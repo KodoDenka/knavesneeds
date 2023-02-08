@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "simplyswords:netherite_chakram"
+  },
+  "addition": {
+    "item": "plus_the_end:block_of_endronium"
+  },
+  "result": {
+    "item": "knavesneeds:endronium_chakram"
+  }
+}

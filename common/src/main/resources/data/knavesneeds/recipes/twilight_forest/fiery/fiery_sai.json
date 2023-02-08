@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "c:wood_sticks"
+    },
+    "X": {
+      "item": "twilightforest:fiery_ingot"
+    }
+  },
+  "pattern": [
+    "  ",
+    " X",
+    "# "
+  ],
+  "result": {
+    "item": "knavesneeds:twilight_forest/fiery/fiery_sai"
+  }
+}

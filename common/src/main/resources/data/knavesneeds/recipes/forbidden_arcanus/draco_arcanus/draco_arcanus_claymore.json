@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "forbidden_arcanus:draco_arcanus_staff"
+    },
+    "X": {
+      "item": "forbidden_arcanus:dragon_scale"
+    },
+    "O": {
+      "item": "forbidden_arcanus:obsidian_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " XD",
+    "XOX",
+    "#X "
+  ],
+  "result": {
+    "item": "knavesneeds:draco_arcanus_claymore"
+  }
+}

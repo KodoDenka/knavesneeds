@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "forbidden_arcanus:draco_arcanus_staff"
+    },
+    "X": {
+      "item": "forbidden_arcanus:dragon_scale"
+    }
+  },
+  "pattern": [
+    "X X",
+    "X#X",
+    "   "
+  ],
+  "result": {
+    "item": "knavesneeds:draco_arcanus_warglaive"
+  }
+}

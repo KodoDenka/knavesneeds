@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "X": {
+      "item": "twilightforest:ironwood_ingot"
+    }
+  },
+  "pattern": [
+    "  X",
+    " X ",
+    "#  "
+  ],
+  "result": {
+    "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:knockback\"}]}",
+    "item": "knavesneeds:ironwood_rapier",
+    "type": "minecraft:item_nbt"
+  }
+}

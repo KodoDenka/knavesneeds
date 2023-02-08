@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/template_cutlass",
+  "textures": {
+    "layer0": "knavesneeds:item/forgotten_cutlass"
+  }
+}

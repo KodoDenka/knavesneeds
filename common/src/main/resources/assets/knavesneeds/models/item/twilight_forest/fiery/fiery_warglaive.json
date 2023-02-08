@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/template_warglaive",
+  "textures": {
+    "layer0": "knavesneeds:item/twilight_forest/fiery/fiery_warglaive"
+  }
+}

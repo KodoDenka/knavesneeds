@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "knavesneeds:endronium_warglaive2"
+    }
+  ],
+  "result": {
+    "item": "knavesneeds:endronium_warglaive"
+  }
+}

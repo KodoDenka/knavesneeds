@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "knavesneeds:cloggrum_twinblade"
+  },
+  "addition": {
+    "item": "undergarden:forgotten_ingot"
+  },
+  "result": {
+    "item": "knavesneeds:forgotten_twinblade"
+  }
+}

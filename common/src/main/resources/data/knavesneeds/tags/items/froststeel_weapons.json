@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "knavesneeds:froststeel_chakram",
+    "knavesneeds:froststeel_claymore",
+    "knavesneeds:froststeel_cutlass",
+    "knavesneeds:froststeel_glaive",
+    "knavesneeds:froststeel_greataxe",
+    "knavesneeds:froststeel_greathammer",
+    "knavesneeds:froststeel_katana",
+    "knavesneeds:froststeel_longsword",
+    "knavesneeds:froststeel_rapier",
+    "knavesneeds:froststeel_sai",
+    "knavesneeds:froststeel_scythe",
+    "knavesneeds:froststeel_spear",
+    "knavesneeds:froststeel_twinblade",
+    "knavesneeds:froststeel_warglaive"
+  ]
+}

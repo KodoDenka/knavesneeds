@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "knavesneeds:knightmetal_chakram",
+    "knavesneeds:knightmetal_claymore",
+    "knavesneeds:knightmetal_cutlass",
+    "knavesneeds:knightmetal_glaive",
+    "knavesneeds:knightmetal_greataxe",
+    "knavesneeds:knightmetal_greathammer",
+    "knavesneeds:knightmetal_katana",
+    "knavesneeds:knightmetal_longsword",
+    "knavesneeds:knightmetal_rapier",
+    "knavesneeds:knightmetal_sai",
+    "knavesneeds:knightmetal_scythe",
+    "knavesneeds:knightmetal_spear",
+    "knavesneeds:knightmetal_twinblade",
+    "knavesneeds:knightmetal_warglaive"
+  ]
+}

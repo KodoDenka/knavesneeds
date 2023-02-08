@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "X": {
+      "item": "undergarden:utherium_crystal"
+    }
+  },
+  "pattern": [
+    "XX#",
+    "X# ",
+    "#  "
+  ],
+  "result": {
+    "item": "knavesneeds:utherium_scythe"
+  }
+}

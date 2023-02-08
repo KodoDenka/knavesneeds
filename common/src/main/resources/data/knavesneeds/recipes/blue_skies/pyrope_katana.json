@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "X": {
+      "item": "blue_skies:pyrope"
+    }
+  },
+  "pattern": [
+    "   ",
+    "#XX",
+    "   "
+  ],
+  "result": {
+    "item": "blue_skies:pyrope_katana"
+  }
+}

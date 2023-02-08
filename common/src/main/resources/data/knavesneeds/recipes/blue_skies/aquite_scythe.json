@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "X": {
+      "item": "blue_skies:aquite"
+    }
+  },
+  "pattern": [
+    "XX#",
+    "X# ",
+    "#  "
+  ],
+  "result": {
+    "item": "blue_skies:aquite_scythe"
+  }
+}
