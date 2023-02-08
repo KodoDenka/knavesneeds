@@ -16,27 +16,5 @@ public class KnavesForge {
 
         //Init core.
         KnavesCommon.init();
-
-
-        //Compat init.
-        //if (ModList.get().isLoaded("twilightforest")) {
-            //TwilightForestCompat.TWILIGHT_FOREST_ITEMS.register();
-        //}
-
-        //if (ModList.get().isLoaded("undergarden")) {
-            //TwilightForestCompat.TwilightForestReg();
-        //}
-
-        //if (ModList.get().isLoaded("plus_the_end")) {
-            //TwilightForestCompat.TwilightForestReg();
-        //}
-
-        //if (ModList.get().isLoaded("blue_skies")) {
-            //TwilightForestCompat.TwilightForestReg();
-        //}
-
-        //if (ModList.get().isLoaded("forbidden_arcanus")) {
-            //TwilightForestCompat.TwilightForestReg();
-        //}
     }
 }

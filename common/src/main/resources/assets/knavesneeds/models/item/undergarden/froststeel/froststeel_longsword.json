@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/template_longsword",
+  "textures": {
+    "layer0": "knavesneeds:item/undergarden/froststeel/froststeel_longsword"
+  }
+}

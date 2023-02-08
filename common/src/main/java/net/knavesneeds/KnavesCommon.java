@@ -7,7 +7,10 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
+import net.knavesneeds.compat.ForbiddenArcanusCompat;
+import net.knavesneeds.compat.PlusTheEndCompat;
 import net.knavesneeds.compat.TwilightForestCompat;
+import net.knavesneeds.compat.UndergardenCompat;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.config.KnavesConfigWrapper;
 import net.knavesneeds.registry.KnavesItemsRegistry;
@@ -81,6 +84,19 @@ public class KnavesCommon {
         if (Platform.isModLoaded("twilightforest")) {
             TwilightForestCompat.TWILIGHT_FOREST_ITEMS.register();
         }
+
+        if (Platform.isModLoaded("undergarden")) {
+            UndergardenCompat.UNDERGARDEN_ITEMS.register();
+        }
+
+        if (Platform.isModLoaded("plus_the_end")) {
+            PlusTheEndCompat.PLUS_THE_END_ITEMS.register();
+        }
+
+        if (Platform.isModLoaded("forbidden_arcanus")) {
+            ForbiddenArcanusCompat.FORBIDDEN_ARCANUS_ITEMS.register();
+        }
+
 
         System.out.println(KnavesExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }

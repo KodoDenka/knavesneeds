@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/template_greathammer",
+  "textures": {
+    "texture": "knavesneeds:item/undergarden/cloggrum/cloggrum_greathammer"
+  }
+}

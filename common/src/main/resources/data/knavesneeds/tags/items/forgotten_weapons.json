@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "knavesneeds:forgotten_chakram",
-    "knavesneeds:forgotten_claymore",
-    "knavesneeds:forgotten_cutlass",
-    "knavesneeds:forgotten_glaive",
-    "knavesneeds:forgotten_greataxe",
-    "knavesneeds:forgotten_greathammer",
-    "knavesneeds:forgotten_katana",
-    "knavesneeds:forgotten_longsword",
-    "knavesneeds:forgotten_rapier",
-    "knavesneeds:forgotten_sai",
-    "knavesneeds:forgotten_scythe",
-    "knavesneeds:forgotten_spear",
-    "knavesneeds:forgotten_twinblade",
-    "knavesneeds:forgotten_warglaive"
+    "knavesneeds:undergarden/forgotten/forgotten_chakram",
+    "knavesneeds:undergarden/forgotten/forgotten_claymore",
+    "knavesneeds:undergarden/forgotten/forgotten_cutlass",
+    "knavesneeds:undergarden/forgotten/forgotten_glaive",
+    "knavesneeds:undergarden/forgotten/forgotten_greataxe",
+    "knavesneeds:undergarden/forgotten/forgotten_greathammer",
+    "knavesneeds:undergarden/forgotten/forgotten_katana",
+    "knavesneeds:undergarden/forgotten/forgotten_longsword",
+    "knavesneeds:undergarden/forgotten/forgotten_rapier",
+    "knavesneeds:undergarden/forgotten/forgotten_sai",
+    "knavesneeds:undergarden/forgotten/forgotten_scythe",
+    "knavesneeds:undergarden/forgotten/forgotten_spear",
+    "knavesneeds:undergarden/forgotten/forgotten_twinblade",
+    "knavesneeds:undergarden/forgotten/forgotten_warglaive"
   ]
 }

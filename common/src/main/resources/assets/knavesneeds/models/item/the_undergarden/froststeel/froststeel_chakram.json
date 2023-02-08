@@ -1,6 +1,0 @@
-{
-  "parent": "knavesneeds:item/template_chakram",
-  "textures": {
-    "layer0": "knavesneeds:item/froststeel_chakram"
-  }
-}

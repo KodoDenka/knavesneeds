@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "knavesneeds:fiery_chakram",
-    "knavesneeds:fiery_claymore",
-    "knavesneeds:fiery_cutlass",
-    "knavesneeds:fiery_glaive",
-    "knavesneeds:fiery_greataxe",
-    "knavesneeds:fiery_greathammer",
-    "knavesneeds:fiery_katana",
-    "knavesneeds:fiery_longsword",
-    "knavesneeds:fiery_rapier",
-    "knavesneeds:fiery_sai",
-    "knavesneeds:fiery_scythe",
-    "knavesneeds:fiery_spear",
-    "knavesneeds:fiery_twinblade",
-    "knavesneeds:fiery_warglaive"
+    "knavesneeds:twilight_forest/fiery/fiery_chakram",
+    "knavesneeds:twilight_forest/fiery/fiery_claymore",
+    "knavesneeds:twilight_forest/fiery/fiery_cutlass",
+    "knavesneeds:twilight_forest/fiery/fiery_glaive",
+    "knavesneeds:twilight_forest/fiery/fiery_greataxe",
+    "knavesneeds:twilight_forest/fiery/fiery_greathammer",
+    "knavesneeds:twilight_forest/fiery/fiery_katana",
+    "knavesneeds:twilight_forest/fiery/fiery_longsword",
+    "knavesneeds:twilight_forest/fiery/fiery_rapier",
+    "knavesneeds:twilight_forest/fiery/fiery_sai",
+    "knavesneeds:twilight_forest/fiery/fiery_scythe",
+    "knavesneeds:twilight_forest/fiery/fiery_spear",
+    "knavesneeds:twilight_forest/fiery/fiery_twinblade",
+    "knavesneeds:twilight_forest/fiery/fiery_warglaive"
   ]
 }

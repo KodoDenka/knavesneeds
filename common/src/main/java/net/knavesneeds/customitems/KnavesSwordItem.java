@@ -50,6 +50,7 @@ public class KnavesSwordItem  extends SwordItem {
     }
 
     //@Override
+    //Steeleaf
     public void fillItemCategory(ItemGroup tab, List<ItemStack> list) {
         if (this.getGroup() == tab) {
             ItemStack istack = new ItemStack(this);
