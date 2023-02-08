@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/template_greathammer",
+  "textures": {
+    "layer0": "knavesneeds:item/diopside_greathammer"
+  }
+}

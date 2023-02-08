@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/template_claymore",
+  "textures": {
+    "layer0": "knavesneeds:item/lunar_stone_claymore"
+  }
+}

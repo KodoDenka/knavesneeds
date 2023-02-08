@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/template_katana",
+  "textures": {
+    "layer0": "knavesneeds:item/dusk_wood_katana"
+  }
+}

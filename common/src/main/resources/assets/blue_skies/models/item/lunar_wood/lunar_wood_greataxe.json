@@ -1,0 +1,6 @@
+{
+	"parent": "knavesneeds:item/big_handheld",
+	"textures": {
+		"layer0": "knavesneeds:item/lunar_wood_greataxe"
+	}
+}
