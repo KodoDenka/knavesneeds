@@ -52,32 +52,6 @@ public class KanvesSimplyConfig {
         return WEAPON_OPTIONS.get(key);
     }
 
-    public static File createFile(String path, String contents, boolean overwrite) {
-        File file = new File(path);
-        if (file.exists() && !overwrite) {
-            return file;
-        }
-        file.getParentFile().mkdirs();
-        try {
-            file.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        file.setReadable(true);
-        file.setWritable(true);
-        file.setExecutable(true);
-        if (contents == null || "".equals(contents)) {
-            return file;
-        }
-        try (FileWriter writer = new FileWriter(file)) {
-            writer.write(contents);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return file;
-    }
-
-
     public static String readFile(File file) {
         String output = "";
         try (Scanner scanner = new Scanner(file)) {
