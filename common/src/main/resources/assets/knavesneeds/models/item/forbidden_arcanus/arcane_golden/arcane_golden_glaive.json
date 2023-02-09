@@ -1,6 +1,6 @@
 {
 	"parent": "knavesneeds:item/big_handheld",
 	"textures": {
-		"layer0": "knavesneeds:item/arcane_golden_glaive"
+		"layer0": "knavesneeds:item/forbidden_arcanus/arcane_golden/arcane_golden_glaive"
 	}
 }

@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_twinblade",
   "textures": {
-    "layer0": "knavesneeds:item/endronium_twinblade"
+    "layer0": "knavesneeds:item/plus_the_end/endronium/endronium_twinblade"
   }
 }

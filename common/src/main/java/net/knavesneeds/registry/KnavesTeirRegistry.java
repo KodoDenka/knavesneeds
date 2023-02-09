@@ -25,7 +25,7 @@ public enum KnavesTeirRegistry implements ToolMaterial {
     PYROPE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     AQUITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     DIOPSIDE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    CHARROITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    CHAROITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     HORIZONITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
 
     TURQUOISE_STONE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),

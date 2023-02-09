@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_twinblade",
   "textures": {
-    "layer0": "knavesneeds:item/reinforced_arcane_golden_twinblade"
+    "layer0": "knavesneeds:item/forbidden_arcanus/reinforced_arcane_golden/reinforced_arcane_golden_twinblade"
   }
 }

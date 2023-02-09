@@ -8,10 +8,7 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
-import net.knavesneeds.compat.ForbiddenArcanusCompat;
-import net.knavesneeds.compat.PlusTheEndCompat;
-import net.knavesneeds.compat.TwilightForestCompat;
-import net.knavesneeds.compat.UndergardenCompat;
+import net.knavesneeds.compat.*;
 import net.knavesneeds.config.KanvesSimplyConfig;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.config.KnavesConfigWrapper;
@@ -69,6 +66,10 @@ public class KnavesCommon {
 
         if (Platform.isModLoaded("forbidden_arcanus")) {
             ForbiddenArcanusCompat.FORBIDDEN_ARCANUS_ITEMS.register();
+        }
+
+        if (Platform.isModLoaded("blue_skies")) {
+            BlueSkiesCompat.BLUE_SKIES_ITEMS.register();
         }
 
 

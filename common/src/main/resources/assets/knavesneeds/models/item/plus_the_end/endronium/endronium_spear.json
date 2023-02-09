@@ -1,6 +1,6 @@
 {
 	"parent": "knavesneeds:item/big_handheld",
 	"textures": {
-		"layer0": "knavesneeds:item/endronium_spear"
+		"layer0": "knavesneeds:item/plus_the_end/endronium/endronium_spear"
 	}
 }

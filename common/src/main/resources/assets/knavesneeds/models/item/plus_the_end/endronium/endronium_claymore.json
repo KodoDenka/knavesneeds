@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_claymore",
   "textures": {
-    "layer0": "knavesneeds:item/endronium_claymore"
+    "layer0": "knavesneeds:item/plus_the_end/endronium/endronium_claymore"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_warglaive",
   "textures": {
-    "layer0": "knavesneeds:item/arcane_golden_warglaive"
+    "layer0": "knavesneeds:item/forbidden_arcanus/arcane_golden/arcane_golden_warglaive"
   }
 }

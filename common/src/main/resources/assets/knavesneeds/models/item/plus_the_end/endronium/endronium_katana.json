@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_katana",
   "textures": {
-    "layer0": "knavesneeds:item/endronium_katana"
+    "layer0": "knavesneeds:item/plus_the_end/endronium/endronium_katana"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_claymore",
   "textures": {
-    "layer0": "knavesneeds:item/draco_arcanus_claymore"
+    "layer0": "knavesneeds:item/forbidden_arcanus/draco_arcanus/draco_arcanus_claymore"
   }
 }

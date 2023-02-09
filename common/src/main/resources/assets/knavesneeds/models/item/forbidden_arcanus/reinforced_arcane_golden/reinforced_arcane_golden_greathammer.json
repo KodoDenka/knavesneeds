@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_greathammer",
   "textures": {
-    "layer0": "knavesneeds:item/reinforced_arcane_golden_greathammer"
+    "texture": "knavesneeds:item/forbidden_arcanus/reinforced_arcane_golden/reinforced_arcane_golden_greathammer"
   }
 }

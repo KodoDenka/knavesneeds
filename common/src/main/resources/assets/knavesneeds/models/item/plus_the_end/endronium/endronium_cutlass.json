@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_cutlass",
   "textures": {
-    "layer0": "knavesneeds:item/endronium_cutlass"
+    "layer0": "knavesneeds:item/plus_the_end/endronium/endronium_cutlass"
   }
 }

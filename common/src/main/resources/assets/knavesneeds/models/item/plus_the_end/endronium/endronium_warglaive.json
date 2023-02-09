@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_warglaive",
   "textures": {
-    "layer0": "knavesneeds:item/endronium_warglaive"
+    "layer0": "knavesneeds:item/plus_the_end/endronium/endronium_warglaive"
   }
 }

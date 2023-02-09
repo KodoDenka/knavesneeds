@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_twinblade",
   "textures": {
-    "layer0": "knavesneeds:item/draco_arcanus_twinblade"
+    "layer0": "knavesneeds:item/forbidden_arcanus/draco_arcanus/draco_arcanus_twinblade"
   }
 }
