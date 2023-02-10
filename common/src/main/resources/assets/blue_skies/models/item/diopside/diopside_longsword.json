@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_longsword",
   "textures": {
-    "layer0": "knavesneeds:item/diopside_longsword"
+    "layer0": "blue_skies:item/diopside/diopside_longsword"
   }
 }

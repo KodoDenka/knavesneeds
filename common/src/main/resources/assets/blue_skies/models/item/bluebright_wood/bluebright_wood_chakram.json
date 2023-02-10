@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_chakram",
   "textures": {
-    "layer0": "knavesneeds:item/bluebright_wood_chakram"
+    "layer0": "blue_skies:item/bluebright_wood/bluebright_wood_chakram"
   }
 }

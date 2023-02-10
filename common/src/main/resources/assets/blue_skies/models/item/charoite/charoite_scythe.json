@@ -1,0 +1,6 @@
+{
+	"parent": "knavesneeds:item/big_handheld",
+	"textures": {
+		"layer0": "blue_skies:item/charoite/charoite_scythe"
+	}
+}

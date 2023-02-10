@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_katana",
   "textures": {
-    "layer0": "knavesneeds:item/frostbright_wood_katana"
+    "layer0": "blue_skies:item/frostbright_wood/frostbright_wood_katana"
   }
 }

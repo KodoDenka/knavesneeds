@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_sai",
   "textures": {
-    "layer0": "knavesneeds:item/starlit_wood_sai"
+    "layer0": "blue_skies:item/starlit_wood/starlit_wood_sai"
   }
 }

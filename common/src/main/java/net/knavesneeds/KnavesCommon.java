@@ -72,6 +72,14 @@ public class KnavesCommon {
             BlueSkiesCompat.BLUE_SKIES_ITEMS.register();
         }
 
+        if (Platform.isModLoaded("betterend")) {
+            BetterEndCompat.BETTER_END_ITEMS.register();
+        }
+
+        if (Platform.isModLoaded("betternether")) {
+            BetterNetherCompat.BETTER_NETHER_ITEMS.register();
+        }
+
 
         System.out.println(KnavesExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }

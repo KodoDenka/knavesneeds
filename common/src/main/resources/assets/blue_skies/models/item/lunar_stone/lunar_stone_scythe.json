@@ -1,6 +1,6 @@
 {
 	"parent": "knavesneeds:item/big_handheld",
 	"textures": {
-		"layer0": "knavesneeds:item/lunar_stone_scythe"
+		"layer0": "blue_skies:item/lunar_stone/lunar_stone_scythe"
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"parent": "knavesneeds:item/big_handheld",
 	"textures": {
-		"layer0": "knavesneeds:item/starlit_wood_greataxe"
+		"layer0": "blue_skies:item/starlit_wood/starlit_wood_greataxe"
 	}
 }

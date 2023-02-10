@@ -1,6 +1,6 @@
 {
 	"parent": "knavesneeds:item/template_longsword",
 	"textures": {
-		"layer0": "knavesneeds:item/aquite_rapier"
+		"layer0": "blue_skies:item/aquite/aquite_rapier"
 	}
 }

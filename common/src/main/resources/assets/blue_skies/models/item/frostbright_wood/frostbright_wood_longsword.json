@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_longsword",
   "textures": {
-    "layer0": "knavesneeds:item/frostbright_wood_longsword"
+    "layer0": "blue_skies:item/frostbright_wood/frostbright_wood_longsword"
   }
 }

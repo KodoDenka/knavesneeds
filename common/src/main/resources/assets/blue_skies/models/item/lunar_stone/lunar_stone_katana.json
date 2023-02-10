@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_katana",
   "textures": {
-    "layer0": "knavesneeds:item/lunar_stone_katana"
+    "layer0": "blue_skies:item/lunar_stone/lunar_stone_katana"
   }
 }

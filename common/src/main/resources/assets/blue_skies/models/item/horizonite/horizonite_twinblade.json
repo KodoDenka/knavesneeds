@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_twinblade",
   "textures": {
-    "layer0": "knavesneeds:item/horizonite_twinblade"
+    "layer0": "blue_skies:item/horizonite/horizonite_twinblade"
   }
 }

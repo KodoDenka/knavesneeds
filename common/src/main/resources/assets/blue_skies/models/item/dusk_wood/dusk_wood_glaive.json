@@ -1,6 +1,6 @@
 {
 	"parent": "knavesneeds:item/big_handheld",
 	"textures": {
-		"layer0": "knavesneeds:item/dusk_wood_glaive"
+		"layer0": "blue_skies:item/dusk_wood/dusk_wood_glaive"
 	}
 }

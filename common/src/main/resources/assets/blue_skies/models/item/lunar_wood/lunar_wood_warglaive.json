@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_warglaive",
   "textures": {
-    "layer0": "knavesneeds:item/lunar_wood_warglaive"
+    "layer0": "blue_skies:item/lunar_wood/lunar_wood_warglaive"
   }
 }

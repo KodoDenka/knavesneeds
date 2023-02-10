@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_twinblade",
   "textures": {
-    "layer0": "knavesneeds:item/aquite_twinblade"
+    "layer0": "blue_skies:item/aquite/aquite_twinblade"
   }
 }

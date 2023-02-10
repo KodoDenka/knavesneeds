@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/template_cutlass",
+  "textures": {
+    "layer0": "blue_skies:item/charoite/charoite_cutlass"
+  }
+}

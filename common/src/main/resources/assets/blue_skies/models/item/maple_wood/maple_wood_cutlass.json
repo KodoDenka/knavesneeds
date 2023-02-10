@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_cutlass",
   "textures": {
-    "layer0": "knavesneeds:item/maple_wood_cutlass"
+    "layer0": "blue_skies:item/maple_wood/maple_wood_cutlass"
   }
 }

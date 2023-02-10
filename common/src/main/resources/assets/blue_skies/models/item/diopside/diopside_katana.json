@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_katana",
   "textures": {
-    "layer0": "knavesneeds:item/diopside_katana"
+    "layer0": "blue_skies:item/diopside/diopside_katana"
   }
 }

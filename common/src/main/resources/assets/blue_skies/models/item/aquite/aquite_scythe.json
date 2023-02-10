@@ -1,6 +1,6 @@
 {
 	"parent": "knavesneeds:item/big_handheld",
 	"textures": {
-		"layer0": "knavesneeds:item/aquite_scythe"
+		"layer0": "blue_skies:item/aquite/aquite_scythe"
 	}
 }

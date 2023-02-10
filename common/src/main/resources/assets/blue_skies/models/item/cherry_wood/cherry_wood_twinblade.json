@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_twinblade",
   "textures": {
-    "layer0": "knavesneeds:item/cherry_wood_twinblade"
+    "layer0": "blue_skies:item/cherry_wood/cherry_wood_twinblade"
   }
 }

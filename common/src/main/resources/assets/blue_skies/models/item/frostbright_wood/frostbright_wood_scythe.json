@@ -1,6 +1,6 @@
 {
 	"parent": "knavesneeds:item/big_handheld",
 	"textures": {
-		"layer0": "knavesneeds:item/frostbright_wood_scythe"
+		"layer0": "blue_skies:item/frostbright_wood/frostbright_wood_scythe"
 	}
 }

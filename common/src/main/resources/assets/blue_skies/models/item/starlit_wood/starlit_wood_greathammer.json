@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_greathammer",
   "textures": {
-    "layer0": "knavesneeds:item/starlit_wood_greathammer"
+    "texture": "blue_skies:item/starlit_wood/starlit_wood_greathammer"
   }
 }

@@ -1,7 +1,7 @@
 package net.knavesneeds.registry;
 
 import net.knavesneeds.config.KanvesSimplyConfig;
-
+import net.knavesneeds.config.KnavesConfig;
 
 
 public class KnavesItemsRegistry {
@@ -39,43 +39,56 @@ public class KnavesItemsRegistry {
 
     //Mod Tier damage modifier
     //Forbidden Arcanus
-    public static final int ARCANE_GOLDEN_MOD = 0;
-    public static final int DRACO_ARCANUS_MOD = 0;
-    public static final int REINFORCED_ARCANE_GOLDEN_MOD = 0;
+    public static final int ARCANE_GOLDEN_MOD = KnavesConfig.ARCANE_GOLDEN_MOD;
+    public static final int DRACO_ARCANUS_MOD = KnavesConfig.DRACO_ARCANUS_MOD;
+    public static final int REINFORCED_ARCANE_GOLDEN_MOD = KnavesConfig.REINFORCED_ARCANE_GOLDEN_MOD;
 
     //Blue Skies Ores
-    public static final int AQUITE_MOD = 0;
-    public static final int CHAROITE_MOD = 0;
-    public static final int DIOPSIDE_MOD = 0;
-    public static final int HORIZONITE_MOD = 0;
-    public static final int PYROPE_MOD = 0;
+    public static final int AQUITE_MOD = KnavesConfig.AQUITE_MOD;
+    public static final int CHAROITE_MOD = KnavesConfig.CHAROITE_MOD;
+    public static final int DIOPSIDE_MOD = KnavesConfig.DIOPSIDE_MOD;
+    public static final int HORIZONITE_MOD = KnavesConfig.HORIZONITE_MOD;
+    public static final int PYROPE_MOD = KnavesConfig.PYROPE_MOD;
 
     //Blue Skies Stone
-    public static final int LUNAR_STONE_MOD = 0;
-    public static final int TURQUOISE_STONE_MOD = 0;
+    public static final int LUNAR_STONE_MOD = KnavesConfig.LUNAR_STONE_MOD;
+    public static final int TURQUOISE_STONE_MOD = KnavesConfig.TURQUOISE_STONE_MOD;
 
     //Blue Skies Wood
-    public static final int BLUEBRIGHT_WOOD_MOD = 0;
-    public static final int CHERRY_WOOD_MOD = 0;
-    public static final int DUSK_WOOD_MOD= 0;
-    public static final int FROSTBRIGHT_WOOD_MOD = 0;
-    public static final int LUNAR_WOOD_MOD = 0;
-    public static final int MAPLE_WOOD_MOD = 0;
-    public static final int STARLIT_WOOD_MOD = 0;
+    public static final int BLUEBRIGHT_WOOD_MOD = KnavesConfig.BLUEBRIGHT_WOOD_MOD;
+    public static final int CHERRY_WOOD_MOD = KnavesConfig.CHERRY_WOOD_MOD;
+    public static final int DUSK_WOOD_MOD= KnavesConfig.DUSK_WOOD_MOD;
+    public static final int FROSTBRIGHT_WOOD_MOD = KnavesConfig.FROSTBRIGHT_WOOD_MOD;
+    public static final int LUNAR_WOOD_MOD = KnavesConfig.LUNAR_WOOD_MOD;
+    public static final int MAPLE_WOOD_MOD = KnavesConfig.MAPLE_WOOD_MOD;
+    public static final int STARLIT_WOOD_MOD = KnavesConfig.STARLIT_WOOD_MOD;
 
     //Plus The End
-    public static final int ENDRONIUM_MOD = 0;
+    public static final int ENDRONIUM_MOD = KnavesConfig.ENDRONIUM_MOD;
 
     //Twilight Forest
-    public static final int STEELEAF_MOD = 0;
-    public static final int IRONWOOD_MOD = 0;
-    public static final int FIERY_MOD= 0;
-    public static final int KNIGHTMETAL_MOD = 0;
+    public static final int STEELEAF_MOD = KnavesConfig.STEELEAF_MOD;
+    public static final int IRONWOOD_MOD = KnavesConfig.IRONWOOD_MOD;
+    public static final int FIERY_MOD= KnavesConfig.FIERY_MOD;
+    public static final int KNIGHTMETAL_MOD = KnavesConfig.KNIGHTMETAL_MOD;
 
     //Undergarden
-    public static final int CLOGGRUM_MOD = 0;
-    public static final int FORGOTTEN_MOD = 0;
-    public static final int FROSTSTEEL_MOD= 0;
-    public static final int UTHERIUM_MOD = 0;
+    public static final int CLOGGRUM_MOD = KnavesConfig.CLOGGRUM_MOD;
+    public static final int FORGOTTEN_MOD = KnavesConfig.FORGOTTEN_MOD;
+    public static final int FROSTSTEEL_MOD= KnavesConfig.FROSTSTEEL_MOD;
+    public static final int UTHERIUM_MOD = KnavesConfig.UTHERIUM_MOD;
+
+    //BetterEnd
+    public static final int AETERNIUM_MOD = KnavesConfig.AETERNIUM_MOD;
+    public static final int TERMINITE_MOD = KnavesConfig.TERMINITE_MOD;
+    public static final int THALLASIUM_MOD = KnavesConfig.THALLASIUM_MOD;
+
+    //BetterNether
+    public static final int CINCINNASITE_MOD = KnavesConfig.CINCINNASITE_MOD;
+    public static final int CINCINNASITE_DIAMOND_MOD = KnavesConfig.CINCINNASITE_DIAMOND_MOD;
+    public static final int NETHER_RUBY_MOD = KnavesConfig.NETHER_RUBY_MOD;
+
+    //SoulsLikeWeapons
+    public static final int TRANSLUCENT = KnavesConfig.TRANSLUCENT_MOD;
 
 }

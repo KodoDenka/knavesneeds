@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_katana",
   "textures": {
-    "layer0": "knavesneeds:item/aquite_katana"
+    "layer0": "blue_skies:item/aquite/aquite_katana"
   }
 }
