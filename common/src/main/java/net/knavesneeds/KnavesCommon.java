@@ -13,14 +13,14 @@ import net.knavesneeds.config.KanvesSimplyConfig;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.config.KnavesConfigWrapper;
 import net.knavesneeds.registry.KnavesItemsRegistry;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 import java.io.File;
+
+import static net.minecraft.util.JsonHelper.asItem;
 
 public class KnavesCommon {
 
@@ -32,7 +32,7 @@ public class KnavesCommon {
 
     // Registering a new creative tab
     public static final ItemGroup KNAVES_TAB = CreativeTabRegistry.create(new Identifier(MOD_ID, "knaves_tab"), () ->
-            new ItemStack(ForbiddenArcanusCompat.REINFORCED_ARCANE_GOLDEN_CHAKRAM.get()));
+            new ItemStack(Items.DIAMOND_SWORD));
 
     //Undergarden Tags
     public static final TagKey<Item> FORGOTTEN_WEAPON = TagKey.of(Registry.ITEM_KEY, new Identifier("knavesneeds", "forgotten_weapons"));
@@ -52,32 +52,37 @@ public class KnavesCommon {
 
         KanvesSimplyConfig.loadConfig();
 
-        if (Platform.isModLoaded("twilightforest")) {
+
+        if (Platform.getOptionalMod("twilightforest").isPresent()) {
             TwilightForestCompat.TWILIGHT_FOREST_ITEMS.register();
         }
 
-        if (Platform.isModLoaded("undergarden")) {
+        if (Platform.getOptionalMod("undergarden").isPresent()) {
             UndergardenCompat.UNDERGARDEN_ITEMS.register();
         }
 
-        if (Platform.isModLoaded("plus_the_end")) {
+        if (Platform.getOptionalMod("plus_the_end").isPresent()) {
             PlusTheEndCompat.PLUS_THE_END_ITEMS.register();
         }
 
-        if (Platform.isModLoaded("forbidden_arcanus")) {
+        if (Platform.getOptionalMod("forbidden_arcanus").isPresent()) {
             ForbiddenArcanusCompat.FORBIDDEN_ARCANUS_ITEMS.register();
         }
 
-        if (Platform.isModLoaded("blue_skies")) {
+        if (Platform.getOptionalMod("blue_skies").isPresent()) {
             BlueSkiesCompat.BLUE_SKIES_ITEMS.register();
         }
 
-        if (Platform.isModLoaded("betterend")) {
+        if (Platform.getOptionalMod("betterend").isPresent()) {
             BetterEndCompat.BETTER_END_ITEMS.register();
         }
 
-        if (Platform.isModLoaded("betternether")) {
+        if (Platform.getOptionalMod("betternether").isPresent()) {
             BetterNetherCompat.BETTER_NETHER_ITEMS.register();
+        }
+
+        if (Platform.getOptionalMod("soulsweapons").isPresent()) {
+            SoulsWeaponsCompat.SOULS_WEAPONS_ITEMS.register();
         }
 
 

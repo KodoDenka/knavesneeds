@@ -47,19 +47,23 @@ public enum KnavesTeirRegistry implements ToolMaterial {
 
 
     //Better End Tiers
-    BETTER_END_PLACEHOLDER(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    BETTER_END_PLACEHOLDER2(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    BETTER_END_PLACEHOLDER3(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    AETERNIUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    TERMINITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    THALLASIUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
 
 
     //Better Nether Tiers
-    BETTER_NETHER_PLACEHOLDER(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    BETTER_NETHER_PLACEHOLDER2(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    BETTER_NETHER_PLACEHOLDER3(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-
+    CINCINNASITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    CINCINNASITE_DIAMON(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    NETHER_RUBY(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
 
     //Plus The End Tiers
-    ENDRONIUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND));
+    ENDRONIUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+
+    //SoulsLikeWeapons
+    TRANSLUCENT(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND));
+
+
 
 
 

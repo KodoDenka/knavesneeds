@@ -3,7 +3,6 @@ package net.knavesneeds.registry;
 import net.knavesneeds.config.KanvesSimplyConfig;
 import net.knavesneeds.config.KnavesConfig;
 
-
 public class KnavesItemsRegistry {
 
     //weapon type modifiers.
@@ -35,7 +34,6 @@ public class KnavesItemsRegistry {
     public static final float CHAKRAM_ATTACKSPEED = KanvesSimplyConfig.getWeaponAttributes("chakram_attackspeed");
     public static final int SCYTHE_DAMAGE_MOD = (int) KanvesSimplyConfig.getWeaponAttributes("scythe_positive_damage_modifier") + (int) KanvesSimplyConfig.getWeaponAttributes("scythe_negative_damage_modifier");
     public static final float SCYTHE_ATTACKSPEED = KanvesSimplyConfig.getWeaponAttributes("scythe_attackspeed");
-
 
     //Mod Tier damage modifier
     //Forbidden Arcanus
@@ -89,6 +87,6 @@ public class KnavesItemsRegistry {
     public static final int NETHER_RUBY_MOD = KnavesConfig.NETHER_RUBY_MOD;
 
     //SoulsLikeWeapons
-    public static final int TRANSLUCENT = KnavesConfig.TRANSLUCENT_MOD;
+    public static final int TRANSLUCENT_MOD = KnavesConfig.TRANSLUCENT_MOD;
 
 }
