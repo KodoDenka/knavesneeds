@@ -48,7 +48,7 @@ public class UndergardenCompat {
     public static final RegistrySupplier<Item> FORGOTTEN_SCYTHE = UNDERGARDEN_ITEMS.register("undergarden/forgotten/forgotten_scythe", () -> new KnavesSwordItem(KnavesTeirRegistry.FORGOTTEN, FORGOTTEN_MOD + SCYTHE_DAMAGE_MOD, SCYTHE_ATTACKSPEED));
 
     //Froststeel
-    public static final RegistrySupplier<Item> FROSTSTEEL_LONGSWORD = UNDERGARDEN_ITEMS.register("undergarden/froststeel/froststeel_longsword", () -> new KnavesSwordItem(KnavesTeirRegistry.FROSTSTEEL, FROSTSTEEL_MOD + LONGSWORD_DAMAGE_MOD, LONGSWORD_ATTACKSPEED));
+    public static final RegistrySupplier<Item> FROSTSTEEL_LONGSWORD = UNDERGARDEN_ITEMS.register("undergarden/froststeel/froststeel_longsword.json", () -> new KnavesSwordItem(KnavesTeirRegistry.FROSTSTEEL, FROSTSTEEL_MOD + LONGSWORD_DAMAGE_MOD, LONGSWORD_ATTACKSPEED));
     public static final RegistrySupplier<Item> FROSTSTEEL_TWINBLADE = UNDERGARDEN_ITEMS.register("undergarden/froststeel/froststeel_twinblade", () -> new KnavesSwordItem(KnavesTeirRegistry.FROSTSTEEL, FROSTSTEEL_MOD + TWINBLADE_DAMAGE_MOD, TWINBLADE_ATTACKSPEED));
     public static final RegistrySupplier<Item> FROSTSTEEL_RAPIER = UNDERGARDEN_ITEMS.register("undergarden/froststeel/froststeel_rapier", () -> new KnavesSwordItem(KnavesTeirRegistry.FROSTSTEEL, FROSTSTEEL_MOD + RAPIER_DAMAGE_MOD, RAPIER_ATTACKSPEED));
     public static final RegistrySupplier<Item> FROSTSTEEL_KATANA = UNDERGARDEN_ITEMS.register("undergarden/froststeel/froststeel_katana", () -> new KnavesSwordItem(KnavesTeirRegistry.FROSTSTEEL, FROSTSTEEL_MOD + KATANA_DAMAGE_MOD, KATANA_ATTACKSPEED));
