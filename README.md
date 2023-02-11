@@ -4,17 +4,21 @@
 
 A compatibility patch for Simply Swords, currently adds support for Forbidden & Arcanus, Twilight Forest, The Undergarden, and Blue Skies.
 
-Featuring over 300 addition weapons, with their respective special effects, all reprogrammed to work with Better Combat dual wielding.
+Featuring over 520 addition weapons, with their respective special effects, all reprogrammed to work with Better Combat dual wielding.
 
 
 ## **Required Mods**
 
- - Simply Swords
- - Better Combat (Currently not optional until I do another re-write of my dual wielding code.)
+ - Simply Swords `[FORGE/FABRIC - 1.18/1.19]`
 
 ## **Optional Mods**
 
- - Forbidden & Arcanus
- - Twilight Forest
- - The Undergarden
- - Blue Skies.
+ - Better Combat (HIGHLY RECOMMENDED) `[FORGE/FABRIC - 1.18/1.19]`
+ - Forbidden & Arcanus `[FORGE - 1.18/1.19]`
+ - Twilight Forest `[FORGE/FABRIC - 1.18/1.19]`
+ - The Undergarden `[FORGE - 1.18/1.19]`
+ - Plus The End `[FORGE - 1.18]`
+ - Blue Skies `[FORGE - 1.18/1.19]`
+ - Better End `[FABRIC - 1.18/1.19]`
+ - Better Nether `[FABRIC - 1.18/1.19]`
+ - Souls Like Weapons `[FABRIC - 1.18/1.19]`
