@@ -1,0 +1,6 @@
+{
+"parent": "knavesneeds:item/template_chakram",
+"textures": {
+"layer0": "knavesneeds:item/betternether/cincinnasite_diamond/cincinnasite_diamond_chakram"
+}
+}

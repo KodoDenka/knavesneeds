@@ -1,0 +1,6 @@
+{
+"parent": "knavesneeds:item/template_greathammer",
+"textures": {
+"texture": "knavesneeds:item/betternether/nether_ruby/nether_ruby_greathammer"
+}
+}

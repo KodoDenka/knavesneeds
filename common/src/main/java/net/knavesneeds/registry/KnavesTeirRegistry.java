@@ -54,7 +54,7 @@ public enum KnavesTeirRegistry implements ToolMaterial {
 
     //Better Nether Tiers
     CINCINNASITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    CINCINNASITE_DIAMON(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    CINCINNASITE_DIAMOND(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     NETHER_RUBY(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
 
     //Plus The End Tiers

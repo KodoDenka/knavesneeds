@@ -1,0 +1,6 @@
+{
+"parent": "knavesneeds:item/big_handheld",
+"textures": {
+"layer0": "knavesneeds:item/betternether/cincinnasite_diamond/cincinnasite_diamond_glaive"
+}
+}

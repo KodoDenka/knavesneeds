@@ -1,0 +1,6 @@
+{
+"parent": "knavesneeds:item/template_greathammer",
+"textures": {
+"texture": "knavesneeds:item/betternether/cincinnasite_diamond/cincinnasite_diamond_greathammer"
+}
+}
