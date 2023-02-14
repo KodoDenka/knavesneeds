@@ -22,7 +22,6 @@ public class KnavesSwordItem  extends SwordItem {
 
     }
 
-
 /*
     @Override
     public Text getName(ItemStack stack) {
