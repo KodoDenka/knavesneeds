@@ -68,7 +68,7 @@ public class LivingEnitiyMixin {
                     playerEntity.sendMessage(Text.of(String.valueOf(Registry.ENTITY_TYPE.getId(target.getType()))));
 
                     //target.getType().getRegistryEntry()   .getKey() .equals("undergarden");
-                    if (Registry.ENTITY_TYPE.getId(target.getType()).equals(new Identifier("undergarden", target.getEntityName()))) {
+                    if (Registry.ENTITY_TYPE.getId(target.getType()).equals(new Identifier("undergarden"))) {
                         return amount * 1.5f;
                     }
                 }

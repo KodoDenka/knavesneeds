@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "knavesneeds:utherium_chakram",
-    "knavesneeds:utherium_claymore",
-    "knavesneeds:utherium_cutlass",
-    "knavesneeds:utherium_glaive",
-    "knavesneeds:utherium_greataxe",
-    "knavesneeds:utherium_greathammer",
-    "knavesneeds:utherium_katana",
-    "knavesneeds:utherium_longsword",
-    "knavesneeds:utherium_rapier",
-    "knavesneeds:utherium_sai",
-    "knavesneeds:utherium_scythe",
-    "knavesneeds:utherium_spear",
-    "knavesneeds:utherium_twinblade",
-    "knavesneeds:utherium_warglaive"
+    "knavesneeds:undergarden/utherium/utherium_chakram",
+    "knavesneeds:undergarden/utherium/utherium_claymore",
+    "knavesneeds:undergarden/utherium/utherium_cutlass",
+    "knavesneeds:undergarden/utherium/utherium_glaive",
+    "knavesneeds:undergarden/utherium/utherium_greataxe",
+    "knavesneeds:undergarden/utherium/utherium_greathammer",
+    "knavesneeds:undergarden/utherium/utherium_katana",
+    "knavesneeds:undergarden/utherium/utherium_longsword",
+    "knavesneeds:undergarden/utherium/utherium_rapier",
+    "knavesneeds:undergarden/utherium/utherium_sai",
+    "knavesneeds:undergarden/utherium/utherium_scythe",
+    "knavesneeds:undergarden/utherium/utherium_spear",
+    "knavesneeds:undergarden/utherium/utherium_twinblade",
+    "knavesneeds:undergarden/utherium/utherium_warglaive"
   ]
 }

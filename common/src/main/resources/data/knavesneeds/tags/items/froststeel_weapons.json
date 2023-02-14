@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "knavesneeds:froststeel_chakram",
-    "knavesneeds:froststeel_claymore",
-    "knavesneeds:froststeel_cutlass",
-    "knavesneeds:froststeel_glaive",
-    "knavesneeds:froststeel_greataxe",
-    "knavesneeds:froststeel_greathammer",
-    "knavesneeds:froststeel_katana",
-    "knavesneeds:froststeel_longsword",
-    "knavesneeds:froststeel_rapier",
-    "knavesneeds:froststeel_sai",
-    "knavesneeds:froststeel_scythe",
-    "knavesneeds:froststeel_spear",
-    "knavesneeds:froststeel_twinblade",
-    "knavesneeds:froststeel_warglaive"
+    "knavesneeds:undergarden/froststeel/froststeel_chakram",
+    "knavesneeds:undergarden/froststeel/froststeel_claymore",
+    "knavesneeds:undergarden/froststeel/froststeel_cutlass",
+    "knavesneeds:undergarden/froststeel/froststeel_glaive",
+    "knavesneeds:undergarden/froststeel/froststeel_greataxe",
+    "knavesneeds:undergarden/froststeel/froststeel_greathammer",
+    "knavesneeds:undergarden/froststeel/froststeel_katana",
+    "knavesneeds:undergarden/froststeel/froststeel_longsword",
+    "knavesneeds:undergarden/froststeel/froststeel_rapier",
+    "knavesneeds:undergarden/froststeel/froststeel_sai",
+    "knavesneeds:undergarden/froststeel/froststeel_scythe",
+    "knavesneeds:undergarden/froststeel/froststeel_spear",
+    "knavesneeds:undergarden/froststeel/froststeel_twinblade",
+    "knavesneeds:undergarden/froststeel/froststeel_warglaive"
   ]
 }

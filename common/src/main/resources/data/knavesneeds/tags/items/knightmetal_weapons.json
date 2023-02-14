@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "knavesneeds:knightmetal_chakram",
-    "knavesneeds:knightmetal_claymore",
-    "knavesneeds:knightmetal_cutlass",
-    "knavesneeds:knightmetal_glaive",
-    "knavesneeds:knightmetal_greataxe",
-    "knavesneeds:knightmetal_greathammer",
-    "knavesneeds:knightmetal_katana",
-    "knavesneeds:knightmetal_longsword",
-    "knavesneeds:knightmetal_rapier",
-    "knavesneeds:knightmetal_sai",
-    "knavesneeds:knightmetal_scythe",
-    "knavesneeds:knightmetal_spear",
-    "knavesneeds:knightmetal_twinblade",
-    "knavesneeds:knightmetal_warglaive"
+    "knavesneeds:undergarden/knightmetal/knightmetal_chakram",
+    "knavesneeds:undergarden/knightmetal/knightmetal_claymore",
+    "knavesneeds:undergarden/knightmetal/knightmetal_cutlass",
+    "knavesneeds:undergarden/knightmetal/knightmetal_glaive",
+    "knavesneeds:undergarden/knightmetal/knightmetal_greataxe",
+    "knavesneeds:undergarden/knightmetal/knightmetal_greathammer",
+    "knavesneeds:undergarden/knightmetal/knightmetal_katana",
+    "knavesneeds:undergarden/knightmetal/knightmetal_longsword",
+    "knavesneeds:undergarden/knightmetal/knightmetal_rapier",
+    "knavesneeds:undergarden/knightmetal/knightmetal_sai",
+    "knavesneeds:undergarden/knightmetal/knightmetal_scythe",
+    "knavesneeds:undergarden/knightmetal/knightmetal_spear",
+    "knavesneeds:undergarden/knightmetal/knightmetal_twinblade",
+    "knavesneeds:undergarden/knightmetal/knightmetal_warglaive"
   ]
 }

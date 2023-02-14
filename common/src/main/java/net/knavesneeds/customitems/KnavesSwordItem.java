@@ -1,12 +1,15 @@
 package net.knavesneeds.customitems;
 
 import net.knavesneeds.KnavesCommon;
+import net.knavesneeds.registry.KnavesTeirRegistry;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Rarity;
+import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -16,14 +19,18 @@ import static net.knavesneeds.KnavesCommon.*;
 public class KnavesSwordItem  extends SwordItem {
     public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().group(KnavesCommon.KNAVES_TAB));
+
     }
 
 
+/*
+    @Override
+    public Text getName(ItemStack stack) {
+        return Text.translatable(this.getTranslationKey(stack)).formatted(Formatting.GOLD, Formatting.BOLD, Formatting.UNDERLINE);
+    }
+ */
 
-    //@Override
-    //public Text getName(ItemStack stack) {
-    //    return Text.translatable(this.getTranslationKey(stack)).formatted(Formatting.GOLD, Formatting.BOLD, Formatting.UNDERLINE);
-    //}
+
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
@@ -49,40 +56,28 @@ public class KnavesSwordItem  extends SwordItem {
         }
     }
 
-    //@Override
     //Steeleaf
-    public void fillItemCategory(ItemGroup tab, List<ItemStack> list) {
-        if (this.getGroup() == tab) {
+
+    @Override
+    public void appendStacks(ItemGroup group, DefaultedList<ItemStack> stacks) {
+        if (this.isIn(group)) {
             ItemStack istack = new ItemStack(this);
-            istack.addEnchantment(Enchantments.LOOTING, 2);
-            list.add(istack);
+
+            //SteelLeaf
+            if (istack.isIn(STEELEAF_WEAPON)) {
+                istack.addEnchantment(Enchantments.LOOTING, 2);
+
+            }
+
+            //Ironwood
+            if (istack.isIn(IRONWOOD_WEAPON)) {
+                istack.addEnchantment(Enchantments.KNOCKBACK, 1);
+            }
+            stacks.add(istack);
         }
     }
-
 /*
 
-        public void fillItemCategory(CreativeModeTab tab, NonNullList<ItemStack> list) {
-        if (this.allowdedIn(tab)) {
-            ItemStack istack = new ItemStack(this);
-            istack.enchant(Enchantments.MOB_LOOTING, 2);
-            list.add(istack);
-        }
-
-    }
-
-
- */
-/*
-
-    //Ironwood creation
-        public void fillItemCategory(CreativeModeTab tab, NonNullList<ItemStack> list) {
-        if (this.allowdedIn(tab)) {
-            ItemStack istack = new ItemStack(this);
-            istack.enchant(Enchantments.KNOCKBACK, 1);
-            list.add(istack);
-        }
-
-    }
 
     //Fiery creation
         public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
@@ -93,24 +88,10 @@ public class KnavesSwordItem  extends SwordItem {
         return !EnchantmentHelper.getEnchantments(book).containsKey(Enchantments.FIRE_ASPECT) && super.isBookEnchantable(stack, book);
     }
 
-    //Steeleaf
-        public void fillItemCategory(CreativeModeTab tab, NonNullList<ItemStack> list) {
-        if (this.allowdedIn(tab)) {
-            ItemStack istack = new ItemStack(this);
-            istack.enchant(Enchantments.MOB_LOOTING, 2);
-            list.add(istack);
-        }
-
-    }
-
     //Undergarden creation
         protected static Rarity isForgotten(Tier tier) {
         return tier.equals(UGItemTiers.FORGOTTEN) ? UGItems.FORGOTTEN : Rarity.COMMON;
     }
-
-
-        //Blue skies creation should be it's own class due to mod_id and other issues.
-
 */
 
 }
