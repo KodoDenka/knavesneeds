@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "betternether:nether_reed_stem"
+      "tag": "c:wood_sticks"
     },
     "X": {
       "item": "undergarden:utherium_crystal"
