@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "betternether:nether_reed_stem"
+    },
+    "X": {
+      "item": "undergarden:froststeel_ingot"
+    }
+  },
+  "pattern": [
+    "  X",
+    " # ",
+    "X  "
+  ],
+  "result": {
+    "item": "knavesneeds:undergarden/froststeel/froststeel_twinblade"
+  }
+}

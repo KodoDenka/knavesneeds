@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
       "item": "twilightforest:ironwood_ingot"
@@ -15,7 +15,7 @@
   ],
   "result": {
     "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:knockback\"}]}",
-    "item": "knavesneeds:ironwood_rapier",
+    "item": "knavesneeds:twilight_forest/ironwood/ironwood_rapier",
     "type": "minecraft:item_nbt"
   }
 }

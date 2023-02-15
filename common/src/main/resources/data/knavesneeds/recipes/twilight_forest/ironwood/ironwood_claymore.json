@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
       "item": "twilightforest:ironwood_ingot"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    " XX",
-    "XXX",
-    "#X "
+    " YX",
+    "YXY",
+    "#Y "
   ],
   "result": {
     "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:knockback\"}]}",
-    "item": "knavesneeds:ironwood_claymore",
+    "item": "knavesneeds:twilight_forest/ironwood/ironwood_claymore",
     "type": "minecraft:item_nbt"
   }
 }

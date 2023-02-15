@@ -90,8 +90,4 @@ public class LivingEnitiyMixin {
 
         return amount;
     }
-
-
-
-    //Blue skies weapons are calculated by their mod_id, causes issues with better combat duel wielding, consider mixing to fix issue.
 }

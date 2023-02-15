@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "betternether:nether_reed_stem"
+    },
+    "X": {
+      "item": "undergarden:cloggrum_ingot"
+    }
+  },
+  "pattern": [
+    "  X",
+    " # ",
+    "#  "
+  ],
+  "result": {
+    "item": "knavesneeds:undergarden/cloggrum/cloggrum_spear"
+  }
+}

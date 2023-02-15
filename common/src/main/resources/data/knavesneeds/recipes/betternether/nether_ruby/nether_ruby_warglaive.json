@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "betternether:nether_reed_stem"
+    },
+    "X": {
+      "item": "betternether:nether_ruby"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    " Y ",
+    "X#X",
+    "   "
+  ],
+  "result": {
+    "item": "knavesneeds:betternether/nether_ruby/nether_ruby_warglaive"
+  }
+}

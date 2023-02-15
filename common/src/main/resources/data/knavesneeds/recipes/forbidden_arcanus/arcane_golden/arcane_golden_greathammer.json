@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "betternether:nether_reed_stem"
     },
     "X": {
       "item": "forbidden_arcanus:arcane_gold_ingot"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
     "XXX",
-    "XXX",
+    "YYY",
     " # "
   ],
   "result": {
-    "item": "knavesneeds:arcane_golden_greathammer"
+    "item": "knavesneeds:forbidden_arcanus/arcane_golden/arcane_golden_greathammer"
   }
 }

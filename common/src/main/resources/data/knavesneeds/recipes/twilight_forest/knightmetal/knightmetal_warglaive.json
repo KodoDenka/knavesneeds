@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "betternether:nether_reed_stem"
     },
     "X": {
-      "item": "twilightforest:knightmetal_ingot"
+      "item": "twilight_forest:knightmetal_ingot"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    "X X",
+    " Y ",
     "X#X",
     "   "
   ],
   "result": {
-    "item": "knavesneeds:knightmetal_warglaive"
+    "item": "knavesneeds:twilight_forest/knightmetal/knightmetal_warglaive"
   }
 }

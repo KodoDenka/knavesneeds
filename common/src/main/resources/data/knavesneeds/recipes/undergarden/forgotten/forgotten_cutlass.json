@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "betternether:nether_reed_stem"
+    },
+    "X": {
+      "item": "undergarden:forgotten_ingot"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    " Y",
+    "XX",
+    "# "
+  ],
+  "result": {
+    "item": "knavesneeds:undergarden/forgotten/forgotten_cutlass"
+  }
+}
