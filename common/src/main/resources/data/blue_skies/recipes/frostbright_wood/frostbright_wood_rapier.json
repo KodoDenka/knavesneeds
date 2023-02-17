@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:frostbright_wood"
+      "item": "blue_skies:frostbright_plank"
     }
   },
   "pattern": [
@@ -14,6 +14,6 @@
     "#  "
   ],
   "result": {
-    "item": "blue_skies:frostbright_wood_rapier"
+    "item": "knavesneeds:blue_skies/frostbright_wood/frostbright_wood_rapier"
   }
 }

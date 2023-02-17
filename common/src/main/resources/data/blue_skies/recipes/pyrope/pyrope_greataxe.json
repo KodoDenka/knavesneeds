@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:pyrope"
+      "item": "blue_skies:pyrope_gem"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
     "XXX",
-    "X#X",
+    "Y#Y",
     " # "
   ],
   "result": {
-    "item": "blue_skies:pyrope_greataxe"
+    "item": "knavesneeds:blue_skies/pyrope/pyrope_greataxe"
   }
 }

@@ -13,6 +13,9 @@ repositories {
         name "KosmX's maven"
         url 'https://maven.kosmx.dev/'
     }
+    maven {
+        url "https://cursemaven.com"
+    }
 }
 
 dependencies {
@@ -28,6 +31,8 @@ dependencies {
 
     modImplementation "maven.modrinth:better-combat:${rootProject.better_combat_version}-fabric"
     //modImplementation ("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
+
+    modImplementation "curse.maven:simply-swords-659887:4396689"
 }
 
 publishing {

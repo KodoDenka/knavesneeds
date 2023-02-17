@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:frostbright_wood"
+      "item": "blue_skies:frostbright_plank"
+    },
+    "Y": {
+      "item": "c:wood_sticks"
     }
   },
   "pattern": [
-    " X",
+    " Y",
     "XX",
     "# "
   ],
   "result": {
-    "item": "blue_skies:frostbright_wood_cutlass"
+    "item": "knavesneeds:blue_skies/frostbright_wood/frostbright_wood_cutlass"
   }
 }

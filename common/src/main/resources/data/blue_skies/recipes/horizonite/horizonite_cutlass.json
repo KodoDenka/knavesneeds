@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:horizonite"
+      "item": "blue_skies:horizonite_ingot"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    " X",
+    " Y",
     "XX",
     "# "
   ],
   "result": {
-    "item": "blue_skies:horizonite_cutlass"
+    "item": "knavesneeds:blue_skies/horizonite/horizonite_cutlass"
   }
 }

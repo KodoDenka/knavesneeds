@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:diopside"
+      "item": "blue_skies:diopside_gem"
     }
   },
   "pattern": [
@@ -14,6 +14,6 @@
     "#  "
   ],
   "result": {
-    "item": "blue_skies:diopside_glaive"
+    "item": "knavesneeds:blue_skies/diopside/diopside_glaive"
   }
 }

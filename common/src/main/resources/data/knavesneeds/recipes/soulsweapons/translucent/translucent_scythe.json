@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "soulsweapons:soul_ingot"
+      "item": "soulsweapons:soul_ingot"
     },
     "X": {
       "item": "soulsweapons:lost_soul"

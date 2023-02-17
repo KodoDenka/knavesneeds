@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:diopside"
+      "item": "blue_skies:diopside_gem"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    "XXX",
+    "YXY",
     "X X",
-    "X#X"
+    "Y#Y"
   ],
   "result": {
-    "item": "blue_skies:diopside_chakram"
+    "item": "knavesneeds:blue_skies/diopside/diopside_chakram"
   }
 }

@@ -8,19 +8,37 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+import net.sweenus.simplyswords.SimplySwords;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static net.knavesneeds.KnavesCommon.*;
 
 public class KnavesSwordItem  extends SwordItem {
-    public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
-        super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().group(KnavesCommon.KNAVES_TAB));
+    String[] repairIngredient;
+    public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, String... repairIngredient) {
+        super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().group(SimplySwords.SIMPLYSWORDS));
 
+        this.repairIngredient = repairIngredient;
     }
+
+    public boolean canRepair(ItemStack stack, ItemStack ingredient) {
+        List<Item> potentialIngredients = new ArrayList<>(List.of());
+        Arrays.stream(repairIngredient).toList().forEach(repIngredient ->
+                potentialIngredients.add(
+                        Registry.ITEM.get(new Identifier(repIngredient))));
+
+
+        return potentialIngredients.contains(ingredient.getItem());
+    }
+
 
 /*
     @Override

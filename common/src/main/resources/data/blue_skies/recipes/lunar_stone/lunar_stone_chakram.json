@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:lunar_stone"
+      "item": "blue_skies:lunar_cobblestone"
+    },
+    "Y": {
+      "item": "c:wood_sticks"
     }
   },
   "pattern": [
-    "XXX",
+    "YXY",
     "X X",
-    "X#X"
+    "Y#Y"
   ],
   "result": {
-    "item": "blue_skies:lunar_stone_chakram"
+    "item": "knavesneeds:blue_skies/lunar_stone/lunar_stone_chakram"
   }
 }

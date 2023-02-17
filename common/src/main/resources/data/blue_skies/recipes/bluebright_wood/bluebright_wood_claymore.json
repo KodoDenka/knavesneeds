@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:bluebright_wood"
+      "item": "blue_skies:bluebright_planks"
+    },
+    "Y": {
+      "item": "c:wood_sticks"
     }
   },
   "pattern": [
-    " XX",
-    "XXX",
-    "#X "
+    " YX",
+    "YXY",
+    "#Y "
   ],
   "result": {
-    "item": "blue_skies:bluebright_wood_claymore"
+    "item": "knavesneeds:blue_skies/bluebright_wood/bluebright_wood_claymore"
   }
 }

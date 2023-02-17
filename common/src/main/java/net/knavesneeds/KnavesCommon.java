@@ -30,10 +30,6 @@ public class KnavesCommon {
     //Calling for configuration
     public static KnavesConfig config;
 
-    // Registering a new creative tab
-    public static final ItemGroup KNAVES_TAB = CreativeTabRegistry.create(new Identifier(MOD_ID, "knaves_tab"), () ->
-            new ItemStack(Items.DIAMOND_SWORD));
-
     //Undergarden Tags
     public static final TagKey<Item> FORGOTTEN_WEAPON = TagKey.of(Registry.ITEM_KEY, new Identifier("knavesneeds", "forgotten_weapons"));
     public static final TagKey<Item> FROSTSTEEL_WEAPON = TagKey.of(Registry.ITEM_KEY,new Identifier("knavesneeds", "froststeel_weapons"));

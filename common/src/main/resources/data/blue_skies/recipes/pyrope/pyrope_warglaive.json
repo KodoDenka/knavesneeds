@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:pyrope"
+      "item": "blue_skies:pyrope_gem"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    "X X",
+    " Y ",
     "X#X",
     "   "
   ],
   "result": {
-    "item": "blue_skies:pyrope_warglaive"
+    "item": "knavesneeds:blue_skies/pyrope/pyrope_warglaive"
   }
 }

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
       "item": "blue_skies:aquite"
@@ -14,6 +14,6 @@
     "#  "
   ],
   "result": {
-    "item": "blue_skies:aquite_rapier"
+    "item": "knavesneeds:blue_skies/aquite/aquite_rapier"
   }
 }

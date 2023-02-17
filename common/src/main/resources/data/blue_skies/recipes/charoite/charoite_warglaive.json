@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "blue_skies:charroite"
+      "item": "blue_skies:charoite"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    "X X",
+    " Y ",
     "X#X",
     "   "
   ],
   "result": {
-    "item": "blue_skies:charroite_warglaive"
+    "item": "knavesneeds:blue_skies/charoite/charoite_warglaive"
   }
 }

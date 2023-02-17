@@ -1,17 +1,19 @@
 package net.knavesneeds.registry;
 
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.util.Identifier;
 
 public enum KnavesTeirRegistry implements ToolMaterial {
 
 
     //Twilight Forest Tiers
-    STEELEAF(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    IRONWOOD(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    STEELEAF(131,8.0f,6.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    IRONWOOD(512,6.5f,5.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     FIERY(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    KNIGHTMETAL(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    KNIGHTMETAL(512,8.0f,6.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
 
 
     //Undergarden Tiers
@@ -28,16 +30,16 @@ public enum KnavesTeirRegistry implements ToolMaterial {
     CHAROITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     HORIZONITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
 
-    TURQUOISE_STONE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    LUNAR_STONE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    TURQUOISE_STONE(131,4.0F,1.0F,1,8,Ingredient.ofItems(Items.DIAMOND)),
+    LUNAR_STONE(131,4.0F,1.0F,1,8,Ingredient.ofItems(Items.DIAMOND)),
 
-    BLUEBRIGHT_WOOD(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    LUNAR_WOOD(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    STARLIT_WOOD(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    DUSK_WOOD(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    FROSTBRIGHT_WOOD(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    MAPLE_WOOD(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    CHERRY_WOOD(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    BLUEBRIGHT_WOOD(59,2.0F,0.0F,0,15,Ingredient.ofItems(Items.DIAMOND)),
+    LUNAR_WOOD(59,2.0F,0.0F,0,15,Ingredient.ofItems(Items.DIAMOND)),
+    STARLIT_WOOD(59,2.0F,0.0F,0,15,Ingredient.ofItems(Items.DIAMOND)),
+    DUSK_WOOD(59,2.0F,0.0F,0,15,Ingredient.ofItems(Items.DIAMOND)),
+    FROSTBRIGHT_WOOD(59,2.0F,0.0F,0,15,Ingredient.ofItems(Items.DIAMOND)),
+    MAPLE_WOOD(64,2.0F,0.0F,0,10,Ingredient.ofItems(Items.DIAMOND)),
+    CHERRY_WOOD(64,2.0F,0.0F,0,10,Ingredient.ofItems(Items.DIAMOND)),
 
 
     //Forbidden Arcanus Tiers
@@ -61,7 +63,7 @@ public enum KnavesTeirRegistry implements ToolMaterial {
     ENDRONIUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
 
     //SoulsLikeWeapons
-    TRANSLUCENT(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND));
+    TRANSLUCENT(300,5.0f,2.0f,2,8,Ingredient.ofItems(Items.DIAMOND));
 
 
 
