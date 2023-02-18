@@ -11,9 +11,9 @@ import org.checkerframework.checker.units.qual.C;
 public class KnavesConfig implements ConfigData {
 
     @Comment("Forbidden & Arcanus")
-    public static int ARCANE_GOLDEN_MOD = 0;
+    public static int DEORUM_MOD = 0;
     public static int DRACO_ARCANUS_MOD = 0;
-    public static int REINFORCED_ARCANE_GOLDEN_MOD = 0;
+    public static int REINFORCED_DEORUM_MOD = 0;
 
     @Comment("Blue Skies")
     public static int AQUITE_MOD = 0;

@@ -37,9 +37,9 @@ public class KnavesItemsRegistry {
 
     //Mod Tier damage modifier
     //Forbidden Arcanus
-    public static final int ARCANE_GOLDEN_MOD = KnavesConfig.ARCANE_GOLDEN_MOD;
+    public static final int DEORUM_MOD = KnavesConfig.DEORUM_MOD;
     public static final int DRACO_ARCANUS_MOD = KnavesConfig.DRACO_ARCANUS_MOD;
-    public static final int REINFORCED_ARCANE_GOLDEN_MOD = KnavesConfig.REINFORCED_ARCANE_GOLDEN_MOD;
+    public static final int REINFORCED_DEORUM_MOD = KnavesConfig.REINFORCED_DEORUM_MOD;
 
     //Blue Skies Ores
     public static final int AQUITE_MOD = KnavesConfig.AQUITE_MOD;

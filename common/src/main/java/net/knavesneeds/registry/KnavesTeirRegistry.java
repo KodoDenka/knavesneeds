@@ -43,8 +43,8 @@ public enum KnavesTeirRegistry implements ToolMaterial {
 
 
     //Forbidden Arcanus Tiers
-    ARCANE_GOLDEN(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-    REINFORCED_ARCANE_GOLDEN(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    DEORUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
+    REINFORCED_DEORUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     DRACO_ARCANUS(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
 
 
