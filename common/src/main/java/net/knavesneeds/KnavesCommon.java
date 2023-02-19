@@ -71,6 +71,7 @@ public class KnavesCommon {
 
         if (Platform.getOptionalMod("betterend").isPresent()) {
             BetterEndCompat.BETTER_END_ITEMS.register();
+            BetterEndRecipeCompat.register();
         }
 
         if (Platform.getOptionalMod("betternether").isPresent()) {

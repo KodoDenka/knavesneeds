@@ -16,34 +16,34 @@ public class BetterEndCompat {
     public static final DeferredRegister<Item> BETTER_END_ITEMS = DeferredRegister.create(MOD_ID, Registry.ITEM_KEY);
 
 
-    //aeternium parts
-    public static final RegistrySupplier<Item> AETERNIUM_LONGSWORD_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_longsword_part", () ->
+    //aeternium heads
+    public static final RegistrySupplier<Item> AETERNIUM_LONGSWORD_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_longsword_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_TWINBLADE_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_twinblade_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_TWINBLADE_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_twinblade_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_RAPIER_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_rapier_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_RAPIER_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_rapier_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_KATANA_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_katana_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_KATANA_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_katana_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_SAI_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_sai_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_SAI_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_sai_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_SPEAR_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_spear_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_SPEAR_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_spear_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_GLAIVE_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_glaive_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_GLAIVE_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_glaive_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_WARGLAIVE_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_warglaive_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_WARGLAIVE_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_warglaive_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_CUTLASS_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_cutlass_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_CUTLASS_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_cutlass_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_CLAYMORE_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_claymore_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_CLAYMORE_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_claymore_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_GREATHAMMER_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_greathammer_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_GREATHAMMER_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_greathammer_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_GREATAXE_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_greataxe_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_GREATAXE_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_greataxe_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_CHAKRAM_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_chakram_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_CHAKRAM_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_chakram_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> AETERNIUM_SCYTHE_PART = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_scythe_part", () ->
+    public static final RegistrySupplier<Item> AETERNIUM_SCYTHE_HEAD = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_scythe_head", () ->
             new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
 
     //aeternium
@@ -76,6 +76,36 @@ public class BetterEndCompat {
     public static final RegistrySupplier<Item> AETERNIUM_SCYTHE = BETTER_END_ITEMS.register("betterend/aeternium/aeternium_scythe", () ->
             new KnavesSwordItem(KnavesTeirRegistry.AETERNIUM, AETERNIUM_MOD + SCYTHE_DAMAGE_MOD, SCYTHE_ATTACKSPEED));
 
+    //terminite heads
+    public static final RegistrySupplier<Item> TERMINITE_LONGSWORD_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_longsword_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_TWINBLADE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_twinblade_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_RAPIER_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_rapier_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_KATANA_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_katana_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_SAI_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_sai_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_SPEAR_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_spear_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_GLAIVE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_glaive_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_WARGLAIVE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_warglaive_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_CUTLASS_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_cutlass_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_CLAYMORE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_claymore_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_GREATHAMMER_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_greathammer_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_GREATAXE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_greataxe_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_CHAKRAM_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_chakram_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> TERMINITE_SCYTHE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_scythe_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+
     //terminite
     public static final RegistrySupplier<Item> TERMINITE_LONGSWORD = BETTER_END_ITEMS.register("betterend/terminite/terminite_longsword", () ->
             new KnavesSwordItem(KnavesTeirRegistry.TERMINITE, TERMINITE_MOD + LONGSWORD_DAMAGE_MOD, LONGSWORD_ATTACKSPEED));
@@ -105,6 +135,36 @@ public class BetterEndCompat {
             new KnavesSwordItem(KnavesTeirRegistry.TERMINITE, TERMINITE_MOD + CHAKRAM_DAMAGE_MOD, CHAKRAM_ATTACKSPEED));
     public static final RegistrySupplier<Item> TERMINITE_SCYTHE = BETTER_END_ITEMS.register("betterend/terminite/terminite_scythe", () ->
             new KnavesSwordItem(KnavesTeirRegistry.TERMINITE, TERMINITE_MOD + SCYTHE_DAMAGE_MOD, SCYTHE_ATTACKSPEED));
+
+    //thallasium heads
+    public static final RegistrySupplier<Item> THALLASIUM_LONGSWORD_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_longsword_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_TWINBLADE_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_twinblade_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_RAPIER_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_rapier_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_KATANA_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_katana_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_SAI_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_sai_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_SPEAR_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_spear_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_GLAIVE_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_glaive_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_WARGLAIVE_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_warglaive_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_CUTLASS_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_cutlass_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_CLAYMORE_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_claymore_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_GREATHAMMER_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_greathammer_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_GREATAXE_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_greataxe_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_CHAKRAM_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_chakram_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    public static final RegistrySupplier<Item> THALLASIUM_SCYTHE_HEAD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_scythe_head", () ->
+            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
 
     //thallasium
     public static final RegistrySupplier<Item> THALLASIUM_LONGSWORD = BETTER_END_ITEMS.register("betterend/thallasium/thallasium_longsword", () ->

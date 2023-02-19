@@ -16,6 +16,8 @@ repositories {
     maven {
         url "https://cursemaven.com"
     }
+
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -33,6 +35,8 @@ dependencies {
     //modImplementation ("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
 
     modImplementation "curse.maven:simply-swords-659887:4396689"
+
+    modImplementation "com.github.quiqueck:BCLib:${rootProject.bclib_version}"
 }
 
 publishing {
