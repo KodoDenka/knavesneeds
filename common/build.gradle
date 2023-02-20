@@ -37,6 +37,8 @@ dependencies {
     modImplementation "curse.maven:simply-swords-659887:4396689"
 
     modImplementation "com.github.quiqueck:BCLib:${rootProject.bclib_version}"
+
+    modImplementation "curse.maven:betterend-413596:4393109"
 }
 
 publishing {
