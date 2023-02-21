@@ -1,15 +1,11 @@
 package net.knavesneeds.customitems;
 
-import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.registry.KnavesTeirRegistry;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
@@ -52,7 +48,7 @@ public class KnavesSwordItem  extends SwordItem {
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
 
-        //Undergarden Tooltips
+        // Undergarden Tooltips
         if (itemStack.isIn(FROSTSTEEL_WEAPON)) {
             tooltip.add(Text.translatable("tooltip.froststeel_sword").formatted((Formatting.AQUA)));
         }
@@ -63,7 +59,7 @@ public class KnavesSwordItem  extends SwordItem {
             tooltip.add(Text.translatable("tooltip.utheric_sword").formatted(Formatting.RED));
         }
 
-        //Twilight Forest Tooltips
+        // Twilight Forest Tooltips
         if (itemStack.isIn(FIERY_WEAPON)) {
             tooltip.add(Text.translatable("item.twilightforest.fiery_sword.tooltip").formatted(Formatting.GRAY));
         }
@@ -73,7 +69,7 @@ public class KnavesSwordItem  extends SwordItem {
         }
     }
 
-    //Steeleaf
+    // Steeleaf
 
     @Override
     public void appendStacks(ItemGroup group, DefaultedList<ItemStack> stacks) {

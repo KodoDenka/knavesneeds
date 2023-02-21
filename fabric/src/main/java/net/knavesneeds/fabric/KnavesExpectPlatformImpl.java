@@ -1,7 +1,7 @@
 package net.knavesneeds.fabric;
 
-import net.knavesneeds.KnavesExpectPlatform;
 import net.fabricmc.loader.api.FabricLoader;
+import net.knavesneeds.KnavesExpectPlatform;
 
 import java.nio.file.Path;
 

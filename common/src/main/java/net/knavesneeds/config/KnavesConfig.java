@@ -3,9 +3,7 @@ package net.knavesneeds.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
-import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
-import org.checkerframework.checker.units.qual.C;
 
 @Config(name = "server")
 public class KnavesConfig implements ConfigData {
