@@ -6,18 +6,14 @@ import com.google.gson.JsonParser;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
-
-import java.io.File;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 
 //Stolen code from Simply Swords
-public class KanvesSimplyConfig {
+public class KnavesSimplyConfig {
 
     private static final HashMap<String, Boolean> BOOLEAN_OPTIONS = new LinkedHashMap<>();
     private static final HashMap<String, Float> GENERAL_OPTIONS = new LinkedHashMap<>();
@@ -75,22 +71,22 @@ public class KanvesSimplyConfig {
     public static void loadConfig() {
         //System.out.println("Loading common Simply Swords config");
         JsonObject json;
-        json = KanvesSimplyConfig.getJsonObject(KanvesSimplyConfig.readFile(new File("config/simplyswords/booleans.json5")));
+        json = KnavesSimplyConfig.getJsonObject(KnavesSimplyConfig.readFile(new File("config/simplyswords/booleans.json5")));
         for (Map.Entry<String, JsonElement> entry : json.entrySet()) {
             BOOLEAN_OPTIONS.put(entry.getKey(), entry.getValue().getAsBoolean());
         }
 
-        json = KanvesSimplyConfig.getJsonObject(KanvesSimplyConfig.readFile(new File("config/simplyswords/general_config.json5")));
+        json = KnavesSimplyConfig.getJsonObject(KnavesSimplyConfig.readFile(new File("config/simplyswords/general_config.json5")));
         for (Map.Entry<String, JsonElement> entry : json.entrySet()) {
             GENERAL_OPTIONS.put(entry.getKey(), entry.getValue().getAsFloat());
         }
 
-        json = KanvesSimplyConfig.getJsonObject(KanvesSimplyConfig.readFile(new File("config/simplyswords/effects_config.json5")));
+        json = KnavesSimplyConfig.getJsonObject(KnavesSimplyConfig.readFile(new File("config/simplyswords/effects_config.json5")));
         for (Map.Entry<String, JsonElement> entry : json.entrySet()) {
             FLOAT_OPTIONS.put(entry.getKey(), entry.getValue().getAsFloat());
         }
 
-        json = KanvesSimplyConfig.getJsonObject(KanvesSimplyConfig.readFile(new File("config/simplyswords/weapon_attributes.json5")));
+        json = KnavesSimplyConfig.getJsonObject(KnavesSimplyConfig.readFile(new File("config/simplyswords/weapon_attributes.json5")));
         for (Map.Entry<String, JsonElement> entry : json.entrySet()) {
             WEAPON_OPTIONS.put(entry.getKey(), entry.getValue().getAsFloat());
         }

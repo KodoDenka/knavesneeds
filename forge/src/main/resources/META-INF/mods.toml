@@ -35,6 +35,13 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.knavesneeds]]
+modId = "simplyswords"
+mandatory = true
+versionRange = "[1.40.0-1.19.2,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.knavesneeds]]
 modId = "twilightforest"
 mandatory = false
 versionRange = "[4.2.1493,)"

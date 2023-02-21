@@ -1,7 +1,7 @@
 package net.knavesneeds.fabric;
 
-import net.knavesneeds.KnavesCommon;
 import net.fabricmc.api.ModInitializer;
+import net.knavesneeds.KnavesCommon;
 
 public class KnavesFabric implements ModInitializer {
     @Override

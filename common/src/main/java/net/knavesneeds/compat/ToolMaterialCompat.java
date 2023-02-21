@@ -1,13 +1,10 @@
-package net.knavesneeds.registry;
+package net.knavesneeds.compat;
 
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.util.Identifier;
 
-public enum KnavesTeirRegistry implements ToolMaterial {
-
+public enum ToolMaterialCompat implements ToolMaterial {
 
     //Twilight Forest Tiers
     STEELEAF(131,8.0f,6.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
@@ -41,18 +38,15 @@ public enum KnavesTeirRegistry implements ToolMaterial {
     MAPLE_WOOD(64,2.0F,0.0F,0,10,Ingredient.ofItems(Items.DIAMOND)),
     CHERRY_WOOD(64,2.0F,0.0F,0,10,Ingredient.ofItems(Items.DIAMOND)),
 
-
     //Forbidden Arcanus Tiers
     DEORUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     REINFORCED_DEORUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     DRACO_ARCANUS(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
 
-
     //Better End Tiers
     AETERNIUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     TERMINITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
     THALLASIUM(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
-
 
     //Better Nether Tiers
     CINCINNASITE(1024,9.0f,7.0f,5,8,Ingredient.ofItems(Items.DIAMOND)),
@@ -65,10 +59,6 @@ public enum KnavesTeirRegistry implements ToolMaterial {
     //SoulsLikeWeapons
     TRANSLUCENT(300,5.0f,2.0f,2,8,Ingredient.ofItems(Items.DIAMOND));
 
-
-
-
-
     //This declares which type of data is allowed to be used in the enum.
     private final int tierDurability;
     private final float tierSpeed;
@@ -77,9 +67,9 @@ public enum KnavesTeirRegistry implements ToolMaterial {
     private final int tierEnchant;
     private final Ingredient tierIngredient;
 
-
-    //This is sloppy, but this lines everything up.
-    KnavesTeirRegistry(int tierDurability, float tierSpeed, float tierDamage, int tierMining, int tierEnchant, Ingredient tierIngredient) {
+    // This is sloppy, but this lines everything up.
+    // From Chronos: This isn't sloppy at all
+    ToolMaterialCompat(int tierDurability, float tierSpeed, float tierDamage, int tierMining, int tierEnchant, Ingredient tierIngredient) {
         this.tierDurability = tierDurability;
         this.tierSpeed = tierSpeed;
         this.tierDamage = tierDamage;
