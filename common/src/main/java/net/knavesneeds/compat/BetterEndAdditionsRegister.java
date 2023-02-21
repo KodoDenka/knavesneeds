@@ -47,35 +47,21 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> AETERNIUM_CHAKRAM            = registerAeternium("chakram");
     public static final RegistrySupplier<Item> AETERNIUM_SCYTHE             = registerAeternium("scythe");
 
-    //terminite heads
-    public static final RegistrySupplier<Item> TERMINITE_LONGSWORD_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_longsword_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_TWINBLADE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_twinblade_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_RAPIER_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_rapier_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_KATANA_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_katana_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_SAI_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_sai_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_SPEAR_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_spear_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_GLAIVE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_glaive_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_WARGLAIVE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_warglaive_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_CUTLASS_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_cutlass_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_CLAYMORE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_claymore_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_GREATHAMMER_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_greathammer_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_GREATAXE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_greataxe_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_CHAKRAM_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_chakram_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
-    public static final RegistrySupplier<Item> TERMINITE_SCYTHE_HEAD = BETTER_END_ITEMS.register("betterend/terminite/terminite_scythe_head", () ->
-            new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+    // Terminite Heads
+    public static final RegistrySupplier<Item> TERMINITE_LONGSWORD_HEAD     = registerHead("longsword", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_TWINBLADE_HEAD     = registerHead("twinblade", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_RAPIER_HEAD        = registerHead("rapier", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_KATANA_HEAD        = registerHead("katana", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_SAI_HEAD           = registerHead("sai", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_SPEAR_HEAD         = registerHead("spear", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_GLAIVE_HEAD        = registerHead("glaive", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_WARGLAIVE_HEAD     = registerHead("warglaive", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_CUTLASS_HEAD       = registerHead("cutlass", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_CLAYMORE_HEAD      = registerHead("claymore", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_GREATHAMMER_HEAD   = registerHead("greathammer", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_GREATAXE_HEAD      = registerHead("greataxe", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_CHAKRAM_HEAD       = registerHead("chakram", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_SCYTHE_HEAD        = registerHead("scythe", ToolMaterialCompat.TERMINITE);
 
     // Terminite
     public static final RegistrySupplier<Item> TERMINITE_LONGSWORD          = registerTerminite("longsword");

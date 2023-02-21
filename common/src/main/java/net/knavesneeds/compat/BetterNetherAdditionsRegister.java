@@ -8,8 +8,7 @@ import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
 
-import static net.knavesneeds.KnavesCommon.MOD_ID;
-import static net.knavesneeds.registry.KnavesItemsRegistry.*;
+import java.util.Locale;
 
 public class BetterNetherAdditionsRegister {
 

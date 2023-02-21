@@ -31,6 +31,24 @@ public class LivingEntityMixin {
                     attackingStack = playerEntity.getCurrentAttack().isOffHand() ? ((PlayerEntity) playerEntity).getOffHandStack() : ((PlayerEntity) playerEntity).getMainHandStack();
                 }
             }
+            if (attackingStack.getItem() instanceof KnavesSwordItem swordItem) {
+                // Forgotten weapon damage against all Undergarden mobs
+                if (swordItem.getMaterial().equals(ToolMaterialCompat.FORGOTTEN)) {
+                    if (Registry.ENTITY_TYPE.getId(target.getType()).getNamespace().equals("undergarden")) {
+                        return amount * 1.5f;
+                    }
+                }
+                // Froststeel slowness application
+                else if (swordItem.getMaterial().equals(ToolMaterialCompat.FROSTSTEEL)) {
+                    target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 600, 2));
+                }
+                // Utherium weapon damage bonus against Rotspawn
+                else if (swordItem.getMaterial().equals(ToolMaterialCompat.UTHERIUM)) {
+                    if (Registry.ENTITY_TYPE.getId(target.getType()).equals(new Identifier("undergarden:rotspawn"))) {
+                        return amount * 1.5f;
+                    }
+                }
+            }
         }
 
         return amount;
