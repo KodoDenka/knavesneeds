@@ -27,6 +27,7 @@
     "fabric": "*",
     "minecraft": ">=1.19.2",
     "architectury": ">=6.2.43",
-    "simplyswords": ">=1.40.0-1.19.2"
+    "simplyswords": ">=1.40.0-1.19.2",
+    "bclib": "2.1.x"
   }
 }

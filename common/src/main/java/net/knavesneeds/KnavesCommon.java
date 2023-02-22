@@ -4,7 +4,7 @@ import dev.architectury.platform.Platform;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
-import net.knavesneeds.compat.*;
+import net.knavesneeds.compat.registries.*;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.config.KnavesConfigWrapper;
 import net.knavesneeds.config.KnavesSimplyConfig;

@@ -59,7 +59,7 @@ public enum ToolMaterialCompat implements ToolMaterial {
     //SoulsLikeWeapons
     TRANSLUCENT(300,5.0f,2.0f,2,8,Ingredient.ofItems(Items.DIAMOND));
 
-    //This declares which type of data is allowed to be used in the enum.
+    //This declares which type of registries is allowed to be used in the enum.
     private final int tierDurability;
     private final float tierSpeed;
     private final float tierDamage;

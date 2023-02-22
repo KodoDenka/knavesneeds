@@ -1,8 +1,9 @@
-package net.knavesneeds.compat;
+package net.knavesneeds.compat.registries;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
+import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.item.Item;
@@ -12,7 +13,7 @@ import java.util.Locale;
 
 public class BlueSkiesAdditionsRegister {
 
-    public static final DeferredRegister<Item> BLUE_SKIES_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, Registry.ITEM_KEY);
+    public static final DeferredRegister<Item> BLUE_SKIES_ITEMS = DeferredRegister.create("blue_skies", Registry.ITEM_KEY);
 
     // Aquite
     public static final RegistrySupplier<Item> AQUITE_LONGSWORD                 = registerAquite("longsword");
@@ -237,6 +238,7 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> TURQUOISE_STONE_GREATAXE         = registerTurquoiseStone("greataxe");
     public static final RegistrySupplier<Item> TURQUOISE_STONE_CHAKRAM          = registerTurquoiseStone("chakram");
     public static final RegistrySupplier<Item> TURQUOISE_STONE_SCYTHE           = registerTurquoiseStone("scythe");
+    public static final RegistrySupplier<Item> TURQUOISE_STONE_HALBERD          = registerTurquoiseStone("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod, String... repairIngredient) {
         return BLUE_SKIES_ITEMS.register(tier.toString().toLowerCase(Locale.ROOT) + "/" +

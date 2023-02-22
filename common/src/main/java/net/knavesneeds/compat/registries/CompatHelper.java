@@ -1,4 +1,4 @@
-package net.knavesneeds.compat;
+package net.knavesneeds.compat.registries;
 
 import net.knavesneeds.config.KnavesSimplyConfig;
 
@@ -21,7 +21,7 @@ public class CompatHelper {
 
     static {
         for (String string : List.of("longsword", "twinblade", "rapier", "katana", "sai", "spear", "glaive",
-                "warglaive", "cutlass", "claymore", "greathammer", "greataxe", "chakram", "scythe")) {
+                "warglaive", "cutlass", "claymore", "greathammer", "greataxe", "chakram", "scythe", "halberd")) {
             DAMAGE_MODS.put(string, (int) KnavesSimplyConfig.getWeaponAttributes(string + "_positive_damage_modifier") +
                     (int) KnavesSimplyConfig.getWeaponAttributes(string + "_negative_damage_modifier"));
             ATTACK_SPEED_MODS.put(string, KnavesSimplyConfig.getWeaponAttributes(string + "_attackspeed"));
