@@ -64,6 +64,8 @@ public class KnavesSwordItem  extends SwordItem {
     }
 
     // Steeleaf / Ironwood inventory enchant
+
+    // I think this is most likely the code that is breaking the inventory tabs.
     @Override
     public void appendStacks(ItemGroup group, DefaultedList<ItemStack> stacks) {
             ItemStack istack = new ItemStack(this);

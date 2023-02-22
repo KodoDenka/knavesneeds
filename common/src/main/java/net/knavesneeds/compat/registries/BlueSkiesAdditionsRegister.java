@@ -238,7 +238,7 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> TURQUOISE_STONE_GREATAXE         = registerTurquoiseStone("greataxe");
     public static final RegistrySupplier<Item> TURQUOISE_STONE_CHAKRAM          = registerTurquoiseStone("chakram");
     public static final RegistrySupplier<Item> TURQUOISE_STONE_SCYTHE           = registerTurquoiseStone("scythe");
-    public static final RegistrySupplier<Item> TURQUOISE_STONE_HALBERD          = registerTurquoiseStone("halberd");
+    //public static final RegistrySupplier<Item> TURQUOISE_STONE_HALBERD          = registerTurquoiseStone("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod, String... repairIngredient) {
         return BLUE_SKIES_ITEMS.register(tier.toString().toLowerCase(Locale.ROOT) + "/" +

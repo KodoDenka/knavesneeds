@@ -1,5 +1,5 @@
 {
-  "parent": "knavesneeds:item/template_greathammer",
+  "parent": "knavesneeds:item/template_greathammer_head",
   "textures": {
     "texture": "knavesneeds:item/betterend/aeternium/aeternium_greathammer"
   }
