@@ -53,6 +53,7 @@ dependencies {
 
     modImplementation ("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
 
+    modApi("curse.maven:simply-swords-659887:4396683")
 
     // Junk mods basically.
     // modApi("teamtwilight:twilightforest:${rootProject.twilight_forest_version}:universal")
@@ -63,9 +64,8 @@ dependencies {
 
     // implementation ("curse.maven:crafttweaker-239197:4375708")
 
-    // modApi("curse.maven:the-twilight-forest-227639:4337394")
-    // modApi("curse.maven:simply-swords-659887:4396683")
-    // modApi("curse.maven:the-undergarden-379849:4057184")
+    modApi("curse.maven:the-twilight-forest-227639:4337394")
+    modApi("curse.maven:the-undergarden-379849:4057184")
     // modApi("curse.maven:plus-the-end-573382:4055155")
 }
 

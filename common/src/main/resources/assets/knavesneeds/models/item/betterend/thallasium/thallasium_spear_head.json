@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "knavesneeds:item/betterend/thallasium/thallasium_spear_head"
+  }
+}

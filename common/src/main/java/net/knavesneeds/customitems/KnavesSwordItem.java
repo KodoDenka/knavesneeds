@@ -1,6 +1,6 @@
 package net.knavesneeds.customitems;
 
-import io.github.fabricators_of_create.porting_lib.enchant.CustomEnchantingBehaviorItem;
+
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.Enchantment;
@@ -21,7 +21,7 @@ import java.util.List;
 
 import static net.knavesneeds.KnavesCommon.*;
 
-public class KnavesSwordItem  extends SwordItem implements CustomEnchantingBehaviorItem {
+public class KnavesSwordItem  extends SwordItem {
     String[] repairIngredient;
     public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, String... repairIngredient) {
         super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().group(SimplySwords.SIMPLYSWORDS));
@@ -79,28 +79,4 @@ public class KnavesSwordItem  extends SwordItem implements CustomEnchantingBehav
             }
             stacks.add(istack);
     }
-
-
-    //Fiery creation
-    @Override
-    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-        if (stack.getItem() instanceof KnavesSwordItem swordItem) {
-            if (swordItem.getMaterial().equals(ToolMaterialCompat.FIERY)) {
-                return enchantment != Enchantments.FIRE_ASPECT;
-            }
-        }
-        return CustomEnchantingBehaviorItem.super.canApplyAtEnchantingTable(stack, enchantment);
-    }
-
-
-    @Override
-    public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
-        if (stack.getItem() instanceof KnavesSwordItem swordItem) {
-            if (swordItem.getMaterial().equals(ToolMaterialCompat.FIERY)) {
-                return !book.getEnchantments().contains(Enchantments.FIRE_ASPECT) && CustomEnchantingBehaviorItem.super.isBookEnchantable(stack, book);
-            }
-        }
-        return CustomEnchantingBehaviorItem.super.isBookEnchantable(stack, book);
-    }
-
 }

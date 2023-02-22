@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "knavesneeds:betterend/terminite/terminite_scythe_head"
+  },
+  "addition": {
+    "item": "betterend:leather_wrapped_stick"
+  },
+  "result": {
+    "item": "knavesneeds:betterend/terminite/terminite_scythe"
+  }
+}

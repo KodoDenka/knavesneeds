@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "knavesneeds:betterend/thallasium/thallasium_katana_head"
+  },
+  "addition": {
+    "item": "betterend:leather_wrapped_stick"
+  },
+  "result": {
+    "item": "knavesneeds:betterend/thallasium/thallasium_katana"
+  }
+}

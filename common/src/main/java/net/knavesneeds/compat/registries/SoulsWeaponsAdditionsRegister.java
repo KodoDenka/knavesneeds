@@ -24,7 +24,6 @@ public class SoulsWeaponsAdditionsRegister {
     public static final RegistrySupplier<Item> TRANSLUCENT_SPEAR           = registerTranslucent("spear");
     public static final RegistrySupplier<Item> TRANSLUCENT_GLAIVE          = registerTranslucent("cutlass");
     public static final RegistrySupplier<Item> TRANSLUCENT_WARGLAIVE       = registerTranslucent("warglaive");
-    public static final RegistrySupplier<Item> TRANSLUCENT_CUTLASS         = registerTranslucent("cutlass");
     public static final RegistrySupplier<Item> TRANSLUCENT_CLAYMORE        = registerTranslucent("claymore");
     public static final RegistrySupplier<Item> TRANSLUCENT_GREATHAMMER     = registerTranslucent("greathammer");
     public static final RegistrySupplier<Item> TRANSLUCENT_GREATAXE        = registerTranslucent("greataxe");
@@ -40,6 +39,6 @@ public class SoulsWeaponsAdditionsRegister {
     }
 
     private static RegistrySupplier<Item> registerTranslucent(String id) {
-        return registerMaterial(id, ToolMaterialCompat.FIERY, KnavesConfig.FIERY_MOD, "soulsweapons:lost_soul");
+        return registerMaterial(id, ToolMaterialCompat.TRANSLUCENT, KnavesConfig.TRANSLUCENT_MOD, "soulsweapons:lost_soul");
     }
 }

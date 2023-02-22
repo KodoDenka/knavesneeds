@@ -32,7 +32,7 @@ dependencies {
         exclude(group: "net.fabricmc.fabric-api")
     }
 
-    modImplementation(include("io.github.fabricators_of_create.Porting-Lib:porting-lib:${rootProject.porting_lib}+${rootProject.minecraft_version}"))
+    //modImplementation(include("io.github.fabricators_of_create.Porting-Lib:porting-lib:${rootProject.porting_lib}+${rootProject.minecraft_version}"))
 
     modImplementation "maven.modrinth:better-combat:${rootProject.better_combat_version}-fabric"
     //modImplementation ("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")

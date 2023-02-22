@@ -24,7 +24,6 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> FIERY_SPEAR                  = registerFiery("spear");
     public static final RegistrySupplier<Item> FIERY_GLAIVE                 = registerFiery("cutlass");
     public static final RegistrySupplier<Item> FIERY_WARGLAIVE              = registerFiery("warglaive");
-    public static final RegistrySupplier<Item> FIERY_CUTLASS                = registerFiery("cutlass");
     public static final RegistrySupplier<Item> FIERY_CLAYMORE               = registerFiery("claymore");
     public static final RegistrySupplier<Item> FIERY_GREATHAMMER            = registerFiery("greathammer");
     public static final RegistrySupplier<Item> FIERY_GREATAXE               = registerFiery("greataxe");
@@ -40,7 +39,6 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> IRONWOOD_SPEAR               = registerIronwood("spear");
     public static final RegistrySupplier<Item> IRONWOOD_GLAIVE              = registerIronwood("cutlass");
     public static final RegistrySupplier<Item> IRONWOOD_WARGLAIVE           = registerIronwood("warglaive");
-    public static final RegistrySupplier<Item> IRONWOOD_CUTLASS             = registerIronwood("cutlass");
     public static final RegistrySupplier<Item> IRONWOOD_CLAYMORE            = registerIronwood("claymore");
     public static final RegistrySupplier<Item> IRONWOOD_GREATHAMMER         = registerIronwood("greathammer");
     public static final RegistrySupplier<Item> IRONWOOD_GREATAXE            = registerIronwood("greataxe");
@@ -56,7 +54,6 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> KNIGHTMETAL_SPEAR            = registerKnightmetal("spear");
     public static final RegistrySupplier<Item> KNIGHTMETAL_GLAIVE           = registerKnightmetal("cutlass");
     public static final RegistrySupplier<Item> KNIGHTMETAL_WARGLAIVE        = registerKnightmetal("warglaive");
-    public static final RegistrySupplier<Item> KNIGHTMETAL_CUTLASS          = registerKnightmetal("cutlass");
     public static final RegistrySupplier<Item> KNIGHTMETAL_CLAYMORE         = registerKnightmetal("claymore");
     public static final RegistrySupplier<Item> KNIGHTMETAL_GREATHAMMER      = registerKnightmetal("greathammer");
     public static final RegistrySupplier<Item> KNIGHTMETAL_GREATAXE         = registerKnightmetal("greataxe");
@@ -72,7 +69,6 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> STEELEAF_SPEAR               = registerSteeleaf("spear");
     public static final RegistrySupplier<Item> STEELEAF_GLAIVE              = registerSteeleaf("cutlass");
     public static final RegistrySupplier<Item> STEELEAF_WARGLAIVE           = registerSteeleaf("warglaive");
-    public static final RegistrySupplier<Item> STEELEAF_CUTLASS             = registerSteeleaf("cutlass");
     public static final RegistrySupplier<Item> STEELEAF_CLAYMORE            = registerSteeleaf("claymore");
     public static final RegistrySupplier<Item> STEELEAF_GREATHAMMER         = registerSteeleaf("greathammer");
     public static final RegistrySupplier<Item> STEELEAF_GREATAXE            = registerSteeleaf("greataxe");

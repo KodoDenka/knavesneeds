@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "knavesneeds:betterend/aeternium/aeternium_sai_head"
+  },
+  "addition": {
+    "item": "betterend:leather_wrapped_stick"
+  },
+  "result": {
+    "item": "knavesneeds:betterend/aeternium/aeternium_sai"
+  }
+}

@@ -1,5 +1,6 @@
 package net.knavesneeds.compat.data;
 
+import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.compat.registries.BetterEndAdditionsRegister;
 import net.minecraft.util.Identifier;
 import org.betterx.bclib.recipes.BCLRecipeBuilder;
@@ -13,7 +14,7 @@ import static net.knavesneeds.KnavesCommon.MOD_ID;
 public class BetterEndRecipesGenerator {
     public static void register() {
 
-        int anvilLevel = EndToolMaterial.AETERNIUM.getMiningLevel();
+        int anvilLevel = ToolMaterialCompat.AETERNIUM.getMiningLevel();
 
         //AETERNIUM TOOLS
         BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "aeternium_chakram_head"), BetterEndAdditionsRegister.AETERNIUM_CHAKRAM_HEAD.get())
