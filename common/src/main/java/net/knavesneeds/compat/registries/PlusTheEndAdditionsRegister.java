@@ -22,7 +22,7 @@ public class PlusTheEndAdditionsRegister {
     public static final RegistrySupplier<Item> ENDRONIUM_KATANA          = registerEndronium("katana");
     public static final RegistrySupplier<Item> ENDRONIUM_SAI             = registerEndronium("sai");
     public static final RegistrySupplier<Item> ENDRONIUM_SPEAR           = registerEndronium("spear");
-    public static final RegistrySupplier<Item> ENDRONIUM_GLAIVE          = registerEndronium("cutlass");
+    public static final RegistrySupplier<Item> ENDRONIUM_GLAIVE          = registerEndronium("glaive");
     public static final RegistrySupplier<Item> ENDRONIUM_WARGLAIVE       = registerEndronium("warglaive");
     public static final RegistrySupplier<Item> ENDRONIUM_CUTLASS         = registerEndronium("cutlass");
     public static final RegistrySupplier<Item> ENDRONIUM_CLAYMORE        = registerEndronium("claymore");

@@ -47,26 +47,30 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
-    modApi("me.shedaniel.cloth:cloth-config-forge:${project.cloth_config_version}")
+    // Required Dependencies
+        // Cloth Config
+        modApi("me.shedaniel.cloth:cloth-config-forge:${project.cloth_config_version}")
 
-    modApi("maven.modrinth:better-combat:${rootProject.better_combat_version}-forge")
+        // Better Combat & Player Animation Lib
+        modApi("maven.modrinth:better-combat:${rootProject.better_combat_version}-forge")
+        modApi("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
 
-    modImplementation ("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
+        // Simply Swords
+        modApi("curse.maven:simply-swords-659887:4406899")
 
-    modApi("curse.maven:simply-swords-659887:4396683")
+    // Optional Mods (Mostly for testing)
+        // Twilight Forest
+        // modImplementation("teamtwilight:twilightforest:${rootProject.twilight_forest_version_forge}:universal")
 
-    // Junk mods basically.
-    // modApi("teamtwilight:twilightforest:${rootProject.twilight_forest_version}:universal")
+        // Blue Skies and Structure Gel API
+        // modApi ("curse.maven:blue-skies-312918:3966273")
+        // modApi ("curse.maven:structure-gel-api-378802:4029363")
 
-    // implementation ("curse.maven:blue-skies-312918:3966273")
-    // implementation ("curse.maven:structure-gel-api-378802:4029363")
+        // The Undergarden
+        // modApi("curse.maven:the-undergarden-379849:4057184")
 
-
-    // implementation ("curse.maven:crafttweaker-239197:4375708")
-
-    modApi("curse.maven:the-twilight-forest-227639:4337394")
-    modApi("curse.maven:the-undergarden-379849:4057184")
-    // modApi("curse.maven:plus-the-end-573382:4055155")
+        // Plus The End
+        // modApi("curse.maven:plus-the-end-573382:4055155")
 }
 
 processResources {

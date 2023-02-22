@@ -22,8 +22,9 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> FIERY_KATANA                 = registerFiery("katana");
     public static final RegistrySupplier<Item> FIERY_SAI                    = registerFiery("sai");
     public static final RegistrySupplier<Item> FIERY_SPEAR                  = registerFiery("spear");
-    public static final RegistrySupplier<Item> FIERY_GLAIVE                 = registerFiery("cutlass");
+    public static final RegistrySupplier<Item> FIERY_GLAIVE                 = registerFiery("glaive");
     public static final RegistrySupplier<Item> FIERY_WARGLAIVE              = registerFiery("warglaive");
+    public static final RegistrySupplier<Item> FIERY_CUTLASS                = registerFiery("cutlass");
     public static final RegistrySupplier<Item> FIERY_CLAYMORE               = registerFiery("claymore");
     public static final RegistrySupplier<Item> FIERY_GREATHAMMER            = registerFiery("greathammer");
     public static final RegistrySupplier<Item> FIERY_GREATAXE               = registerFiery("greataxe");
@@ -37,8 +38,9 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> IRONWOOD_KATANA              = registerIronwood("katana");
     public static final RegistrySupplier<Item> IRONWOOD_SAI                 = registerIronwood("sai");
     public static final RegistrySupplier<Item> IRONWOOD_SPEAR               = registerIronwood("spear");
-    public static final RegistrySupplier<Item> IRONWOOD_GLAIVE              = registerIronwood("cutlass");
+    public static final RegistrySupplier<Item> IRONWOOD_GLAIVE              = registerIronwood("glaive");
     public static final RegistrySupplier<Item> IRONWOOD_WARGLAIVE           = registerIronwood("warglaive");
+    public static final RegistrySupplier<Item> IRONWOOD_CUTLASS             = registerIronwood("cutlass");
     public static final RegistrySupplier<Item> IRONWOOD_CLAYMORE            = registerIronwood("claymore");
     public static final RegistrySupplier<Item> IRONWOOD_GREATHAMMER         = registerIronwood("greathammer");
     public static final RegistrySupplier<Item> IRONWOOD_GREATAXE            = registerIronwood("greataxe");
@@ -52,8 +54,9 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> KNIGHTMETAL_KATANA           = registerKnightmetal("katana");
     public static final RegistrySupplier<Item> KNIGHTMETAL_SAI              = registerKnightmetal("sai");
     public static final RegistrySupplier<Item> KNIGHTMETAL_SPEAR            = registerKnightmetal("spear");
-    public static final RegistrySupplier<Item> KNIGHTMETAL_GLAIVE           = registerKnightmetal("cutlass");
+    public static final RegistrySupplier<Item> KNIGHTMETAL_GLAIVE           = registerKnightmetal("glaive");
     public static final RegistrySupplier<Item> KNIGHTMETAL_WARGLAIVE        = registerKnightmetal("warglaive");
+    public static final RegistrySupplier<Item> KNIGHTMETAL_CUTLASS          = registerKnightmetal("cutlass");
     public static final RegistrySupplier<Item> KNIGHTMETAL_CLAYMORE         = registerKnightmetal("claymore");
     public static final RegistrySupplier<Item> KNIGHTMETAL_GREATHAMMER      = registerKnightmetal("greathammer");
     public static final RegistrySupplier<Item> KNIGHTMETAL_GREATAXE         = registerKnightmetal("greataxe");
@@ -67,8 +70,9 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> STEELEAF_KATANA              = registerSteeleaf("katana");
     public static final RegistrySupplier<Item> STEELEAF_SAI                 = registerSteeleaf("sai");
     public static final RegistrySupplier<Item> STEELEAF_SPEAR               = registerSteeleaf("spear");
-    public static final RegistrySupplier<Item> STEELEAF_GLAIVE              = registerSteeleaf("cutlass");
+    public static final RegistrySupplier<Item> STEELEAF_GLAIVE              = registerSteeleaf("glaive");
     public static final RegistrySupplier<Item> STEELEAF_WARGLAIVE           = registerSteeleaf("warglaive");
+    public static final RegistrySupplier<Item> STEELEAF_CUTLASS             = registerSteeleaf("cutlass");
     public static final RegistrySupplier<Item> STEELEAF_CLAYMORE            = registerSteeleaf("claymore");
     public static final RegistrySupplier<Item> STEELEAF_GREATHAMMER         = registerSteeleaf("greathammer");
     public static final RegistrySupplier<Item> STEELEAF_GREATAXE            = registerSteeleaf("greataxe");

@@ -3,7 +3,6 @@ package net.knavesneeds.customitems;
 
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
@@ -14,12 +13,9 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.sweenus.simplyswords.SimplySwords;
 
-import javax.tools.Tool;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static net.knavesneeds.KnavesCommon.*;
 
 public class KnavesSwordItem  extends SwordItem {
     String[] repairIngredient;
@@ -29,6 +25,7 @@ public class KnavesSwordItem  extends SwordItem {
         this.repairIngredient = repairIngredient;
     }
 
+    @Override
     public boolean canRepair(ItemStack stack, ItemStack ingredient) {
         List<Item> potentialIngredients = new ArrayList<>(List.of());
         Arrays.stream(repairIngredient).toList().forEach(repIngredient ->
@@ -63,22 +60,21 @@ public class KnavesSwordItem  extends SwordItem {
         }
     }
 
-    // Steeleaf / Ironwood inventory enchant
-
-    // I think this is most likely the code that is breaking the inventory tabs.
+    // Steeleaf & Ironwood inventory enchant from creative menu
     @Override
     public void appendStacks(ItemGroup group, DefaultedList<ItemStack> stacks) {
-            ItemStack istack = new ItemStack(this);
-
+        if (this.isIn(group)) {
+            ItemStack itemStack = new ItemStack(this);
             //SteelLeaf
             if (this.getMaterial().equals(ToolMaterialCompat.STEELEAF)) {
-                istack.addEnchantment(Enchantments.LOOTING, 2);
+                itemStack.addEnchantment(Enchantments.LOOTING, 2);
             }
 
             //Ironwood
             if (this.getMaterial().equals(ToolMaterialCompat.IRONWOOD)) {
-                istack.addEnchantment(Enchantments.KNOCKBACK, 1);
+                itemStack.addEnchantment(Enchantments.KNOCKBACK, 1);
             }
-            stacks.add(istack);
+            stacks.add(itemStack);
+        }
     }
 }
