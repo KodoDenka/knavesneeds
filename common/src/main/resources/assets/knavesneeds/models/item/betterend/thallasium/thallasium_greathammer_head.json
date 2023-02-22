@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/template_greathammer",
   "textures": {
-    "texture": "knavesneeds:item/betterend/thallasium/thallasium_greathammer_head"
+    "texture": "knavesneeds:item/betterend/thallasium/thallasium_greathammer"
   }
 }

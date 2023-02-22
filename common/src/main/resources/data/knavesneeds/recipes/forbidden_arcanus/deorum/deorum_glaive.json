@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "c:wood_sticks"
+    },
+    "X": {
+      "item": "forbidden_arcanus:deorum_ingot"
+    }
+  },
+  "pattern": [
+    "  X",
+    " #X",
+    "#  "
+  ],
+  "result": {
+    "item": "knavesneeds:forbidden_arcanus/deorum/deorum_glaive"
+  }
+}
