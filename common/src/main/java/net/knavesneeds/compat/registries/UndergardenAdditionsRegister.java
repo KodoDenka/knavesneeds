@@ -22,7 +22,7 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> CLOGGRUM_KATANA          = registerCloggrum("katana");
     public static final RegistrySupplier<Item> CLOGGRUM_SAI             = registerCloggrum("sai");
     public static final RegistrySupplier<Item> CLOGGRUM_SPEAR           = registerCloggrum("spear");
-    public static final RegistrySupplier<Item> CLOGGRUM_GLAIVE          = registerCloggrum("cutlass");
+    public static final RegistrySupplier<Item> CLOGGRUM_GLAIVE          = registerCloggrum("glaive");
     public static final RegistrySupplier<Item> CLOGGRUM_WARGLAIVE       = registerCloggrum("warglaive");
     public static final RegistrySupplier<Item> CLOGGRUM_CUTLASS         = registerCloggrum("cutlass");
     public static final RegistrySupplier<Item> CLOGGRUM_CLAYMORE        = registerCloggrum("claymore");
@@ -38,7 +38,7 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> FORGOTTEN_KATANA         = registerForgotten("katana");
     public static final RegistrySupplier<Item> FORGOTTEN_SAI            = registerForgotten("sai");
     public static final RegistrySupplier<Item> FORGOTTEN_SPEAR          = registerForgotten("spear");
-    public static final RegistrySupplier<Item> FORGOTTEN_GLAIVE         = registerForgotten("cutlass");
+    public static final RegistrySupplier<Item> FORGOTTEN_GLAIVE         = registerForgotten("glaive");
     public static final RegistrySupplier<Item> FORGOTTEN_WARGLAIVE      = registerForgotten("warglaive");
     public static final RegistrySupplier<Item> FORGOTTEN_CUTLASS        = registerForgotten("cutlass");
     public static final RegistrySupplier<Item> FORGOTTEN_CLAYMORE       = registerForgotten("claymore");
@@ -55,7 +55,7 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> FROSTSTEEL_SAI           = registerFroststeel("sai");
     public static final RegistrySupplier<Item> FROSTSTEEL_SPEAR         = registerFroststeel("spear");
     public static final RegistrySupplier<Item> FROSTSTEEL_GLAIVE        = registerFroststeel("cutlass");
-    public static final RegistrySupplier<Item> FROSTSTEEL_WARGLAIVE     = registerFroststeel("warglaive");
+    public static final RegistrySupplier<Item> FROSTSTEEL_WARGLAIVE     = registerFroststeel("glaive");
     public static final RegistrySupplier<Item> FROSTSTEEL_CUTLASS       = registerFroststeel("cutlass");
     public static final RegistrySupplier<Item> FROSTSTEEL_CLAYMORE      = registerFroststeel("claymore");
     public static final RegistrySupplier<Item> FROSTSTEEL_GREATHAMMER   = registerFroststeel("greathammer");
@@ -70,7 +70,7 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> UTHERIUM_KATANA          = registerUtherium("katana");
     public static final RegistrySupplier<Item> UTHERIUM_SAI             = registerUtherium("sai");
     public static final RegistrySupplier<Item> UTHERIUM_SPEAR           = registerUtherium("spear");
-    public static final RegistrySupplier<Item> UTHERIUM_GLAIVE          = registerUtherium("cutlass");
+    public static final RegistrySupplier<Item> UTHERIUM_GLAIVE          = registerUtherium("glaive");
     public static final RegistrySupplier<Item> UTHERIUM_WARGLAIVE       = registerUtherium("warglaive");
     public static final RegistrySupplier<Item> UTHERIUM_CUTLASS         = registerUtherium("cutlass");
     public static final RegistrySupplier<Item> UTHERIUM_CLAYMORE        = registerUtherium("claymore");

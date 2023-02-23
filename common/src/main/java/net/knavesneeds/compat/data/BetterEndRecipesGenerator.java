@@ -4,7 +4,6 @@ import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.compat.registries.BetterEndAdditionsRegister;
 import net.minecraft.util.Identifier;
 import org.betterx.bclib.recipes.BCLRecipeBuilder;
-import org.betterx.betterend.item.material.EndToolMaterial;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
 

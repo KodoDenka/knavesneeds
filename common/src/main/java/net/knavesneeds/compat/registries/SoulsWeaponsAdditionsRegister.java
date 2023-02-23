@@ -22,7 +22,7 @@ public class SoulsWeaponsAdditionsRegister {
     public static final RegistrySupplier<Item> TRANSLUCENT_KATANA          = registerTranslucent("katana");
     public static final RegistrySupplier<Item> TRANSLUCENT_SAI             = registerTranslucent("sai");
     public static final RegistrySupplier<Item> TRANSLUCENT_SPEAR           = registerTranslucent("spear");
-    public static final RegistrySupplier<Item> TRANSLUCENT_GLAIVE          = registerTranslucent("cutlass");
+    public static final RegistrySupplier<Item> TRANSLUCENT_GLAIVE          = registerTranslucent("glaive");
     public static final RegistrySupplier<Item> TRANSLUCENT_WARGLAIVE       = registerTranslucent("warglaive");
     public static final RegistrySupplier<Item> TRANSLUCENT_CLAYMORE        = registerTranslucent("claymore");
     public static final RegistrySupplier<Item> TRANSLUCENT_GREATHAMMER     = registerTranslucent("greathammer");

@@ -23,7 +23,7 @@ public class ForbiddenArcanusAdditionsRegister {
     public static final RegistrySupplier<Item> DEORUM_KATANA                    = registerDeorum("katana");
     public static final RegistrySupplier<Item> DEORUM_SAI                       = registerDeorum("sai");
     public static final RegistrySupplier<Item> DEORUM_SPEAR                     = registerDeorum("spear");
-    public static final RegistrySupplier<Item> DEORUM_GLAIVE                    = registerDeorum("cutlass");
+    public static final RegistrySupplier<Item> DEORUM_GLAIVE                    = registerDeorum("glaive");
     public static final RegistrySupplier<Item> DEORUM_WARGLAIVE                 = registerDeorum("warglaive");
     public static final RegistrySupplier<Item> DEORUM_CUTLASS                   = registerDeorum("cutlass");
     public static final RegistrySupplier<Item> DEORUM_CLAYMORE                  = registerDeorum("claymore");
@@ -39,7 +39,7 @@ public class ForbiddenArcanusAdditionsRegister {
     public static final RegistrySupplier<Item> DRACO_ARCANUS_KATANA             = registerDracoArcanus("katana");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_SAI                = registerDracoArcanus("sai");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_SPEAR              = registerDracoArcanus("spear");
-    public static final RegistrySupplier<Item> DRACO_ARCANUS_GLAIVE             = registerDracoArcanus("cutlass");
+    public static final RegistrySupplier<Item> DRACO_ARCANUS_GLAIVE             = registerDracoArcanus("glaive");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_WARGLAIVE          = registerDracoArcanus("warglaive");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_CUTLASS            = registerDracoArcanus("cutlass");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_CLAYMORE           = registerDracoArcanus("claymore");
@@ -55,7 +55,7 @@ public class ForbiddenArcanusAdditionsRegister {
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_KATANA          = registerReinforcedDeorum("katana");
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_SAI             = registerReinforcedDeorum("sai");
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_SPEAR           = registerReinforcedDeorum("spear");
-    public static final RegistrySupplier<Item> REINFORCE_DEORUM_GLAIVE          = registerReinforcedDeorum("cutlass");
+    public static final RegistrySupplier<Item> REINFORCE_DEORUM_GLAIVE          = registerReinforcedDeorum("glaive");
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_WARGLAIVE       = registerReinforcedDeorum("warglaive");
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_CUTLASS         = registerReinforcedDeorum("cutlass");
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_CLAYMORE        = registerReinforcedDeorum("claymore");
