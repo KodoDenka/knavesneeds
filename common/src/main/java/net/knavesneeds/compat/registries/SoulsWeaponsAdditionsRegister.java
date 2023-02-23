@@ -30,15 +30,15 @@ public class SoulsWeaponsAdditionsRegister {
     public static final RegistrySupplier<Item> TRANSLUCENT_CHAKRAM         = registerTranslucent("chakram");
     public static final RegistrySupplier<Item> TRANSLUCENT_SCYTHE          = registerTranslucent("scythe");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod, String... repairIngredient) {
+    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return SOULS_WEAPONS_ITEMS.register("soulsweapons/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id), repairIngredient));
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 
     private static RegistrySupplier<Item> registerTranslucent(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TRANSLUCENT, KnavesConfig.TRANSLUCENT_MOD, "soulsweapons:lost_soul");
+        return registerMaterial(id, ToolMaterialCompat.TRANSLUCENT, KnavesConfig.TRANSLUCENT_MOD);
     }
 }

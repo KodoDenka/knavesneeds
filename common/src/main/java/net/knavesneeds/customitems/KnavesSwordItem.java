@@ -18,22 +18,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class KnavesSwordItem  extends SwordItem {
-    String[] repairIngredient;
-    public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, String... repairIngredient) {
+    public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().group(SimplySwords.SIMPLYSWORDS));
-
-        this.repairIngredient = repairIngredient;
-    }
-
-    @Override
-    public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        List<Item> potentialIngredients = new ArrayList<>(List.of());
-        Arrays.stream(repairIngredient).toList().forEach(repIngredient ->
-                potentialIngredients.add(
-                        Registry.ITEM.get(new Identifier(repIngredient))));
-
-
-        return potentialIngredients.contains(ingredient.getItem());
     }
 
     @Override

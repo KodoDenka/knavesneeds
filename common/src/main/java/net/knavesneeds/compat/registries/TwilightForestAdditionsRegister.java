@@ -79,27 +79,27 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> STEELEAF_CHAKRAM             = registerSteeleaf("chakram");
     public static final RegistrySupplier<Item> STEELEAF_SCYTHE              = registerSteeleaf("scythe");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod, String... repairIngredient) {
+    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return TWILIGHT_FOREST_ITEMS.register("twilight_forest/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id), repairIngredient));
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 
     private static RegistrySupplier<Item> registerFiery(String id) {
-        return registerMaterial(id, ToolMaterialCompat.FIERY, KnavesConfig.FIERY_MOD, "twilightforest:fiery_ingot");
+        return registerMaterial(id, ToolMaterialCompat.FIERY, KnavesConfig.FIERY_MOD);
     }
 
     private static RegistrySupplier<Item> registerIronwood(String id) {
-        return registerMaterial(id, ToolMaterialCompat.IRONWOOD, KnavesConfig.IRONWOOD_MOD, "twilightforest:ironwood_ingot");
+        return registerMaterial(id, ToolMaterialCompat.IRONWOOD, KnavesConfig.IRONWOOD_MOD);
     }
 
     private static RegistrySupplier<Item> registerKnightmetal(String id) {
-        return registerMaterial(id, ToolMaterialCompat.KNIGHTMETAL, KnavesConfig.KNIGHTMETAL_MOD, "twilightforest:knightmetal_ingot");
+        return registerMaterial(id, ToolMaterialCompat.KNIGHTMETAL, KnavesConfig.KNIGHTMETAL_MOD);
     }
 
     private static RegistrySupplier<Item> registerSteeleaf(String id) {
-        return registerMaterial(id, ToolMaterialCompat.STEELEAF, KnavesConfig.STEELEAF_MOD, "twilightforest:steeleaf_ingot");
+        return registerMaterial(id, ToolMaterialCompat.STEELEAF, KnavesConfig.STEELEAF_MOD);
     }
 }

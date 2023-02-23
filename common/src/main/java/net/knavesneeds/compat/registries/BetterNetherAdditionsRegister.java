@@ -63,23 +63,23 @@ public class BetterNetherAdditionsRegister {
     public static final RegistrySupplier<Item> NETHER_RUBY_CHAKRAM              = registerNetherRuby("chakram");
     public static final RegistrySupplier<Item> NETHER_RUBY_SCYTHE               = registerNetherRuby("scythe");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod, String... repairIngredient) {
+    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return BETTER_NETHER_ITEMS.register("betternether/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id), repairIngredient));
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 
     private static RegistrySupplier<Item> registerCincinnasite(String id) {
-        return registerMaterial(id, ToolMaterialCompat.CINCINNASITE, KnavesConfig.CINCINNASITE_MOD, "betternether:cincinnasite_ingot");
+        return registerMaterial(id, ToolMaterialCompat.CINCINNASITE, KnavesConfig.CINCINNASITE_MOD);
     }
 
     private static RegistrySupplier<Item> registerCincinnasiteDiamond(String id) {
-        return registerMaterial(id, ToolMaterialCompat.CINCINNASITE_DIAMOND, KnavesConfig.CINCINNASITE_DIAMOND_MOD, "minecraft:diamond");
+        return registerMaterial(id, ToolMaterialCompat.CINCINNASITE_DIAMOND, KnavesConfig.CINCINNASITE_DIAMOND_MOD);
     }
 
     private static RegistrySupplier<Item> registerNetherRuby(String id) {
-        return registerMaterial(id, ToolMaterialCompat.NETHER_RUBY, KnavesConfig.NETHER_RUBY_MOD, "betternether:nether_ruby");
+        return registerMaterial(id, ToolMaterialCompat.NETHER_RUBY, KnavesConfig.NETHER_RUBY_MOD);
     }
 }

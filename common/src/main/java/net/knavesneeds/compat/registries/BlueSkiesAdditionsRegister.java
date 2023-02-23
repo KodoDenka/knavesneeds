@@ -239,67 +239,67 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> TURQUOISE_STONE_SCYTHE           = registerTurquoiseStone("scythe");
     //public static final RegistrySupplier<Item> TURQUOISE_STONE_HALBERD          = registerTurquoiseStone("halberd");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod, String... repairIngredient) {
+    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return BLUE_SKIES_ITEMS.register(tier.toString().toLowerCase(Locale.ROOT) + "/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id), repairIngredient));
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 
     private static RegistrySupplier<Item> registerAquite(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:aquite");
+        return registerMaterial(id, ToolMaterialCompat.AQUITE, KnavesConfig.AETERNIUM_MOD);
     }
 
     private static RegistrySupplier<Item> registerBluebrightWood(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:bluebright_planks");
+        return registerMaterial(id, ToolMaterialCompat.BLUEBRIGHT_WOOD, KnavesConfig.BLUEBRIGHT_WOOD_MOD);
     }
 
     private static RegistrySupplier<Item> registerCharoite(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:charoite");
+        return registerMaterial(id, ToolMaterialCompat.CHAROITE, KnavesConfig.CHAROITE_MOD);
     }
 
     private static RegistrySupplier<Item> registerCherryWood(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:cherry_planks");
+        return registerMaterial(id, ToolMaterialCompat.CHERRY_WOOD, KnavesConfig.CHERRY_WOOD_MOD);
     }
 
     private static RegistrySupplier<Item> registerDiopside(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:diopside_gem");
+        return registerMaterial(id, ToolMaterialCompat.DIOPSIDE, KnavesConfig.DIOPSIDE_MOD);
     }
 
     private static RegistrySupplier<Item> registerDuskWood(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:dusk_planks");
+        return registerMaterial(id, ToolMaterialCompat.DUSK_WOOD, KnavesConfig.DUSK_WOOD_MOD);
     }
 
     private static RegistrySupplier<Item> registerFrostbrightWood(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:frostbright_planks");
+        return registerMaterial(id, ToolMaterialCompat.FROSTBRIGHT_WOOD, KnavesConfig.FROSTBRIGHT_WOOD_MOD);
     }
 
     private static RegistrySupplier<Item> registerHorizonite(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:horizonite_ingot");
+        return registerMaterial(id, ToolMaterialCompat.HORIZONITE, KnavesConfig.HORIZONITE_MOD);
     }
 
     private static RegistrySupplier<Item> registerLunarStone(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:lunar_cobblestone");
+        return registerMaterial(id, ToolMaterialCompat.LUNAR_STONE, KnavesConfig.LUNAR_STONE_MOD);
     }
 
     private static RegistrySupplier<Item> registerLunarWood(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:lunar_planks");
+        return registerMaterial(id, ToolMaterialCompat.LUNAR_WOOD, KnavesConfig.LUNAR_WOOD_MOD);
     }
 
     private static RegistrySupplier<Item> registerMapleWood(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:maple_planks");
+        return registerMaterial(id, ToolMaterialCompat.MAPLE_WOOD, KnavesConfig.MAPLE_WOOD_MOD);
     }
 
     private static RegistrySupplier<Item> registerPyrope(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:pyrope_gem");
+        return registerMaterial(id, ToolMaterialCompat.PYROPE, KnavesConfig.PYROPE_MOD);
     }
 
     private static RegistrySupplier<Item> registerStarlitWood(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:starlit_planks");
+        return registerMaterial(id, ToolMaterialCompat.STARLIT_WOOD, KnavesConfig.STARLIT_WOOD_MOD);
     }
 
     private static RegistrySupplier<Item> registerTurquoiseStone(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD, "blue_skies:turquoise_cobblestone");
+        return registerMaterial(id, ToolMaterialCompat.TURQUOISE_STONE, KnavesConfig.TURQUOISE_STONE_MOD);
     }
 
 }

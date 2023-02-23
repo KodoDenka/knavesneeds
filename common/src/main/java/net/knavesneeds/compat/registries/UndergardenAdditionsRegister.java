@@ -79,28 +79,27 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> UTHERIUM_CHAKRAM         = registerUtherium("chakram");
     public static final RegistrySupplier<Item> UTHERIUM_SCYTHE          = registerUtherium("scythe");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod, String... repairIngredient) {
+    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return UNDERGARDEN_ITEMS.register("undergarden/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id), repairIngredient));
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 
     private static RegistrySupplier<Item> registerCloggrum(String id) {
-        return registerMaterial(id, ToolMaterialCompat.CLOGGRUM, KnavesConfig.CLOGGRUM_MOD, "undergarden:cloggrum_ingot");
+        return registerMaterial(id, ToolMaterialCompat.CLOGGRUM, KnavesConfig.CLOGGRUM_MOD);
     }
 
     private static RegistrySupplier<Item> registerForgotten(String id) {
-        return registerMaterial(id, ToolMaterialCompat.FORGOTTEN, KnavesConfig.FORGOTTEN_MOD, "undergarden:forgotten_ingot");
+        return registerMaterial(id, ToolMaterialCompat.FORGOTTEN, KnavesConfig.FORGOTTEN_MOD);
     }
 
     private static RegistrySupplier<Item> registerFroststeel(String id) {
-        return registerMaterial(id, ToolMaterialCompat.FROSTSTEEL, KnavesConfig.FROSTSTEEL_MOD, "undergarden:froststeel_ingot");
+        return registerMaterial(id, ToolMaterialCompat.FROSTSTEEL, KnavesConfig.FROSTSTEEL_MOD);
     }
 
     private static RegistrySupplier<Item> registerUtherium(String id) {
-        return registerMaterial(id, ToolMaterialCompat.UTHERIUM, KnavesConfig.UTHERIUM_MOD, "undergarden:utherium_crystal");
+        return registerMaterial(id, ToolMaterialCompat.UTHERIUM, KnavesConfig.UTHERIUM_MOD);
     }
-
 }

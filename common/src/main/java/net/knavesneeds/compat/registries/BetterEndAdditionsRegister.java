@@ -119,23 +119,23 @@ public class BetterEndAdditionsRegister {
                 new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
     }
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod, String... repairIngredient) {
+    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return BETTER_END_ITEMS.register("betterend/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id), repairIngredient));
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 
     private static RegistrySupplier<Item> registerAeternium(String id) {
-        return registerMaterial(id, ToolMaterialCompat.AETERNIUM, KnavesConfig.AETERNIUM_MOD, "betterend:aeternium_ingot");
+        return registerMaterial(id, ToolMaterialCompat.AETERNIUM, KnavesConfig.AETERNIUM_MOD);
     }
 
     private static RegistrySupplier<Item> registerTerminite(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TERMINITE, KnavesConfig.TERMINITE_MOD, "betterend:terminite_ingot");
+        return registerMaterial(id, ToolMaterialCompat.TERMINITE, KnavesConfig.TERMINITE_MOD);
     }
 
     private static RegistrySupplier<Item> registerThallasium(String id) {
-        return registerMaterial(id, ToolMaterialCompat.THALLASIUM, KnavesConfig.THALLASIUM_MOD, "betterend:thallasium_ingot");
+        return registerMaterial(id, ToolMaterialCompat.THALLASIUM, KnavesConfig.THALLASIUM_MOD);
     }
 }

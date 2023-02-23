@@ -31,15 +31,15 @@ public class PlusTheEndAdditionsRegister {
     public static final RegistrySupplier<Item> ENDRONIUM_CHAKRAM         = registerEndronium("chakram");
     public static final RegistrySupplier<Item> ENDRONIUM_SCYTHE          = registerEndronium("scythe");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod, String... repairIngredient) {
+    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return PLUS_THE_END_ITEMS.register("plus_the_end/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id), repairIngredient));
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 
     private static RegistrySupplier<Item> registerEndronium(String id) {
-        return registerMaterial(id, ToolMaterialCompat.ENDRONIUM, KnavesConfig.ENDRONIUM_MOD, "plus_the_end:endronium_ingot");
+        return registerMaterial(id, ToolMaterialCompat.ENDRONIUM, KnavesConfig.ENDRONIUM_MOD);
     }
 }

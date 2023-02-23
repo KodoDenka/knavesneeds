@@ -22,17 +22,6 @@ public class KnavesCommon {
     //Calling for configuration
     public static KnavesConfig config;
 
-    //Undergarden Tags
-    public static final TagKey<Item> FORGOTTEN_WEAPON = TagKey.of(Registry.ITEM_KEY, new Identifier("knavesneeds", "forgotten_weapons"));
-    public static final TagKey<Item> FROSTSTEEL_WEAPON = TagKey.of(Registry.ITEM_KEY,new Identifier("knavesneeds", "froststeel_weapons"));
-    public static final TagKey<Item> UTHERIUM_WEAPON = TagKey.of(Registry.ITEM_KEY, new Identifier("knavesneeds", "utherium_weapons"));
-
-    //Twilight Forest Tags
-    public static final TagKey<Item> FIERY_WEAPON = TagKey.of(Registry.ITEM_KEY, new Identifier("knavesneeds", "fiery_weapons"));
-    public static final TagKey<Item> IRONWOOD_WEAPON = TagKey.of(Registry.ITEM_KEY, new Identifier("knavesneeds", "ironwood_weapons"));
-    public static final TagKey<Item> KNIGHTMETAL_WEAPON = TagKey.of(Registry.ITEM_KEY, new Identifier("knavesneeds", "utherium_weapons"));
-    public static final TagKey<Item> STEELEAF_WEAPON = TagKey.of(Registry.ITEM_KEY, new Identifier("knavesneeds", "steeleaf_weapons"));
-
     //Run when mod is loaded.
     public static void init() {
         AutoConfig.register(KnavesConfigWrapper.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new));
@@ -63,6 +52,7 @@ public class KnavesCommon {
         }
 
         if (Platform.getOptionalMod("betterend").isPresent()) {
+            //Item recipe generation is called in the KnavesFabric call.
             BetterEndAdditionsRegister.BETTER_END_ITEMS.register();
         }
 
@@ -73,7 +63,6 @@ public class KnavesCommon {
         if (Platform.getOptionalMod("soulsweapons").isPresent()) {
             SoulsWeaponsAdditionsRegister.SOULS_WEAPONS_ITEMS.register();
         }
-
 
         System.out.println(KnavesExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
