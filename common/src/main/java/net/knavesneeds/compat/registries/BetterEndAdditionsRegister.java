@@ -95,6 +95,7 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> THALLASIUM_GREATAXE_HEAD     = registerHead("greataxe", ToolMaterialCompat.THALLASIUM);
     public static final RegistrySupplier<Item> THALLASIUM_CHAKRAM_HEAD      = registerHead("chakram", ToolMaterialCompat.THALLASIUM);
     public static final RegistrySupplier<Item> THALLASIUM_SCYTHE_HEAD       = registerHead("scythe", ToolMaterialCompat.THALLASIUM);
+    //public static final RegistrySupplier<Item> THALLASIUM_HALBERD_HEAD      = registerHead("halberd", ToolMaterialCompat.THALLASIUM);
 
     // Thallasium
     public static final RegistrySupplier<Item> THALLASIUM_LONGSWORD         = registerThallasium("longsword");
@@ -111,6 +112,7 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> THALLASIUM_GREATAXE          = registerThallasium("greataxe");
     public static final RegistrySupplier<Item> THALLASIUM_CHAKRAM           = registerThallasium("chakram");
     public static final RegistrySupplier<Item> THALLASIUM_SCYTHE            = registerThallasium("scythe");
+    //public static final RegistrySupplier<Item> THALLASIUM_HALBERD           = registerThallasium("halberd");
 
     private static RegistrySupplier<Item> registerHead(String id, ToolMaterialCompat tier) {
         return BETTER_END_ITEMS.register("betterend/" +

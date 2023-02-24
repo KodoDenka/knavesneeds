@@ -26,6 +26,7 @@ public abstract class EnchantmentMixin {
         }
     }
 
+
     //Used with permission from chronosacaria :)
     private boolean knavesneeds$isEnchantment(Enchantment... enchantments){
         for (Enchantment enchantment : enchantments){

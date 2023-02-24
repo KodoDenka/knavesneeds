@@ -7,14 +7,10 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.sweenus.simplyswords.SimplySwords;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class KnavesSwordItem  extends SwordItem {
