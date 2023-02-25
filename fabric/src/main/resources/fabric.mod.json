@@ -3,15 +3,15 @@
   "id": "knavesneeds",
   "version": "${version}",
   "name": "Knaves' Needs",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Additional swords for Simply Swords. \n \n Special thanks to the following people for their contributions/influence on this mod: \n - Sweeney/Sweenuss, for creating Simply Swords and supporting this addon.\n- Chronos_Sacaria, for their support and help with the mod.\n- LostLandFound, for creating and editing the textures for this project.\n- daedelus, for creating Better Combat and helping this mod support it.\n- Shedaniel, for creating Architectury. \n - The Twilight Forest Team, for creating Twilight Forest. \n - The BetterX team, for creating BetterNether/BetterEnd and bclib. \n - Marium/mariumbacchus, for creating Soulslike Weaponry.",
   "authors": [
-    "Me!"
+    "KodoDenka"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/knaves-needs",
+    "sources": "https://github.com/KodoDenka/knavesneeds"
   },
-  "license": "Insert License Here",
+  "license": "MIT",
   "icon": "assets/knavesneeds/icon.png",
   "environment": "*",
   "entrypoints": {
@@ -27,7 +27,6 @@
     "fabric": "*",
     "minecraft": ">=1.19.2",
     "architectury": ">=6.2.43",
-    "simplyswords": ">=1.40.0-1.19.2",
-    "bclib": "2.1.x"
+    "simplyswords": ">=1.40.0-1.19.2"
   }
 }
