@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/template_greathammer",
+  "textures": {
+    "texture": "knavesneeds:item/twilight_forest/knightmetal/greathammer"
+  }
+}

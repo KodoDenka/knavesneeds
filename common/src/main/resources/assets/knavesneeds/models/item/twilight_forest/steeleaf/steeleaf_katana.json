@@ -1,6 +1,0 @@
-{
-  "parent": "knavesneeds:item/template_katana",
-  "textures": {
-    "layer0": "knavesneeds:item/twilight_forest/steeleaf/steeleaf_katana"
-  }
-}
