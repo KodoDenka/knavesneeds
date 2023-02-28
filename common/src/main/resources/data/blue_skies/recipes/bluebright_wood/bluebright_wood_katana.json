@@ -1,4 +1,16 @@
 {
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "blue_skies"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "blue_skies"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {

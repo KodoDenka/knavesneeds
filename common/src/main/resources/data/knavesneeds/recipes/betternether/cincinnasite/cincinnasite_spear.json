@@ -1,8 +1,16 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "betternether"
+      ]
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "betternether:nether_reed_stem"
+      "item": "betternether:nether_reed_stem"
     },
     "X": {
       "item": "betternether:cincinnasite_ingot"

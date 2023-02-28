@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "plus_the_end"
+    }
+  ],
   "type": "minecraft:smithing",
   "base": {
     "item": "simplyswords:netherite_greathammer"
