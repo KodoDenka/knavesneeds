@@ -1,6 +1,8 @@
 package net.knavesneeds.compat.registries;
 
+import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.config.KnavesSimplyConfig;
+import net.minecraft.item.Item;
 
 import java.util.HashMap;
 import java.util.List;
@@ -26,5 +28,15 @@ public class CompatHelper {
                     (int) KnavesSimplyConfig.getWeaponAttributes(string + "_negative_damage_modifier"));
             ATTACK_SPEED_MODS.put(string, KnavesSimplyConfig.getWeaponAttributes(string + "_attackspeed"));
         }
+    }
+
+    public RegistrySupplier<Item> addCompat() {
+        //
+        return null;
+    }
+
+    public static void build() {
+        //
+
     }
 }
