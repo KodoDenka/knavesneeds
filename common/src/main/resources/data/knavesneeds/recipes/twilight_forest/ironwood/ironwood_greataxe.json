@@ -28,7 +28,7 @@
   ],
   "result": {
     "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:knockback\"}]}",
-    "item": "knavesneeds:twilight_forest/ironwood/ironwood_greataxe",
+    "item": "knavesneeds:twilight_forest/ironwood/greataxe",
     "type": "minecraft:item_nbt"
   }
 }

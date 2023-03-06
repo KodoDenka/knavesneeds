@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/thallasium/thallasium_greataxe_head"
+    "item": "knavesneeds:betterend/thallasium/greataxe_head"
   },
   "addition": {
     "item": "minecraft:stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/thallasium/thallasium_greataxe"
+    "item": "knavesneeds:betterend/thallasium/greataxe"
   }
 }

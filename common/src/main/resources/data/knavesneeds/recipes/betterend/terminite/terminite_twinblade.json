@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/terminite/terminite_twinblade_head"
+    "item": "knavesneeds:betterend/terminite/twinblade_head"
   },
   "addition": {
     "item": "minecraft:stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/terminite/terminite_twinblade"
+    "item": "knavesneeds:betterend/terminite/twinblade"
   }
 }

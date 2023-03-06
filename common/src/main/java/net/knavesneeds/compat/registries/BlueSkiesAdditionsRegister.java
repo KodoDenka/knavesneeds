@@ -240,8 +240,7 @@ public class BlueSkiesAdditionsRegister {
     //public static final RegistrySupplier<Item> TURQUOISE_STONE_HALBERD          = registerTurquoiseStone("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
-        return BLUE_SKIES_ITEMS.register(tier.toString().toLowerCase(Locale.ROOT) + "/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
+        return BLUE_SKIES_ITEMS.register(tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
                         CompatHelper.getAttackSpeedMod(id)));
     }

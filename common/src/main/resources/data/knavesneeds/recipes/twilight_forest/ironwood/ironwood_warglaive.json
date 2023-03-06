@@ -28,7 +28,7 @@
   ],
   "result": {
     "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:knockback\"}]}",
-    "item": "knavesneeds:twilight_forest/ironwood/ironwood_warglaive",
+    "item": "knavesneeds:twilight_forest/ironwood/warglaive",
     "type": "minecraft:item_nbt"
   }
 }

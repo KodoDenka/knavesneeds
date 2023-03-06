@@ -66,8 +66,7 @@ public class ForbiddenArcanusAdditionsRegister {
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return FORBIDDEN_ARCANUS_ITEMS.register("forbidden_arcanus/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
+                tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
                         CompatHelper.getAttackSpeedMod(id)));
     }

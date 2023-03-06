@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/thallasium/thallasium_chakram_head"
+    "item": "knavesneeds:betterend/thallasium/chakram_head"
   },
   "addition": {
     "item": "minecraft:stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/thallasium/thallasium_chakram"
+    "item": "knavesneeds:betterend/thallasium/chakram"
   }
 }

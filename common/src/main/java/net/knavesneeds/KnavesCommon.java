@@ -8,7 +8,6 @@ import net.knavesneeds.compat.registries.*;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.config.KnavesConfigWrapper;
 import net.knavesneeds.config.KnavesSimplyConfig;
-import net.knavesneeds.customitems.KnavesNeedsItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
@@ -28,8 +27,6 @@ public class KnavesCommon {
         config = AutoConfig.getConfigHolder(KnavesConfigWrapper.class).getConfig().client;
 
         KnavesSimplyConfig.loadConfig();
-
-        KnavesNeedsItemGroup.ItemGroupsRegistry();
 
         if (Platform.getOptionalMod("twilightforest").isPresent()) {
             TwilightForestAdditionsRegister.TWILIGHT_FOREST_ITEMS.register();

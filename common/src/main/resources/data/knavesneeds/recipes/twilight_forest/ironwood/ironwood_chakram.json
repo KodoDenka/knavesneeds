@@ -31,7 +31,7 @@
   ],
   "result": {
     "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:knockback\"}]}",
-    "item": "knavesneeds:twilight_forest/ironwood/ironwood_chakram",
+    "item": "knavesneeds:twilight_forest/ironwood/chakram",
     "type": "minecraft:item_nbt"
   }
 }

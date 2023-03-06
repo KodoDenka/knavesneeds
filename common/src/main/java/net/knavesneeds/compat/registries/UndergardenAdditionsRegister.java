@@ -81,8 +81,7 @@ public class UndergardenAdditionsRegister {
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return UNDERGARDEN_ITEMS.register("undergarden/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
+                tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
                         CompatHelper.getAttackSpeedMod(id)));
     }

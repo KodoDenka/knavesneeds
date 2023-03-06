@@ -116,15 +116,13 @@ public class BetterEndAdditionsRegister {
 
     private static RegistrySupplier<Item> registerHead(String id, ToolMaterialCompat tier) {
         return BETTER_END_ITEMS.register("betterend/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "_" + id + "_head", ()->
+                tier.toString().toLowerCase(Locale.ROOT) + "/" + id + "_head", ()->
                 new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
     }
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return BETTER_END_ITEMS.register("betterend/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
+                tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
                         CompatHelper.getAttackSpeedMod(id)));
     }

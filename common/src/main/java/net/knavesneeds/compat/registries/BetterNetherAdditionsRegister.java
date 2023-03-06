@@ -65,8 +65,7 @@ public class BetterNetherAdditionsRegister {
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return BETTER_NETHER_ITEMS.register("betternether/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
+                tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
                 new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
                         CompatHelper.getAttackSpeedMod(id)));
     }

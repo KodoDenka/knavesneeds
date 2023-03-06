@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/aeternium/aeternium_rapier_head"
+    "item": "knavesneeds:betterend/aeternium/rapier_head"
   },
   "addition": {
     "item": "betterend:leather_wrapped_stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/aeternium/aeternium_rapier"
+    "item": "knavesneeds:betterend/aeternium/rapier"
   }
 }

@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/aeternium/aeternium_greataxe_head"
+    "item": "knavesneeds:betterend/aeternium/greataxe_head"
   },
   "addition": {
     "item": "betterend:leather_wrapped_stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/aeternium/aeternium_greataxe"
+    "item": "knavesneeds:betterend/aeternium/greataxe"
   }
 }

@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/thallasium/thallasium_warglaive_head"
+    "item": "knavesneeds:betterend/thallasium/warglaive_head"
   },
   "addition": {
     "item": "minecraft:stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/thallasium/thallasium_warglaive"
+    "item": "knavesneeds:betterend/thallasium/warglaive"
   }
 }

@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/terminite/terminite_chakram_head"
+    "item": "knavesneeds:betterend/terminite/chakram_head"
   },
   "addition": {
     "item": "minecraft:stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/terminite/terminite_chakram"
+    "item": "knavesneeds:betterend/terminite/chakram"
   }
 }

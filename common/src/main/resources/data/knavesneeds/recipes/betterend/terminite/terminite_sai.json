@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/terminite/terminite_sai_head"
+    "item": "knavesneeds:betterend/terminite/sai_head"
   },
   "addition": {
     "item": "minecraft:stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/terminite/terminite_sai"
+    "item": "knavesneeds:betterend/terminite/sai"
   }
 }

@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/terminite/terminite_cutlass_head"
+    "item": "knavesneeds:betterend/terminite/cutlass_head"
   },
   "addition": {
     "item": "minecraft:stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/terminite/terminite_cutlass"
+    "item": "knavesneeds:betterend/terminite/cutlass"
   }
 }

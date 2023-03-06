@@ -68,6 +68,6 @@ side = "BOTH"
 [[dependencies.knavesneeds]]
 modId = "forbidden_arcanus"
 mandatory = false
-versionRange = "[2.1.0,)"
+versionRange = "[1.19.2-2.1.0,)"
 ordering = "AFTER"
 side = "BOTH"

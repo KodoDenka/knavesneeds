@@ -16,7 +16,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:wood_sticks"
     },
     "X": {
       "item": "twilightforest:steeleaf_ingot"
@@ -29,7 +29,7 @@
   ],
   "result": {
     "nbt": "{Enchantments:[{lvl:2s,id:\"minecraft:looting\"}]}",
-    "item": "knavesneeds:steeleaf_katana",
+    "item": "knavesneeds:twilight_forest/steeleaf/katana",
     "type": "minecraft:item_nbt"
   }
 }

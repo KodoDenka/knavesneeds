@@ -9,12 +9,12 @@
   ],
   "type": "minecraft:smithing",
   "base": {
-    "item": "knavesneeds:betterend/thallasium/thallasium_spear_head"
+    "item": "knavesneeds:betterend/thallasium/spear_head"
   },
   "addition": {
     "item": "minecraft:stick"
   },
   "result": {
-    "item": "knavesneeds:betterend/thallasium/thallasium_spear"
+    "item": "knavesneeds:betterend/thallasium/spear"
   }
 }

@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "blue_skies"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "c:wood_sticks"
+    },
+    "X": {
+      "item": "blue_skies:turquoise_cobblestone"
+    },
+    "Y": {
+      "tag": "c:wood_sticks"
+    }
+  },
+  "pattern": [
+    " Y ",
+    "X#X",
+    "   "
+  ],
+  "result": {
+    "item": "blue_skies:turquoise_stone/warglaive"
+  }
+}
