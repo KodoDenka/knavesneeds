@@ -31,6 +31,7 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> AETERNIUM_GREATAXE_HEAD      = registerHead("greataxe", ToolMaterialCompat.AETERNIUM);
     public static final RegistrySupplier<Item> AETERNIUM_CHAKRAM_HEAD       = registerHead("chakram", ToolMaterialCompat.AETERNIUM);
     public static final RegistrySupplier<Item> AETERNIUM_SCYTHE_HEAD        = registerHead("scythe", ToolMaterialCompat.AETERNIUM);
+    public static final RegistrySupplier<Item> AETERNIUM_HALBERD_HEAD       = registerHead("halberd", ToolMaterialCompat.AETERNIUM);
 
     // Aeternium
     public static final RegistrySupplier<Item> AETERNIUM_LONGSWORD          = registerAeternium("longsword");
@@ -47,6 +48,7 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> AETERNIUM_GREATAXE           = registerAeternium("greataxe");
     public static final RegistrySupplier<Item> AETERNIUM_CHAKRAM            = registerAeternium("chakram");
     public static final RegistrySupplier<Item> AETERNIUM_SCYTHE             = registerAeternium("scythe");
+    public static final RegistrySupplier<Item> AETERNIUM_HALBERD            = registerAeternium("halberd");
 
     // Terminite Heads
     public static final RegistrySupplier<Item> TERMINITE_LONGSWORD_HEAD     = registerHead("longsword", ToolMaterialCompat.TERMINITE);
@@ -63,6 +65,9 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> TERMINITE_GREATAXE_HEAD      = registerHead("greataxe", ToolMaterialCompat.TERMINITE);
     public static final RegistrySupplier<Item> TERMINITE_CHAKRAM_HEAD       = registerHead("chakram", ToolMaterialCompat.TERMINITE);
     public static final RegistrySupplier<Item> TERMINITE_SCYTHE_HEAD        = registerHead("scythe", ToolMaterialCompat.TERMINITE);
+    public static final RegistrySupplier<Item> TERMINITE_HALBERD_HEAD       = registerHead("halberd", ToolMaterialCompat.TERMINITE);
+
+
 
     // Terminite
     public static final RegistrySupplier<Item> TERMINITE_LONGSWORD          = registerTerminite("longsword");
@@ -79,6 +84,7 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> TERMINITE_GREATAXE           = registerTerminite("greataxe");
     public static final RegistrySupplier<Item> TERMINITE_CHAKRAM            = registerTerminite("chakram");
     public static final RegistrySupplier<Item> TERMINITE_SCYTHE             = registerTerminite("scythe");
+    public static final RegistrySupplier<Item> TERMINITE_HALBERD            = registerTerminite("halberd");
 
     // Thallasium Heads
     public static final RegistrySupplier<Item> THALLASIUM_LONGSWORD_HEAD    = registerHead("longsword", ToolMaterialCompat.THALLASIUM);
@@ -95,7 +101,7 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> THALLASIUM_GREATAXE_HEAD     = registerHead("greataxe", ToolMaterialCompat.THALLASIUM);
     public static final RegistrySupplier<Item> THALLASIUM_CHAKRAM_HEAD      = registerHead("chakram", ToolMaterialCompat.THALLASIUM);
     public static final RegistrySupplier<Item> THALLASIUM_SCYTHE_HEAD       = registerHead("scythe", ToolMaterialCompat.THALLASIUM);
-    //public static final RegistrySupplier<Item> THALLASIUM_HALBERD_HEAD      = registerHead("halberd", ToolMaterialCompat.THALLASIUM);
+    public static final RegistrySupplier<Item> THALLASIUM_HALBERD_HEAD      = registerHead("halberd", ToolMaterialCompat.THALLASIUM);
 
     // Thallasium
     public static final RegistrySupplier<Item> THALLASIUM_LONGSWORD         = registerThallasium("longsword");
@@ -112,7 +118,7 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> THALLASIUM_GREATAXE          = registerThallasium("greataxe");
     public static final RegistrySupplier<Item> THALLASIUM_CHAKRAM           = registerThallasium("chakram");
     public static final RegistrySupplier<Item> THALLASIUM_SCYTHE            = registerThallasium("scythe");
-    //public static final RegistrySupplier<Item> THALLASIUM_HALBERD           = registerThallasium("halberd");
+    public static final RegistrySupplier<Item> THALLASIUM_HALBERD           = registerThallasium("halberd");
 
     private static RegistrySupplier<Item> registerHead(String id, ToolMaterialCompat tier) {
         return BETTER_END_ITEMS.register("betterend/" +
