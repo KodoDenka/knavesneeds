@@ -29,6 +29,7 @@ public class SoulsWeaponsAdditionsRegister {
     public static final RegistrySupplier<Item> TRANSLUCENT_GREATAXE        = registerTranslucent("greataxe");
     public static final RegistrySupplier<Item> TRANSLUCENT_CHAKRAM         = registerTranslucent("chakram");
     public static final RegistrySupplier<Item> TRANSLUCENT_SCYTHE          = registerTranslucent("scythe");
+    public static final RegistrySupplier<Item> TRANSLUCENT_HALBERD         = registerTranslucent("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return SOULS_WEAPONS_ITEMS.register("soulsweapons/" +

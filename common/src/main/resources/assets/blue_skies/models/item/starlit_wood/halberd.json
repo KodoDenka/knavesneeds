@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/big_handheld",
+  "textures": {
+    "layer0": "blue_skies:item/starlit_wood/starlit_wood_halberd"
+  }
+}

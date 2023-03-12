@@ -30,6 +30,7 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> CLOGGRUM_GREATAXE        = registerCloggrum("greataxe");
     public static final RegistrySupplier<Item> CLOGGRUM_CHAKRAM         = registerCloggrum("chakram");
     public static final RegistrySupplier<Item> CLOGGRUM_SCYTHE          = registerCloggrum("scythe");
+    public static final RegistrySupplier<Item> CLOGGRUM_HALBERD         = registerCloggrum("halberd");
 
     // Forgotten
     public static final RegistrySupplier<Item> FORGOTTEN_LONGSWORD      = registerForgotten("longsword");
@@ -46,6 +47,7 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> FORGOTTEN_GREATAXE       = registerForgotten("greataxe");
     public static final RegistrySupplier<Item> FORGOTTEN_CHAKRAM        = registerForgotten("chakram");
     public static final RegistrySupplier<Item> FORGOTTEN_SCYTHE         = registerForgotten("scythe");
+    public static final RegistrySupplier<Item> FORGOTTEN_HALBERD        = registerForgotten("halberd");
 
     // Froststeel
     public static final RegistrySupplier<Item> FROSTSTEEL_LONGSWORD     = registerFroststeel("longsword");
@@ -62,6 +64,7 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> FROSTSTEEL_GREATAXE      = registerFroststeel("greataxe");
     public static final RegistrySupplier<Item> FROSTSTEEL_CHAKRAM       = registerFroststeel("chakram");
     public static final RegistrySupplier<Item> FROSTSTEEL_SCYTHE        = registerFroststeel("scythe");
+    public static final RegistrySupplier<Item> FROSTSTEEL_HALBERD       = registerFroststeel("halberd");
 
     // Utherium
     public static final RegistrySupplier<Item> UTHERIUM_LONGSWORD       = registerUtherium("longsword");
@@ -78,6 +81,7 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> UTHERIUM_GREATAXE        = registerUtherium("greataxe");
     public static final RegistrySupplier<Item> UTHERIUM_CHAKRAM         = registerUtherium("chakram");
     public static final RegistrySupplier<Item> UTHERIUM_SCYTHE          = registerUtherium("scythe");
+    public static final RegistrySupplier<Item> UTHERIUM_HALBERD         = registerUtherium("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return UNDERGARDEN_ITEMS.register("undergarden/" +
