@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "byg"
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "byg"
+    }
+  ],
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "simplyswords:netherite_cutlass"
+  },
+  "addition": {
+    "item": "byg:pendorite_ingot"
+  },
+  "result": {
+    "item": "knavesneeds:byg/pendorite/cutlass"
+  }
+}

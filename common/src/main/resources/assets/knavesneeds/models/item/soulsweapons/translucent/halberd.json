@@ -1,6 +1,6 @@
 {
-  "parent": "knavesneeds:item/big_handheld",
+  "parent": "knavesneeds:item/long_handheld",
   "textures": {
-    "layer0": "knavesneeds:item/souldsweapons/translucent/halberd"
+    "layer0": "knavesneeds:item/souldsweapons/translucent/translucent_halberd"
   }
 }

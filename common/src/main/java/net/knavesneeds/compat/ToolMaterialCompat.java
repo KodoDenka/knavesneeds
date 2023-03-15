@@ -64,7 +64,15 @@ public enum ToolMaterialCompat implements ToolMaterial {
 
 
     //SoulsLikeWeapons
-    TRANSLUCENT(300,5.0f,2.0f,2,8, "soulsweapons:lost_soul");
+    TRANSLUCENT(300,5.0f,2.0f,2,8, "soulsweapons:lost_soul"),
+
+
+    //Deeper and Darker
+    WARDEN(2464,11.0f,7.0f,4,21, "deeperdarker:reinforced_echo_shard"),
+
+
+    //Oh The Biomes You'll Go
+    PENDORITE(2500,10.0f,4.0f,5,15, "byg:pendorite_ingot");
 
     
     //This declares which type of registries is allowed to be used in the enum.

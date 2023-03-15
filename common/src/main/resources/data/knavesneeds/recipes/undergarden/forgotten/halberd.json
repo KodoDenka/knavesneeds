@@ -2,7 +2,7 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "forbidden_arcanus"
+      "modid": "undergarden"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -11,18 +11,18 @@
       "tag": "c:wood_sticks"
     },
     "X": {
-      "item": "forbidden_arcanus:arcane_gold_ingot"
+      "item": "twilightforest:forgotten_ingot"
     },
     "Y": {
       "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    "XXX",
-    "Y#Y",
-    " # "
+    " XY",
+    "X#X",
+    "#  "
   ],
   "result": {
-    "item": "knavesneeds:forbidden_arcanus/deorum/greataxe"
+    "item": "knavesneeds:undergarden/forgotten/halberd"
   }
 }

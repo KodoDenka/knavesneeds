@@ -1,0 +1,30 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "soulsweapons"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "soulsweapons:soul_ingot"
+    },
+    "X": {
+      "item": "soulsweapons:lost_soul"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    " XY",
+    "X#X",
+    "#  "
+  ],
+  "result": {
+    "item": "knavesneeds:soulsweapons/translucent/halberd"
+  }
+}

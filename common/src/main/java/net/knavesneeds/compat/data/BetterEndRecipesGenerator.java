@@ -128,6 +128,14 @@ public class BetterEndRecipesGenerator {
                 .setDamage(6)
                 .build();
 
+        BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "aeternium_halberd_head"), BetterEndAdditionsRegister.AETERNIUM_HALBERD_HEAD.get())
+                .setInput(EndItems.AETERNIUM_INGOT)
+                .setInputCount(2)
+                .setAnvilLevel(anvilLevel)
+                .setToolLevel(anvilLevel)
+                .setDamage(6)
+                .build();
+
         //Terminite
         BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "terminite_chakram_head"), BetterEndAdditionsRegister.TERMINITE_CHAKRAM_HEAD.get())
                 .setInput(EndBlocks.TERMINITE.ingot)
@@ -241,6 +249,14 @@ public class BetterEndRecipesGenerator {
                 .setDamage(6)
                 .build();
 
+        BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "terminite_halberd_head"), BetterEndAdditionsRegister.TERMINITE_HALBERD_HEAD.get())
+                .setInput(EndBlocks.TERMINITE.ingot)
+                .setInputCount(2)
+                .setAnvilLevel(anvilLevel)
+                .setToolLevel(anvilLevel)
+                .setDamage(6)
+                .build();
+
         //Thallasium
         BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "thallasium_chakram_head"), BetterEndAdditionsRegister.THALLASIUM_CHAKRAM_HEAD.get())
                 .setInput(EndBlocks.THALLASIUM.ingot)
@@ -347,6 +363,14 @@ public class BetterEndRecipesGenerator {
                 .build();
 
         BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "thallasium_warglaive_head"), BetterEndAdditionsRegister.THALLASIUM_WARGLAIVE_HEAD.get())
+                .setInput(EndBlocks.THALLASIUM.ingot)
+                .setInputCount(2)
+                .setAnvilLevel(anvilLevel)
+                .setToolLevel(anvilLevel)
+                .setDamage(6)
+                .build();
+
+        BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "thallasium_halberd_head"), BetterEndAdditionsRegister.THALLASIUM_HALBERD_HEAD.get())
                 .setInput(EndBlocks.THALLASIUM.ingot)
                 .setInputCount(2)
                 .setAnvilLevel(anvilLevel)

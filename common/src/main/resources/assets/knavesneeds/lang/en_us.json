@@ -13,6 +13,7 @@
   "item.knavesneeds.twilight_forest.fiery.greathammer"                      : "Fiery Greathammer",
   "item.knavesneeds.twilight_forest.fiery.chakram"                          : "Fiery Chakram",
   "item.knavesneeds.twilight_forest.fiery.scythe"                           : "Fiery Scythe",
+  "item.knavesneeds.twilight_forest.fiery.halberd"                          : "Fiery Halberd",
 
   "item.knavesneeds.twilight_forest.ironwood.longsword"                     : "Ironwood Longsword",
   "item.knavesneeds.twilight_forest.ironwood.twinblade"                     : "Ironwood Twinblade",
@@ -28,6 +29,7 @@
   "item.knavesneeds.twilight_forest.ironwood.greathammer"                   : "Ironwood Greathammer",
   "item.knavesneeds.twilight_forest.ironwood.chakram"                       : "Ironwood Chakram",
   "item.knavesneeds.twilight_forest.ironwood.scythe"                        : "Ironwood Scythe",
+  "item.knavesneeds.twilight_forest.ironwood.halberd"                       : "Ironwood Halberd",
 
   "item.knavesneeds.twilight_forest.knightmetal.longsword"                  : "Knightmetal Longsword",
   "item.knavesneeds.twilight_forest.knightmetal.twinblade"                  : "Knightmetal Twinblade",
@@ -43,6 +45,7 @@
   "item.knavesneeds.twilight_forest.knightmetal.greathammer"                : "Knightmetal Greathammer",
   "item.knavesneeds.twilight_forest.knightmetal.chakram"                    : "Knightmetal Chakram",
   "item.knavesneeds.twilight_forest.knightmetal.scythe"                     : "Knightmetal Scythe",
+  "item.knavesneeds.twilight_forest.knightmetal.halberd"                    : "Knightmetal Halberd",
 
   "item.knavesneeds.twilight_forest.steeleaf.longsword"                     : "Steeleaf Longsword",
   "item.knavesneeds.twilight_forest.steeleaf.twinblade"                     : "Steeleaf Twinblade",
@@ -58,6 +61,7 @@
   "item.knavesneeds.twilight_forest.steeleaf.greathammer"                   : "Steeleaf Greathammer",
   "item.knavesneeds.twilight_forest.steeleaf.chakram"                       : "Steeleaf Chakram",
   "item.knavesneeds.twilight_forest.steeleaf.scythe"                        : "Steeleaf Scythe",
+  "item.knavesneeds.twilight_forest.steeleaf.halberd"                       : "Steeleaf Halberd",
 
   "item.knavesneeds.undergarden.cloggrum.longsword"                         : "Cloggrum Longsword",
   "item.knavesneeds.undergarden.cloggrum.twinblade"                         : "Cloggrum Twinblade",
@@ -73,6 +77,7 @@
   "item.knavesneeds.undergarden.cloggrum.greathammer"                       : "Cloggrum Greathammer",
   "item.knavesneeds.undergarden.cloggrum.chakram"                           : "Cloggrum Chakram",
   "item.knavesneeds.undergarden.cloggrum.scythe"                            : "Cloggrum Scythe",
+  "item.knavesneeds.undergarden.cloggrum.halberd"                           : "Cloggrum Halberd",
 
   "item.knavesneeds.undergarden.forgotten.longsword"                        : "Forgotten Longsword",
   "item.knavesneeds.undergarden.forgotten.twinblade"                        : "Forgotten Twinblade",
@@ -88,6 +93,7 @@
   "item.knavesneeds.undergarden.forgotten.greathammer"                      : "Forgotten Greathammer",
   "item.knavesneeds.undergarden.forgotten.chakram"                          : "Forgotten Chakram",
   "item.knavesneeds.undergarden.forgotten.scythe"                           : "Forgotten Scythe",
+  "item.knavesneeds.undergarden.forgotten.halberd"                          : "Forgotten Halberd",
 
   "item.knavesneeds.undergarden.froststeel.longsword"                       : "Froststeel Longsword",
   "item.knavesneeds.undergarden.froststeel.twinblade"                       : "Froststeel Twinblade",
@@ -103,6 +109,7 @@
   "item.knavesneeds.undergarden.froststeel.greathammer"                     : "Froststeel Greathammer",
   "item.knavesneeds.undergarden.froststeel.chakram"                         : "Froststeel Chakram",
   "item.knavesneeds.undergarden.froststeel.scythe"                          : "Froststeel Scythe",
+  "item.knavesneeds.undergarden.froststeel.halberd"                         : "Froststeel Halberd",
 
   "item.knavesneeds.undergarden.utherium.longsword"                         : "Utherium Longsword",
   "item.knavesneeds.undergarden.utherium.twinblade"                         : "Utherium Twinblade",
@@ -118,6 +125,7 @@
   "item.knavesneeds.undergarden.utherium.greathammer"                       : "Utherium Greathammer",
   "item.knavesneeds.undergarden.utherium.chakram"                           : "Utherium Chakram",
   "item.knavesneeds.undergarden.utherium.scythe"                            : "Utherium Scythe",
+  "item.knavesneeds.undergarden.utherium.halberd"                           : "Utherium Halberd",
 
   "item.knavesneeds.forbidden_arcanus.deorum.longsword"                     : "Deorum Longsword",
   "item.knavesneeds.forbidden_arcanus.deorum.twinblade"                     : "Deorum Twinblade",
@@ -133,6 +141,7 @@
   "item.knavesneeds.forbidden_arcanus.deorum.greathammer"                   : "Deorum Greathammer",
   "item.knavesneeds.forbidden_arcanus.deorum.chakram"                       : "Deorum Chakram",
   "item.knavesneeds.forbidden_arcanus.deorum.scythe"                        : "Deorum Scythe",
+  "item.knavesneeds.forbidden_arcanus.deorum.halberd"                       : "Deorum Halberd",
 
   "item.knavesneeds.forbidden_arcanus.draco_arcanus.longsword"              : "Draco Arcanus Longsword",
   "item.knavesneeds.forbidden_arcanus.draco_arcanus.twinblade"              : "Draco Arcanus Twinblade",
@@ -148,6 +157,7 @@
   "item.knavesneeds.forbidden_arcanus.draco_arcanus.greathammer"            : "Draco Arcanus Greathammer",
   "item.knavesneeds.forbidden_arcanus.draco_arcanus.chakram"                : "Draco Arcanus Chakram",
   "item.knavesneeds.forbidden_arcanus.draco_arcanus.scythe"                 : "Draco Arcanus Scythe",
+  "item.knavesneeds.forbidden_arcanus.draco_arcanus.halberd"                : "Draco Arcanus Halberd",
 
   "item.knavesneeds.forbidden_arcanus.reinforced_deorum.longsword"          : "Reinforced Deorum Longsword",
   "item.knavesneeds.forbidden_arcanus.reinforced_deorum.twinblade"          : "Reinforced Deorum Twinblade",
@@ -163,6 +173,7 @@
   "item.knavesneeds.forbidden_arcanus.reinforced_deorum.greathammer"        : "Reinforced Deorum Greathammer",
   "item.knavesneeds.forbidden_arcanus.reinforced_deorum.chakram"            : "Reinforced Deorum Chakram",
   "item.knavesneeds.forbidden_arcanus.reinforced_deorum.scythe"             : "Reinforced Deorum Scythe",
+  "item.knavesneeds.forbidden_arcanus.reinforced_deorum.halberd"            : "Reinforced Deorum Halberd",
 
   "item.knavesneeds.plus_the_end.endronium.longsword"                       : "Endronium Longsword",
   "item.knavesneeds.plus_the_end.endronium.twinblade"                       : "Endronium Twinblade",
@@ -178,6 +189,7 @@
   "item.knavesneeds.plus_the_end.endronium.greathammer"                     : "Endronium Greathammer",
   "item.knavesneeds.plus_the_end.endronium.chakram"                         : "Endronium Chakram",
   "item.knavesneeds.plus_the_end.endronium.scythe"                          : "Endronium Scythe",
+  "item.knavesneeds.plus_the_end.endronium.halberd"                         : "Endronium Halberd",
 
   "item.blue_skies.aquite.longsword"                                        : "Aquite Longsword",
   "item.blue_skies.aquite.twinblade"                                        : "Aquite Twinblade",
@@ -193,6 +205,7 @@
   "item.blue_skies.aquite.greathammer"                                      : "Aquite Greathammer",
   "item.blue_skies.aquite.chakram"                                          : "Aquite Chakram",
   "item.blue_skies.aquite.scythe"                                           : "Aquite Scythe",
+  "item.blue_skies.aquite.halberd"                                          : "Aquite Halberd",
 
   "item.blue_skies.bluebright_wood.longsword"                               : "Bluebright Wood Longsword",
   "item.blue_skies.bluebright_wood.twinblade"                               : "Bluebright Wood Twinblade",
@@ -208,6 +221,7 @@
   "item.blue_skies.bluebright_wood.greathammer"                             : "Bluebright Wood Greathammer",
   "item.blue_skies.bluebright_wood.chakram"                                 : "Bluebright Wood Chakram",
   "item.blue_skies.bluebright_wood.scythe"                                  : "Bluebright Wood Scythe",
+  "item.blue_skies.bluebright_wood.halberd"                                 : "Bluebright Wood Halberd",
 
   "item.blue_skies.charoite.longsword"                                      : "Charoite Longsword",
   "item.blue_skies.charoite.twinblade"                                      : "Charoite Twinblade",
@@ -223,6 +237,7 @@
   "item.blue_skies.charoite.greathammer"                                    : "Charoite Greathammer",
   "item.blue_skies.charoite.chakram"                                        : "Charoite Chakram",
   "item.blue_skies.charoite.scythe"                                         : "Charoite Scythe",
+  "item.blue_skies.charoite.halberd"                                        : "Charoite Halberd",
 
   "item.blue_skies.cherry_wood.longsword"                                   : "Cherry Wood Longsword",
   "item.blue_skies.cherry_wood.twinblade"                                   : "Cherry Wood Twinblade",
@@ -238,6 +253,7 @@
   "item.blue_skies.cherry_wood.greathammer"                                 : "Cherry Wood Greathammer",
   "item.blue_skies.cherry_wood.chakram"                                     : "Cherry Wood Chakram",
   "item.blue_skies.cherry_wood.scythe"                                      : "Cherry Wood Scythe",
+  "item.blue_skies.cherry_wood.halberd"                                     : "Cherry Wood Halberd",
 
   "item.blue_skies.diopside.longsword"                                      : "Diopside Longsword",
   "item.blue_skies.diopside.twinblade"                                      : "Diopside Twinblade",
@@ -253,6 +269,7 @@
   "item.blue_skies.diopside.greathammer"                                    : "Diopside Greathammer",
   "item.blue_skies.diopside.chakram"                                        : "Diopside Chakram",
   "item.blue_skies.diopside.scythe"                                         : "Diopside Scythe",
+  "item.blue_skies.diopside.halberd"                                        : "Diopside Halberd",
 
   "item.blue_skies.dusk_wood.longsword"                                     : "Dusk Wood Longsword",
   "item.blue_skies.dusk_wood.twinblade"                                     : "Dusk Wood Twinblade",
@@ -268,6 +285,7 @@
   "item.blue_skies.dusk_wood.greathammer"                                   : "Dusk Wood Greathammer",
   "item.blue_skies.dusk_wood.chakram"                                       : "Dusk Wood Chakram",
   "item.blue_skies.dusk_wood.scythe"                                        : "Dusk Wood Scythe",
+  "item.blue_skies.dusk_wood.halberd"                                       : "Dusk Wood Halberd",
 
   "item.blue_skies.frostbright_wood.longsword"                              : "Frostbright Wood Longsword",
   "item.blue_skies.frostbright_wood.twinblade"                              : "Frostbright Wood Twinblade",
@@ -283,6 +301,7 @@
   "item.blue_skies.frostbright_wood.greathammer"                            : "Frostbright Wood Greathammer",
   "item.blue_skies.frostbright_wood.chakram"                                : "Frostbright Wood Chakram",
   "item.blue_skies.frostbright_wood.scythe"                                 : "Frostbright Wood Scythe",
+  "item.blue_skies.frostbright_wood.halberd"                                : "Frostbright Wood Halberd",
 
   "item.blue_skies.horizonite.longsword"                                    : "Horizonite Longsword",
   "item.blue_skies.horizonite.twinblade"                                    : "Horizonite Twinblade",
@@ -298,6 +317,7 @@
   "item.blue_skies.horizonite.greathammer"                                  : "Horizonite Greathammer",
   "item.blue_skies.horizonite.chakram"                                      : "Horizonite Chakram",
   "item.blue_skies.horizonite.scythe"                                       : "Horizonite Scythe",
+  "item.blue_skies.horizonite.halberd"                                      : "Horizonite Halberd",
 
   "item.blue_skies.lunar_stone.longsword"                                   : "Lunar Stone Longsword",
   "item.blue_skies.lunar_stone.twinblade"                                   : "Lunar Stone Twinblade",
@@ -313,6 +333,7 @@
   "item.blue_skies.lunar_stone.greathammer"                                 : "Lunar Stone Greathammer",
   "item.blue_skies.lunar_stone.chakram"                                     : "Lunar Stone Chakram",
   "item.blue_skies.lunar_stone.scythe"                                      : "Lunar Stone Scythe",
+  "item.blue_skies.lunar_stone.halberd"                                     : "Lunar Stone Halberd",
 
   "item.blue_skies.lunar_wood.longsword"                                    : "Lunar Wood Longsword",
   "item.blue_skies.lunar_wood.twinblade"                                    : "Lunar Wood Twinblade",
@@ -328,6 +349,7 @@
   "item.blue_skies.lunar_wood.greathammer"                                  : "Lunar Wood Greathammer",
   "item.blue_skies.lunar_wood.chakram"                                      : "Lunar Wood Chakram",
   "item.blue_skies.lunar_wood.scythe"                                       : "Lunar Wood Scythe",
+  "item.blue_skies.lunar_wood.halberd"                                      : "Lunar Wood Halberd",
 
   "item.blue_skies.maple_wood.longsword"                                    : "Maple Wood Longsword",
   "item.blue_skies.maple_wood.twinblade"                                    : "Maple Wood Twinblade",
@@ -343,6 +365,7 @@
   "item.blue_skies.maple_wood.greathammer"                                  : "Maple Wood Greathammer",
   "item.blue_skies.maple_wood.chakram"                                      : "Maple Wood Chakram",
   "item.blue_skies.maple_wood.scythe"                                       : "Maple Wood Scythe",
+  "item.blue_skies.maple_wood.halberd"                                      : "Maple Wood Halberd",
 
   "item.blue_skies.pyrope.longsword"                                        : "Pyrope Longsword",
   "item.blue_skies.pyrope.twinblade"                                        : "Pyrope Twinblade",
@@ -358,6 +381,7 @@
   "item.blue_skies.pyrope.greathammer"                                      : "Pyrope Greathammer",
   "item.blue_skies.pyrope.chakram"                                          : "Pyrope Chakram",
   "item.blue_skies.pyrope.scythe"                                           : "Pyrope Scythe",
+  "item.blue_skies.pyrope.halberd"                                          : "Pyrope Halberd",
 
   "item.blue_skies.starlit_wood.longsword"                                  : "Starlit Wood Longsword",
   "item.blue_skies.starlit_wood.twinblade"                                  : "Starlit Wood Twinblade",
@@ -373,6 +397,7 @@
   "item.blue_skies.starlit_wood.greathammer"                                : "Starlit Wood Greathammer",
   "item.blue_skies.starlit_wood.chakram"                                    : "Starlit Wood Chakram",
   "item.blue_skies.starlit_wood.scythe"                                     : "Starlit Wood Scythe",
+  "item.blue_skies.starlit_wood.halberd"                                    : "Starlit Wood Halberd",
 
   "item.blue_skies.turquoise_stone.longsword"                               : "Turquoise Stone Longsword",
   "item.blue_skies.turquoise_stone.twinblade"                               : "Turquoise Stone Twinblade",
@@ -388,6 +413,7 @@
   "item.blue_skies.turquoise_stone.greathammer"                             : "Turquoise Stone Greathammer",
   "item.blue_skies.turquoise_stone.chakram"                                 : "Turquoise Stone Chakram",
   "item.blue_skies.turquoise_stone.scythe"                                  : "Turquoise Stone Scythe",
+  "item.blue_skies.turquoise_stone.halberd"                                 : "Turquoise Stone Halberd",
 
   "item.knavesneeds.betterend.aeternium.longsword"                          : "Aeternium Longsword",
   "item.knavesneeds.betterend.aeternium.twinblade"                          : "Aeternium Twinblade",
@@ -403,6 +429,7 @@
   "item.knavesneeds.betterend.aeternium.greathammer"                        : "Aeternium Greathammer",
   "item.knavesneeds.betterend.aeternium.chakram"                            : "Aeternium Chakram",
   "item.knavesneeds.betterend.aeternium.scythe"                             : "Aeternium Scythe",
+  "item.knavesneeds.betterend.aeternium.halberd"                            : "Aeternium Halberd",
 
   "item.knavesneeds.betterend.aeternium.longsword_head"                     : "Aeternium Longsword Head",
   "item.knavesneeds.betterend.aeternium.twinblade_head"                     : "Aeternium Twinblade Head",
@@ -418,6 +445,7 @@
   "item.knavesneeds.betterend.aeternium.greathammer_head"                   : "Aeternium Greathammer Head",
   "item.knavesneeds.betterend.aeternium.chakram_head"                       : "Aeternium Chakram Head",
   "item.knavesneeds.betterend.aeternium.scythe_head"                        : "Aeternium Scythe Head",
+  "item.knavesneeds.betterend.aeternium.halberd_head"                       : "Aeternium Halberd Head",
 
   "item.knavesneeds.betterend.terminite.longsword"                          : "Terminite Longsword",
   "item.knavesneeds.betterend.terminite.twinblade"                          : "Terminite Twinblade",
@@ -433,6 +461,7 @@
   "item.knavesneeds.betterend.terminite.greathammer"                        : "Terminite Greathammer",
   "item.knavesneeds.betterend.terminite.chakram"                            : "Terminite Chakram",
   "item.knavesneeds.betterend.terminite.scythe"                             : "Terminite Scythe",
+  "item.knavesneeds.betterend.terminite.halberd"                            : "Terminite Halberd",
 
   "item.knavesneeds.betterend.terminite.longsword_head"                     : "Terminite Longsword Head",
   "item.knavesneeds.betterend.terminite.twinblade_head"                     : "Terminite Twinblade Head",
@@ -448,6 +477,7 @@
   "item.knavesneeds.betterend.terminite.greathammer_head"                   : "Terminite Greathammer Head",
   "item.knavesneeds.betterend.terminite.chakram_head"                       : "Terminite Chakram Head",
   "item.knavesneeds.betterend.terminite.scythe_head"                        : "Terminite Scythe Head",
+  "item.knavesneeds.betterend.terminite.halberd_head"                       : "Terminite Halberd Head",
 
   "item.knavesneeds.betterend.thallasium.longsword"                         : "Thallasium Longsword",
   "item.knavesneeds.betterend.thallasium.twinblade"                         : "Thallasium Twinblade",
@@ -463,6 +493,7 @@
   "item.knavesneeds.betterend.thallasium.greathammer"                       : "Thallasium Greathammer",
   "item.knavesneeds.betterend.thallasium.chakram"                           : "Thallasium Chakram",
   "item.knavesneeds.betterend.thallasium.scythe"                            : "Thallasium Scythe",
+  "item.knavesneeds.betterend.thallasium.halberd"                           : "Thallasium Halberd",
 
   "item.knavesneeds.betterend.thallasium.longsword_head"                    : "Thallasium Longsword Head",
   "item.knavesneeds.betterend.thallasium.twinblade_head"                    : "Thallasium Twinblade Head",
@@ -478,6 +509,7 @@
   "item.knavesneeds.betterend.thallasium.greathammer_head"                  : "Thallasium Greathammer Head",
   "item.knavesneeds.betterend.thallasium.chakram_head"                      : "Thallasium Chakram Head",
   "item.knavesneeds.betterend.thallasium.scythe_head"                       : "Thallasium Scythe Head",
+  "item.knavesneeds.betterend.thallasium.halberd_head"                      : "Thallasium Halberd Head",
 
   "item.knavesneeds.betternether.cincinnasite.longsword"                    : "Cincinnasite Longsword",
   "item.knavesneeds.betternether.cincinnasite.twinblade"                    : "Cincinnasite Twinblade",
@@ -493,6 +525,7 @@
   "item.knavesneeds.betternether.cincinnasite.greathammer"                  : "Cincinnasite Greathammer",
   "item.knavesneeds.betternether.cincinnasite.chakram"                      : "Cincinnasite Chakram",
   "item.knavesneeds.betternether.cincinnasite.scythe"                       : "Cincinnasite Scythe",
+  "item.knavesneeds.betternether.cincinnasite.halberd"                      : "Cincinnasite Halberd",
 
   "item.knavesneeds.betternether.cincinnasite_diamond.longsword"            : "Cincinnasite Diamond Longsword",
   "item.knavesneeds.betternether.cincinnasite_diamond.twinblade"            : "Cincinnasite Diamond Twinblade",
@@ -508,6 +541,7 @@
   "item.knavesneeds.betternether.cincinnasite_diamond.greathammer"          : "Cincinnasite Diamond Greathammer",
   "item.knavesneeds.betternether.cincinnasite_diamond.chakram"              : "Cincinnasite Diamond Chakram",
   "item.knavesneeds.betternether.cincinnasite_diamond.scythe"               : "Cincinnasite Diamond Scythe",
+  "item.knavesneeds.betternether.cincinnasite_diamond.halberd"              : "Cincinnasite Diamond Halberd",
 
   "item.knavesneeds.betternether.nether_ruby.longsword"                     : "Nether Ruby Longsword",
   "item.knavesneeds.betternether.nether_ruby.twinblade"                     : "Nether Ruby Twinblade",
@@ -523,6 +557,7 @@
   "item.knavesneeds.betternether.nether_ruby.greathammer"                   : "Nether Ruby Greathammer",
   "item.knavesneeds.betternether.nether_ruby.chakram"                       : "Nether Ruby Chakram",
   "item.knavesneeds.betternether.nether_ruby.scythe"                        : "Nether Ruby Scythe",
+  "item.knavesneeds.betternether.nether_ruby.halberd"                       : "Nether Ruby Halberd",
 
   "item.knavesneeds.soulsweapons.translucent.longsword"                     : "Translucent Longsword",
   "item.knavesneeds.soulsweapons.translucent.twinblade"                     : "Translucent Twinblade",
@@ -537,5 +572,38 @@
   "item.knavesneeds.soulsweapons.translucent.greataxe"                      : "Translucent Greataxe",
   "item.knavesneeds.soulsweapons.translucent.greathammer"                   : "Translucent Greathammer",
   "item.knavesneeds.soulsweapons.translucent.chakram"                       : "Translucent Chakram",
-  "item.knavesneeds.soulsweapons.translucent.scythe"                        : "Translucent Scythe"
+  "item.knavesneeds.soulsweapons.translucent.scythe"                        : "Translucent Scythe",
+  "item.knavesneeds.soulsweapons.translucent.halberd"                       : "Translucent Halberd",
+
+  "item.knavesneeds.byg.pendorite.longsword"                                : "Pendorite Longsword",
+  "item.knavesneeds.byg.pendorite.twinblade"                                : "Pendorite Twinblade",
+  "item.knavesneeds.byg.pendorite.rapier"                                   : "Pendorite Rapier",
+  "item.knavesneeds.byg.pendorite.katana"                                   : "Pendorite Katana",
+  "item.knavesneeds.byg.pendorite.sai"                                      : "Pendorite Sai",
+  "item.knavesneeds.byg.pendorite.spear"                                    : "Pendorite Spear",
+  "item.knavesneeds.byg.pendorite.glaive"                                   : "Pendorite Glaive",
+  "item.knavesneeds.byg.pendorite.warglaive"                                : "Pendorite Warglaive",
+  "item.knavesneeds.byg.pendorite.cutlass"                                  : "Pendorite Cutlass",
+  "item.knavesneeds.byg.pendorite.claymore"                                 : "Pendorite Claymore",
+  "item.knavesneeds.byg.pendorite.greataxe"                                 : "Pendorite Greataxe",
+  "item.knavesneeds.byg.pendorite.greathammer"                              : "Pendorite Greathammer",
+  "item.knavesneeds.byg.pendorite.chakram"                                  : "Pendorite Chakram",
+  "item.knavesneeds.byg.pendorite.scythe"                                   : "Pendorite Scythe",
+  "item.knavesneeds.byg.pendorite.halberd"                                  : "Pendorite Halberd",
+
+  "item.knavesneeds.deeperdarker.warden.longsword"                          : "Warden Longsword",
+  "item.knavesneeds.deeperdarker.warden.twinblade"                          : "Warden Twinblade",
+  "item.knavesneeds.deeperdarker.warden.rapier"                             : "Warden Rapier",
+  "item.knavesneeds.deeperdarker.warden.katana"                             : "Warden Katana",
+  "item.knavesneeds.deeperdarker.warden.sai"                                : "Warden Sai",
+  "item.knavesneeds.deeperdarker.warden.spear"                              : "Warden Spear",
+  "item.knavesneeds.deeperdarker.warden.glaive"                             : "Warden Glaive",
+  "item.knavesneeds.deeperdarker.warden.warglaive"                          : "Warden Warglaive",
+  "item.knavesneeds.deeperdarker.warden.cutlass"                            : "Warden Cutlass",
+  "item.knavesneeds.deeperdarker.warden.claymore"                           : "Warden Claymore",
+  "item.knavesneeds.deeperdarker.warden.greataxe"                           : "Warden Greataxe",
+  "item.knavesneeds.deeperdarker.warden.greathammer"                        : "Warden Greathammer",
+  "item.knavesneeds.deeperdarker.warden.chakram"                            : "Warden Chakram",
+  "item.knavesneeds.deeperdarker.warden.scythe"                             : "Warden Scythe",
+  "item.knavesneeds.deeperdarker.warden.halberd"                            : "Warden Halberd"
 }

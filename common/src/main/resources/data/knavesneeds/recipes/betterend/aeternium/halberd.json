@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "betterend"
+      ]
+    }
+  ],
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "knavesneeds:betterend/aeternium/halberd_head"
+  },
+  "addition": {
+    "item": "betterend:leather_wrapped_stick"
+  },
+  "result": {
+    "item": "knavesneeds:betterend/aeternium/halberd"
+  }
+}

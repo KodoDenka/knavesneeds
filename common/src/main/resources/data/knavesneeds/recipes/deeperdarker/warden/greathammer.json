@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "deeperdarker"
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "deeperdarker"
+    }
+  ],
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "simplyswords:netherite_greathammer"
+  },
+  "addition": {
+    "item": "deeperdarker:reinforced_echo_shard"
+  },
+  "result": {
+    "item": "knavesneeds:deeperdarker/warden/greathammer"
+  }
+}

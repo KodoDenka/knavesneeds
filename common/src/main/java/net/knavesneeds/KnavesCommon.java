@@ -61,6 +61,14 @@ public class KnavesCommon {
             SoulsWeaponsAdditionsRegister.SOULS_WEAPONS_ITEMS.register();
         }
 
+        if (Platform.getOptionalMod("byg").isPresent()) {
+            BiomesYoullGoRegister.BYG_ITEMS.register();
+        }
+
+        if (Platform.getOptionalMod("deeperdarker").isPresent()) {
+            DeeperAndDarkerRegister.DEEPER_DARKER_ITEMS.register();
+        }
+
         System.out.println(KnavesExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
 }

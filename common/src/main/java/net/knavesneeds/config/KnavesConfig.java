@@ -61,4 +61,10 @@ public class KnavesConfig implements ConfigData {
     @Comment("SoulslikeWeapons")
     public static int TRANSLUCENT_MOD = 0;
 
+    @Comment("Deeper And Darker")
+    public static int WARDEN_MOD = 0;
+
+    @Comment("Oh The Biomes You'll Go")
+    public static int PENDORITE_MOD = 0;
+
 }
