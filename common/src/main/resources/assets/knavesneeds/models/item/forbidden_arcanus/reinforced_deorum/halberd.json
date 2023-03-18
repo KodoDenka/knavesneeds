@@ -1,6 +1,6 @@
 {
   "parent": "knavesneeds:item/long_handheld",
   "textures": {
-    "layer0": "knavesneeds:item/fobidden_arcans/reinforced_deorum/reinforced_deorum_halberd"
+    "layer0": "knavesneeds:item/forbidden_arcanus/reinforced_deorum/reinforced_deorum_halberd"
   }
 }

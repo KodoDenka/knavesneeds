@@ -49,7 +49,7 @@ public class LivingEntityMixin {
                     }
                 }
                 // Fiery Weapon burn
-                else if (swordItem.getMaterial().equals(ToolMaterialCompat.FIERY)) {
+                else if (swordItem.getMaterial().equals(ToolMaterialCompat.FIERY) || swordItem.getMaterial().equals(ToolMaterialCompat.HORIZONITE)) {
                     target.setOnFireFor(2);
                 }
             }

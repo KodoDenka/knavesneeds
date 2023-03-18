@@ -39,6 +39,10 @@ public class KnavesSwordItem  extends SwordItem {
             if (swordItem.getMaterial().equals(ToolMaterialCompat.KNIGHTMETAL)) {
                 tooltip.add(Text.translatable("item.twilightforest.knightmetal_sword.tooltip").formatted(Formatting.GRAY));
             }
+
+            if (swordItem.getMaterial().equals(ToolMaterialCompat.HORIZONITE)) {
+                tooltip.add(Text.translatable("gui.blue_skies.item.ability.fire").formatted(Formatting.GRAY));
+            }
         }
     }
 

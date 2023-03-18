@@ -23,22 +23,22 @@ public enum ToolMaterialCompat implements ToolMaterial {
 
 
     //Blue Skies Tiers
-    PYROPE(200,9.0f,1.5f,1,10, "blue_skies:pyrope_gem"),
-    AQUITE(270,9.0f,2.0f,2,32, "blue_skies:aquite"),
-    DIOPSIDE(1661,9.0f,5.0f,3,14, "blue_skies:diopside_gem"),
-    CHAROITE(1561,9.0f,3.0f,3,10, "blue_skies:charoite"),
+    PYROPE(200,9.0f,4.5f,1,10, "blue_skies:pyrope_gem"),
+    AQUITE(270,9.0f,5.0f,2,32, "blue_skies:aquite"),
+    DIOPSIDE(1661,9.0f,8.0f,3,14, "blue_skies:diopside_gem"),
+    CHAROITE(1561,9.0f,6.0f,3,10, "blue_skies:charoite"),
     HORIZONITE(250,9.0f,2.0f,3,10, "blue_skies:horizonite_ingot"),
 
-    TURQUOISE_STONE(131,4.0F,1.0F,1,8, "blue_skies:turquoise_cobblestone"),
-    LUNAR_STONE(131,4.0F,1.0F,1,8, "blue_skies:lunar_cobblestone"),
+    TURQUOISE_STONE(131,4.0F,4.0F,1,8, "blue_skies:turquoise_cobblestone"),
+    LUNAR_STONE(131,4.0F,4.0F,1,8, "blue_skies:lunar_cobblestone"),
 
-    BLUEBRIGHT_WOOD(59,2.0F,0.0F,0,15, "blue_skies:bluebright_planks"),
-    LUNAR_WOOD(59,2.0F,0.0F,0,15, "blue_skies:lunar_planks"),
-    STARLIT_WOOD(59,2.0F,0.0F,0,15, "blue_skies:starlit_planks"),
-    DUSK_WOOD(59,2.0F,0.0F,0,15, "blue_skies:dusk_planks"),
-    FROSTBRIGHT_WOOD(59,2.0F,0.0F,0,15, "blue_skies:frostbright_planks"),
-    MAPLE_WOOD(64,2.0F,0.0F,0,10, "blue_skies:maple_planks"),
-    CHERRY_WOOD(64,2.0F,0.0F,0,10, "blue_skies:cherry_planks"),
+    BLUEBRIGHT_WOOD(59,2.0F,3.0F,0,15, "blue_skies:bluebright_planks"),
+    LUNAR_WOOD(59,2.0F,3.0F,0,15, "blue_skies:lunar_planks"),
+    STARLIT_WOOD(59,2.0F,3.0F,0,15, "blue_skies:starlit_planks"),
+    DUSK_WOOD(59,2.0F,3.0F,0,15, "blue_skies:dusk_planks"),
+    FROSTBRIGHT_WOOD(59,2.0F,3.0F,0,15, "blue_skies:frostbright_planks"),
+    MAPLE_WOOD(64,2.0F,3.0F,0,10, "blue_skies:maple_planks"),
+    CHERRY_WOOD(64,2.0F,3.0F,0,10, "blue_skies:cherry_planks"),
 
 
     //Forbidden Arcanus Tiers
