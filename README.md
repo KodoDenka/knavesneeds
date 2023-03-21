@@ -22,3 +22,5 @@ Featuring over 520 addition weapons, with their respective special effects, all 
  - Better End `[FABRIC - 1.18/1.19]`
  - Better Nether `[FABRIC - 1.18/1.19]`
  - Souls Like Weapons `[FABRIC - 1.18/1.19]`
+ - Deeper And Darker `[FORGE/FABRIC - 1.19]`
+ - Oh The Biomes You'll Go `[FORGE/FABRIC - 1.19]`
