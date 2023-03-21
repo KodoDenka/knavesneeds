@@ -7,6 +7,7 @@ import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
+import net.sweenus.simplyswords.SimplySwords;
 
 import java.util.Locale;
 
@@ -274,8 +275,11 @@ public class BlueSkiesAdditionsRegister {
         return registerMaterial(id, ToolMaterialCompat.CHERRY_WOOD, KnavesConfig.CHERRY_WOOD_MOD);
     }
 
+    //Custom behaviour to reduce attack speed.
     private static RegistrySupplier<Item> registerDiopside(String id) {
-        return registerMaterial(id, ToolMaterialCompat.DIOPSIDE, KnavesConfig.DIOPSIDE_MOD);
+        return BLUE_SKIES_ITEMS.register(ToolMaterialCompat.DIOPSIDE.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new KnavesSwordItem(ToolMaterialCompat.DIOPSIDE, KnavesConfig.DIOPSIDE_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id) - 0.4F));
     }
 
     private static RegistrySupplier<Item> registerDuskWood(String id) {
@@ -302,8 +306,11 @@ public class BlueSkiesAdditionsRegister {
         return registerMaterial(id, ToolMaterialCompat.MAPLE_WOOD, KnavesConfig.MAPLE_WOOD_MOD);
     }
 
+    //Custom behaviour to add attack speed.
     private static RegistrySupplier<Item> registerPyrope(String id) {
-        return registerMaterial(id, ToolMaterialCompat.PYROPE, KnavesConfig.PYROPE_MOD);
+        return BLUE_SKIES_ITEMS.register(ToolMaterialCompat.PYROPE.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new KnavesSwordItem(ToolMaterialCompat.PYROPE, KnavesConfig.PYROPE_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id) + 0.4F));
     }
 
     private static RegistrySupplier<Item> registerStarlitWood(String id) {

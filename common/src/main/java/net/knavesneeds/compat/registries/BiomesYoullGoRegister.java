@@ -23,6 +23,7 @@ public class BiomesYoullGoRegister {
     public static final RegistrySupplier<Item> PENDORITE_SPEAR           = registerPendorite("spear");
     public static final RegistrySupplier<Item> PENDORITE_GLAIVE          = registerPendorite("glaive");
     public static final RegistrySupplier<Item> PENDORITE_WARGLAIVE       = registerPendorite("warglaive");
+    public static final RegistrySupplier<Item> PENDORITE_CUTLASS         = registerPendorite("cutlass");
     public static final RegistrySupplier<Item> PENDORITE_CLAYMORE        = registerPendorite("claymore");
     public static final RegistrySupplier<Item> PENDORITE_GREATHAMMER     = registerPendorite("greathammer");
     public static final RegistrySupplier<Item> PENDORITE_GREATAXE        = registerPendorite("greataxe");

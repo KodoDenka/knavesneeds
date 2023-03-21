@@ -23,6 +23,7 @@ public class DeeperAndDarkerRegister {
     public static final RegistrySupplier<Item> WARDEN_SPEAR           = registerWarden("spear");
     public static final RegistrySupplier<Item> WARDEN_GLAIVE          = registerWarden("glaive");
     public static final RegistrySupplier<Item> WARDEN_WARGLAIVE       = registerWarden("warglaive");
+    public static final RegistrySupplier<Item> WARDEN_CUTLASS         = registerWarden("cutlass");
     public static final RegistrySupplier<Item> WARDEN_CLAYMORE        = registerWarden("claymore");
     public static final RegistrySupplier<Item> WARDEN_GREATHAMMER     = registerWarden("greathammer");
     public static final RegistrySupplier<Item> WARDEN_GREATAXE        = registerWarden("greataxe");

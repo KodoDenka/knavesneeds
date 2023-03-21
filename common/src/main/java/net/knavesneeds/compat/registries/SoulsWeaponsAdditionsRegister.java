@@ -25,6 +25,7 @@ public class SoulsWeaponsAdditionsRegister {
     public static final RegistrySupplier<Item> TRANSLUCENT_GLAIVE          = registerTranslucent("glaive");
     public static final RegistrySupplier<Item> TRANSLUCENT_WARGLAIVE       = registerTranslucent("warglaive");
     public static final RegistrySupplier<Item> TRANSLUCENT_CLAYMORE        = registerTranslucent("claymore");
+    public static final RegistrySupplier<Item> TRANSLUCENT_CUTLASS         = registerTranslucent("cutlass");
     public static final RegistrySupplier<Item> TRANSLUCENT_GREATHAMMER     = registerTranslucent("greathammer");
     public static final RegistrySupplier<Item> TRANSLUCENT_GREATAXE        = registerTranslucent("greataxe");
     public static final RegistrySupplier<Item> TRANSLUCENT_CHAKRAM         = registerTranslucent("chakram");

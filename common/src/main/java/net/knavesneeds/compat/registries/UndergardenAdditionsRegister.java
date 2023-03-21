@@ -56,8 +56,8 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> FROSTSTEEL_KATANA        = registerFroststeel("katana");
     public static final RegistrySupplier<Item> FROSTSTEEL_SAI           = registerFroststeel("sai");
     public static final RegistrySupplier<Item> FROSTSTEEL_SPEAR         = registerFroststeel("spear");
-    public static final RegistrySupplier<Item> FROSTSTEEL_GLAIVE        = registerFroststeel("cutlass");
-    public static final RegistrySupplier<Item> FROSTSTEEL_WARGLAIVE     = registerFroststeel("glaive");
+    public static final RegistrySupplier<Item> FROSTSTEEL_GLAIVE        = registerFroststeel("glaive");
+    public static final RegistrySupplier<Item> FROSTSTEEL_WARGLAIVE     = registerFroststeel("warglaive");
     public static final RegistrySupplier<Item> FROSTSTEEL_CUTLASS       = registerFroststeel("cutlass");
     public static final RegistrySupplier<Item> FROSTSTEEL_CLAYMORE      = registerFroststeel("claymore");
     public static final RegistrySupplier<Item> FROSTSTEEL_GREATHAMMER   = registerFroststeel("greathammer");

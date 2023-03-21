@@ -74,14 +74,24 @@ public class BetterNetherAdditionsRegister {
     }
 
     private static RegistrySupplier<Item> registerCincinnasite(String id) {
-        return registerMaterial(id, ToolMaterialCompat.CINCINNASITE, KnavesConfig.CINCINNASITE_MOD);
+        return BETTER_NETHER_ITEMS.register("betternether/" +
+                ToolMaterialCompat.CINCINNASITE.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new KnavesSwordItem(ToolMaterialCompat.CINCINNASITE, KnavesConfig.CINCINNASITE_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id) + 0.2F));
     }
 
     private static RegistrySupplier<Item> registerCincinnasiteDiamond(String id) {
-        return registerMaterial(id, ToolMaterialCompat.CINCINNASITE_DIAMOND, KnavesConfig.CINCINNASITE_DIAMOND_MOD);
+        return BETTER_NETHER_ITEMS.register("betternether/" +
+                ToolMaterialCompat.CINCINNASITE_DIAMOND.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new KnavesSwordItem(ToolMaterialCompat.CINCINNASITE_DIAMOND, KnavesConfig.CINCINNASITE_DIAMOND_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id) + 0.3F));
     }
 
+    //Custom behaviour to add attack speed.
     private static RegistrySupplier<Item> registerNetherRuby(String id) {
-        return registerMaterial(id, ToolMaterialCompat.NETHER_RUBY, KnavesConfig.NETHER_RUBY_MOD);
+        return BETTER_NETHER_ITEMS.register("betternether/" +
+                ToolMaterialCompat.NETHER_RUBY.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new KnavesSwordItem(ToolMaterialCompat.NETHER_RUBY, KnavesConfig.NETHER_RUBY_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id) + 0.4F));
     }
 }

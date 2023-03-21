@@ -3,10 +3,12 @@ package net.knavesneeds.customitems;
 
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 import net.sweenus.simplyswords.SimplySwords;
@@ -39,7 +41,7 @@ public class KnavesSwordItem  extends SwordItem {
             if (swordItem.getMaterial().equals(ToolMaterialCompat.KNIGHTMETAL)) {
                 tooltip.add(Text.translatable("item.twilightforest.knightmetal_sword.tooltip").formatted(Formatting.GRAY));
             }
-
+            // Blue Skies Tooltips
             if (swordItem.getMaterial().equals(ToolMaterialCompat.HORIZONITE)) {
                 tooltip.add(Text.translatable("gui.blue_skies.item.ability.fire").formatted(Formatting.GRAY));
             }
@@ -59,6 +61,11 @@ public class KnavesSwordItem  extends SwordItem {
             //Ironwood
             if (this.getMaterial().equals(ToolMaterialCompat.IRONWOOD)) {
                 itemStack.addEnchantment(Enchantments.KNOCKBACK, 1);
+            }
+
+            //Nether Ruby
+            if (this.getMaterial().equals(ToolMaterialCompat.NETHER_RUBY)) {
+                //itemStack.addEnchantment(null);
             }
             stacks.add(itemStack);
         }
