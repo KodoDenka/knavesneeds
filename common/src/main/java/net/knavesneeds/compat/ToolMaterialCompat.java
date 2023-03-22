@@ -71,7 +71,7 @@ public enum ToolMaterialCompat implements ToolMaterial {
     WARDEN(2464,11.0f,9.0f,4,21, "deeperdarker:reinforced_echo_shard"),
 
 
-    //Oh The Biomes You'll Go
+    //Oh, The Biomes You'll Go
     PENDORITE(2500,10.0f,8.0f,5,15, "byg:pendorite_ingot");
 
     

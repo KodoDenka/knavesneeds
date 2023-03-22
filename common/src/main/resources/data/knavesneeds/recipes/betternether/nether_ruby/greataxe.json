@@ -25,6 +25,8 @@
     " # "
   ],
   "result": {
-    "item": "knavesneeds:betternether/nether_ruby/greataxe"
+    "nbt": "{Enchantments:[{lvl:1s,id:\"betternether:ruby_fire\"}]}",
+    "item": "knavesneeds:betternether/nether_ruby/greataxe",
+    "type": "minecraft:item_nbt"
   }
 }

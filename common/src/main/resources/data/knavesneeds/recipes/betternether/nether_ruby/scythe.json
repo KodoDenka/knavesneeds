@@ -22,6 +22,8 @@
     "#  "
   ],
   "result": {
-    "item": "knavesneeds:betternether/nether_ruby/scythe"
+    "nbt": "{Enchantments:[{lvl:1s,id:\"betternether:ruby_fire\"}]}",
+    "item": "knavesneeds:betternether/nether_ruby/scythe",
+    "type": "minecraft:item_nbt"
   }
 }

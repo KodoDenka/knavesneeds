@@ -15,6 +15,8 @@ import net.sweenus.simplyswords.SimplySwords;
 
 import java.util.List;
 
+import static org.betterx.betternether.registry.NetherEnchantments.RUBY_FIRE;
+
 public class KnavesSwordItem  extends SwordItem {
     public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().group(SimplySwords.SIMPLYSWORDS));
@@ -65,7 +67,7 @@ public class KnavesSwordItem  extends SwordItem {
 
             //Nether Ruby
             if (this.getMaterial().equals(ToolMaterialCompat.NETHER_RUBY)) {
-                //itemStack.addEnchantment(null);
+                itemStack.addEnchantment(RUBY_FIRE, 1);
             }
             stacks.add(itemStack);
         }

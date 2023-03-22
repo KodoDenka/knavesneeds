@@ -22,6 +22,8 @@
     "  X"
   ],
   "result": {
-    "item": "knavesneeds:betternether/nether_ruby/longsword"
+    "nbt": "{Enchantments:[{lvl:1s,id:\"betternether:ruby_fire\"}]}",
+    "item": "knavesneeds:betternether/nether_ruby/longsword",
+    "type": "minecraft:item_nbt"
   }
 }

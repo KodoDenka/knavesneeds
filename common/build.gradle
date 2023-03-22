@@ -42,6 +42,8 @@ dependencies {
     modImplementation "com.github.quiqueck:BCLib:${rootProject.bclib_version}"
 
     modImplementation "curse.maven:betterend-413596:4393109"
+
+    modImplementation "curse.maven:betternether-311377:4393102"
 }
 
 publishing {

@@ -25,6 +25,8 @@
     "Y#Y"
   ],
   "result": {
-    "item": "knavesneeds:betternether/nether_ruby/chakram"
+    "nbt": "{Enchantments:[{lvl:1s,id:\"betternether:ruby_fire\"}]}",
+    "item": "knavesneeds:betternether/nether_ruby/chakram",
+    "type": "minecraft:item_nbt"
   }
 }
