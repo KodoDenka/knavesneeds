@@ -1,15 +1,19 @@
 package net.knavesneeds.customitems;
 
 
+import dev.architectury.platform.Platform;
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.sweenus.simplyswords.SimplySwords;
+import org.betterx.betternether.enchantments.RubyFire;
 
 import java.util.List;
 
@@ -65,8 +69,9 @@ public class KnavesSwordItem  extends SwordItem {
 
             //Nether Ruby
             if (this.getMaterial().equals(ToolMaterialCompat.NETHER_RUBY)) {
-                itemStack.addEnchantment(RUBY_FIRE, 1);
+                itemStack.addEnchantment(Registry.ENCHANTMENT.get(new Identifier("betternether","rubyfire")), 1);
             }
+
             stacks.add(itemStack);
         }
     }
