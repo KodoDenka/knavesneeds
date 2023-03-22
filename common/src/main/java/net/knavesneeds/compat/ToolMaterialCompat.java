@@ -2,6 +2,7 @@ package net.knavesneeds.compat;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
@@ -124,6 +125,6 @@ public enum ToolMaterialCompat implements ToolMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         
-        return Ingredient.ofItems(Registry.ITEM.getValue(new Identifier(tierIngredient)));
+        return Ingredient.ofItems(Registries.ITEM.get(new Identifier(tierIngredient)));
     }
 }

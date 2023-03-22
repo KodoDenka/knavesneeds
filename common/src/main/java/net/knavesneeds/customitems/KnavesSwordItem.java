@@ -1,9 +1,11 @@
 package net.knavesneeds.customitems;
 
 
+import net.fabricmc.fabric.impl.item.group.ItemGroupExtensions;
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -18,6 +20,10 @@ import static org.betterx.betternether.registry.NetherEnchantments.RUBY_FIRE;
 public class KnavesSwordItem  extends SwordItem {
     public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().arch$tab(SimplySwords.SIMPLYSWORDS));
+        ItemStack itemStack = new ItemStack(this);
+        if (SimplySwords.SIMPLYSWORDS.contains(itemStack)) {
+            itemStack.addEnchantment(Enchantments.LOOTING, 2);
+        }
     }
 
     @Override
@@ -49,8 +55,9 @@ public class KnavesSwordItem  extends SwordItem {
     }
 
     // Steeleaf & Ironwood inventory enchant from creative menu
+    /*
     @Override
-    public void appendStacks(ItemGroup group, DefaultedList<ItemStack> stacks) {
+    public void getDefaultStack(ItemGroup group, DefaultedList<ItemStack> stacks) {
         if (this.isIn(group)) {
             ItemStack itemStack = new ItemStack(this);
             //SteelLeaf
@@ -67,7 +74,10 @@ public class KnavesSwordItem  extends SwordItem {
             if (this.getMaterial().equals(ToolMaterialCompat.NETHER_RUBY)) {
                 itemStack.addEnchantment(RUBY_FIRE, 1);
             }
+            SimplySwords.SIMPLYSWORDS.updateEntries();
             stacks.add(itemStack);
         }
     }
+
+     */
 }

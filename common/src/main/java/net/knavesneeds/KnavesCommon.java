@@ -8,10 +8,6 @@ import net.knavesneeds.compat.registries.*;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.config.KnavesConfigWrapper;
 import net.knavesneeds.config.KnavesSimplyConfig;
-import net.minecraft.item.Item;
-import net.minecraft.tag.TagKey;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class KnavesCommon {
 
