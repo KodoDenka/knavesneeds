@@ -3,12 +3,10 @@ package net.knavesneeds.customitems;
 
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 import net.sweenus.simplyswords.SimplySwords;

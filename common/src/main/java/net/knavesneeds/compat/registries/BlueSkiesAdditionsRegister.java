@@ -2,12 +2,12 @@ package net.knavesneeds.compat.registries;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
+import net.knavesneeds.compat.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
-import net.sweenus.simplyswords.SimplySwords;
 
 import java.util.Locale;
 

@@ -1,4 +1,4 @@
-package net.knavesneeds.compat.registries;
+package net.knavesneeds.compat;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.config.KnavesSimplyConfig;
@@ -10,11 +10,11 @@ import java.util.List;
 public class CompatHelper {
 
 
-    protected static int getDamageMod(String weaponType) {
+    public static int getDamageMod(String weaponType) {
         return DAMAGE_MODS.get(weaponType);
     }
 
-    protected static float getAttackSpeedMod(String weaponType) {
+    public static float getAttackSpeedMod(String weaponType) {
         return ATTACK_SPEED_MODS.get(weaponType);
     }
 
