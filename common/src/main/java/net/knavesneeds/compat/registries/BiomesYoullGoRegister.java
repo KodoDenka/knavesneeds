@@ -8,12 +8,12 @@ import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
 
 import java.util.Locale;
 
 public class BiomesYoullGoRegister {
-    public static final DeferredRegister<Item> BYG_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, Registry.ITEM_KEY);
+    public static final DeferredRegister<Item> BYG_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, RegistryKeys.ITEM);
 
     // Translucent
     public static final RegistrySupplier<Item> PENDORITE_LONGSWORD       = registerPendorite("longsword");

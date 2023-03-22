@@ -17,7 +17,7 @@ import static org.betterx.betternether.registry.NetherEnchantments.RUBY_FIRE;
 
 public class KnavesSwordItem  extends SwordItem {
     public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
-        super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().group(SimplySwords.SIMPLYSWORDS));
+        super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().arch$tab(SimplySwords.SIMPLYSWORDS));
     }
 
     @Override

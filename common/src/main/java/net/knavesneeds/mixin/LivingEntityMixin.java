@@ -10,7 +10,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -34,7 +34,7 @@ public class LivingEntityMixin {
             if (attackingStack.getItem() instanceof KnavesSwordItem swordItem) {
                 // Forgotten weapon damage against all Undergarden mobs
                 if (swordItem.getMaterial().equals(ToolMaterialCompat.FORGOTTEN)) {
-                    if (Registry.ENTITY_TYPE.getId(target.getType()).getNamespace().equals("undergarden")) {
+                    if (Registries.ENTITY_TYPE.getId(target.getType()).getNamespace().equals("undergarden")) {
                         return amount * 1.5f;
                     }
                 }
@@ -44,7 +44,7 @@ public class LivingEntityMixin {
                 }
                 // Utherium weapon damage bonus against Rotspawn
                 else if (swordItem.getMaterial().equals(ToolMaterialCompat.UTHERIUM)) {
-                    if (Registry.ENTITY_TYPE.getId(target.getType()).equals(new Identifier("undergarden:rotspawn"))) {
+                    if (Registries.ENTITY_TYPE.getId(target.getType()).equals(new Identifier("undergarden:rotspawn"))) {
                         return amount * 1.5f;
                     }
                 }
