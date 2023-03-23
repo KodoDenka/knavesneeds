@@ -26,9 +26,11 @@ public class LivingEntityMixin {
         if (source.getAttacker() instanceof PlayerEntity player) {
             ItemStack attackingStack = player.getMainHandStack();
             ////Checks to see if the attack is a BetterCombat player. If so, consider offhand
-            if (source.getAttacker() instanceof EntityPlayer_BetterCombat playerEntity) {
-                if (playerEntity.getCurrentAttack() != null) {
-                    attackingStack = playerEntity.getCurrentAttack().isOffHand() ? ((PlayerEntity) playerEntity).getOffHandStack() : ((PlayerEntity) playerEntity).getMainHandStack();
+            if (Platform.getOptionalMod("bettercombat").isPresent()) {
+                if (source.getAttacker() instanceof EntityPlayer_BetterCombat playerEntity) {
+                    if (playerEntity.getCurrentAttack() != null) {
+                        attackingStack = playerEntity.getCurrentAttack().isOffHand() ? ((PlayerEntity) playerEntity).getOffHandStack() : ((PlayerEntity) playerEntity).getMainHandStack();
+                    }
                 }
             }
             if (attackingStack.getItem() instanceof KnavesSwordItem swordItem) {
