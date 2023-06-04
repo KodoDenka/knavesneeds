@@ -1,6 +1,7 @@
 package net.knavesneeds.mixin;
 
-import net.bettercombat.api.EntityPlayer_BetterCombat;
+import dev.architectury.platform.Platform;
+import net.knavesneeds.compat.BetterCombatHelperClass;
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.entity.LivingEntity;
@@ -19,6 +20,8 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
 
+    private BetterCombatHelperClass leaveMeAloneCurseForgeComments;
+
     @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
     public float knavesneeds$damageModifiers(float amount, DamageSource source) {
         LivingEntity target = (LivingEntity) (Object) this;
@@ -27,11 +30,10 @@ public class LivingEntityMixin {
             ItemStack attackingStack = player.getMainHandStack();
             ////Checks to see if the attack is a BetterCombat player. If so, consider offhand
             if (Platform.getOptionalMod("bettercombat").isPresent()) {
-                if (source.getAttacker() instanceof EntityPlayer_BetterCombat playerEntity) {
-                    if (playerEntity.getCurrentAttack() != null) {
-                        attackingStack = playerEntity.getCurrentAttack().isOffHand() ? ((PlayerEntity) playerEntity).getOffHandStack() : ((PlayerEntity) playerEntity).getMainHandStack();
-                    }
+                if (leaveMeAloneCurseForgeComments == null) {
+                    leaveMeAloneCurseForgeComments = new BetterCombatHelperClass();
                 }
+                attackingStack = leaveMeAloneCurseForgeComments.attackingStackFix(source);
             }
             if (attackingStack.getItem() instanceof KnavesSwordItem swordItem) {
                 // Forgotten weapon damage against all Undergarden mobs
@@ -53,6 +55,17 @@ public class LivingEntityMixin {
                 // Fiery Weapon burn
                 else if (swordItem.getMaterial().equals(ToolMaterialCompat.FIERY) || swordItem.getMaterial().equals(ToolMaterialCompat.HORIZONITE)) {
                     target.setOnFireFor(2);
+                }
+                // Knightmetal armor bonus
+                else if (swordItem.getMaterial().equals(ToolMaterialCompat.UTHERIUM)) {
+                    if (target.getArmor() > 0) {
+                        if (target.getArmorVisibility() > 0.0f) {
+                            int damageBonus = (int)(2.0f * target.getArmorVisibility());
+                            return amount + (float)damageBonus;
+                        } else {
+                            return amount + 2.0f;
+                        }
+                    }
                 }
             }
         }
