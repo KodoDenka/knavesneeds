@@ -56,7 +56,7 @@ dependencies {
         modApi("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
 
         // Simply Swords
-        modApi("curse.maven:simply-swords-659887:4406899")
+        modApi("curse.maven:simply-swords-659887:4612118")
 
     // Optional Mods (Mostly for testing)
         // Twilight Forest
