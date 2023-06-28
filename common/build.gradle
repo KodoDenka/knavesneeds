@@ -28,22 +28,22 @@ dependencies {
     // Remove the next line if you don't want to depend on the API
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"
 
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
+    //modApi("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}") {
+    //    exclude(group: "net.fabricmc.fabric-api")
+    //}
 
     //modImplementation(include("io.github.fabricators_of_create.Porting-Lib:porting-lib:${rootProject.porting_lib}+${rootProject.minecraft_version}"))
 
-    modImplementation "maven.modrinth:better-combat:${rootProject.better_combat_version}-fabric"
+    //modImplementation "maven.modrinth:better-combat:${rootProject.better_combat_version}-fabric"
     //modImplementation ("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
 
-    modImplementation "curse.maven:simply-swords-659887:4612118"
+    //modImplementation "curse.maven:simply-swords-659887:4612118"
 
-    modImplementation "com.github.quiqueck:BCLib:${rootProject.bclib_version}"
+    //modImplementation "com.github.quiqueck:BCLib:${rootProject.bclib_version}"
 
-    modImplementation "curse.maven:betterend-413596:4607164"
+    //modImplementation "curse.maven:betterend-413596:4607164"
 
-    modImplementation "curse.maven:betternether-311377:4607169"
+    //modImplementation "curse.maven:betternether-311377:4607169"
 }
 
 publishing {
