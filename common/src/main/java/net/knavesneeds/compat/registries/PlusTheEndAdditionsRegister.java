@@ -8,13 +8,13 @@ import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
 
 import java.util.Locale;
 
 public class PlusTheEndAdditionsRegister {
 
-    public static final DeferredRegister<Item> PLUS_THE_END_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, Registry.ITEM_KEY);
+    public static final DeferredRegister<Item> PLUS_THE_END_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, RegistryKeys.ITEM);
 
     // Normal Endronium
     public static final RegistrySupplier<Item> ENDRONIUM_LONGSWORD       = registerEndronium("longsword");

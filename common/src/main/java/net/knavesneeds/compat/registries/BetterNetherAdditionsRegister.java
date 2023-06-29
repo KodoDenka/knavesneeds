@@ -8,13 +8,13 @@ import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
 
 import java.util.Locale;
 
 public class BetterNetherAdditionsRegister {
 
-    public static final DeferredRegister<Item> BETTER_NETHER_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, Registry.ITEM_KEY);
+    public static final DeferredRegister<Item> BETTER_NETHER_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, RegistryKeys.ITEM);
 
     // Cincinnasite
     public static final RegistrySupplier<Item> CINCINNASITE_LONGSWORD           = registerCincinnasite("longsword");

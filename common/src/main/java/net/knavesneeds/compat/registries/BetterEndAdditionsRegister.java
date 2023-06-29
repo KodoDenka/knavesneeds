@@ -8,14 +8,16 @@ import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.sweenus.simplyswords.SimplySwords;
 
 import java.util.Locale;
 
 public class BetterEndAdditionsRegister {
 
-    public static final DeferredRegister<Item> BETTER_END_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, Registry.ITEM_KEY);
+    public static final DeferredRegister<Item> BETTER_END_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, RegistryKeys.ITEM);
 
     // Aeternium Heads
     public static final RegistrySupplier<Item> AETERNIUM_LONGSWORD_HEAD     = registerHead("longsword", ToolMaterialCompat.AETERNIUM);
@@ -124,7 +126,7 @@ public class BetterEndAdditionsRegister {
     private static RegistrySupplier<Item> registerHead(String id, ToolMaterialCompat tier) {
         return BETTER_END_ITEMS.register("betterend/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" + id + "_head", ()->
-                new Item(new Item.Settings().group(SimplySwords.SIMPLYSWORDS)));
+                new Item(new Item.Settings().arch$tab((RegistryKey<ItemGroup>) SimplySwords.SIMPLYSWORDS)));
     }
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
