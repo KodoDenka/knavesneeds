@@ -6,7 +6,7 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Util;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,7 +30,7 @@ public abstract class EnchantmentMixin {
     //Used with permission from chronosacaria :)
     private boolean knavesneeds$isEnchantment(Enchantment... enchantments){
         for (Enchantment enchantment : enchantments){
-            if (Util.createTranslationKey("enchantment", Registry.ENCHANTMENT.getId(enchantment)).equals(this.getOrCreateTranslationKey())){
+            if (Util.createTranslationKey("enchantment", Registries.ENCHANTMENT.getId(enchantment)).equals(this.getOrCreateTranslationKey())){
                 return true;
             }
         }

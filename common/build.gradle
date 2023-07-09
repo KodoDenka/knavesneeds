@@ -37,8 +37,9 @@ dependencies {
     modImplementation "maven.modrinth:better-combat:${rootProject.better_combat_version}-fabric"
     modImplementation ("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
 
-    modImplementation "curse.maven:simply-swords-659887:4612118"
+    modImplementation "curse.maven:simply-swords-659887:4612108"
 
+    modImplementation "curse.maven:bclib-495191:4607159"
     //modImplementation "com.github.quiqueck:BCLib:${rootProject.bclib_version}"
 
     modImplementation "curse.maven:betterend-413596:4607164"

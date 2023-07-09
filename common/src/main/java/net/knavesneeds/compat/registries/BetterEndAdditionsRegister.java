@@ -126,7 +126,7 @@ public class BetterEndAdditionsRegister {
     private static RegistrySupplier<Item> registerHead(String id, ToolMaterialCompat tier) {
         return BETTER_END_ITEMS.register("betterend/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" + id + "_head", ()->
-                new Item(new Item.Settings().arch$tab((RegistryKey<ItemGroup>) SimplySwords.SIMPLYSWORDS)));
+                new Item(new Item.Settings()));
     }
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
