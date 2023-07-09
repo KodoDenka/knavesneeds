@@ -3,15 +3,12 @@ package net.knavesneeds.compat.registries;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.compat.CompatHelper;
+import net.knavesneeds.helpers.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.sweenus.simplyswords.SimplySwords;
 
 import java.util.Locale;
 
@@ -126,7 +123,7 @@ public class BetterEndAdditionsRegister {
     private static RegistrySupplier<Item> registerHead(String id, ToolMaterialCompat tier) {
         return BETTER_END_ITEMS.register("betterend/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" + id + "_head", ()->
-                new Item(new Item.Settings()));
+                new Item(new Item.Settings().arch$tab(KnavesCommon.KNAVESNEEDS)));
     }
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {

@@ -1,4 +1,4 @@
-package net.knavesneeds.compat;
+package net.knavesneeds.helpers;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.config.KnavesSimplyConfig;

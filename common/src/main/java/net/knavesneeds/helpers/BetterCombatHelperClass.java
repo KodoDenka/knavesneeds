@@ -1,4 +1,4 @@
-package net.knavesneeds.compat;
+package net.knavesneeds.helpers;
 
 import net.bettercombat.api.EntityPlayer_BetterCombat;
 import net.minecraft.entity.damage.DamageSource;

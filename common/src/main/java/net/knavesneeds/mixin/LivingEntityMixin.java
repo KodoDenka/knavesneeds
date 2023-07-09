@@ -1,7 +1,7 @@
 package net.knavesneeds.mixin;
 
 import dev.architectury.platform.Platform;
-import net.knavesneeds.compat.BetterCombatHelperClass;
+import net.knavesneeds.helpers.BetterCombatHelperClass;
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.customitems.KnavesSwordItem;
 import net.minecraft.entity.LivingEntity;
@@ -11,7 +11,6 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.registry.Registry;
 import net.minecraft.registry.Registries;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

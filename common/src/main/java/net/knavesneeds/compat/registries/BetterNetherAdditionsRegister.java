@@ -3,7 +3,7 @@ package net.knavesneeds.compat.registries;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.compat.CompatHelper;
+import net.knavesneeds.helpers.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.config.KnavesConfig;
 import net.knavesneeds.customitems.KnavesSwordItem;

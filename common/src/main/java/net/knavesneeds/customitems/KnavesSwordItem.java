@@ -1,6 +1,7 @@
 package net.knavesneeds.customitems;
 
 
+import net.knavesneeds.KnavesCommon;
 import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.compat.interfaces.InitialStackStateProvider;
 import net.minecraft.client.item.TooltipContext;
@@ -20,9 +21,10 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import java.util.List;
 import java.util.Map;
 
+
 public class KnavesSwordItem  extends SwordItem implements InitialStackStateProvider {
     public KnavesSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
-        super(toolMaterial, attackDamage, attackSpeed, new Item.Settings());
+        super(toolMaterial, attackDamage, attackSpeed, new Item.Settings().arch$tab(KnavesCommon.KNAVESNEEDS));
     }
 
     @Override
