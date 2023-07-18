@@ -11,9 +11,7 @@ public class KnavesFabric implements ModInitializer {
         KnavesCommon.init();
 
         if (Platform.isModLoaded("betterend")) {
-            if (Platform.isModLoaded("bclib")) {
-                BetterEndRecipesGenerator.register();
-            }
+            BetterEndRecipesGenerator.register();
         }
     }
 }

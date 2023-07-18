@@ -16,7 +16,6 @@ public class BetterEndRecipesGenerator {
         //AETERNIUM TOOLS
         BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "aeternium_chakram_head"), BetterEndAdditionsRegister.AETERNIUM_CHAKRAM_HEAD.get())
                 .setPrimaryInputAndUnlock(Registries.ITEM.get(new Identifier("betterend", "aeternium_ingot")))
-                .setInputCount(2)
                 .setAnvilLevel(anvilLevel)
                 .setToolLevel(anvilLevel)
                 .setDamage(6)
@@ -24,11 +23,12 @@ public class BetterEndRecipesGenerator {
 
         BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "aeternium_claymore_head"), BetterEndAdditionsRegister.AETERNIUM_CLAYMORE_HEAD.get())
                 .setPrimaryInputAndUnlock(Registries.ITEM.get(new Identifier("betterend", "aeternium_ingot")))
-                .setInputCount(2)
                 .setAnvilLevel(anvilLevel)
                 .setToolLevel(anvilLevel)
                 .setDamage(6)
                 .build();
+
+        /**
 
         BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "aeternium_cutlass_head"), BetterEndAdditionsRegister.AETERNIUM_CUTLASS_HEAD.get())
                 .setPrimaryInputAndUnlock(Registries.ITEM.get(new Identifier("betterend", "aeternium_ingot")))
@@ -375,6 +375,8 @@ public class BetterEndRecipesGenerator {
                 .setToolLevel(anvilLevel)
                 .setDamage(6)
                 .build();
+
+         **/
 
     }
 }
