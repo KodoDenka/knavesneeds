@@ -45,45 +45,58 @@ public class KnavesCommon {
 
         KnavesSimplyConfig.loadConfig();
 
+        int compatsLoaded = 0;
+
         if (Platform.getOptionalMod("twilightforest").isPresent()) {
             TwilightForestAdditionsRegister.TWILIGHT_FOREST_ITEMS.register();
+            compatsLoaded += 1;
         }
 
         if (Platform.getOptionalMod("undergarden").isPresent()) {
             UndergardenAdditionsRegister.UNDERGARDEN_ITEMS.register();
+            compatsLoaded += 1;
         }
 
         if (Platform.getOptionalMod("forbidden_arcanus").isPresent()) {
             ForbiddenArcanusAdditionsRegister.FORBIDDEN_ARCANUS_ITEMS.register();
+            compatsLoaded += 1;
         }
 
         if (Platform.getOptionalMod("blue_skies").isPresent()) {
             BlueSkiesAdditionsRegister.BLUE_SKIES_ITEMS.register();
+            compatsLoaded += 1;
         }
 
         if (Platform.getOptionalMod("betterend").isPresent()) {
             //Item recipe generation is called in the KnavesFabric call.
             BetterEndAdditionsRegister.BETTER_END_ITEMS.register();
+            compatsLoaded += 1;
         }
 
         if (Platform.getOptionalMod("betternether").isPresent()) {
             BetterNetherAdditionsRegister.BETTER_NETHER_ITEMS.register();
+            compatsLoaded += 1;
         }
 
         if (Platform.getOptionalMod("soulsweapons").isPresent()) {
             SoulsWeaponsAdditionsRegister.SOULS_WEAPONS_ITEMS.register();
+            compatsLoaded += 1;
         }
 
         if (Platform.getOptionalMod("byg").isPresent()) {
             BiomesYoullGoRegister.BYG_ITEMS.register();
+            compatsLoaded += 1;
         }
 
         if (Platform.getOptionalMod("deeperdarker").isPresent()) {
             DeeperAndDarkerRegister.DEEPER_DARKER_ITEMS.register();
+            compatsLoaded += 1;
         }
 
         //Register item group
-        KnavesCommon.CREATIVE_TAB.register();
+        if (compatsLoaded > 0) {
+            KnavesCommon.CREATIVE_TAB.register();
+        }
 
         System.out.println(KnavesExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }

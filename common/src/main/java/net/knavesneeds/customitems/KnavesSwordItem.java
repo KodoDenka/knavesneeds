@@ -6,6 +6,7 @@ import net.knavesneeds.compat.ToolMaterialCompat;
 import net.knavesneeds.compat.interfaces.InitialStackStateProvider;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -14,9 +15,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
-import net.sweenus.simplyswords.SimplySwords;
-import net.minecraft.enchantment.EnchantmentHelper;
-
 
 import java.util.List;
 import java.util.Map;
@@ -80,7 +78,7 @@ public class KnavesSwordItem  extends SwordItem implements InitialStackStateProv
     // Steeleaf, Ironwood and Ruby inventory enchant from creative menu.
     @Override
     public void putEnchantments(ItemStack stack, Map<Enchantment, Integer> defaultEnchants) {
-        if (this.arch$holder().equals(new Item.Settings().arch$tab((RegistryKey<ItemGroup>)SimplySwords.SIMPLYSWORDS))){
+        if (this.arch$holder().equals(new Item.Settings().arch$tab((RegistryKey<ItemGroup>)KnavesCommon.KNAVESNEEDS))){
             //SteelLeaf
             if (this.getMaterial().equals(ToolMaterialCompat.STEELEAF)) {
                 defaultEnchants.put(Enchantments.LOOTING, 2);
@@ -94,7 +92,7 @@ public class KnavesSwordItem  extends SwordItem implements InitialStackStateProv
             }
 
             //Nether Ruby
-            if (this.getMaterial().equals(ToolMaterialCompat.NETHER_RUBY)) {
+            if (this.getMaterial().equals(ToolMaterialCompat.FLAMING_RUBY)) {
                 defaultEnchants.put(Registries.ENCHANTMENT.get(new Identifier("betternether", "rubyfire")), 1);
                 EnchantmentHelper.set(defaultEnchants, stack);
             }

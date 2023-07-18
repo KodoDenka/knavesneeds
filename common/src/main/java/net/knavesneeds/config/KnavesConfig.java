@@ -57,6 +57,7 @@ public class KnavesConfig implements ConfigData {
     public static int CINCINNASITE_MOD = 0;
     public static int CINCINNASITE_DIAMOND_MOD = 0;
     public static int NETHER_RUBY_MOD = 0;
+    public static int FLAMING_RUBY_MOD = 0;
 
     @Comment("SoulslikeWeapons")
     public static int TRANSLUCENT_MOD = 0;

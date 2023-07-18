@@ -7,16 +7,17 @@
       ]
     }
   ],
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "knavesneeds:betternether/cincinnasite/greataxe"
-    }
-  ],
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "knavesneeds:betternether/cincinnasite/greataxe"
+  },
+  "addition": {
+    "item": "minecraft:diamond"
+  },
   "result": {
     "item": "knavesneeds:betternether/cincinnasite_diamond/greataxe"
+  },
+  "template": {
+    "item": "betterend:cincinnasite_diamond_upgrade_smithing_template"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "betternether"
+      ]
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "knavesneeds:betternether/flaming_ruby/chakram"
+  },
+  "addition": {
+    "item": "minecraft:sculk_catalyst"
+  },
+  "template": {
+    "item": "betterend:flaming_ruby_upgrade_smithing_template"
+  },
+  "result": {
+    "nbt": "{Enchantments:[{lvl:1s,id:\"betternether:ruby_fire\"}]}",
+    "item": "knavesneeds:betternether/flaming_ruby/chakram",
+    "type": "minecraft:item_nbt"
+  }
+}

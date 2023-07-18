@@ -7,7 +7,7 @@
       ]
     }
   ],
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
   "base": {
     "item": "knavesneeds:betterend/thallasium/claymore_head"
   },
@@ -16,5 +16,8 @@
   },
   "result": {
     "item": "knavesneeds:betterend/thallasium/claymore"
+  },
+  "template": {
+    "item": "betterend:tool_assembly_smithing_template"
   }
 }

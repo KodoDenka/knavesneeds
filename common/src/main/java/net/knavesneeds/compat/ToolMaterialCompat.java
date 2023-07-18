@@ -56,6 +56,7 @@ public enum ToolMaterialCompat implements ToolMaterial {
     CINCINNASITE(512,6.2f,5.5f,2,16, "betternether:cincinnasite_ingot"),
     CINCINNASITE_DIAMOND(2061,8.2f,6.7f,3,14, "minecraft:diamond"),
     NETHER_RUBY(2561,9.2f,8.0f,4,22, "betternether:nether_ruby"),
+    FLAMING_RUBY(2561,9.2f,8.0f,4,22, "betternether:nether_ruby"),
 
 
     //Plus The End Tiers

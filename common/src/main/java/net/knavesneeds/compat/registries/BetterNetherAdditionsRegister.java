@@ -67,6 +67,25 @@ public class BetterNetherAdditionsRegister {
     public static final RegistrySupplier<Item> NETHER_RUBY_SCYTHE               = registerNetherRuby("scythe");
     public static final RegistrySupplier<Item> NETHER_RUBY_HALBERD              = registerNetherRuby("halberd");
 
+    /**
+    // Nether Ruby
+    public static final RegistrySupplier<Item> FLAMING_RUBY_LONGSWORD            = registerFlamingRuby("longsword");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_TWINBLADE            = registerFlamingRuby("twinblade");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_RAPIER               = registerFlamingRuby("rapier");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_KATANA               = registerFlamingRuby("katana");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_SAI                  = registerFlamingRuby("sai");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_SPEAR                = registerFlamingRuby("spear");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_GLAIVE               = registerFlamingRuby("glaive");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_WARGLAIVE            = registerFlamingRuby("warglaive");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_CUTLASS              = registerFlamingRuby("cutlass");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_CLAYMORE             = registerFlamingRuby("claymore");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_GREATHAMMER          = registerFlamingRuby("greathammer");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_GREATAXE             = registerFlamingRuby("greataxe");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_CHAKRAM              = registerFlamingRuby("chakram");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_SCYTHE               = registerFlamingRuby("scythe");
+    public static final RegistrySupplier<Item> FLAMING_RUBY_HALBERD              = registerFlamingRuby("halberd");
+     **/
+
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return BETTER_NETHER_ITEMS.register("betternether/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
@@ -94,5 +113,12 @@ public class BetterNetherAdditionsRegister {
                 ToolMaterialCompat.NETHER_RUBY.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
                 new KnavesSwordItem(ToolMaterialCompat.NETHER_RUBY, KnavesConfig.NETHER_RUBY_MOD + CompatHelper.getDamageMod(id),
                         CompatHelper.getAttackSpeedMod(id) + 0.4F));
+    }
+
+    private static RegistrySupplier<Item> registerFlamingRuby(String id) {
+        return BETTER_NETHER_ITEMS.register("betternether/" +
+                ToolMaterialCompat.FLAMING_RUBY.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new KnavesSwordItem(ToolMaterialCompat.FLAMING_RUBY, KnavesConfig.FLAMING_RUBY_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id) + 0.3F));
     }
 }
