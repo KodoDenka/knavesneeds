@@ -68,7 +68,6 @@ public class KnavesCommon {
         }
 
         if (Platform.getOptionalMod("betterend").isPresent()) {
-            //Item recipe generation is called in the KnavesFabric call.
             BetterEndAdditionsRegister.BETTER_END_ITEMS.register();
             compatsLoaded += 1;
         }
