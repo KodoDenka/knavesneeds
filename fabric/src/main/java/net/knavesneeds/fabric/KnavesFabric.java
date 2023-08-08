@@ -9,9 +9,5 @@ public class KnavesFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         KnavesCommon.init();
-
-        if (Platform.isModLoaded("bclib")) {
-            BetterEndRecipesGenerator.register();
-        }
     }
 }

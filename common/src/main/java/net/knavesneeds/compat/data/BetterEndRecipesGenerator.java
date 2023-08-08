@@ -15,6 +15,8 @@ public class BetterEndRecipesGenerator {
 
         int anvilLevel = ToolMaterialCompat.AETERNIUM.getMiningLevel();
 
+        /**
+
         //AETERNIUM TOOLS
         BCLRecipeBuilder.anvil(new Identifier(MOD_ID, "aeternium_chakram_head"), BetterEndAdditionsRegister.AETERNIUM_CHAKRAM_HEAD.get())
                 .setInput(EndItems.AETERNIUM_INGOT)
@@ -377,6 +379,6 @@ public class BetterEndRecipesGenerator {
                 .setToolLevel(anvilLevel)
                 .setDamage(6)
                 .build();
-
+         **/
     }
 }
