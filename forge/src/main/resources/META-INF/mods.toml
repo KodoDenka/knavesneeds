@@ -50,29 +50,3 @@ mandatory = true
 versionRange = "[1.48.0-1.21,)"
 ordering = "AFTER"
 side = "BOTH"
-
-#Needs update
-[[dependencies.knavesneeds]]
-modId = "twilightforest"
-mandatory = false
-versionRange = "[4.2.1493,)"
-ordering = "AFTER"
-side = "BOTH"
-
-#Needs update
-[[dependencies.knavesneeds]]
-modId = "blue_skies"
-mandatory = false
-versionRange = "[1.3,)"
-ordering = "AFTER"
-side = "BOTH"
-
-#Needs update
-[[dependencies.knavesneeds]]
-modId = "forbidden_arcanus"
-mandatory = false
-versionRange = "[1.20.2-2.1.0,)"
-ordering = "AFTER"
-side = "BOTH"
-
-#Add deeper darker.
