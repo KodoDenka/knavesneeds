@@ -35,6 +35,7 @@ public class KnavesSimplyConfig {
         return output;
     }
 
+    /**
     public static JsonObject getJsonObject(String json) {
         try {
             return new JsonParser().parse(json).getAsJsonObject();
@@ -43,6 +44,7 @@ public class KnavesSimplyConfig {
             return null;
         }
     }
+     **/
 
     public static void loadConfig() {
         //System.out.println("Loading common Simply Swords config");
@@ -51,7 +53,7 @@ public class KnavesSimplyConfig {
         File f = new File("config/simplyswords/weapon_attributes.json5");
 
         if (f.exists()) {
-            json = KnavesSimplyConfig.getJsonObject(KnavesSimplyConfig.readFile(f));
+            json = new JsonParser().parse(KnavesSimplyConfig.readFile(f)).getAsJsonObject();
             for (Map.Entry<String, JsonElement> entry : json.entrySet()) {
                 WEAPON_OPTIONS.put(entry.getKey(), entry.getValue().getAsFloat());
             }
