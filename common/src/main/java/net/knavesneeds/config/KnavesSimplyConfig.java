@@ -73,7 +73,6 @@ public class KnavesSimplyConfig {
             WEAPON_OPTIONS.put("greathammer_positive_damage_modifier", 4.0f);
             WEAPON_OPTIONS.put("chakram_positive_damage_modifier", 0.0f);
             WEAPON_OPTIONS.put("scythe_positive_damage_modifier", 1.0f);
-            WEAPON_OPTIONS.put("halberd_positive_damage_modifier", 3.0f);
 
             // Negative backup modifiers.
             WEAPON_OPTIONS.put("longsword_negative_damage_modifier", 0.0f);
@@ -90,7 +89,6 @@ public class KnavesSimplyConfig {
             WEAPON_OPTIONS.put("greathammer_negative_damage_modifier", 0.0f);
             WEAPON_OPTIONS.put("chakram_negative_damage_modifier", 1.0f);
             WEAPON_OPTIONS.put("scythe_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("halberd_negative_damage_modifier", 0.0f);
 
             // Attackspeed modifiers backup.
             WEAPON_OPTIONS.put("longsword_attackspeed", -2.4f);
@@ -107,7 +105,6 @@ public class KnavesSimplyConfig {
             WEAPON_OPTIONS.put("greathammer_attackspeed", -3.2f);
             WEAPON_OPTIONS.put("chakram_attackspeed", -3.0f);
             WEAPON_OPTIONS.put("scythe_attackspeed", -2.7f);
-            WEAPON_OPTIONS.put("halberd_attackspeed", -2.8f);
 
         }
 

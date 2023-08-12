@@ -7,6 +7,7 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.*;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
@@ -30,24 +31,24 @@ public class KnavesSwordItem  extends SwordItem {
         if (itemStack.getItem() instanceof KnavesSwordItem swordItem) {
             // Undergarden Tooltips
             if (swordItem.getMaterial().equals(ToolMaterialCompat.FROSTSTEEL)) {
-                tooltip.add(Text.translatable("tooltip.froststeel_sword").formatted((Formatting.AQUA)));
+                tooltip.add(new TranslatableText("tooltip.froststeel_sword").formatted((Formatting.AQUA)));
             }
             if (swordItem.getMaterial().equals(ToolMaterialCompat.FORGOTTEN)) {
-                tooltip.add(Text.translatable("tooltip.forgotten_sword").formatted(Formatting.GREEN));
+                tooltip.add(new TranslatableText("tooltip.forgotten_sword").formatted(Formatting.GREEN));
             }
             if (swordItem.getMaterial().equals(ToolMaterialCompat.UTHERIUM)) {
-                tooltip.add(Text.translatable("tooltip.utheric_sword").formatted(Formatting.RED));
+                tooltip.add(new TranslatableText("tooltip.utheric_sword").formatted(Formatting.RED));
             }
             // Twilight Forest Tooltips
             if (swordItem.getMaterial().equals(ToolMaterialCompat.FIERY)) {
-                tooltip.add(Text.translatable("item.twilightforest.fiery_sword.tooltip").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("item.twilightforest.fiery_sword.tooltip").formatted(Formatting.GRAY));
             }
             if (swordItem.getMaterial().equals(ToolMaterialCompat.KNIGHTMETAL)) {
-                tooltip.add(Text.translatable("item.twilightforest.knightmetal_sword.tooltip").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("item.twilightforest.knightmetal_sword.tooltip").formatted(Formatting.GRAY));
             }
             // Blue Skies Tooltips
             if (swordItem.getMaterial().equals(ToolMaterialCompat.HORIZONITE)) {
-                tooltip.add(Text.translatable("gui.blue_skies.item.ability.fire").formatted(Formatting.GRAY));
+                tooltip.add(new TranslatableText("gui.blue_skies.item.ability.fire").formatted(Formatting.GRAY));
             }
         }
     }

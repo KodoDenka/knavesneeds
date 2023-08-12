@@ -30,7 +30,6 @@ public class DeeperAndDarkerRegister {
     public static final RegistrySupplier<Item> WARDEN_GREATAXE        = registerWarden("greataxe");
     public static final RegistrySupplier<Item> WARDEN_CHAKRAM         = registerWarden("chakram");
     public static final RegistrySupplier<Item> WARDEN_SCYTHE          = registerWarden("scythe");
-    public static final RegistrySupplier<Item> WARDEN_HALBERD         = registerWarden("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return DEEPER_DARKER_ITEMS.register("deeperdarker/" +

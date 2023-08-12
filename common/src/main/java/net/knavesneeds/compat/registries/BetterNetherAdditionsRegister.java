@@ -31,7 +31,6 @@ public class BetterNetherAdditionsRegister {
     public static final RegistrySupplier<Item> CINCINNASITE_GREATAXE            = registerCincinnasite("greataxe");
     public static final RegistrySupplier<Item> CINCINNASITE_CHAKRAM             = registerCincinnasite("chakram");
     public static final RegistrySupplier<Item> CINCINNASITE_SCYTHE              = registerCincinnasite("scythe");
-    public static final RegistrySupplier<Item> CINCINNASITE_HALBERD             = registerCincinnasite("halberd");
 
     // Cincinnasite Diamond
     public static final RegistrySupplier<Item> CINCINNASITE_DIAMOND_LONGSWORD   = registerCincinnasiteDiamond("longsword");
@@ -48,7 +47,6 @@ public class BetterNetherAdditionsRegister {
     public static final RegistrySupplier<Item> CINCINNASITE_DIAMOND_GREATAXE    = registerCincinnasiteDiamond("greataxe");
     public static final RegistrySupplier<Item> CINCINNASITE_DIAMOND_CHAKRAM     = registerCincinnasiteDiamond("chakram");
     public static final RegistrySupplier<Item> CINCINNASITE_DIAMOND_SCYTHE      = registerCincinnasiteDiamond("scythe");
-    public static final RegistrySupplier<Item> CINCINNASITE_DIAMOND_HALBERD     = registerCincinnasiteDiamond("halberd");
 
     // Nether Ruby
     public static final RegistrySupplier<Item> NETHER_RUBY_LONGSWORD            = registerNetherRuby("longsword");
@@ -65,7 +63,6 @@ public class BetterNetherAdditionsRegister {
     public static final RegistrySupplier<Item> NETHER_RUBY_GREATAXE             = registerNetherRuby("greataxe");
     public static final RegistrySupplier<Item> NETHER_RUBY_CHAKRAM              = registerNetherRuby("chakram");
     public static final RegistrySupplier<Item> NETHER_RUBY_SCYTHE               = registerNetherRuby("scythe");
-    public static final RegistrySupplier<Item> NETHER_RUBY_HALBERD              = registerNetherRuby("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return BETTER_NETHER_ITEMS.register("betternether/" +

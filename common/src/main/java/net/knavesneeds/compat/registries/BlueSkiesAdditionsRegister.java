@@ -30,7 +30,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> AQUITE_GREATAXE                  = registerAquite("greataxe");
     public static final RegistrySupplier<Item> AQUITE_CHAKRAM                   = registerAquite("chakram");
     public static final RegistrySupplier<Item> AQUITE_SCYTHE                    = registerAquite("scythe");
-    public static final RegistrySupplier<Item> AQUITE_HALBERD                   = registerAquite("halberd");
 
     // Bluebright Wood
     public static final RegistrySupplier<Item> BLUEBRIGHT_WOOD_LONGSWORD        = registerBluebrightWood("longsword");
@@ -47,7 +46,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> BLUEBRIGHT_WOOD_GREATAXE         = registerBluebrightWood("greataxe");
     public static final RegistrySupplier<Item> BLUEBRIGHT_WOOD_CHAKRAM          = registerBluebrightWood("chakram");
     public static final RegistrySupplier<Item> BLUEBRIGHT_WOOD_SCYTHE           = registerBluebrightWood("scythe");
-    public static final RegistrySupplier<Item> BLUEBRIGHT_WOOD_HALBERD          = registerBluebrightWood("halberd");
 
     // Charoite
     public static final RegistrySupplier<Item> CHAROITE_LONGSWORD               = registerCharoite("longsword");
@@ -64,7 +62,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> CHAROITE_GREATAXE                = registerCharoite("greataxe");
     public static final RegistrySupplier<Item> CHAROITE_CHAKRAM                 = registerCharoite("chakram");
     public static final RegistrySupplier<Item> CHAROITE_SCYTHE                  = registerCharoite("scythe");
-    public static final RegistrySupplier<Item> CHAROITE_HALBERD                 = registerCharoite("halberd");
 
     // Cherry Wood
     public static final RegistrySupplier<Item> CHERRY_WOOD_LONGSWORD            = registerCherryWood("longsword");
@@ -81,7 +78,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> CHERRY_WOOD_GREATAXE             = registerCherryWood("greataxe");
     public static final RegistrySupplier<Item> CHERRY_WOOD_CHAKRAM              = registerCherryWood("chakram");
     public static final RegistrySupplier<Item> CHERRY_WOOD_SCYTHE               = registerCherryWood("scythe");
-    public static final RegistrySupplier<Item> CHERRY_WOOD_HALBERD              = registerCherryWood("halberd");
 
     // Diopside
     public static final RegistrySupplier<Item> DIOPSIDE_LONGSWORD               = registerDiopside("longsword");
@@ -98,7 +94,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> DIOPSIDE_GREATAXE                = registerDiopside("greataxe");
     public static final RegistrySupplier<Item> DIOPSIDE_CHAKRAM                 = registerDiopside("chakram");
     public static final RegistrySupplier<Item> DIOPSIDE_SCYTHE                  = registerDiopside("scythe");
-    public static final RegistrySupplier<Item> DIOPSIDE_HALBERD                 = registerDiopside("halberd");
 
     // Dusk Wood
     public static final RegistrySupplier<Item> DUSK_WOOD_LONGSWORD              = registerDuskWood("longsword");
@@ -115,7 +110,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> DUSK_WOOD_GREATAXE               = registerDuskWood("greataxe");
     public static final RegistrySupplier<Item> DUSK_WOOD_CHAKRAM                = registerDuskWood("chakram");
     public static final RegistrySupplier<Item> DUSK_WOOD_SCYTHE                 = registerDuskWood("scythe");
-    public static final RegistrySupplier<Item> DUSK_WOOD_HALBERD                = registerDuskWood("halberd");
 
     // Frostbright Wood
     public static final RegistrySupplier<Item> FROSTBRIGHT_WOOD_LONGSWORD       = registerFrostbrightWood("longsword");
@@ -132,7 +126,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> FROSTBRIGHT_WOOD_GREATAXE        = registerFrostbrightWood("greataxe");
     public static final RegistrySupplier<Item> FROSTBRIGHT_WOOD_CHAKRAM         = registerFrostbrightWood("chakram");
     public static final RegistrySupplier<Item> FROSTBRIGHT_WOOD_SCYTHE          = registerFrostbrightWood("scythe");
-    public static final RegistrySupplier<Item> FROSTBRIGHT_WOOD_HALBERD         = registerFrostbrightWood("halberd");
 
     // Horizonite
     public static final RegistrySupplier<Item> HORIZONITE_LONGSWORD             = registerHorizonite("longsword");
@@ -149,7 +142,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> HORIZONITE_GREATAXE              = registerHorizonite("greataxe");
     public static final RegistrySupplier<Item> HORIZONITE_CHAKRAM               = registerHorizonite("chakram");
     public static final RegistrySupplier<Item> HORIZONITE_SCYTHE                = registerHorizonite("scythe");
-    public static final RegistrySupplier<Item> HORIZONITE_HALBERD               = registerHorizonite("halberd");
 
     // Lunar Stone
     public static final RegistrySupplier<Item> LUNAR_STONE_LONGSWORD            = registerLunarStone("longsword");
@@ -166,7 +158,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> LUNAR_STONE_GREATAXE             = registerLunarStone("greataxe");
     public static final RegistrySupplier<Item> LUNAR_STONE_CHAKRAM              = registerLunarStone("chakram");
     public static final RegistrySupplier<Item> LUNAR_STONE_SCYTHE               = registerLunarStone("scythe");
-    public static final RegistrySupplier<Item> LUNAR_STONE_HALBERD              = registerLunarStone("halberd");
 
     // Lunar Wood
     public static final RegistrySupplier<Item> LUNAR_WOOD_LONGSWORD             = registerLunarWood("longsword");
@@ -183,7 +174,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> LUNAR_WOOD_GREATAXE              = registerLunarWood("greataxe");
     public static final RegistrySupplier<Item> LUNAR_WOOD_CHAKRAM               = registerLunarWood("chakram");
     public static final RegistrySupplier<Item> LUNAR_WOOD_SCYTHE                = registerLunarWood("scythe");
-    public static final RegistrySupplier<Item> LUNAR_WOOD_HALBERD               = registerLunarWood("halberd");
 
     // Maple Wood
     public static final RegistrySupplier<Item> MAPLE_WOOD_LONGSWORD             = registerMapleWood("longsword");
@@ -200,7 +190,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> MAPLE_WOOD_GREATAXE              = registerMapleWood("greataxe");
     public static final RegistrySupplier<Item> MAPLE_WOOD_CHAKRAM               = registerMapleWood("chakram");
     public static final RegistrySupplier<Item> MAPLE_WOOD_SCYTHE                = registerMapleWood("scythe");
-    public static final RegistrySupplier<Item> MAPLE_WOOD_HALBERD               = registerMapleWood("halberd");
 
     // Pyrope
     public static final RegistrySupplier<Item> PYROPE_LONGSWORD                 = registerPyrope("longsword");
@@ -217,7 +206,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> PYROPE_GREATAXE                  = registerPyrope("greataxe");
     public static final RegistrySupplier<Item> PYROPE_CHAKRAM                   = registerPyrope("chakram");
     public static final RegistrySupplier<Item> PYROPE_SCYTHE                    = registerPyrope("scythe");
-    public static final RegistrySupplier<Item> PYROPE_HALBERD                   = registerPyrope("halberd");
 
     // Starlit Wood
     public static final RegistrySupplier<Item> STARLIT_WOOD_LONGSWORD           = registerStarlitWood("longsword");
@@ -234,7 +222,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> STARLIT_WOOD_GREATAXE            = registerStarlitWood("greataxe");
     public static final RegistrySupplier<Item> STARLIT_WOOD_CHAKRAM             = registerStarlitWood("chakram");
     public static final RegistrySupplier<Item> STARLIT_WOOD_SCYTHE              = registerStarlitWood("scythe");
-    public static final RegistrySupplier<Item> STARLIT_WOOD_HALBERD             = registerStarlitWood("halberd");
 
     // Turquoise Stone
     public static final RegistrySupplier<Item> TURQUOISE_STONE_LONGSWORD        = registerTurquoiseStone("longsword");
@@ -251,7 +238,6 @@ public class BlueSkiesAdditionsRegister {
     public static final RegistrySupplier<Item> TURQUOISE_STONE_GREATAXE         = registerTurquoiseStone("greataxe");
     public static final RegistrySupplier<Item> TURQUOISE_STONE_CHAKRAM          = registerTurquoiseStone("chakram");
     public static final RegistrySupplier<Item> TURQUOISE_STONE_SCYTHE           = registerTurquoiseStone("scythe");
-    public static final RegistrySupplier<Item> TURQUOISE_STONE_HALBERD          = registerTurquoiseStone("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return BLUE_SKIES_ITEMS.register(tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->

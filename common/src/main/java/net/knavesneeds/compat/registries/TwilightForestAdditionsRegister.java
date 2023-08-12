@@ -31,7 +31,6 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> FIERY_GREATAXE               = registerFiery("greataxe");
     public static final RegistrySupplier<Item> FIERY_CHAKRAM                = registerFiery("chakram");
     public static final RegistrySupplier<Item> FIERY_SCYTHE                 = registerFiery("scythe");
-    public static final RegistrySupplier<Item> FIERY_HALBERD                = registerFiery("halberd");
 
     // Ironwood
     public static final RegistrySupplier<Item> IRONWOOD_LONGSWORD           = registerIronwood("longsword");
@@ -48,7 +47,6 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> IRONWOOD_GREATAXE            = registerIronwood("greataxe");
     public static final RegistrySupplier<Item> IRONWOOD_CHAKRAM             = registerIronwood("chakram");
     public static final RegistrySupplier<Item> IRONWOOD_SCYTHE              = registerIronwood("scythe");
-    public static final RegistrySupplier<Item> IRONWOOD_HALBERD             = registerIronwood("halberd");
 
     // Knightmetal
     public static final RegistrySupplier<Item> KNIGHTMETAL_LONGSWORD        = registerKnightmetal("longsword");
@@ -65,7 +63,6 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> KNIGHTMETAL_GREATAXE         = registerKnightmetal("greataxe");
     public static final RegistrySupplier<Item> KNIGHTMETAL_CHAKRAM          = registerKnightmetal("chakram");
     public static final RegistrySupplier<Item> KNIGHTMETAL_SCYTHE           = registerKnightmetal("scythe");
-    public static final RegistrySupplier<Item> KNIGHTMETAL_HALBERD          = registerKnightmetal("halberd");
 
     // Steeleaf
     public static final RegistrySupplier<Item> STEELEAF_LONGSWORD           = registerSteeleaf("longsword");
@@ -82,7 +79,6 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> STEELEAF_GREATAXE            = registerSteeleaf("greataxe");
     public static final RegistrySupplier<Item> STEELEAF_CHAKRAM             = registerSteeleaf("chakram");
     public static final RegistrySupplier<Item> STEELEAF_SCYTHE              = registerSteeleaf("scythe");
-    public static final RegistrySupplier<Item> STEELEAF_HALBERD             = registerSteeleaf("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return TWILIGHT_FOREST_ITEMS.register("twilight_forest/" +

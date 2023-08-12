@@ -30,7 +30,6 @@ public class BiomesYoullGoRegister {
     public static final RegistrySupplier<Item> PENDORITE_GREATAXE        = registerPendorite("greataxe");
     public static final RegistrySupplier<Item> PENDORITE_CHAKRAM         = registerPendorite("chakram");
     public static final RegistrySupplier<Item> PENDORITE_SCYTHE          = registerPendorite("scythe");
-    public static final RegistrySupplier<Item> PENDORITE_HALBERD         = registerPendorite("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return BYG_ITEMS.register("byg/" +

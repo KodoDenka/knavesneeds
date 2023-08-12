@@ -32,7 +32,6 @@ public class ForbiddenArcanusAdditionsRegister {
     public static final RegistrySupplier<Item> DEORUM_GREATAXE                  = registerDeorum("greataxe");
     public static final RegistrySupplier<Item> DEORUM_CHAKRAM                   = registerDeorum("chakram");
     public static final RegistrySupplier<Item> DEORUM_SCYTHE                    = registerDeorum("scythe");
-    public static final RegistrySupplier<Item> DEORUM_HALBERD                   = registerDeorum("halberd");
 
     // Draco Arcanus
     public static final RegistrySupplier<Item> DRACO_ARCANUS_LONGSWORD          = registerDracoArcanus("longsword");
@@ -49,7 +48,6 @@ public class ForbiddenArcanusAdditionsRegister {
     public static final RegistrySupplier<Item> DRACO_ARCANUS_GREATAXE           = registerDracoArcanus("greataxe");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_CHAKRAM            = registerDracoArcanus("chakram");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_SCYTHE             = registerDracoArcanus("scythe");
-    public static final RegistrySupplier<Item> DRACO_ARCANUS_HALBERD            = registerDracoArcanus("halberd");
 
     // Reinforced Deorum
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_LONGSWORD       = registerReinforcedDeorum("longsword");
@@ -66,7 +64,6 @@ public class ForbiddenArcanusAdditionsRegister {
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_GREATAXE        = registerReinforcedDeorum("greataxe");
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_CHAKRAM         = registerReinforcedDeorum("chakram");
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_SCYTHE          = registerReinforcedDeorum("scythe");
-    public static final RegistrySupplier<Item> REINFORCE_DEORUM_HALBERD         = registerReinforcedDeorum("halberd");
 
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return FORBIDDEN_ARCANUS_ITEMS.register("forbidden_arcanus/" +

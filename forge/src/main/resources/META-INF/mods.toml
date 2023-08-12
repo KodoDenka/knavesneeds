@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[43,)"
+loaderVersion = "[40,)"
 issueTrackerURL = "https://github.com/KodoDenka/knavesneeds/issues"
 license = "MIT"
 
@@ -26,48 +26,27 @@ Special thanks to the following people for their contributions/influence on this
 [[dependencies.knavesneeds]]
 modId = "forge"
 mandatory = true
-versionRange = "[43,)"
+versionRange = "[40,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.knavesneeds]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,)"
+versionRange = "[1.18.2,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.knavesneeds]]
 modId = "architectury"
 mandatory = true
-versionRange = "[6.2.43,)"
+versionRange = "[4.10.88,)"
 ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.knavesneeds]]
 modId = "simplyswords"
 mandatory = true
-versionRange = "[1.40.0-1.19.2,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.knavesneeds]]
-modId = "twilightforest"
-mandatory = false
-versionRange = "[4.2.1493,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.knavesneeds]]
-modId = "blue_skies"
-mandatory = false
-versionRange = "[1.3,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.knavesneeds]]
-modId = "forbidden_arcanus"
-mandatory = false
-versionRange = "[1.19.2-2.1.0,)"
+versionRange = "[1.40.0-1.18.2,)"
 ordering = "AFTER"
 side = "BOTH"
