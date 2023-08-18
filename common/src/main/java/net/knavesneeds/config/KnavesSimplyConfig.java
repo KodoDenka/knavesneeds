@@ -57,60 +57,56 @@ public class KnavesSimplyConfig {
             }
         }
 
-        else {
-            // Positive backup modifiers.
-            WEAPON_OPTIONS.put("longsword_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("twinblade_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("rapier_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("katana_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("sai_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("spear_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("glaive_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("warglaive_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("cutlass_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("claymore_positive_damage_modifier", 2.0f);
-            WEAPON_OPTIONS.put("greataxe_positive_damage_modifier", 3.0f);
-            WEAPON_OPTIONS.put("greathammer_positive_damage_modifier", 4.0f);
-            WEAPON_OPTIONS.put("chakram_positive_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("scythe_positive_damage_modifier", 1.0f);
-            WEAPON_OPTIONS.put("halberd_positive_damage_modifier", 3.0f);
+        // Positive backup modifiers.
+        WEAPON_OPTIONS.putIfAbsent("longsword_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("twinblade_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("rapier_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("katana_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("sai_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("spear_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("glaive_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("warglaive_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("cutlass_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("claymore_positive_damage_modifier", 2.0f);
+        WEAPON_OPTIONS.putIfAbsent("greataxe_positive_damage_modifier", 3.0f);
+        WEAPON_OPTIONS.putIfAbsent("greathammer_positive_damage_modifier", 4.0f);
+        WEAPON_OPTIONS.putIfAbsent("chakram_positive_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("scythe_positive_damage_modifier", 1.0f);
+        WEAPON_OPTIONS.putIfAbsent("halberd_positive_damage_modifier", 3.0f);
 
-            // Negative backup modifiers.
-            WEAPON_OPTIONS.put("longsword_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("twinblade_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("rapier_negative_damage_modifier", 1.0f);
-            WEAPON_OPTIONS.put("katana_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("sai_negative_damage_modifier", 3.0f);
-            WEAPON_OPTIONS.put("spear_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("glaive_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("warglaive_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("cutlass_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("claymore_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("greataxe_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("greathammer_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("chakram_negative_damage_modifier", 1.0f);
-            WEAPON_OPTIONS.put("scythe_negative_damage_modifier", 0.0f);
-            WEAPON_OPTIONS.put("halberd_negative_damage_modifier", 0.0f);
+        // Negative backup modifiers.
+        WEAPON_OPTIONS.putIfAbsent("longsword_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("twinblade_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("rapier_negative_damage_modifier", 1.0f);
+        WEAPON_OPTIONS.putIfAbsent("katana_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("sai_negative_damage_modifier", 3.0f);
+        WEAPON_OPTIONS.putIfAbsent("spear_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("glaive_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("warglaive_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("cutlass_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("claymore_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("greataxe_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("greathammer_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("chakram_negative_damage_modifier", 1.0f);
+        WEAPON_OPTIONS.putIfAbsent("scythe_negative_damage_modifier", 0.0f);
+        WEAPON_OPTIONS.putIfAbsent("halberd_negative_damage_modifier", 0.0f);
 
-            // Attackspeed modifiers backup.
-            WEAPON_OPTIONS.put("longsword_attackspeed", -2.4f);
-            WEAPON_OPTIONS.put("twinblade_attackspeed", -2.0f);
-            WEAPON_OPTIONS.put("rapier_attackspeed", -1.8f);
-            WEAPON_OPTIONS.put("katana_attackspeed", -2.0f);
-            WEAPON_OPTIONS.put("sai_attackspeed", -1.5f);
-            WEAPON_OPTIONS.put("spear_attackspeed", -2.7f);
-            WEAPON_OPTIONS.put("glaive_attackspeed", -2.6f);
-            WEAPON_OPTIONS.put("warglaive_attackspeed", -2.2f);
-            WEAPON_OPTIONS.put("cutlass_attackspeed", -2.0f);
-            WEAPON_OPTIONS.put("claymore_attackspeed", -2.8f);
-            WEAPON_OPTIONS.put("greataxe_attackspeed", -3.1f);
-            WEAPON_OPTIONS.put("greathammer_attackspeed", -3.2f);
-            WEAPON_OPTIONS.put("chakram_attackspeed", -3.0f);
-            WEAPON_OPTIONS.put("scythe_attackspeed", -2.7f);
-            WEAPON_OPTIONS.put("halberd_attackspeed", -2.8f);
-
-        }
-
+        // Attackspeed modifiers backup.
+        WEAPON_OPTIONS.putIfAbsent("longsword_attackspeed", -2.4f);
+        WEAPON_OPTIONS.putIfAbsent("twinblade_attackspeed", -2.0f);
+        WEAPON_OPTIONS.putIfAbsent("rapier_attackspeed", -1.8f);
+        WEAPON_OPTIONS.putIfAbsent("katana_attackspeed", -2.0f);
+        WEAPON_OPTIONS.putIfAbsent("sai_attackspeed", -1.5f);
+        WEAPON_OPTIONS.putIfAbsent("spear_attackspeed", -2.7f);
+        WEAPON_OPTIONS.putIfAbsent("glaive_attackspeed", -2.6f);
+        WEAPON_OPTIONS.putIfAbsent("warglaive_attackspeed", -2.2f);
+        WEAPON_OPTIONS.putIfAbsent("cutlass_attackspeed", -2.0f);
+        WEAPON_OPTIONS.putIfAbsent("claymore_attackspeed", -2.8f);
+        WEAPON_OPTIONS.putIfAbsent("greataxe_attackspeed", -3.1f);
+        WEAPON_OPTIONS.putIfAbsent("greathammer_attackspeed", -3.2f);
+        WEAPON_OPTIONS.putIfAbsent("chakram_attackspeed", -3.0f);
+        WEAPON_OPTIONS.putIfAbsent("scythe_attackspeed", -2.7f);
+        WEAPON_OPTIONS.putIfAbsent("halberd_attackspeed", -2.8f);
     }
 }
 
