@@ -1,9 +1,10 @@
 package net.knavesneeds.compat;
 
+import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
 
 public enum ToolMaterialCompat implements ToolMaterial {
 
@@ -72,7 +73,13 @@ public enum ToolMaterialCompat implements ToolMaterial {
 
 
     //Oh, The Biomes You'll Go
-    PENDORITE(2500,10.0f,8.0f,5,15, "byg:pendorite_ingot");
+    PENDORITE(2500,10.0f,8.0f,5,15, "byg:pendorite_ingot"),
+
+    //AmethystImbuement
+    AMETRINE(2550,9.5f,5f,MiningLevels.NETHERITE,18, "byg:pendorite_ingot"),
+    GARNET(3151,7.5f,3.0f,3,12, "byg:pendorite_ingot"),
+    GLOWING(333,11.5f,4.5f, MiningLevels.NETHERITE,12, "byg:pendorite_ingot"),
+    STEEL(400,6.5f,2.5f,2,15, "byg:pendorite_ingot");
 
     
     //This declares which type of registries is allowed to be used in the enum.

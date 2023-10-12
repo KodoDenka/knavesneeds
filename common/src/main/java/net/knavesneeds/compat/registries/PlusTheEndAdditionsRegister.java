@@ -3,10 +3,9 @@ package net.knavesneeds.compat.registries;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.helpers.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
-import net.knavesneeds.config.KnavesConfig;
-import net.knavesneeds.customitems.KnavesSwordItem;
+import net.knavesneeds.customitems.swords.plus_the_end.EndroniumSwordItem;
+import net.knavesneeds.helpers.CompatHelper;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 
@@ -32,15 +31,11 @@ public class PlusTheEndAdditionsRegister {
     public static final RegistrySupplier<Item> ENDRONIUM_CHAKRAM         = registerEndronium("chakram");
     public static final RegistrySupplier<Item> ENDRONIUM_SCYTHE          = registerEndronium("scythe");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
-        return PLUS_THE_END_ITEMS.register("plus_the_end/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
-                new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id)));
-    }
-
     private static RegistrySupplier<Item> registerEndronium(String id) {
-        return registerMaterial(id, ToolMaterialCompat.ENDRONIUM, KnavesConfig.ENDRONIUM_MOD);
+        return PLUS_THE_END_ITEMS.register("plus_the_end/" +
+                ToolMaterialCompat.ENDRONIUM.toString().toLowerCase(Locale.ROOT) + "/" +
+                ToolMaterialCompat.ENDRONIUM.toString().toLowerCase(Locale.ROOT) + "_" + id, ()->
+                new EndroniumSwordItem(ToolMaterialCompat.ENDRONIUM, KnavesCommon.plusTheEndConfig.ENDRONIUM_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 }

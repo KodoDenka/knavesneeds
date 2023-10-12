@@ -3,10 +3,12 @@ package net.knavesneeds.compat.registries;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.helpers.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
-import net.knavesneeds.config.KnavesConfig;
-import net.knavesneeds.customitems.KnavesSwordItem;
+import net.knavesneeds.customitems.swords.undergarden.CloggrumSwordItem;
+import net.knavesneeds.customitems.swords.undergarden.ForgottenSwordItem;
+import net.knavesneeds.customitems.swords.undergarden.FroststeelSwordItem;
+import net.knavesneeds.customitems.swords.undergarden.UtheriumSwordItem;
+import net.knavesneeds.helpers.CompatHelper;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 
@@ -33,6 +35,13 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> CLOGGRUM_SCYTHE          = registerCloggrum("scythe");
     public static final RegistrySupplier<Item> CLOGGRUM_HALBERD         = registerCloggrum("halberd");
 
+    private static RegistrySupplier<Item> registerCloggrum(String id) {
+        return UNDERGARDEN_ITEMS.register("undergarden/" +
+                ToolMaterialCompat.CLOGGRUM.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new CloggrumSwordItem(ToolMaterialCompat.CLOGGRUM, KnavesCommon.undergardenConfig.CLOGGRUM_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
+
     // Forgotten
     public static final RegistrySupplier<Item> FORGOTTEN_LONGSWORD      = registerForgotten("longsword");
     public static final RegistrySupplier<Item> FORGOTTEN_TWINBLADE      = registerForgotten("twinblade");
@@ -49,6 +58,13 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> FORGOTTEN_CHAKRAM        = registerForgotten("chakram");
     public static final RegistrySupplier<Item> FORGOTTEN_SCYTHE         = registerForgotten("scythe");
     public static final RegistrySupplier<Item> FORGOTTEN_HALBERD        = registerForgotten("halberd");
+
+    private static RegistrySupplier<Item> registerForgotten(String id) {
+        return UNDERGARDEN_ITEMS.register("undergarden/" +
+                ToolMaterialCompat.FORGOTTEN.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new ForgottenSwordItem(ToolMaterialCompat.FORGOTTEN, KnavesCommon.undergardenConfig.FORGOTTEN_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
 
     // Froststeel
     public static final RegistrySupplier<Item> FROSTSTEEL_LONGSWORD     = registerFroststeel("longsword");
@@ -67,6 +83,13 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> FROSTSTEEL_SCYTHE        = registerFroststeel("scythe");
     public static final RegistrySupplier<Item> FROSTSTEEL_HALBERD       = registerFroststeel("halberd");
 
+    private static RegistrySupplier<Item> registerFroststeel(String id) {
+        return UNDERGARDEN_ITEMS.register("undergarden/" +
+                ToolMaterialCompat.FROSTSTEEL.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new FroststeelSwordItem(ToolMaterialCompat.FROSTSTEEL, KnavesCommon.undergardenConfig.FROSTSTEEL_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
+
     // Utherium
     public static final RegistrySupplier<Item> UTHERIUM_LONGSWORD       = registerUtherium("longsword");
     public static final RegistrySupplier<Item> UTHERIUM_TWINBLADE       = registerUtherium("twinblade");
@@ -84,26 +107,10 @@ public class UndergardenAdditionsRegister {
     public static final RegistrySupplier<Item> UTHERIUM_SCYTHE          = registerUtherium("scythe");
     public static final RegistrySupplier<Item> UTHERIUM_HALBERD         = registerUtherium("halberd");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
-        return UNDERGARDEN_ITEMS.register("undergarden/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
-                new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id)));
-    }
-
-    private static RegistrySupplier<Item> registerCloggrum(String id) {
-        return registerMaterial(id, ToolMaterialCompat.CLOGGRUM, KnavesConfig.CLOGGRUM_MOD);
-    }
-
-    private static RegistrySupplier<Item> registerForgotten(String id) {
-        return registerMaterial(id, ToolMaterialCompat.FORGOTTEN, KnavesConfig.FORGOTTEN_MOD);
-    }
-
-    private static RegistrySupplier<Item> registerFroststeel(String id) {
-        return registerMaterial(id, ToolMaterialCompat.FROSTSTEEL, KnavesConfig.FROSTSTEEL_MOD);
-    }
-
     private static RegistrySupplier<Item> registerUtherium(String id) {
-        return registerMaterial(id, ToolMaterialCompat.UTHERIUM, KnavesConfig.UTHERIUM_MOD);
+        return UNDERGARDEN_ITEMS.register("undergarden/" +
+                ToolMaterialCompat.UTHERIUM.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new UtheriumSwordItem(ToolMaterialCompat.UTHERIUM, KnavesCommon.undergardenConfig.UTHERIUM_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 }

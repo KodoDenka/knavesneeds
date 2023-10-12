@@ -3,10 +3,12 @@ package net.knavesneeds.compat.registries;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.helpers.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
-import net.knavesneeds.config.KnavesConfig;
-import net.knavesneeds.customitems.KnavesSwordItem;
+import net.knavesneeds.customitems.swords.twilight_forest.FierySwordItem;
+import net.knavesneeds.customitems.swords.twilight_forest.IronwoodSwordItem;
+import net.knavesneeds.customitems.swords.twilight_forest.KnightmetalSwordItem;
+import net.knavesneeds.customitems.swords.twilight_forest.SteeleafSwordItem;
+import net.knavesneeds.helpers.CompatHelper;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 
@@ -33,6 +35,13 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> FIERY_SCYTHE                 = registerFiery("scythe");
     public static final RegistrySupplier<Item> FIERY_HALBERD                = registerFiery("halberd");
 
+    private static RegistrySupplier<Item> registerFiery(String id) {
+        return TWILIGHT_FOREST_ITEMS.register("twilight_forest/" +
+                ToolMaterialCompat.FIERY.toString().toLowerCase(Locale.ROOT) + "/" + id, () ->
+                new FierySwordItem(ToolMaterialCompat.FIERY, KnavesCommon.twilightForestConfig.FIERY_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
+
     // Ironwood
     public static final RegistrySupplier<Item> IRONWOOD_LONGSWORD           = registerIronwood("longsword");
     public static final RegistrySupplier<Item> IRONWOOD_TWINBLADE           = registerIronwood("twinblade");
@@ -49,6 +58,13 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> IRONWOOD_CHAKRAM             = registerIronwood("chakram");
     public static final RegistrySupplier<Item> IRONWOOD_SCYTHE              = registerIronwood("scythe");
     public static final RegistrySupplier<Item> IRONWOOD_HALBERD             = registerIronwood("halberd");
+
+    private static RegistrySupplier<Item> registerIronwood(String id) {
+        return TWILIGHT_FOREST_ITEMS.register("twilight_forest/" +
+                ToolMaterialCompat.IRONWOOD.toString().toLowerCase(Locale.ROOT) + "/" + id, () ->
+                new IronwoodSwordItem(ToolMaterialCompat.IRONWOOD, KnavesCommon.twilightForestConfig.IRONWOOD_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
 
     // Knightmetal
     public static final RegistrySupplier<Item> KNIGHTMETAL_LONGSWORD        = registerKnightmetal("longsword");
@@ -67,6 +83,13 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> KNIGHTMETAL_SCYTHE           = registerKnightmetal("scythe");
     public static final RegistrySupplier<Item> KNIGHTMETAL_HALBERD          = registerKnightmetal("halberd");
 
+    private static RegistrySupplier<Item> registerKnightmetal(String id) {
+        return TWILIGHT_FOREST_ITEMS.register("twilight_forest/" +
+                ToolMaterialCompat.KNIGHTMETAL.toString().toLowerCase(Locale.ROOT) + "/" + id, () ->
+                new KnightmetalSwordItem(ToolMaterialCompat.KNIGHTMETAL, KnavesCommon.twilightForestConfig.KNIGHTMETAL_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
+
     // Steeleaf
     public static final RegistrySupplier<Item> STEELEAF_LONGSWORD           = registerSteeleaf("longsword");
     public static final RegistrySupplier<Item> STEELEAF_TWINBLADE           = registerSteeleaf("twinblade");
@@ -84,26 +107,10 @@ public class TwilightForestAdditionsRegister {
     public static final RegistrySupplier<Item> STEELEAF_SCYTHE              = registerSteeleaf("scythe");
     public static final RegistrySupplier<Item> STEELEAF_HALBERD             = registerSteeleaf("halberd");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
-        return TWILIGHT_FOREST_ITEMS.register("twilight_forest/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
-                new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id)));
-    }
-
-    private static RegistrySupplier<Item> registerFiery(String id) {
-        return registerMaterial(id, ToolMaterialCompat.FIERY, KnavesConfig.FIERY_MOD);
-    }
-
-    private static RegistrySupplier<Item> registerIronwood(String id) {
-        return registerMaterial(id, ToolMaterialCompat.IRONWOOD, KnavesConfig.IRONWOOD_MOD);
-    }
-
-    private static RegistrySupplier<Item> registerKnightmetal(String id) {
-        return registerMaterial(id, ToolMaterialCompat.KNIGHTMETAL, KnavesConfig.KNIGHTMETAL_MOD);
-    }
-
     private static RegistrySupplier<Item> registerSteeleaf(String id) {
-        return registerMaterial(id, ToolMaterialCompat.STEELEAF, KnavesConfig.STEELEAF_MOD);
+        return TWILIGHT_FOREST_ITEMS.register("twilight_forest/" +
+                ToolMaterialCompat.STEELEAF.toString().toLowerCase(Locale.ROOT) + "/" + id, () ->
+                new SteeleafSwordItem(ToolMaterialCompat.STEELEAF, KnavesCommon.twilightForestConfig.STEELEAF_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 }

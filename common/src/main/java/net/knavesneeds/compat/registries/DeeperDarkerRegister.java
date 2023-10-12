@@ -3,16 +3,15 @@ package net.knavesneeds.compat.registries;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.helpers.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
-import net.knavesneeds.config.KnavesConfig;
-import net.knavesneeds.customitems.KnavesSwordItem;
+import net.knavesneeds.customitems.swords.deeperdarker.WardenSwordItem;
+import net.knavesneeds.helpers.CompatHelper;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 
 import java.util.Locale;
 
-public class DeeperAndDarkerRegister {
+public class DeeperDarkerRegister {
     public static final DeferredRegister<Item> DEEPER_DARKER_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, RegistryKeys.ITEM);
 
     // Translucent
@@ -35,11 +34,11 @@ public class DeeperAndDarkerRegister {
     private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
         return DEEPER_DARKER_ITEMS.register("deeperdarker/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
-                new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
+                new WardenSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
                         CompatHelper.getAttackSpeedMod(id)));
     }
 
     private static RegistrySupplier<Item> registerWarden(String id) {
-        return registerMaterial(id, ToolMaterialCompat.WARDEN, KnavesConfig.WARDEN_MOD);
+        return registerMaterial(id, ToolMaterialCompat.WARDEN, KnavesCommon.deeperDarkerConfig.WARDEN_MOD);
     }
 }

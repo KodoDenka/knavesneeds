@@ -47,6 +47,7 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
+
     // Required Dependencies
         // Cloth Config
         modApi("me.shedaniel.cloth:cloth-config-forge:${project.cloth_config_version}")

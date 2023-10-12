@@ -6,8 +6,9 @@ import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 import net.knavesneeds.KnavesCommon;
 
 @Config(name = KnavesCommon.MOD_ID)
-public class KnavesConfigWrapper extends PartitioningSerializer.GlobalData {
-    @ConfigEntry.Category("server")
-    @ConfigEntry.Gui.Excluded
-    public KnavesConfig client = new KnavesConfig();
+@Config.Gui.Background("cloth-config2:transparent")
+public class UndergardenWrapper extends PartitioningSerializer.GlobalData {
+    @ConfigEntry.Category("undergarden")
+    @ConfigEntry.Gui.TransitiveObject
+    public UndergardenConfig undergarden = new UndergardenConfig();
 }

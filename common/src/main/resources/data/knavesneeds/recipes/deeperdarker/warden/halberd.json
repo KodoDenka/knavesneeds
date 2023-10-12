@@ -13,7 +13,7 @@
       "modid": "deeperdarker"
     }
   ],
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
   "base": {
     "item": "simplyswords:netherite_halberd"
   },
@@ -22,5 +22,8 @@
   },
   "result": {
     "item": "knavesneeds:deeperdarker/warden/halberd"
+  },
+  "template": {
+    "item": "deeperdarker:warden_upgrade_smithing_template"
   }
 }

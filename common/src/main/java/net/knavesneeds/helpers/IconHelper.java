@@ -37,7 +37,10 @@ public class IconHelper {
             return () -> new ItemStack(BiomesYoullGoRegister.PENDORITE_CHAKRAM.get());
 
         } else if (Platform.isModLoaded("deeperdarker")) {
-            return () -> new ItemStack(DeeperAndDarkerRegister.WARDEN_CHAKRAM.get());
+            return () -> new ItemStack(DeeperDarkerRegister.WARDEN_CHAKRAM.get());
+
+        } else if (Platform.isModLoaded("amethyst_imbuement")) {
+            return () -> new ItemStack(AmethystImbuementRegister.AMETRINE_CHAKRAM.get());
 
         }
 

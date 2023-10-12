@@ -3,10 +3,9 @@ package net.knavesneeds.compat.registries;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.helpers.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
-import net.knavesneeds.config.KnavesConfig;
-import net.knavesneeds.customitems.KnavesSwordItem;
+import net.knavesneeds.customitems.swords.byg.PendoriteSwordItem;
+import net.knavesneeds.helpers.CompatHelper;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 
@@ -32,14 +31,10 @@ public class BiomesYoullGoRegister {
     public static final RegistrySupplier<Item> PENDORITE_SCYTHE          = registerPendorite("scythe");
     public static final RegistrySupplier<Item> PENDORITE_HALBERD         = registerPendorite("halberd");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
-        return BYG_ITEMS.register("byg/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
-                new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id)));
-    }
-
     private static RegistrySupplier<Item> registerPendorite(String id) {
-        return registerMaterial(id, ToolMaterialCompat.PENDORITE, KnavesConfig.PENDORITE_MOD);
+        return BYG_ITEMS.register("byg/" +
+                ToolMaterialCompat.PENDORITE.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new PendoriteSwordItem(ToolMaterialCompat.PENDORITE, KnavesCommon.biomesYoullGoConfig.PENDORITE_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 }

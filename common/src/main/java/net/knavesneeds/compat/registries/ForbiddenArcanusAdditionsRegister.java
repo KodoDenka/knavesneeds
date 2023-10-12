@@ -3,10 +3,10 @@ package net.knavesneeds.compat.registries;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.helpers.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
-import net.knavesneeds.config.KnavesConfig;
-import net.knavesneeds.customitems.KnavesSwordItem;
+import net.knavesneeds.customitems.swords.forbidden_arcanus.DracoArcanusSwordItem;
+import net.knavesneeds.customitems.swords.forbidden_arcanus.ReinforcedDeorumSwordItem;
+import net.knavesneeds.helpers.CompatHelper;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 
@@ -16,6 +16,7 @@ public class ForbiddenArcanusAdditionsRegister {
 
     public static final DeferredRegister<Item> FORBIDDEN_ARCANUS_ITEMS = DeferredRegister.create(KnavesCommon.MOD_ID, RegistryKeys.ITEM);
 
+    /**
     // Deorum
     // Should these be Slimec Items? There are no Deorum Items, but the Slimec Items are made from Deorum Ingots
     public static final RegistrySupplier<Item> DEORUM_LONGSWORD                 = registerDeorum("longsword");
@@ -34,6 +35,14 @@ public class ForbiddenArcanusAdditionsRegister {
     public static final RegistrySupplier<Item> DEORUM_SCYTHE                    = registerDeorum("scythe");
     public static final RegistrySupplier<Item> DEORUM_HALBERD                   = registerDeorum("halberd");
 
+    private static RegistrySupplier<Item> registerDeorum(String id) {
+        return FORBIDDEN_ARCANUS_ITEMS.register("forbidden_arcanus/" +
+                ToolMaterialCompat.DEORUM.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new DeorumSwordItem(ToolMaterialCompat.DEORUM, KnavesCommon.forbiddenArcanusConfig.DEORUM_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
+     **/
+
     // Draco Arcanus
     public static final RegistrySupplier<Item> DRACO_ARCANUS_LONGSWORD          = registerDracoArcanus("longsword");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_TWINBLADE          = registerDracoArcanus("twinblade");
@@ -50,6 +59,13 @@ public class ForbiddenArcanusAdditionsRegister {
     public static final RegistrySupplier<Item> DRACO_ARCANUS_CHAKRAM            = registerDracoArcanus("chakram");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_SCYTHE             = registerDracoArcanus("scythe");
     public static final RegistrySupplier<Item> DRACO_ARCANUS_HALBERD            = registerDracoArcanus("halberd");
+
+    private static RegistrySupplier<Item> registerDracoArcanus(String id) {
+        return FORBIDDEN_ARCANUS_ITEMS.register("forbidden_arcanus/" +
+                ToolMaterialCompat.DRACO_ARCANUS.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new DracoArcanusSwordItem(ToolMaterialCompat.DRACO_ARCANUS, KnavesCommon.forbiddenArcanusConfig.DRACO_ARCANUS_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
 
     // Reinforced Deorum
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_LONGSWORD       = registerReinforcedDeorum("longsword");
@@ -68,22 +84,10 @@ public class ForbiddenArcanusAdditionsRegister {
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_SCYTHE          = registerReinforcedDeorum("scythe");
     public static final RegistrySupplier<Item> REINFORCE_DEORUM_HALBERD         = registerReinforcedDeorum("halberd");
 
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
-        return FORBIDDEN_ARCANUS_ITEMS.register("forbidden_arcanus/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
-                new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id)));
-    }
-
-    private static RegistrySupplier<Item> registerDeorum(String id) {
-        return registerMaterial(id, ToolMaterialCompat.DEORUM, KnavesConfig.DEORUM_MOD);
-    }
-
-    private static RegistrySupplier<Item> registerDracoArcanus(String id) {
-        return registerMaterial(id, ToolMaterialCompat.DRACO_ARCANUS, KnavesConfig.DRACO_ARCANUS_MOD);
-    }
-
     private static RegistrySupplier<Item> registerReinforcedDeorum(String id) {
-        return registerMaterial(id, ToolMaterialCompat.REINFORCED_DEORUM, KnavesConfig.REINFORCED_DEORUM_MOD);
+        return FORBIDDEN_ARCANUS_ITEMS.register("forbidden_arcanus/" +
+                ToolMaterialCompat.REINFORCED_DEORUM.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new ReinforcedDeorumSwordItem(ToolMaterialCompat.REINFORCED_DEORUM, KnavesCommon.forbiddenArcanusConfig.REINFORCED_DEORUM_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
     }
 }

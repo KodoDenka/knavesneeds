@@ -3,10 +3,11 @@ package net.knavesneeds.compat.registries;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.knavesneeds.KnavesCommon;
-import net.knavesneeds.helpers.CompatHelper;
 import net.knavesneeds.compat.ToolMaterialCompat;
-import net.knavesneeds.config.KnavesConfig;
-import net.knavesneeds.customitems.KnavesSwordItem;
+import net.knavesneeds.customitems.swords.betterend.AeterniumSwordItem;
+import net.knavesneeds.customitems.swords.betterend.TerminiteSwordItem;
+import net.knavesneeds.customitems.swords.betterend.ThallasiumSwordItem;
+import net.knavesneeds.helpers.CompatHelper;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 
@@ -50,6 +51,13 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> AETERNIUM_SCYTHE             = registerAeternium("scythe");
     public static final RegistrySupplier<Item> AETERNIUM_HALBERD            = registerAeternium("halberd");
 
+    private static RegistrySupplier<Item> registerAeternium(String id) {
+        return BETTER_END_ITEMS.register("betterend/" +
+                ToolMaterialCompat.AETERNIUM.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new AeterniumSwordItem(ToolMaterialCompat.AETERNIUM, KnavesCommon.betterEndConfig.AETERNIUM_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
+
     // Terminite Heads
     public static final RegistrySupplier<Item> TERMINITE_LONGSWORD_HEAD     = registerHead("longsword", ToolMaterialCompat.TERMINITE);
     public static final RegistrySupplier<Item> TERMINITE_TWINBLADE_HEAD     = registerHead("twinblade", ToolMaterialCompat.TERMINITE);
@@ -86,6 +94,13 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> TERMINITE_SCYTHE             = registerTerminite("scythe");
     public static final RegistrySupplier<Item> TERMINITE_HALBERD            = registerTerminite("halberd");
 
+    private static RegistrySupplier<Item> registerTerminite(String id) {
+        return BETTER_END_ITEMS.register("betterend/" +
+                ToolMaterialCompat.TERMINITE.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new TerminiteSwordItem(ToolMaterialCompat.TERMINITE, KnavesCommon.betterEndConfig.TERMINITE_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
+
     // Thallasium Heads
     public static final RegistrySupplier<Item> THALLASIUM_LONGSWORD_HEAD    = registerHead("longsword", ToolMaterialCompat.THALLASIUM);
     public static final RegistrySupplier<Item> THALLASIUM_TWINBLADE_HEAD    = registerHead("twinblade", ToolMaterialCompat.THALLASIUM);
@@ -120,28 +135,16 @@ public class BetterEndAdditionsRegister {
     public static final RegistrySupplier<Item> THALLASIUM_SCYTHE            = registerThallasium("scythe");
     public static final RegistrySupplier<Item> THALLASIUM_HALBERD           = registerThallasium("halberd");
 
+    private static RegistrySupplier<Item> registerThallasium(String id) {
+        return BETTER_END_ITEMS.register("betterend/" +
+                ToolMaterialCompat.THALLASIUM.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
+                new ThallasiumSwordItem(ToolMaterialCompat.THALLASIUM, KnavesCommon.betterEndConfig.THALLASIUM_MOD + CompatHelper.getDamageMod(id),
+                        CompatHelper.getAttackSpeedMod(id)));
+    }
+
     private static RegistrySupplier<Item> registerHead(String id, ToolMaterialCompat tier) {
         return BETTER_END_ITEMS.register("betterend/" +
                 tier.toString().toLowerCase(Locale.ROOT) + "/" + id + "_head", ()->
                 new Item(new Item.Settings().arch$tab(KnavesCommon.KNAVESNEEDS)));
-    }
-
-    private static RegistrySupplier<Item> registerMaterial(String id, ToolMaterialCompat tier, int materialMod) {
-        return BETTER_END_ITEMS.register("betterend/" +
-                tier.toString().toLowerCase(Locale.ROOT) + "/" + id, ()->
-                new KnavesSwordItem(tier, materialMod + CompatHelper.getDamageMod(id),
-                        CompatHelper.getAttackSpeedMod(id)));
-    }
-
-    private static RegistrySupplier<Item> registerAeternium(String id) {
-        return registerMaterial(id, ToolMaterialCompat.AETERNIUM, KnavesConfig.AETERNIUM_MOD);
-    }
-
-    private static RegistrySupplier<Item> registerTerminite(String id) {
-        return registerMaterial(id, ToolMaterialCompat.TERMINITE, KnavesConfig.TERMINITE_MOD);
-    }
-
-    private static RegistrySupplier<Item> registerThallasium(String id) {
-        return registerMaterial(id, ToolMaterialCompat.THALLASIUM, KnavesConfig.THALLASIUM_MOD);
     }
 }

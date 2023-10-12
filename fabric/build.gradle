@@ -44,6 +44,9 @@ dependencies {
     modImplementation "maven.modrinth:better-combat:${rootProject.better_combat_version}-fabric"
 
     modImplementation "dev.kosmx.player-anim:player-animation-lib-fabric:${rootProject.player_anim}"
+
+    modImplementation "curse.maven:simply-swords-659887:4704028"
+
 }
 
 processResources {
