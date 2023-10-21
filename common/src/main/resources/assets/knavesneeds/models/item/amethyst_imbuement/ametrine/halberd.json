@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/long_handheld",
+  "textures": {
+    "layer0": "knavesneeds:item/amethyst_imbuement/ametrine/halberd"
+  }
+}

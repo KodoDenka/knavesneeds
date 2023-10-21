@@ -16,4 +16,5 @@ classes/
 .metadata
 .vscode
 .settings
+machinet.conf
 *.launch

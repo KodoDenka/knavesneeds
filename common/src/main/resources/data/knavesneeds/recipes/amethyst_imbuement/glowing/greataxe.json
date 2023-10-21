@@ -1,0 +1,49 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "amethyst_imbuement"
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "amethyst_imbuement"
+    }
+  ],
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+    "item": "minecraft:amethyst_shard"
+  },
+  "imbueB": {
+    "item": "amethyst_imbuement:citrine"
+  },
+  "imbueC": {
+    "item": "amethyst_imbuement:citrine"
+  },
+  "imbueD": {
+    "item": "minecraft:amethyst_shard"
+  },
+  "craftB": {
+    "item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftD": {
+    "item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftE": {
+    "item": "knavesneeds:amethyst_imbuement/garnet/greataxe"
+  },
+  "craftF": {
+    "item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftH": {
+    "item": "amethyst_imbuement:glowing_fragment"
+  },
+  "title": "Glowing Blade",
+  "cost": 13,
+  "resultA": "knavesneeds:amethyst_imbuement/glowing/greataxe",
+  "countA": 1,
+  "transferEnchant": true
+}

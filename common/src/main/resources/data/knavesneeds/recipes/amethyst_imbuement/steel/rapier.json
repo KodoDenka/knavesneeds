@@ -1,0 +1,32 @@
+{  "fabric:load_conditions": [
+  {
+    "condition": "fabric:all_mods_loaded",
+    "values": [
+      "amethyst_imbuement"
+    ]
+  }
+],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "amethyst_imbuement"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "c:wood_sticks"
+    },
+    "X": {
+      "item": "amethyst_imbuement:steel_ingot"
+    }
+  },
+  "pattern": [
+    "  X",
+    " X ",
+    "#  "
+  ],
+  "result": {
+    "item": "knavesneeds:twilight_forest/steel/rapier"
+  }
+}
