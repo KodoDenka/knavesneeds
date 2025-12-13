@@ -1,128 +1,72 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "7.1.2"
+    id 'multiloader-loader'
+    id 'net.neoforged.moddev.legacyforge'
 }
 
-architectury {
-    platformSetupLoomIde()
-    forge()
+mixin {
+    add(sourceSets.main, "${mod_id}.refmap.json")
+
+    config("${mod_id}.mixins.json")
+    config("${mod_id}.forge.mixins.json")
 }
 
-loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
+legacyForge {
+    version = "${minecraft_version}-${forge_version}"
 
-    forge {
-        convertAccessWideners = true
-        extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
+    validateAccessTransformers = true
 
-        mixinConfig "knavesneeds-common.mixins.json"
-        mixinConfig "knavesneeds.mixins.json"
+    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (at.exists()) {
+        accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
+    }
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
+    }
+    runs {
+        client {
+            client()
+        }
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+        server {
+            server()
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
     }
 }
 
-configurations {
-    common
-    shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
-    compileClasspath.extendsFrom common
-    runtimeClasspath.extendsFrom common
-    developmentForge.extendsFrom common
-}
+sourceSets.main.resources.srcDir 'src/generated/resources'
 
 repositories {
-    maven { url "https://cursemaven.com" }
-    maven { url 'https://api.modrinth.com/maven' }
     maven {
-        name "KosmX's maven"
-        url 'https://maven.kosmx.dev/'
+        name = "FzzyMaven"
+        url = "https://maven.fzzyhmstrs.me/"
     }
+
     maven {
-        url = "https://modmaven.dev/"
+        url = "https://thedarkcolour.github.io/KotlinForForge/"
     }
 }
 
 dependencies {
-    forge "net.minecraftforge:forge:${rootProject.forge_version}"
-    // Remove the next line if you don't want to depend on the API
-    modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
+    compileOnly project(":common")
+    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 
-    common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+    modImplementation "me.fzzyhmstrs:fzzy_config:${fzzyConfigForgeVersion}"
 
-    // Required Dependencies
-        // Cloth Config
-        modApi("me.shedaniel.cloth:cloth-config-forge:${project.cloth_config_version}")
-
-        // Better Combat & Player Animation Lib
-        modApi("maven.modrinth:better-combat:${rootProject.better_combat_version}-forge")
-        modApi("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
-
-        // Simply Swords
-        modApi("curse.maven:simply-swords-659887:4406899")
-
-    // Optional Mods (Mostly for testing)
-        // Twilight Forest
-        // modImplementation("teamtwilight:twilightforest:${rootProject.twilight_forest_version_forge}:universal")
-
-        // Blue Skies and Structure Gel API
-        // modApi ("curse.maven:blue-skies-312918:3966273")
-        // modApi ("curse.maven:structure-gel-api-378802:4029363")
-
-        // The Undergarden
-        // modApi("curse.maven:the-undergarden-379849:4057184")
-
-        // Plus The End
-        // modApi("curse.maven:plus-the-end-573382:4055155")
-}
-
-processResources {
-    inputs.property "version", project.version
-
-    filesMatching("META-INF/mods.toml") {
-        expand "version": project.version
-    }
-}
-
-shadowJar {
-    exclude "fabric.mod.json"
-    exclude "architectury.common.json"
-
-    configurations = [project.configurations.shadowCommon]
-    classifier "dev-shadow"
-}
-
-remapJar {
-    input.set shadowJar.archiveFile
-    dependsOn shadowJar
-    classifier null
 }
 
 jar {
-    classifier "dev"
-}
-
-sourcesJar {
-    def commonSources = project(":common").sourcesJar
-    dependsOn commonSources
-    from commonSources.archiveFile.map { zipTree(it) }
-}
-
-components.java {
-    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
-        skip()
-    }
-}
-
-publishing {
-    publications {
-        mavenForge(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
-            from components.java
-        }
-    }
-
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
-        maven { url 'https://maven.shedaniel.me/' }
-
-    }
+    finalizedBy('reobfJar')
+    manifest.attributes([
+            "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
+    ])
 }

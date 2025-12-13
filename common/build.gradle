@@ -1,61 +1,45 @@
-architectury {
-    common(rootProject.enabled_platforms.split(","))
+plugins {
+    id 'multiloader-common'
+    id 'net.neoforged.moddev.legacyforge'
 }
 
-loom {
-    accessWidenerPath = file("src/main/resources/knavesneeds.accesswidener")
+legacyForge {
+    mcpVersion = minecraft_version
+    if (file("src/main/resources/META-INF/accesstransformer.cfg").exists()) {
+        accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
+    }
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
+    }
 }
 
 repositories {
-    maven { url 'https://maven.shedaniel.me/' }
-    maven { url 'https://api.modrinth.com/maven' }
     maven {
-        name "KosmX's maven"
-        url 'https://maven.kosmx.dev/'
+        name = "FzzyMaven"
+        url = "https://maven.fzzyhmstrs.me/"
     }
-    maven {
-        url "https://cursemaven.com"
-    }
-
-    maven { url 'https://jitpack.io' }
-    maven { url = "https://mvn.devos.one/snapshots/" }
 }
 
 dependencies {
-    // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
-    // Do NOT use other classes from fabric loader
-    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
-    // Remove the next line if you don't want to depend on the API
-    modApi "dev.architectury:architectury:${rootProject.architectury_version}"
+    compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
+    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-
-    //modImplementation(include("io.github.fabricators_of_create.Porting-Lib:porting-lib:${rootProject.porting_lib}+${rootProject.minecraft_version}"))
-
-    modImplementation "maven.modrinth:better-combat:${rootProject.better_combat_version}-fabric"
-    //modImplementation ("dev.kosmx.player-anim:player-animation-lib-forge:${rootProject.player_anim}")
-
-    modImplementation "curse.maven:simply-swords-659887:4396689"
-
-    modImplementation "com.github.quiqueck:BCLib:${rootProject.bclib_version}"
-
-    modImplementation "curse.maven:betterend-413596:4393109"
-
-    modImplementation "curse.maven:betternether-311377:4393102"
+    modImplementation "me.fzzyhmstrs:fzzy_config:${project.fzzyConfigForgeVersion}"
 }
 
-publishing {
-    publications {
-        mavenCommon(MavenPublication) {
-            artifactId = rootProject.archives_base_name
-            from components.java
-        }
+configurations {
+    commonJava {
+        canBeResolved = false
+        canBeConsumed = true
     }
+    commonResources {
+        canBeResolved = false
+        canBeConsumed = true
+    }
+}
 
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
-    }
+artifacts {
+    commonJava sourceSets.main.java.sourceDirectories.singleFile
+    commonResources sourceSets.main.resources.sourceDirectories.singleFile
 }

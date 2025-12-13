@@ -1,6 +1,0 @@
-{
-  "parent": "knavesneeds:item/template_claymore",
-  "textures": {
-    "layer0": "blue_skies:item/turquoise_stone/turquoise_stone_claymore"
-  }
-}

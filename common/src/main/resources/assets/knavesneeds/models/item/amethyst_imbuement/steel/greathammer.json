@@ -1,0 +1,6 @@
+{
+"parent": "knavesneeds:item/template_greathammer",
+"textures": {
+"texture": "knavesneeds:item/amethyst_imbuement/steel/greathammer"
+}
+}
