@@ -1,11 +1,13 @@
 package dev.manasnow.knavesneeds.config;
 
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
+@Version(version = 1)
 public class KnavesBetterEndConfig extends Config {
 
     public KnavesBetterEndConfig() {
@@ -20,7 +22,7 @@ public class KnavesBetterEndConfig extends Config {
     int aeterniumMiningLevel = 1;
     int aeterniumEnchantability = 15;
 
-    @Comment("Material - Terminite")
+    @Comment("\n Material - Terminite")
     boolean terminiteEnabled = true;
     int terminiteDurability = 1000;
     float terminiteMiningSpeedMultiplier = 1.0f;
@@ -28,11 +30,18 @@ public class KnavesBetterEndConfig extends Config {
     int terminiteMiningLevel = 1;
     int terminiteEnchantability = 15;
 
-    @Comment("Material - Thallasium")
+    @Comment("\n Material - Thallasium")
     boolean thallasiumEnabled = true;
     int thallasiumDurability = 1000;
     float thallasiumMiningSpeedMultiplier = 1.0f;
     float thallasiumAttackDamage = 0.0f;
     int thallasiumMiningLevel = 1;
     int thallasiumEnchantability = 15;
+
+    @Override
+    public void update(int deserializedVersion) {
+        if (deserializedVersion < 1) {
+            //nothing here yet :)
+        }
+    }
 }

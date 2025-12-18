@@ -1,57 +1,58 @@
 package dev.manasnow.knavesneeds.config;
 
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.RootConfig;
+import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
+@RootConfig
+
 public class KnavesCommonConfig extends Config {
 
+    // Common Config constructor
     public KnavesCommonConfig() {
         super(new ResourceLocation(MOD_ID, "knaves_config"));
     }
 
+
     @Comment("Enables Better End support.")
     public boolean betterEndEnabled = true;
 
-    @Comment("Enables Better Nether support.")
+    @Comment("\n Enables Better Nether support.")
     public boolean betterNetherEnabled = true;
 
-    @Comment("Enables Biomes You'll Go support.")
+    @Comment("\n Enables Biomes You'll Go support.")
     public boolean biomesYoullGoEnabled = true;
 
-    @Comment("Enables Blue Skies support.")
+    @Comment("\n Enables Blue Skies support.")
     public boolean blueSkiesEnabled = true;
 
-    @Comment("Enables Deeper and Darker support.")
+    @Comment("\n Enables Deeper and Darker support.")
     public boolean deeperDarkerEnabled = true;
 
-    @Comment("Enables Forbidden Arcanus support.")
+    @Comment("\n Enables Forbidden Arcanus support.")
     public boolean forbiddenArcanusEnabled = true;
 
-    @Comment("Enables Plus The End support.")
+    @Comment("\n Enables Plus The End support.")
     public boolean plusTheEndEnabled = true;
 
-    @Comment("Enables Marium's Soulslike Weaponry support.")
+    @Comment("\n Enables Marium's Soulslike Weaponry support.")
     public boolean soulsWeaponsEnabled = true;
 
-    @Comment("Enables Twilight Forest support")
+    @Comment("\n Enables Twilight Forest support")
     public boolean twilightForestEnabled = true;
 
-    @Comment("Enables Undergarden support")
+    @Comment("\n Enables Undergarden support")
     public boolean undergardenEnabled = true;
 
 
-
-
-    //public KnavesCommonConfig() {
-        //super(ResourceLocation.of(MOD_ID, 'c'));
-
-        //super (new ResourceLocation(MOD_ID, "knaves_config"));
-
-        //super(ResourceLocation.of(MOD_ID, "KnavesCommonConfig"));
-
-        //super(ResourceLocation.tryBuild(MOD_ID, "KnavesCommonConfig"));
-    //}
+    @Override
+    public void update(int deserializedVersion) {
+        if (deserializedVersion < 1) {
+            //nothing here yet :)
+        }
+    }
 }

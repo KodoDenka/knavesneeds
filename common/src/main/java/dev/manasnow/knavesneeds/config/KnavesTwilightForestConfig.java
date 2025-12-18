@@ -1,11 +1,13 @@
 package dev.manasnow.knavesneeds.config;
 
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
+@Version(version = 1)
 public class KnavesTwilightForestConfig extends Config {
 
     public KnavesTwilightForestConfig() {
@@ -20,7 +22,7 @@ public class KnavesTwilightForestConfig extends Config {
     int steeleafMiningLevel = 1;
     int steeleafEnchantability = 15;
 
-    @Comment("Material - Ironwood")
+    @Comment("\n Material - Ironwood")
     boolean ironwoodEnabled = true;
     int ironwoodDurability = 1000;
     float ironwoodMiningSpeedMultiplier = 1.0f;
@@ -29,7 +31,7 @@ public class KnavesTwilightForestConfig extends Config {
     int ironwoodEnchantability = 15;
 
 
-    @Comment("Material - Fiery")
+    @Comment("\n Material - Fiery")
     boolean fieryEnabled = true;
     int fieryDurability = 1000;
     float fieryMiningSpeedMultiplier = 1.0f;
@@ -37,7 +39,7 @@ public class KnavesTwilightForestConfig extends Config {
     int fieryMiningLevel = 1;
     int fieryEnchantability = 15;
 
-    @Comment("Material - Knightmetal")
+    @Comment("\n Material - Knightmetal")
     boolean knightmetalEnabled = true;
     int knightmetalDurability = 1000;
     float knightmetalMiningSpeedMultiplier = 1.0f;
@@ -45,5 +47,10 @@ public class KnavesTwilightForestConfig extends Config {
     int knightmetalMiningLevel = 1;
     int knightmetalEnchantability = 15;
 
-
+    @Override
+    public void update(int deserializedVersion) {
+        if (deserializedVersion < 1) {
+            //nothing here yet :)
+        }
+    }
 }

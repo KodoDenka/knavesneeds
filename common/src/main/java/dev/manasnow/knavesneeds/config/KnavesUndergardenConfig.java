@@ -1,11 +1,13 @@
 package dev.manasnow.knavesneeds.config;
 
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
+@Version(version = 1)
 public class KnavesUndergardenConfig extends Config {
 
     public KnavesUndergardenConfig() {
@@ -20,7 +22,7 @@ public class KnavesUndergardenConfig extends Config {
     int cloggrumMiningLevel = 1;
     int cloggrumEnchantability = 15;
 
-    @Comment("Material - Froststeel")
+    @Comment("\n Material - Froststeel")
     boolean froststeelEnabled = true;
     int froststeelDurability = 1000;
     float froststeelMiningSpeedMultiplier = 1.0f;
@@ -28,7 +30,7 @@ public class KnavesUndergardenConfig extends Config {
     int froststeelMiningLevel = 1;
     int froststeelEnchantability = 15;
 
-    @Comment("Material - Utherium")
+    @Comment("\n Material - Utherium")
     boolean utheriumEnabled = true;
     int utheriumDurability = 1000;
     float utheriumMiningSpeedMultiplier = 1.0f;
@@ -36,7 +38,7 @@ public class KnavesUndergardenConfig extends Config {
     int utheriumMiningLevel = 1;
     int utheriumEnchantability = 15;
 
-    @Comment("Material - Forgotten")
+    @Comment("\n Material - Forgotten")
     boolean forgottenEnabled = true;
     int forgottenDurability = 1000;
     float forgottenMiningSpeedMultiplier = 1.0f;
@@ -44,4 +46,10 @@ public class KnavesUndergardenConfig extends Config {
     int forgottenMiningLevel = 1;
     int forgottenEnchantability = 15;
 
+    @Override
+    public void update(int deserializedVersion) {
+        if (deserializedVersion < 1) {
+            //nothing here yet :)
+        }
+    }
 }

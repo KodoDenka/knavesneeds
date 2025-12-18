@@ -1,12 +1,14 @@
 package dev.manasnow.knavesneeds.config;
 
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
 
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
+@Version(version = 1)
 public class KnavesAmethystImbuementConfig extends Config {
 
     public KnavesAmethystImbuementConfig() {
@@ -21,7 +23,7 @@ public class KnavesAmethystImbuementConfig extends Config {
     int ametrineMiningLevel = 1;
     int ametrineEnchantability = 15;
 
-    @Comment("Garnet")
+    @Comment("\n Garnet")
     boolean garnetEnabled = true;
     int garnetDurability = 1000;
     float garnetMiningSpeedMultiplier = 1.0f;
@@ -29,7 +31,7 @@ public class KnavesAmethystImbuementConfig extends Config {
     int garnetMiningLevel = 1;
     int garnetEnchantability = 15;
 
-    @Comment("Glowing")
+    @Comment("\n Glowing")
     boolean glowingEnabled = true;
     int glowingDurability = 1000;
     float glowingMiningSpeedMultiplier = 1.0f;
@@ -37,7 +39,7 @@ public class KnavesAmethystImbuementConfig extends Config {
     int glowingMiningLevel = 1;
     int glowingEnchantability = 15;
 
-    @Comment("Steel")
+    @Comment("\n Steel")
     boolean steelEnabled = true;
     int steelDurability = 1000;
     float steelMiningSpeedMultiplier = 1.0f;
@@ -45,4 +47,10 @@ public class KnavesAmethystImbuementConfig extends Config {
     int steelMiningLevel = 1;
     int steelEnchantability = 15;
 
+    @Override
+    public void update(int deserializedVersion) {
+        if (deserializedVersion < 1) {
+            //nothing here yet :)
+        }
+    }
 }

@@ -1,11 +1,13 @@
 package dev.manasnow.knavesneeds.config;
 
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
+@Version(version = 1)
 public class KnavesBetterNetherConfig extends Config {
 
     public KnavesBetterNetherConfig() {
@@ -20,7 +22,7 @@ public class KnavesBetterNetherConfig extends Config {
     int cincinnasiteMiningLevel = 1;
     int cincinnasiteEnchantability = 15;
 
-    @Comment("Material - Cincinnasite Diamond")
+    @Comment("\n Material - Cincinnasite Diamond")
     boolean cincinnasiteDiamondEnabled = true;
     int cincinnasiteDiamondDurability = 1000;
     float cincinnasiteDiamondMiningSpeedMultiplier = 1.0f;
@@ -28,7 +30,7 @@ public class KnavesBetterNetherConfig extends Config {
     int cincinnasiteDiamondMiningLevel = 1;
     int cincinnasiteDiamondEnchantability = 15;
 
-    @Comment("Material - Nether Ruby")
+    @Comment("\n Material - Nether Ruby")
     boolean netherRubyEnabled = true;
     int netherRubyDurability = 1000;
     float netherRubyMiningSpeedMultiplier = 1.0f;
@@ -36,7 +38,7 @@ public class KnavesBetterNetherConfig extends Config {
     int netherRubyMiningLevel = 1;
     int netherRubyEnchantability = 15;
 
-    @Comment("Material - Flaming Ruby")
+    @Comment("\n Material - Flaming Ruby")
     boolean flamingRubyEnabled = true;
     int flamingRubyDurability = 1000;
     float flamingRubyMiningSpeedMultiplier = 1.0f;
@@ -44,4 +46,10 @@ public class KnavesBetterNetherConfig extends Config {
     int flamingRubyMiningLevel = 1;
     int flamingRubyEnchantability = 15;
 
+    @Override
+    public void update(int deserializedVersion) {
+        if (deserializedVersion < 1) {
+            //nothing here yet :)
+        }
+    }
 }
