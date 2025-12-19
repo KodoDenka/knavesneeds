@@ -9,6 +9,8 @@ import com.mojang.brigadier.tree.RootCommandNode;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.item.ItemStack;
 
 import static java.lang.Integer.getInteger;
 
@@ -38,5 +40,10 @@ public class KnavesCommands {
         Constants.LOG.info("Executing command");
         context.getSource().sendSuccess(() -> Component.literal("You ran the subcommand!"), false);
         return 1;
+        new ItemStack heldItem;
+        heldItem = context.getSource().getPlayer().getMainHandItem();
+        // get tier of held item
+
+        //return tier of held item.
     }
 }
