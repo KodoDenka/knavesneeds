@@ -8,9 +8,15 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.tree.RootCommandNode;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
+import net.minecraft.core.DefaultedRegistry;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import static java.lang.Integer.getInteger;
 
@@ -20,30 +26,53 @@ public class KnavesCommands {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         Constants.LOG.info("Attempting to registering commands");
         // Register the command with the literal "mycommand"
-        dispatcher.register(Commands.literal("KnavesCommands")
+        dispatcher.register(Commands.literal("knavesneeds")
                 .executes(KnavesCommands::execute) // Calls the execute method when command is run
-                .then(Commands.literal("subcommand") // Example of a subcommand
-                        .executes(KnavesCommands::executeSub)
+                .then(Commands.literal("tier_info")
+                    .executes(KnavesCommands::executeSub)
+                )
+                .then(Commands.literal("help")
+                        .executes(KnavesCommands::executeHelp)
                 )
         );
     }
 
     private static int execute(CommandContext<CommandSourceStack> context) {
         // This is the code that runs when /mycommand is used
-        Constants.LOG.info("Executing command");
-        context.getSource().sendSuccess(() -> Component.literal("Hello from the common project command!"), false);
-        return 1; // Return 1 for success
+        context.getSource().sendSuccess(() -> Component.literal("P"), false);
+        return 1;
     }
 
     private static int executeSub(CommandContext<CommandSourceStack> context) {
-        // Code for the subcommand
         Constants.LOG.info("Executing command");
-        context.getSource().sendSuccess(() -> Component.literal("You ran the subcommand!"), false);
-        return 1;
-        new ItemStack heldItem;
-        heldItem = context.getSource().getPlayer().getMainHandItem();
-        // get tier of held item
 
-        //return tier of held item.
+        Item heldItem = context.getSource().getPlayer().getMainHandItem().getItem();
+
+
+        if (heldItem instanceof SwordItem swordItem) {
+            float itemAttackDamage = swordItem.getTier().getAttackDamageBonus();
+            Constants.LOG.info(String.valueOf(itemAttackDamage));
+            int itemEnchantmentValue = swordItem.getTier().getEnchantmentValue();
+            Constants.LOG.info(String.valueOf(itemEnchantmentValue));
+            int itemDurability = swordItem.getTier().getUses();
+            Constants.LOG.info(String.valueOf(itemDurability));
+            int itemLevel = swordItem.getTier().getLevel();
+            Constants.LOG.info(String.valueOf(itemLevel));
+            float itemSpeed = swordItem.getTier().getSpeed();
+            Constants.LOG.info(String.valueOf(itemSpeed));
+            Ingredient itemRepairIngredient = swordItem.getTier().getRepairIngredient();
+            Constants.LOG.info(String.valueOf(BuiltInRegistries.ITEM.getKey(itemRepairIngredient.getItems()[0].getItem())));
+            context.getSource().sendSuccess(() -> Component.literal("Check Logs"),(false));
+
+        }
+        else {
+            context.getSource().sendSuccess(() -> Component.literal("You are not holding a valid weapon."), false);
+        }
+        return 1;
+    }
+
+    private static int executeHelp(CommandContext<CommandSourceStack> context) {
+        context.getSource().sendSuccess(() -> Component.literal("Hold the weapon you want tier information about and then run /knavesneeds tier_info"), false);
+        return 1;
     }
 }
