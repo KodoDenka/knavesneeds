@@ -2,6 +2,7 @@ package dev.manasnow.knavesneeds;
 
 import dev.manasnow.knavesneeds.config.KnavesCommonConfig;
 import dev.manasnow.knavesneeds.platform.Services;
+import dev.manasnow.knavesneeds.registries.TwilightForestAdditionsRegistries;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
@@ -36,6 +37,8 @@ public class KnavesCommon {
             Constants.LOG.info(String.valueOf(commonConfig.betterEndEnabled));
 
             //KnavesCommands.register();
+
+            TwilightForestAdditionsRegistries.smartRegister();
 
         }
 
