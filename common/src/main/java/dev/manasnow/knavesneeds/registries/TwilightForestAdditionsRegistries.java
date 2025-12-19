@@ -10,13 +10,19 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
 public class TwilightForestAdditionsRegistries {
 
+<<<<<<< Updated upstream
 
+=======
+    public static final Item TEST = registerItem("test", new Item(new Item.Properties()));
+>>>>>>> Stashed changes
 
 
     private static Item registerItem(String name, Item item) {
         return net.minecraft.core.Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MOD_ID, name), item);
     }
 
+    public static void smartRegister() {
+    }
 
 
 }
