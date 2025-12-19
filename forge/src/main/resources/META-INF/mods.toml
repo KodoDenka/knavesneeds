@@ -25,3 +25,9 @@ mandatory = true
 versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
+[[dependencies.${mod_id}]]
+modId = "fzzy_config"
+mandatory = true
+versionRange = "[0.5.9,)"
+ordering = "BEFORE"
+side = "BOTH"
