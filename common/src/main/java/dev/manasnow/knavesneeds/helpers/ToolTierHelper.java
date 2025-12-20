@@ -9,6 +9,9 @@ import org.jetbrains.annotations.NotNull;
 
 public enum ToolTierHelper implements Tier {
 
+    //TODO: Divide this enum into multiple enums for each mod to work with config.
+
+
     //Twilight Forest Tiers
     STEELEAF(131,8.0f,7.0f,3,9, "twilightforest:steeleaf_ingot"),
     IRONWOOD(512,6.5f,5.0f,2,25, "twilightforest:ironwood_ingot"),

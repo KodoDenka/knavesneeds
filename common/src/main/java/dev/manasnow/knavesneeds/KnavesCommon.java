@@ -13,6 +13,8 @@ import net.minecraft.world.item.Items;
 // However, it will be compatible with all supported mod loaders.
 public class KnavesCommon {
 
+    //TODO Clean up comments and LOG.info statements from template. Properly credit template on modpage and modinfo.
+
     //public static KnavesCommonConfig CONFIG2 = ConfigApiJava.registerAndLoadConfig(KnavesCommonConfig::new);
 
     // The loader-specific projects are able to import and use any code from the common project. This allows you to
