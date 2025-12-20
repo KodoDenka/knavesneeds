@@ -1,5 +1,6 @@
 package dev.manasnow.knavesneeds;
 
+import dev.manasnow.knavesneeds.commands.KnavesCommands;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
