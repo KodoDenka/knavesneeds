@@ -1,15 +1,14 @@
 package dev.manasnow.knavesneeds.helpers;
 
-import dev.manasnow.knavesneeds.KnavesCommon;
 import dev.manasnow.knavesneeds.config.KnavesTwilightForestConfig;
+import dev.manasnow.knavesneeds.registries.TwilightForestAdditionsRegistries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
-import org.jetbrains.annotations.NotNull;
 
-import static dev.manasnow.knavesneeds.KnavesCommon.twilightForestConfig;
+import static dev.manasnow.knavesneeds.registries.TwilightForestAdditionsRegistries.twilightForestConfig;
+
 
 public enum ToolTierHelper implements Tier {
 
@@ -18,10 +17,10 @@ public enum ToolTierHelper implements Tier {
 
 
     //Twilight Forest Tiers
-    STEELEAF(KnavesTwilightForestConfig.steeleafDurability,KnavesTwilightForestConfig.steeleafMiningSpeedMultiplier,7.0f,3,9, "twilightforest:steeleaf_ingot"),
-    IRONWOOD(KnavesTwilightForestConfig.ironwoodDurability,6.5f,5.0f,2,25, "twilightforest:ironwood_ingot"),
-    FIERY(KnavesTwilightForestConfig.fieryDurability,9.0f,7.0f,4,10, "twilightforest:fiery_ingot"),
-    KNIGHTMETAL(KnavesTwilightForestConfig.knightmetalDurability,8.0f,6.0f,3,8, "twilightforest:knightmetal_ingot"),
+    STEELEAF(twilightForestConfig.steeleafDurability, twilightForestConfig.steeleafMiningSpeedMultiplier,7.0f,3,9, "twilightforest:steeleaf_ingot"),
+    IRONWOOD(twilightForestConfig.ironwoodDurability,6.5f,5.0f,2,25, "twilightforest:ironwood_ingot"),
+    FIERY(twilightForestConfig.fieryDurability,9.0f,7.0f,4,10, "twilightforest:fiery_ingot"),
+    KNIGHTMETAL(twilightForestConfig.knightmetalDurability,8.0f,6.0f,3,8, "twilightforest:knightmetal_ingot"),
 
 
     //Undergarden Tiers
@@ -136,7 +135,7 @@ public enum ToolTierHelper implements Tier {
     }
 
     @Override
-    public @NotNull Ingredient getRepairIngredient() {
+    public Ingredient getRepairIngredient() {
         return Ingredient.of(BuiltInRegistries.ITEM.get(new ResourceLocation(tierIngredient)));
     }
 }

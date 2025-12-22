@@ -15,28 +15,28 @@ public class KnavesForbiddenArcanusConfig extends Config {
     }
 
     @Comment("Material - deorum")
-    public static boolean deorumEnabled = true;
-    public static int deorumDurability = 1000;
-    public static float deorumMiningSpeedMultiplier = 1.0f;
-    public static float deorumAttackDamage = 0.0f;
-    public static int deorumMiningLevel = 1;
-    public static int deorumEnchantability = 15;
+    public boolean deorumEnabled = true;
+    public int deorumDurability = 1000;
+    public float deorumMiningSpeedMultiplier = 1.0f;
+    public float deorumAttackDamage = 0.0f;
+    public int deorumMiningLevel = 1;
+    public int deorumEnchantability = 15;
 
     @Comment("\n Material - reinforcedDeorum")
-    public static boolean reinforcedDeorumEnabled = true;
-    public static int reinforcedDeorumDurability = 1000;
-    public static float reinforcedDeorumMiningSpeedMultiplier = 1.0f;
-    public static float reinforcedDeorumAttackDamage = 0.0f;
-    public static int reinforcedDeorumMiningLevel = 1;
-    public static int reinforcedDeorumEnchantability = 15;
+    public boolean reinforcedDeorumEnabled = true;
+    public int reinforcedDeorumDurability = 1000;
+    public float reinforcedDeorumMiningSpeedMultiplier = 1.0f;
+    public float reinforcedDeorumAttackDamage = 0.0f;
+    public int reinforcedDeorumMiningLevel = 1;
+    public int reinforcedDeorumEnchantability = 15;
 
     @Comment("\n Material - dracoArcanus")
-    public static boolean dracoArcanusEnabled = true;
-    public static int dracoArcanusDurability = 1000;
-    public static float dracoArcanusMiningSpeedMultiplier = 1.0f;
-    public static float dracoArcanusAttackDamage = 0.0f;
-    public static int dracoArcanusMiningLevel = 1;
-    public static int dracoArcanusEnchantability = 15;
+    public boolean dracoArcanusEnabled = true;
+    public int dracoArcanusDurability = 1000;
+    public float dracoArcanusMiningSpeedMultiplier = 1.0f;
+    public float dracoArcanusAttackDamage = 0.0f;
+    public int dracoArcanusMiningLevel = 1;
+    public int dracoArcanusEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {

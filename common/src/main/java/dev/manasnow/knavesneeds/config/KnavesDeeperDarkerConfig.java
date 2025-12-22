@@ -15,12 +15,12 @@ public class KnavesDeeperDarkerConfig extends Config {
     }
 
     @Comment("Material - warden")
-    public static boolean wardenEnabled = true;
-    public static int wardenDurability = 1000;
-    public static float wardenMiningSpeedMultiplier = 1.0f;
-    public static float wardenAttackDamage = 0.0f;
-    public static int wardenMiningLevel = 1;
-    public static int wardenEnchantability = 15;
+    public boolean wardenEnabled = true;
+    public int wardenDurability = 1000;
+    public float wardenMiningSpeedMultiplier = 1.0f;
+    public float wardenAttackDamage = 0.0f;
+    public int wardenMiningLevel = 1;
+    public int wardenEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {

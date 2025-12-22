@@ -12,40 +12,40 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 public class KnavesAmethystImbuementConfig extends Config {
 
     public KnavesAmethystImbuementConfig() {
-        super(new ResourceLocation(MOD_ID, "AmethystImbuementConfig"));
+        super(new ResourceLocation(MOD_ID, "amethyst_imbuement_config"));
     }
 
     @Comment("Material Modifier - ametrine")
-    public static boolean ametrineEnabled = true;
-    public static int ametrineDurability = 1000;
-    public static float ametrineMiningSpeedMultiplier = 1.0f;
-    public static float ametrineAttackDamage = 0.0f;
-    public static int ametrineMiningLevel = 1;
-    public static int ametrineEnchantability = 15;
+    public boolean ametrineEnabled = true;
+    public int ametrineDurability = 1000;
+    public float ametrineMiningSpeedMultiplier = 1.0f;
+    public float ametrineAttackDamage = 0.0f;
+    public int ametrineMiningLevel = 1;
+    public int ametrineEnchantability = 15;
 
     @Comment("\n Garnet")
-    public static boolean garnetEnabled = true;
-    public static int garnetDurability = 1000;
-    public static float garnetMiningSpeedMultiplier = 1.0f;
-    public static float garnetAttackDamage = 0.0f;
-    public static int garnetMiningLevel = 1;
-    public static int garnetEnchantability = 15;
+    public boolean garnetEnabled = true;
+    public int garnetDurability = 1000;
+    public float garnetMiningSpeedMultiplier = 1.0f;
+    public float garnetAttackDamage = 0.0f;
+    public int garnetMiningLevel = 1;
+    public int garnetEnchantability = 15;
 
     @Comment("\n Glowing")
-    public static boolean glowingEnabled = true;
-    public static int glowingDurability = 1000;
-    public static float glowingMiningSpeedMultiplier = 1.0f;
-    public static float glowingAttackDamage = 0.0f;
-    public static int glowingMiningLevel = 1;
-    public static int glowingEnchantability = 15;
+    public boolean glowingEnabled = true;
+    public int glowingDurability = 1000;
+    public float glowingMiningSpeedMultiplier = 1.0f;
+    public float glowingAttackDamage = 0.0f;
+    public int glowingMiningLevel = 1;
+    public int glowingEnchantability = 15;
 
     @Comment("\n Steel")
-    public static boolean steelEnabled = true;
-    public static int steelDurability = 1000;
-    public static float steelMiningSpeedMultiplier = 1.0f;
-    public static float steelAttackDamage = 0.0f;
-    public static int steelMiningLevel = 1;
-    public static int steelEnchantability = 15;
+    public boolean steelEnabled = true;
+    public int steelDurability = 1000;
+    public float steelMiningSpeedMultiplier = 1.0f;
+    public float steelAttackDamage = 0.0f;
+    public int steelMiningLevel = 1;
+    public int steelEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {

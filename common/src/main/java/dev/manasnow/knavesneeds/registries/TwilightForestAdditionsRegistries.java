@@ -1,49 +1,32 @@
 package dev.manasnow.knavesneeds.registries;
 
-import dev.manasnow.knavesneeds.KnavesCommon;
+import dev.manasnow.knavesneeds.config.KnavesTwilightForestConfig;
+import dev.manasnow.knavesneeds.customitems.swords.twilight_forest.FierySwordItem;
+import dev.manasnow.knavesneeds.helpers.SwordSet;
 import dev.manasnow.knavesneeds.helpers.ToolTierHelper;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
-import me.fzzyhmstrs.fzzy_config.util.platform.RegistrySupplier;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.crafting.Ingredient;
 
-import javax.tools.Tool;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
 public class TwilightForestAdditionsRegistries {
 
+    //Load config for Twilight Forest
+    public static KnavesTwilightForestConfig twilightForestConfig = ConfigApiJava.registerAndLoadConfig(KnavesTwilightForestConfig::new);
 
-    Tier testing_tier = ToolTierHelper.AETERNIUM;
+    static Registrar<Item> TWILIGHT_FOREST_ITEMS = ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
 
-    boolean testing = KnavesCommon.commonConfig;
 
-    //testing_tier
-
-    //public static final Item TEST = registerItem("test", new Item(new Item.Properties()));
-
-    static Registrar<Item> myItemRegistrar = ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
-
-    public static RegistrySupplier<Item> TEST_ONE = myItemRegistrar.register("test", () -> new SwordItem(ToolTierHelper.AETERNIUM, 4 , 1.0f, new Item.Properties()));
+    //TODO fix ToolTier loading incorrectly.
+    public static final SwordSet FIERY = new SwordSet(TWILIGHT_FOREST_ITEMS,"twilight_forest", ToolTierHelper.FIERY, FierySwordItem::new);
+    public static final SwordSet IRONWOOD = new SwordSet(TWILIGHT_FOREST_ITEMS,"twilight_forest", ToolTierHelper.IRONWOOD, SwordItem::new);
+    public static final SwordSet KNIGHTMETAL = new SwordSet(TWILIGHT_FOREST_ITEMS,"twilight_forest", ToolTierHelper.KNIGHTMETAL, SwordItem::new);
 
     public static void smartRegister() {
-        myItemRegistrar.init();
+        TWILIGHT_FOREST_ITEMS.init();
     }
-
-    //private static Item registerItem(String name, Item item) {
-    //    return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MOD_ID, name), item);
-    //}
-
-    //public static void smartRegister() {
-    //
-    //}
-
-
 }
