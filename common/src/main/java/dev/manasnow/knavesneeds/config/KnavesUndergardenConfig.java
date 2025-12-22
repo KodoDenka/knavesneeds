@@ -15,36 +15,36 @@ public class KnavesUndergardenConfig extends Config {
     }
 
     @Comment("Material - Cloggrum")
-    boolean cloggrumEnabled = true;
-    int cloggrumDurability = 1000;
-    float cloggrumMiningSpeedMultiplier = 1.0f;
-    float cloggrumAttackDamage = 0.0f;
-    int cloggrumMiningLevel = 1;
-    int cloggrumEnchantability = 15;
+    public static boolean cloggrumEnabled = true;
+    public static int cloggrumDurability = 1000;
+    public static float cloggrumMiningSpeedMultiplier = 1.0f;
+    public static float cloggrumAttackDamage = 0.0f;
+    public static int cloggrumMiningLevel = 1;
+    public static int cloggrumEnchantability = 15;
 
     @Comment("\n Material - Froststeel")
-    boolean froststeelEnabled = true;
-    int froststeelDurability = 1000;
-    float froststeelMiningSpeedMultiplier = 1.0f;
-    float froststeelAttackDamage = 0.0f;
-    int froststeelMiningLevel = 1;
-    int froststeelEnchantability = 15;
+    public static boolean froststeelEnabled = true;
+    public static int froststeelDurability = 1000;
+    public static float froststeelMiningSpeedMultiplier = 1.0f;
+    public static float froststeelAttackDamage = 0.0f;
+    public static int froststeelMiningLevel = 1;
+    public static int froststeelEnchantability = 15;
 
     @Comment("\n Material - Utherium")
-    boolean utheriumEnabled = true;
-    int utheriumDurability = 1000;
-    float utheriumMiningSpeedMultiplier = 1.0f;
-    float utheriumAttackDamage = 0.0f;
-    int utheriumMiningLevel = 1;
-    int utheriumEnchantability = 15;
+    public static boolean utheriumEnabled = true;
+    public static int utheriumDurability = 1000;
+    public static float utheriumMiningSpeedMultiplier = 1.0f;
+    public static float utheriumAttackDamage = 0.0f;
+    public static int utheriumMiningLevel = 1;
+    public static int utheriumEnchantability = 15;
 
     @Comment("\n Material - Forgotten")
-    boolean forgottenEnabled = true;
-    int forgottenDurability = 1000;
-    float forgottenMiningSpeedMultiplier = 1.0f;
-    float forgottenAttackDamage = 0.0f;
-    int forgottenMiningLevel = 1;
-    int forgottenEnchantability = 15;
+    public static boolean forgottenEnabled = true;
+    public static int forgottenDurability = 1000;
+    public static float forgottenMiningSpeedMultiplier = 1.0f;
+    public static float forgottenAttackDamage = 0.0f;
+    public static int forgottenMiningLevel = 1;
+    public static int forgottenEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {

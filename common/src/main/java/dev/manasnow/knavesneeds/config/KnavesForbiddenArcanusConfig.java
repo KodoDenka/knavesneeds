@@ -15,28 +15,28 @@ public class KnavesForbiddenArcanusConfig extends Config {
     }
 
     @Comment("Material - deorum")
-    boolean deorumEnabled = true;
-    int deorumDurability = 1000;
-    float deorumMiningSpeedMultiplier = 1.0f;
-    float deorumAttackDamage = 0.0f;
-    int deorumMiningLevel = 1;
-    int deorumEnchantability = 15;
+    public static boolean deorumEnabled = true;
+    public static int deorumDurability = 1000;
+    public static float deorumMiningSpeedMultiplier = 1.0f;
+    public static float deorumAttackDamage = 0.0f;
+    public static int deorumMiningLevel = 1;
+    public static int deorumEnchantability = 15;
 
     @Comment("\n Material - reinforcedDeorum")
-    boolean reinforcedDeorumEnabled = true;
-    int reinforcedDeorumDurability = 1000;
-    float reinforcedDeorumMiningSpeedMultiplier = 1.0f;
-    float reinforcedDeorumAttackDamage = 0.0f;
-    int reinforcedDeorumMiningLevel = 1;
-    int reinforcedDeorumEnchantability = 15;
+    public static boolean reinforcedDeorumEnabled = true;
+    public static int reinforcedDeorumDurability = 1000;
+    public static float reinforcedDeorumMiningSpeedMultiplier = 1.0f;
+    public static float reinforcedDeorumAttackDamage = 0.0f;
+    public static int reinforcedDeorumMiningLevel = 1;
+    public static int reinforcedDeorumEnchantability = 15;
 
     @Comment("\n Material - dracoArcanus")
-    boolean dracoArcanusEnabled = true;
-    int dracoArcanusDurability = 1000;
-    float dracoArcanusMiningSpeedMultiplier = 1.0f;
-    float dracoArcanusAttackDamage = 0.0f;
-    int dracoArcanusMiningLevel = 1;
-    int dracoArcanusEnchantability = 15;
+    public static boolean dracoArcanusEnabled = true;
+    public static int dracoArcanusDurability = 1000;
+    public static float dracoArcanusMiningSpeedMultiplier = 1.0f;
+    public static float dracoArcanusAttackDamage = 0.0f;
+    public static int dracoArcanusMiningLevel = 1;
+    public static int dracoArcanusEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {

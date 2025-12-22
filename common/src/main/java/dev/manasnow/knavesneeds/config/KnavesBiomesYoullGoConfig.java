@@ -15,12 +15,12 @@ public class KnavesBiomesYoullGoConfig extends Config {
     }
 
     @Comment("Material - Pendorite")
-    boolean pendoriteEnabled = true;
-    int pendoriteDurability = 1000;
-    float pendoriteMiningSpeedMultiplier = 1.0f;
-    float pendoriteAttackDamage = 0.0f;
-    int pendoriteMiningLevel = 1;
-    int pendoriteEnchantability = 15;
+    public static boolean pendoriteEnabled = true;
+    public static int pendoriteDurability = 1000;
+    public static float pendoriteMiningSpeedMultiplier = 1.0f;
+    public static float pendoriteAttackDamage = 0.0f;
+    public static int pendoriteMiningLevel = 1;
+    public static int pendoriteEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {

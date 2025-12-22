@@ -1,6 +1,7 @@
 package dev.manasnow.knavesneeds;
 
 import dev.manasnow.knavesneeds.config.KnavesCommonConfig;
+import dev.manasnow.knavesneeds.config.KnavesTwilightForestConfig;
 import dev.manasnow.knavesneeds.platform.Services;
 import dev.manasnow.knavesneeds.registries.TwilightForestAdditionsRegistries;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
@@ -12,17 +13,16 @@ import net.minecraft.world.item.Items;
 // common compatible binaries. This means common code cannot directly use loader-specific concepts such as Forge events.
 // However, it will be compatible with all supported mod loaders.
 public class KnavesCommon {
+    public static KnavesTwilightForestConfig twilightForestConfig;
 
     //TODO Clean up comments and LOG.info statements from template. Properly credit template on modpage and modinfo.
 
-    //public static KnavesCommonConfig CONFIG2 = ConfigApiJava.registerAndLoadConfig(KnavesCommonConfig::new);
+    public static KnavesCommonConfig commonConfig = ConfigApiJava.registerAndLoadConfig(KnavesCommonConfig::new);
 
     // The loader-specific projects are able to import and use any code from the common project. This allows you to
     // write the majority of your code here and load it from your loader-specific projects. This example has some
     // code that gets invoked by the entry point of the loader-specific projects.
     public static void init() {
-
-        KnavesCommonConfig commonConfig = ConfigApiJava.registerAndLoadConfig(KnavesCommonConfig::new);
 
         Constants.LOG.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
         Constants.LOG.info("The ID for diamonds is {}", BuiltInRegistries.ITEM.getKey(Items.DIAMOND));
@@ -48,6 +48,7 @@ public class KnavesCommon {
         if (Services.PLATFORM.isModLoaded("twilightforest") && commonConfig.twilightForestEnabled) {
             // do twilight forest things
             Constants.LOG.info("Loading Twilight Forest items.");
+            KnavesTwilightForestConfig twilightForestConfig = ConfigApiJava.registerAndLoadConfig(KnavesTwilightForestConfig::new);
 
         }
 

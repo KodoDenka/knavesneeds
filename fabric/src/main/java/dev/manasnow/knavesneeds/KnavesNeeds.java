@@ -1,6 +1,8 @@
 package dev.manasnow.knavesneeds;
 
+import dev.manasnow.knavesneeds.commands.KnavesCommands;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
 public class KnavesNeeds implements ModInitializer {
     
@@ -15,6 +17,9 @@ public class KnavesNeeds implements ModInitializer {
         Constants.LOG.info("Hello Fabric world!");
         KnavesCommon.init();
 
-        //TODO import command code from common.
+        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+            KnavesCommands.register(dispatcher);
+        });
+
     }
 }

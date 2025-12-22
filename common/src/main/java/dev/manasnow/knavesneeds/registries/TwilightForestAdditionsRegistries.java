@@ -1,5 +1,6 @@
 package dev.manasnow.knavesneeds.registries;
 
+import dev.manasnow.knavesneeds.KnavesCommon;
 import dev.manasnow.knavesneeds.helpers.ToolTierHelper;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
@@ -13,43 +14,18 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
+import javax.tools.Tool;
+
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
 public class TwilightForestAdditionsRegistries {
 
-    static Tier test = new Tier() {
-        @Override
-        public int getUses() {
-            return 0;
-        }
 
-        @Override
-        public float getSpeed() {
-            return 0;
-        }
+    Tier testing_tier = ToolTierHelper.AETERNIUM;
 
-        @Override
-        public float getAttackDamageBonus() {
-            return 0;
-        }
+    boolean testing = KnavesCommon.commonConfig;
 
-        @Override
-        public int getLevel() {
-            return 0;
-        }
-
-        @Override
-        public int getEnchantmentValue() {
-            return 0;
-        }
-
-        @Override
-        public Ingredient getRepairIngredient() {
-            return null;
-        }
-    };
-
-
+    //testing_tier
 
     //public static final Item TEST = registerItem("test", new Item(new Item.Properties()));
 

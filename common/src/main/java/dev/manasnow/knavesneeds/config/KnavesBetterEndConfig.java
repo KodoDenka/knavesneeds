@@ -15,28 +15,28 @@ public class KnavesBetterEndConfig extends Config {
     }
 
     @Comment("Material - Aeternium")
-    boolean aeterniumEnabled = true;
-    int aeterniumDurability = 1000;
-    float aeterniumMiningSpeedMultiplier = 1.0f;
-    float aeterniumAttackDamage = 0.0f;
-    int aeterniumMiningLevel = 1;
-    int aeterniumEnchantability = 15;
+    public static boolean aeterniumEnabled = true;
+    public static int aeterniumDurability = 1000;
+    public static float aeterniumMiningSpeedMultiplier = 1.0f;
+    public static float aeterniumAttackDamage = 0.0f;
+    public static int aeterniumMiningLevel = 1;
+    public static int aeterniumEnchantability = 15;
 
     @Comment("\n Material - Terminite")
-    boolean terminiteEnabled = true;
-    int terminiteDurability = 1000;
-    float terminiteMiningSpeedMultiplier = 1.0f;
-    float terminiteAttackDamage = 0.0f;
-    int terminiteMiningLevel = 1;
-    int terminiteEnchantability = 15;
+    public static boolean terminiteEnabled = true;
+    public static int terminiteDurability = 1000;
+    public static float terminiteMiningSpeedMultiplier = 1.0f;
+    public static float terminiteAttackDamage = 0.0f;
+    public static int terminiteMiningLevel = 1;
+    public static int terminiteEnchantability = 15;
 
     @Comment("\n Material - Thallasium")
-    boolean thallasiumEnabled = true;
-    int thallasiumDurability = 1000;
-    float thallasiumMiningSpeedMultiplier = 1.0f;
-    float thallasiumAttackDamage = 0.0f;
-    int thallasiumMiningLevel = 1;
-    int thallasiumEnchantability = 15;
+    public static boolean thallasiumEnabled = true;
+    public static int thallasiumDurability = 1000;
+    public static float thallasiumMiningSpeedMultiplier = 1.0f;
+    public static float thallasiumAttackDamage = 0.0f;
+    public static int thallasiumMiningLevel = 1;
+    public static int thallasiumEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {

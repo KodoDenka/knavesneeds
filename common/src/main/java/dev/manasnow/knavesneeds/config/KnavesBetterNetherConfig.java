@@ -15,36 +15,36 @@ public class KnavesBetterNetherConfig extends Config {
     }
 
     @Comment("Material - Cincinnasite")
-    boolean cincinnasiteEnabled = true;
-    int cincinnasiteDurability = 1000;
-    float cincinnasiteMiningSpeedMultiplier = 1.0f;
-    float cincinnasiteAttackDamage = 0.0f;
-    int cincinnasiteMiningLevel = 1;
-    int cincinnasiteEnchantability = 15;
+    public static boolean cincinnasiteEnabled = true;
+    public static int cincinnasiteDurability = 1000;
+    public static float cincinnasiteMiningSpeedMultiplier = 1.0f;
+    public static float cincinnasiteAttackDamage = 0.0f;
+    public static int cincinnasiteMiningLevel = 1;
+    public static int cincinnasiteEnchantability = 15;
 
     @Comment("\n Material - Cincinnasite Diamond")
-    boolean cincinnasiteDiamondEnabled = true;
-    int cincinnasiteDiamondDurability = 1000;
-    float cincinnasiteDiamondMiningSpeedMultiplier = 1.0f;
-    float cincinnasiteDiamondAttackDamage = 0.0f;
-    int cincinnasiteDiamondMiningLevel = 1;
-    int cincinnasiteDiamondEnchantability = 15;
+    public static boolean cincinnasiteDiamondEnabled = true;
+    public static int cincinnasiteDiamondDurability = 1000;
+    public static float cincinnasiteDiamondMiningSpeedMultiplier = 1.0f;
+    public static float cincinnasiteDiamondAttackDamage = 0.0f;
+    public static int cincinnasiteDiamondMiningLevel = 1;
+    public static int cincinnasiteDiamondEnchantability = 15;
 
     @Comment("\n Material - Nether Ruby")
-    boolean netherRubyEnabled = true;
-    int netherRubyDurability = 1000;
-    float netherRubyMiningSpeedMultiplier = 1.0f;
-    float netherRubyAttackDamage = 0.0f;
-    int netherRubyMiningLevel = 1;
-    int netherRubyEnchantability = 15;
+    public static boolean netherRubyEnabled = true;
+    public static int netherRubyDurability = 1000;
+    public static float netherRubyMiningSpeedMultiplier = 1.0f;
+    public static float netherRubyAttackDamage = 0.0f;
+    public static int netherRubyMiningLevel = 1;
+    public static int netherRubyEnchantability = 15;
 
     @Comment("\n Material - Flaming Ruby")
-    boolean flamingRubyEnabled = true;
-    int flamingRubyDurability = 1000;
-    float flamingRubyMiningSpeedMultiplier = 1.0f;
-    float flamingRubyAttackDamage = 0.0f;
-    int flamingRubyMiningLevel = 1;
-    int flamingRubyEnchantability = 15;
+    public static boolean flamingRubyEnabled = true;
+    public static int flamingRubyDurability = 1000;
+    public static float flamingRubyMiningSpeedMultiplier = 1.0f;
+    public static float flamingRubyAttackDamage = 0.0f;
+    public static int flamingRubyMiningLevel = 1;
+    public static int flamingRubyEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {
