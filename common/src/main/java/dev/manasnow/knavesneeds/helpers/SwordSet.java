@@ -3,6 +3,7 @@ package dev.manasnow.knavesneeds.helpers;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
 import me.fzzyhmstrs.fzzy_config.util.platform.RegistrySupplier;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
 import java.util.Locale;
@@ -51,6 +52,6 @@ public class SwordSet {
 
     @FunctionalInterface
     public interface SwordFactory {
-        Item create(Tier tier, int attackDamageModifier, float attackSpeedModifier, Item.Properties properties);
+        SwordItem create(Tier tier, int attackDamageModifier, float attackSpeedModifier, Item.Properties properties);
     }
 }

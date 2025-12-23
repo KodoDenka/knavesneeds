@@ -11,7 +11,7 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 public class KnavesDeeperDarkerConfig extends Config {
 
     public KnavesDeeperDarkerConfig() {
-        super(new ResourceLocation(MOD_ID, "DeeperDarkerConfig"));
+        super(new ResourceLocation(MOD_ID, "deeper_darker_config"));
     }
 
     @Comment("Material - warden")

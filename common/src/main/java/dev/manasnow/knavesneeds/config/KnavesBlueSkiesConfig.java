@@ -11,7 +11,7 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 public class KnavesBlueSkiesConfig extends Config {
 
     public KnavesBlueSkiesConfig() {
-        super(new ResourceLocation(MOD_ID, "BlueSkiesConfig"));
+        super(new ResourceLocation(MOD_ID, "blue_skies_config"));
     }
 
     @Comment("Material - Pyrope")

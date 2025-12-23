@@ -1,6 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesBetterEndConfig;
+import dev.manasnow.knavesneeds.config.KnavesBetterNetherConfig;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import dev.manasnow.knavesneeds.helpers.ToolTierHelper;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
@@ -13,7 +14,7 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 
 public class BetterNetherAdditionsRegistries {
 
-    public static KnavesBetterEndConfig betterNetherConfig = ConfigApiJava.registerAndLoadConfig(KnavesBetterEndConfig::new);
+    public static KnavesBetterNetherConfig betterNetherConfig = ConfigApiJava.registerAndLoadConfig(KnavesBetterNetherConfig::new);
 
     static Registrar<Item> BETTER_NETHER_ITEMS = ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
 
