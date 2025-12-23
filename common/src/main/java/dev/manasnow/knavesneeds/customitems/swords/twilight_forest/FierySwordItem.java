@@ -1,6 +1,5 @@
 package dev.manasnow.knavesneeds.customitems.swords.twilight_forest;
 
-import dev.manasnow.knavesneeds.customitems.swords.blue_skies.HorizoniteSwordItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;

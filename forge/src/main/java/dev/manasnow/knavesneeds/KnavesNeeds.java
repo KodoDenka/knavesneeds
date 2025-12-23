@@ -11,12 +11,8 @@ public class KnavesNeeds {
     
     public KnavesNeeds() {
     
-        // This method is invoked by the Forge mod loader when it is ready
-        // to load your mod. You can access Forge and Common code in this
-        // project.
-    
         // Use Forge to bootstrap the Common mod.
-        Constants.LOG.info("Hello Forge world!");
+        Constants.LOG.debug("Knaves' Needs (Neo)Forge code running!");
         KnavesCommon.init();
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -26,7 +22,6 @@ public class KnavesNeeds {
 
     @SubscribeEvent
     public void onRegisterCommands(RegisterCommandsEvent event) {
-        Constants.LOG.info("Registering commands");
         KnavesCommands.register(event.getDispatcher());
     }
 

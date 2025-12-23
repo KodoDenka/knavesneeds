@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 public class Constants {
 
+    //Data used in all projects
 	public static final String MOD_ID = "knavesneeds";
 	public static final String MOD_NAME = "Knaves' Needs";
 	public static final Logger LOG = LoggerFactory.getLogger(MOD_NAME);

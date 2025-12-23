@@ -11,7 +11,7 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 public class KnavesUndergardenConfig extends Config {
 
     public KnavesUndergardenConfig() {
-        super(new ResourceLocation(MOD_ID, "UndergardenConfig"));
+        super(new ResourceLocation(MOD_ID, "undergarden_config"));
     }
 
     @Comment("Material - Cloggrum")

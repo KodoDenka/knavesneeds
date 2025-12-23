@@ -54,6 +54,17 @@ repositories {
     maven {
         url = "https://thedarkcolour.github.io/KotlinForForge/"
     }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                url "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
@@ -61,6 +72,9 @@ dependencies {
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 
     modImplementation "me.fzzyhmstrs:fzzy_config:${fzzyConfigForgeVersion}"
+    modImplementation "curse.maven:simply-swords-659887:5639538"
+    modImplementation "curse.maven:architectury-api-419699:5137938"
+    modImplementation "curse.maven:cloth-config-348521:5729105"
 
 }
 

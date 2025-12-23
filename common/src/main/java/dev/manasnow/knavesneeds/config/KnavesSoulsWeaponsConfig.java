@@ -11,7 +11,7 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 public class KnavesSoulsWeaponsConfig extends Config {
 
     public KnavesSoulsWeaponsConfig() {
-        super(new ResourceLocation(MOD_ID, "SoulsWeaponsConfig"));
+        super(new ResourceLocation(MOD_ID, "souls_weapons_config"));
     }
 
     @Comment("Material - Translucent")

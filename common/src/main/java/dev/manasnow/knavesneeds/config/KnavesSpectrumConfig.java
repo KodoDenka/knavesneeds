@@ -10,7 +10,7 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 public class KnavesSpectrumConfig extends Config {
 
     public KnavesSpectrumConfig() {
-        super(new ResourceLocation(MOD_ID, "SpectrumConfig"));
+        super(new ResourceLocation(MOD_ID, "spectrum_config"));
     }
 
 

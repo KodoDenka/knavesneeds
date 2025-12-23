@@ -8,6 +8,16 @@ repositories {
         name = "FzzyMaven"
         url = "https://maven.fzzyhmstrs.me/"
     }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
@@ -20,6 +30,9 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
     modImplementation "me.fzzyhmstrs:fzzy_config:${project.fzzyConfigVersion}"
+    modImplementation "curse.maven:simply-swords-659887:5639522"
+    modImplementation "curse.maven:architectury-api-419699:5137936"
+    modImplementation "curse.maven:cloth-config-348521:5729104"
 
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":common")
