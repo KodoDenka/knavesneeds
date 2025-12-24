@@ -52,6 +52,15 @@ public class SwordSet {
     //Grabs attack speed modifier from SimplySwords config. Wrapped to be safer for early loading.
     private float getAttackSpeedModifier(String id) {
         var simplySwordsConfig = SimplySwords.weaponAttributesConfig;
+        if (simplySwordsConfig == null) {
+            return switch (id) {
+                case "twinblade", "rapier", "katana", "sai", "chakram" -> -2.0f;
+                case "spear", "glaive", "cutlass" -> -2.4f;
+                case "warglaive" -> -2.2f;
+                case "claymore", "greathammer", "greataxe", "scythe", "halberd" -> -3.0f;
+                default -> -2.4f;
+            };
+        }
         return switch (id) {
             case "twinblade" -> simplySwordsConfig.twinblade_attackSpeed;
             case "rapier" -> simplySwordsConfig.rapier_attackSpeed;
@@ -69,11 +78,21 @@ public class SwordSet {
             case "halberd" -> simplySwordsConfig.halberd_attackSpeed;
             default -> simplySwordsConfig.longsword_attackSpeed;
         };
+
     }
 
     //Grabs attack damage modifier from SimplySwords config. Wrapped to be safer for early loading.
     public int getAttackDamageModifier(String id) {
         var simplySwordConfig = SimplySwords.weaponAttributesConfig;
+        if (simplySwordConfig == null) {
+            return switch (id) {
+                case "twinblade", "sai", "chakram" -> 1;
+                case "rapier", "katana", "spear" -> 2;
+                case "glaive", "warglaive", "cutlass" -> 3;
+                case "claymore", "greathammer", "greataxe", "scythe", "halberd" -> 4;
+                default -> 3;
+            };
+        }
         return switch (id) {
             case "twinblade" -> (int) (simplySwordConfig.twinblade_positiveDamageModifier - simplySwordConfig.twinblade_negativeDamageModifier);
             case "rapier" -> (int) (simplySwordConfig.rapier_positiveDamageModifier - simplySwordConfig.rapier_negativeDamageModifier);
