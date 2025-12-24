@@ -22,8 +22,8 @@ public class UndergardenAdditionsRegistries {
     public static final Tier CLOGGRUM = new SimpleTier(
             "CLOGGRUM",
             () -> undergardenConfig.cloggrumDurability,
-            () -> undergardenConfig.cloggrumMiningSpeedMultiplier,
-            () -> undergardenConfig.cloggrumAttackDamage,
+            () -> undergardenConfig.cloggrumSpeed,
+            () -> undergardenConfig.cloggrumAttackBonus,
             () -> undergardenConfig.cloggrumMiningLevel,
             () -> undergardenConfig.cloggrumEnchantability,
             "undergarden:cloggrum_ingot"
@@ -32,8 +32,8 @@ public class UndergardenAdditionsRegistries {
     public static final Tier FORGOTTEN = new SimpleTier(
             "FORGOTTEN",
             () -> undergardenConfig.forgottenDurability,
-            () -> undergardenConfig.forgottenMiningSpeedMultiplier,
-            () -> undergardenConfig.forgottenAttackDamage,
+            () -> undergardenConfig.forgottenSpeed,
+            () -> undergardenConfig.forgottenAttackBonus,
             () -> undergardenConfig.forgottenMiningLevel,
             () -> undergardenConfig.forgottenEnchantability,
             "undergarden:froststeel_ingot"
@@ -42,8 +42,8 @@ public class UndergardenAdditionsRegistries {
     public static final Tier FROSTSTEEL = new SimpleTier(
             "FROSTSTEEL",
             () -> undergardenConfig.froststeelDurability,
-            () -> undergardenConfig.froststeelMiningSpeedMultiplier,
-            () -> undergardenConfig.froststeelAttackDamage,
+            () -> undergardenConfig.froststeelSpeed,
+            () -> undergardenConfig.froststeelAttackBonus,
             () -> undergardenConfig.froststeelMiningLevel,
             () -> undergardenConfig.froststeelEnchantability,
             "undergarden:utherium_crystal"
@@ -52,8 +52,8 @@ public class UndergardenAdditionsRegistries {
     public static final Tier UTHERIUM = new SimpleTier(
             "UTHERIUM",
             () -> undergardenConfig.utheriumDurability,
-            () -> undergardenConfig.utheriumMiningSpeedMultiplier,
-            () -> undergardenConfig.utheriumAttackDamage,
+            () -> undergardenConfig.utheriumSpeed,
+            () -> undergardenConfig.utheriumAttackBonus,
             () -> undergardenConfig.utheriumMiningLevel,
             () -> undergardenConfig.utheriumEnchantability,
             "undergarden:forgotten_ingot"

@@ -1,10 +1,8 @@
 package dev.manasnow.knavesneeds.registries;
 
-import dev.manasnow.knavesneeds.config.KnavesBiomesYoullGoConfig;
 import dev.manasnow.knavesneeds.config.KnavesDeeperDarkerConfig;
 import dev.manasnow.knavesneeds.helpers.SimpleTier;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
-import dev.manasnow.knavesneeds.helpers.ToolTierHelper;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
 import net.minecraft.core.registries.BuiltInRegistries;

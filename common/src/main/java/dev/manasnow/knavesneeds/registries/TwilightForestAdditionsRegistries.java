@@ -21,8 +21,8 @@ public class TwilightForestAdditionsRegistries {
     public static final Tier STEELEAF = new SimpleTier(
             "STEELEAF",
             () -> twilightForestConfig.steeleafDurability,
-            () -> twilightForestConfig.steeleafMiningSpeedMultiplier,
-            () -> twilightForestConfig.steeleafAttackDamage,
+            () -> twilightForestConfig.steeleafSpeed,
+            () -> twilightForestConfig.steeleafAttackBonus,
             () -> twilightForestConfig.steeleafMiningLevel,
             () -> twilightForestConfig.steeleafEnchantability,
             "twilightforest:steeleaf_ingot"
@@ -31,8 +31,8 @@ public class TwilightForestAdditionsRegistries {
     public static final Tier IRONWOOD = new SimpleTier(
             "IRONWOOD",
             () -> twilightForestConfig.ironwoodDurability,
-            () -> twilightForestConfig.ironwoodMiningSpeedMultiplier,
-            () -> twilightForestConfig.ironwoodAttackDamage,
+            () -> twilightForestConfig.ironwoodSpeed,
+            () -> twilightForestConfig.ironwoodAttackBonus,
             () -> twilightForestConfig.ironwoodMiningLevel,
             () -> twilightForestConfig.ironwoodEnchantability,
             "twilightforest:ironwood_ingot"
@@ -41,8 +41,8 @@ public class TwilightForestAdditionsRegistries {
     public static final Tier FIERY = new SimpleTier(
             "FIERY",
             () -> twilightForestConfig.fieryDurability,
-            () -> twilightForestConfig.fieryMiningSpeedMultiplier,
-            () -> twilightForestConfig.fieryAttackDamage,
+            () -> twilightForestConfig.fierySpeed,
+            () -> twilightForestConfig.fieryAttackBonus,
             () -> twilightForestConfig.fieryMiningLevel,
             () -> twilightForestConfig.fieryEnchantability,
             "twilightforest:fiery_ingot"
@@ -51,8 +51,8 @@ public class TwilightForestAdditionsRegistries {
     public static final Tier KNIGHTMETAL = new SimpleTier(
             "KNIGHTMETAL",
             () -> twilightForestConfig.knightmetalDurability,
-            () -> twilightForestConfig.knightmetalMiningSpeedMultiplier,
-            () -> twilightForestConfig.knightmetalAttackDamage,
+            () -> twilightForestConfig.knightmetalSpeed,
+            () -> twilightForestConfig.knightmetalAttackBonus,
             () -> twilightForestConfig.knightmetalMiningLevel,
             () -> twilightForestConfig.knightmetalEnchantability,
             "twilightforest:knightmetal_ingot"

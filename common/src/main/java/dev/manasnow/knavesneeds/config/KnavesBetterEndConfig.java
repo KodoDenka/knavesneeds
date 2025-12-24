@@ -11,13 +11,13 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 public class KnavesBetterEndConfig extends Config {
 
     public KnavesBetterEndConfig() {
-        super(new ResourceLocation(MOD_ID, "better_end_config"));
+        super(new ResourceLocation(MOD_ID, "betterend_config"));
     }
 
-    @Comment("Material - Aeternium")
+    @Comment("Enables/disables - Knaves' Needs' Aeternium additions.")
     public boolean aeterniumEnabled = true;
     public int aeterniumDurability = 1000;
-    public float aeterniumMiningSpeedMultiplier = 1.0f;
+    public float aeterniumSpeed = 1.0f;
     public float aeterniumAttackDamage = 0.0f;
     public int aeterniumMiningLevel = 1;
     public int aeterniumEnchantability = 15;

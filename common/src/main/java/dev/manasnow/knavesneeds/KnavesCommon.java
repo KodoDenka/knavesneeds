@@ -31,54 +31,60 @@ public class KnavesCommon {
 
         //Checks if mod is loaded and enabled, and registers the weapons.
         if (Services.PLATFORM.isModLoaded("twilightforest") && commonConfig.twilightForestEnabled) {
-            Constants.LOG.info("Loading Twilight Forest items.");
+            Constants.LOG.info("Knaves' Needs is adding Twilight Forest items.");
             TwilightForestAdditionsRegistries.smartRegister();
 
         }
 
         if (Services.PLATFORM.isModLoaded("undergarden") && commonConfig.undergardenEnabled) {
-            Constants.LOG.info("Loading Undergarden items.");
+            Constants.LOG.info("Knaves' Needs is adding Undergarden items.");
             UndergardenAdditionsRegistries.smartRegister();
         }
 
+        //Mod is deprecated.
         if (Services.PLATFORM.isModLoaded("plus_the_end") && commonConfig.plusTheEndEnabled) {
-            Constants.LOG.info("Loading Plus The End items.");
+            Constants.LOG.info("Knaves' Needs is adding Plus The End items.");
             //this mod is gone :c
         }
 
         if (Services.PLATFORM.isModLoaded("soulsweapons") && commonConfig.soulsWeaponsEnabled) {
-            Constants.LOG.info("Loading Soulslike Weaponry items.");
+            Constants.LOG.info("Knaves' Needs is adding Soulslike Weaponry items.");
             SoulsWeaponsAdditionsRegistries.smartRegister();
         }
 
         if (Services.PLATFORM.isModLoaded("forbidden_arcanus") && commonConfig.forbiddenArcanusEnabled) {
-            Constants.LOG.info("Loading Forbidden Arcanus items.");
+            Constants.LOG.info("Knaves' Needs is adding Forbidden Arcanus items.");
             ForbiddenArcanusAdditionsRegistries.smartRegister();
         }
 
         if (Services.PLATFORM.isModLoaded("deeperdarker") && commonConfig.deeperDarkerEnabled) {
-            Constants.LOG.info("Loading Deeper and Darker items.");
+            Constants.LOG.info("Knaves' Needs is adding Deeper and Darker items.");
             DeeperDarkerAdditionsRegistries.smartRegister();
         }
 
         if (Services.PLATFORM.isModLoaded("blue_skies") && commonConfig.blueSkiesEnabled) {
-            Constants.LOG.info("Loading Blue Skies items.");
+            Constants.LOG.info("Knaves' Needs is adding Blue Skies items.");
             BlueSkiesAdditionsRegistries.smartRegister();
         }
 
         if (Services.PLATFORM.isModLoaded("betterend") && commonConfig.betterEndEnabled) {
-            Constants.LOG.info("Loading Better End items.");
+            Constants.LOG.info("Knaves' Needs is adding Better End items.");
             BetterEndAdditionsRegistries.smartRegister();
         }
 
-        if (Services.PLATFORM.isModLoaded("betternether") && commonConfig.betterNetherEnabled) {
-            Constants.LOG.info("Loading Better Nether items.");
+        //Checks for both Better Nether (Fabric) and Even Better Nether (Forge)
+        //Might be worth to imrpove this later.
+        if ((Services.PLATFORM.isModLoaded("betternether") || Services.PLATFORM.isModLoaded("evenbetternether")) && commonConfig.betterNetherEnabled) {
+            Constants.LOG.info("Knaves' Needs is adding Better Nether items.");
             BetterNetherAdditionsRegistries.smartRegister();
         }
 
+        //Deprecated
+        /**
         if (Services.PLATFORM.isModLoaded("biomeswevegone") && commonConfig.biomesYoullGoEnabled) {
-            Constants.LOG.info("Loading Biomes You'll Go items.");
+            Constants.LOG.info("Knaves' Needs is adding Biomes You'll Go items.");
             BiomesYoullGoAdditionsRegistries.smartRegister();
         }
+         **/
     }
 }

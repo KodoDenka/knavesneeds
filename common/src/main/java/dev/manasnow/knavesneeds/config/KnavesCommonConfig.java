@@ -21,31 +21,28 @@ public class KnavesCommonConfig extends Config {
     @Comment("Enables Better End support.")
     public boolean betterEndEnabled = true;
 
-    @Comment("\n Enables Better Nether support.")
+    @Comment("Enables Better Nether support.")
     public boolean betterNetherEnabled = true;
 
-    @Comment("\n Enables Biomes You'll Go support.")
-    public boolean biomesYoullGoEnabled = true;
-
-    @Comment("\n Enables Blue Skies support.")
+    @Comment("Enables Blue Skies support.")
     public boolean blueSkiesEnabled = true;
 
-    @Comment("\n Enables Deeper and Darker support.")
+    @Comment("Enables Deeper and Darker support.")
     public boolean deeperDarkerEnabled = true;
 
-    @Comment("\n Enables Forbidden Arcanus support.")
+    @Comment("Enables Forbidden Arcanus support.")
     public boolean forbiddenArcanusEnabled = true;
 
-    @Comment("\n Enables Plus The End support.")
+    @Comment("Enables Plus The End support.")
     public boolean plusTheEndEnabled = true;
 
-    @Comment("\n Enables Marium's Soulslike Weaponry support.")
+    @Comment("Enables Marium's Soulslike Weaponry support.")
     public boolean soulsWeaponsEnabled = true;
 
-    @Comment("\n Enables Twilight Forest support")
+    @Comment("Enables Twilight Forest support")
     public boolean twilightForestEnabled = true;
 
-    @Comment("\n Enables Undergarden support")
+    @Comment("Enables Undergarden support")
     public boolean undergardenEnabled = true;
 
 

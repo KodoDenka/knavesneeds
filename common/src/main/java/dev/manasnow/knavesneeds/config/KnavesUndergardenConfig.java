@@ -14,37 +14,57 @@ public class KnavesUndergardenConfig extends Config {
         super(new ResourceLocation(MOD_ID, "undergarden_config"));
     }
 
-    @Comment("Material - Cloggrum")
+    @Comment("Enables/disables - Knaves' Needs' Cloggrum additions.")
     public boolean cloggrumEnabled = true;
-    public int cloggrumDurability = 1000;
-    public float cloggrumMiningSpeedMultiplier = 1.0f;
-    public float cloggrumAttackDamage = 0.0f;
-    public int cloggrumMiningLevel = 1;
-    public int cloggrumEnchantability = 15;
+    @Comment("Cloggrum durability/uses, can be any whole number.")
+    public int cloggrumDurability = 286;
+    @Comment("Cloggrum attack speed, can be any decimal number.")
+    public float cloggrumSpeed = 6.0f;
+    @Comment("Cloggrum bonus damage, can be any decimal number.")
+    public float cloggrumAttackBonus = 3.0f;
+    @Comment("Cloggrum mining level, can be any whole number.")
+    public int cloggrumMiningLevel = 2;
+    @Comment("Cloggrum enchantability, can be any whole number.")
+    public int cloggrumEnchantability = 8;
 
-    @Comment("\n Material - Froststeel")
+    @Comment("Enables/disables - Knaves' Needs' Froststeel additions.")
     public boolean froststeelEnabled = true;
-    public int froststeelDurability = 1000;
-    public float froststeelMiningSpeedMultiplier = 1.0f;
-    public float froststeelAttackDamage = 0.0f;
-    public int froststeelMiningLevel = 1;
-    public int froststeelEnchantability = 15;
+    @Comment("Froststeel durability/uses, can be any whole number.")
+    public int froststeelDurability = 575;
+    @Comment("Froststeel attack speed, can be any decimal number.")
+    public float froststeelSpeed = 7.0f;
+    @Comment("Froststeel bonus damage, can be any decimal number.")
+    public float froststeelAttackBonus = 2.0f;
+    @Comment("Froststeel mining level, can be any whole number.")
+    public int froststeelMiningLevel = 2;
+    @Comment("Froststeel enchantability, can be any whole number.")
+    public int froststeelEnchantability = 20;
 
-    @Comment("\n Material - Utherium")
+    @Comment("Enables/disables - Knaves' Needs' Utherium additions.")
     public boolean utheriumEnabled = true;
-    public int utheriumDurability = 1000;
-    public float utheriumMiningSpeedMultiplier = 1.0f;
-    public float utheriumAttackDamage = 0.0f;
-    public int utheriumMiningLevel = 1;
-    public int utheriumEnchantability = 15;
+    @Comment("Utherium durability/uses, can be any whole number.")
+    public int utheriumDurability = 1279;
+    @Comment("Utherium attack speed, can be any decimal number.")
+    public float utheriumSpeed = 8.5f;
+    @Comment("Utherium bonus damage, can be any decimal number.")
+    public float utheriumAttackBonus = 3.5f;
+    @Comment("Utherium mining level, can be any whole number.")
+    public int utheriumMiningLevel = 3;
+    @Comment("Utherium enchantability, can be any whole number.")
+    public int utheriumEnchantability = 17;
 
-    @Comment("\n Material - Forgotten")
+    @Comment("Enables/disables - Knaves' Needs' Forgotten additions.")
     public boolean forgottenEnabled = true;
-    public int forgottenDurability = 1000;
-    public float forgottenMiningSpeedMultiplier = 1.0f;
-    public float forgottenAttackDamage = 0.0f;
-    public int forgottenMiningLevel = 1;
-    public int forgottenEnchantability = 15;
+    @Comment("Forgotten durability/uses, can be any whole number.")
+    public int forgottenDurability = 1876;
+    @Comment("Forgotten attack speed, can be any decimal number.")
+    public float forgottenSpeed = 8.0f;
+    @Comment("Forgotten bonus damage, can be any decimal number.")
+    public float forgottenAttackBonus = 3.0f;
+    @Comment("Forgotten mining level, can be any whole number.")
+    public int forgottenMiningLevel = 4;
+    @Comment("Forgotten enchantability, can be any whole number.")
+    public int forgottenEnchantability = 2;
 
     @Override
     public void update(int deserializedVersion) {

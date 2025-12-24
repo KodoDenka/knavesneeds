@@ -146,6 +146,8 @@ public class BlueSkiesAdditionsRegistries {
             "blue_skies:maple_planks"
     );
 
+    //TODO add comet support since cherry wood has been removed.
+
 
     //TODO Blue skies needs a diffrent MOD_ID
     static Registrar<Item> BLUE_SKIES_ITEMS  = ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
