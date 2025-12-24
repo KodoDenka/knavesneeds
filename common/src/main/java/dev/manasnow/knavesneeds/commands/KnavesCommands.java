@@ -10,60 +10,64 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.crafting.Ingredient;
 
 public class KnavesCommands {
 
+    //Registers knavesneeds as a command with help and tier info as subcommands.
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         Constants.LOG.info("Knaves' Need helper is active.");
-        // Registers main command.
         dispatcher.register(Commands.literal("knavesneeds")
-                .executes(KnavesCommands::execute)
-                //Registers subcommand. ((There might be a better way to do this))
-                .then(Commands.literal("tier_info")
-                    .executes(KnavesCommands::executeSub)
-                )
-                .then(Commands.literal("help")
-                        .executes(KnavesCommands::executeHelp)
-                )
+                        .then(Commands.literal("tier_info")
+                                .executes(KnavesCommands::executeInfo)
+                        )
+                        .then(Commands.literal("help")
+                                .executes(KnavesCommands::executeHelp)
+                        )
+                // Removed the base .executes() to ensure users provide a valid subcommand
         );
     }
 
-    private static int execute(CommandContext<CommandSourceStack> context) {
-        // I don't need this here, look into refactoring to remove this.
-        context.getSource().sendSuccess(() -> Component.literal("P"), false);
-        return 1;
-    }
+    //Sub commands the shows information about the current tier.
+    private static int executeInfo(CommandContext<CommandSourceStack> context) {
+        CommandSourceStack source = context.getSource();
 
-    private static int executeSub(CommandContext<CommandSourceStack> context) {
-        Item heldItem = context.getSource().getPlayer().getMainHandItem().getItem();
+        // Safety: check if the source is actually a player
+        if (source.getPlayer() == null) {
+            source.sendFailure(Component.literal("This command must be executed by a player."));
+            return 0;
+        }
 
+        Item heldItem = source.getPlayer().getMainHandItem().getItem();
 
         if (heldItem instanceof SwordItem swordItem) {
-            float itemAttackDamage = swordItem.getTier().getAttackDamageBonus();
-            int itemEnchantmentValue = swordItem.getTier().getEnchantmentValue();
-            int itemDurability = swordItem.getTier().getUses();
-            int itemLevel = swordItem.getTier().getLevel();
-            float itemSpeed = swordItem.getTier().getSpeed();
-            Ingredient itemRepairIngredient = swordItem.getTier().getRepairIngredient();
+            var tier = swordItem.getTier();
 
-            context.getSource().sendSuccess(() -> Component.literal("Tier named " + swordItem.getTier()
-                    + ":\n - attackDamageBonus - " + itemAttackDamage
-                    + "\n - enchantmentValue - " + itemEnchantmentValue
-                    + "\n - durability - " + itemDurability
-                    + "\n - speed - " + itemSpeed
-                    + "\n - level - " + itemLevel
-                    + "\n - repair ingredient - " + BuiltInRegistries.ITEM.getKey(itemRepairIngredient.getItems()[0].getItem())),(false));
+            // Format ingredient name nicely
+            String ingredientName;
+            if (tier.getRepairIngredient().getItems().length > 0) {
+                ingredientName = BuiltInRegistries.ITEM.getKey(tier.getRepairIngredient().getItems()[0].getItem()).toString();
+            } else {
+                ingredientName = "None";
+            }
 
+            source.sendSuccess(() -> Component.literal("§5Tier Info: §f" + tier)
+                    .append("\n §7- Attack Bonus: §a" + tier.getAttackDamageBonus())
+                    .append("\n §7- Durability: §a" + tier.getUses())
+                    .append("\n §7- Speed: §a" + tier.getSpeed())
+                    .append("\n §7- Enchantability: §a" + tier.getEnchantmentValue())
+                    .append("\n §7- Mining Level: §a" + tier.getLevel())
+                    .append("\n §7- Repair Item: §e" + ingredientName), false);
+            return 1;
+        } else {
+            source.sendFailure(Component.literal("You must be holding a Sword/Weapon to see tier info."));
+            return 0;
         }
-        else {
-            context.getSource().sendSuccess(() -> Component.literal("You are not holding a valid weapon."), false);
-        }
-        return 1;
     }
 
+    //Simple sub command, honestly don't know how helpful this is.
+    //TODO more testing to see if this is needed for the workflow.
     private static int executeHelp(CommandContext<CommandSourceStack> context) {
-        context.getSource().sendSuccess(() -> Component.literal("Hold the weapon you want tier information about and then run /knavesneeds tier_info"), false);
+        context.getSource().sendSuccess(() -> Component.literal("§6Help: §fHold a weapon or sword and use /knavesneeds tier_info to get information about the item's tier. \n This is mostly a dev tool."), false);
         return 1;
     }
 }

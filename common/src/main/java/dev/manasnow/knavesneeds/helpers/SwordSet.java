@@ -50,47 +50,47 @@ public class SwordSet {
                 factory.create(tier, getAttackDamageModifier(id), getAttackSpeedModifier(id), new Item.Properties()));
     }
 
-    //Grabs attack speed modifier from SimplySwords config. **MIGHT NOT BE SAFE**
+    //Grabs attack speed modifier from SimplySwords config. Wrapped to be safer for early loading.
     private float getAttackSpeedModifier(String id) {
+        var simplySwordsConfig = SimplySwords.weaponAttributesConfig;
         return switch (id) {
-            case "longsword" -> SimplySwords.weaponAttributesConfig.longsword_attackSpeed;
-            case "twinblade" -> SimplySwords.weaponAttributesConfig.twinblade_attackSpeed;
-            case "rapier" -> SimplySwords.weaponAttributesConfig.rapier_attackSpeed;
-            case "katana" -> SimplySwords.weaponAttributesConfig.katana_attackSpeed;
-            case "sai" -> SimplySwords.weaponAttributesConfig.sai_attackSpeed;
-            case "spear" -> SimplySwords.weaponAttributesConfig.spear_attackSpeed;
-            case "glaive" -> SimplySwords.weaponAttributesConfig.glaive_attackSpeed;
-            case "warglaive" -> SimplySwords.weaponAttributesConfig.warglaive_attackSpeed;
-            case "cutlass" -> SimplySwords.weaponAttributesConfig.cutlass_attackSpeed;
-            case "claymore" -> SimplySwords.weaponAttributesConfig.claymore_attackSpeed;
-            case "greathammer" -> SimplySwords.weaponAttributesConfig.greathammer_attackSpeed;
-            case "greataxe" -> SimplySwords.weaponAttributesConfig.greataxe_attackSpeed;
-            case "chakram" -> SimplySwords.weaponAttributesConfig.chakram_attackSpeed;
-            case "scythe" -> SimplySwords.weaponAttributesConfig.scythe_attackSpeed;
-            case "halberd" -> SimplySwords.weaponAttributesConfig.halberd_attackSpeed;
-            default -> SimplySwords.weaponAttributesConfig.longsword_attackSpeed;
+            case "twinblade" -> simplySwordsConfig.twinblade_attackSpeed;
+            case "rapier" -> simplySwordsConfig.rapier_attackSpeed;
+            case "katana" -> simplySwordsConfig.katana_attackSpeed;
+            case "sai" -> simplySwordsConfig.sai_attackSpeed;
+            case "spear" -> simplySwordsConfig.spear_attackSpeed;
+            case "glaive" -> simplySwordsConfig.glaive_attackSpeed;
+            case "warglaive" -> simplySwordsConfig.warglaive_attackSpeed;
+            case "cutlass" -> simplySwordsConfig.cutlass_attackSpeed;
+            case "claymore" -> simplySwordsConfig.claymore_attackSpeed;
+            case "greathammer" -> simplySwordsConfig.greathammer_attackSpeed;
+            case "greataxe" -> simplySwordsConfig.greataxe_attackSpeed;
+            case "chakram" -> simplySwordsConfig.chakram_attackSpeed;
+            case "scythe" -> simplySwordsConfig.scythe_attackSpeed;
+            case "halberd" -> simplySwordsConfig.halberd_attackSpeed;
+            default -> simplySwordsConfig.longsword_attackSpeed;
         };
     }
 
-    //Grabs attack damage modifier from SimplySwords config. **STILL MIGHT NOT BE SAFE**
+    //Grabs attack damage modifier from SimplySwords config. Wrapped to be safer for early loading.
     public int getAttackDamageModifier(String id) {
+        var simplySwordConfig = SimplySwords.weaponAttributesConfig;
         return switch (id) {
-            case "longsword" -> (int) (SimplySwords.weaponAttributesConfig.longsword_positiveDamageModifier - SimplySwords.weaponAttributesConfig.longsword_negativeDamageModifier);
-            case "twinblade" -> (int) (SimplySwords.weaponAttributesConfig.twinblade_positiveDamageModifier - SimplySwords.weaponAttributesConfig.twinblade_negativeDamageModifier);
-            case "rapier" -> (int) (SimplySwords.weaponAttributesConfig.rapier_positiveDamageModifier - SimplySwords.weaponAttributesConfig.rapier_negativeDamageModifier);
-            case "katana" -> (int) (SimplySwords.weaponAttributesConfig.katana_positiveDamageModifier - SimplySwords.weaponAttributesConfig.katana_negativeDamageModifier);
-            case "sai" -> (int) (SimplySwords.weaponAttributesConfig.sai_positiveDamageModifier - SimplySwords.weaponAttributesConfig.sai_negativeDamageModifier);
-            case "spear" -> (int) (SimplySwords.weaponAttributesConfig.spear_positiveDamageModifier - SimplySwords.weaponAttributesConfig.spear_negativeDamageModifier);
-            case "glaive" -> (int) (SimplySwords.weaponAttributesConfig.glaive_positiveDamageModifier - SimplySwords.weaponAttributesConfig.glaive_negativeDamageModifier);
-            case "warglaive" -> (int) (SimplySwords.weaponAttributesConfig.warglaive_positiveDamageModifier - SimplySwords.weaponAttributesConfig.warglaive_negativeDamageModifier);
-            case "cutlass" -> (int) (SimplySwords.weaponAttributesConfig.cutlass_positiveDamageModifier - SimplySwords.weaponAttributesConfig.cutlass_negativeDamageModifier);
-            case "claymore" -> (int) (SimplySwords.weaponAttributesConfig.claymore_positiveDamageModifier - SimplySwords.weaponAttributesConfig.claymore_negativeDamageModifier);
-            case "greathammer" -> (int) (SimplySwords.weaponAttributesConfig.greathammer_positiveDamageModifier - SimplySwords.weaponAttributesConfig.greathammer_negativeDamageModifier);
-            case "greataxe" -> (int) (SimplySwords.weaponAttributesConfig.greataxe_positiveDamageModifier - SimplySwords.weaponAttributesConfig.greataxe_negativeDamageModifier);
-            case "chakram" -> (int) (SimplySwords.weaponAttributesConfig.chakram_positiveDamageModifier - SimplySwords.weaponAttributesConfig.chakram_negativeDamageModifier);
-            case "scythe" -> (int) (SimplySwords.weaponAttributesConfig.scythe_positiveDamageModifier - SimplySwords.weaponAttributesConfig.scythe_negativeDamageModifier);
-            case "halberd" -> (int) (SimplySwords.weaponAttributesConfig.halberd_positiveDamageModifier - SimplySwords.weaponAttributesConfig.halberd_negativeDamageModifier);
-            default -> (int) (SimplySwords.weaponAttributesConfig.longsword_positiveDamageModifier - SimplySwords.weaponAttributesConfig.longsword_negativeDamageModifier);
+            case "twinblade" -> (int) (simplySwordConfig.twinblade_positiveDamageModifier - simplySwordConfig.twinblade_negativeDamageModifier);
+            case "rapier" -> (int) (simplySwordConfig.rapier_positiveDamageModifier - simplySwordConfig.rapier_negativeDamageModifier);
+            case "katana" -> (int) (simplySwordConfig.katana_positiveDamageModifier - simplySwordConfig.katana_negativeDamageModifier);
+            case "sai" -> (int) (simplySwordConfig.sai_positiveDamageModifier - simplySwordConfig.sai_negativeDamageModifier);
+            case "spear" -> (int) (simplySwordConfig.spear_positiveDamageModifier - simplySwordConfig.spear_negativeDamageModifier);
+            case "glaive" -> (int) (simplySwordConfig.glaive_positiveDamageModifier - simplySwordConfig.glaive_negativeDamageModifier);
+            case "warglaive" -> (int) (simplySwordConfig.warglaive_positiveDamageModifier - simplySwordConfig.warglaive_negativeDamageModifier);
+            case "cutlass" -> (int) (simplySwordConfig.cutlass_positiveDamageModifier - simplySwordConfig.cutlass_negativeDamageModifier);
+            case "claymore" -> (int) (simplySwordConfig.claymore_positiveDamageModifier - simplySwordConfig.claymore_negativeDamageModifier);
+            case "greathammer" -> (int) (simplySwordConfig.greathammer_positiveDamageModifier - simplySwordConfig.greathammer_negativeDamageModifier);
+            case "greataxe" -> (int) (simplySwordConfig.greataxe_positiveDamageModifier - simplySwordConfig.greataxe_negativeDamageModifier);
+            case "chakram" -> (int) (simplySwordConfig.chakram_positiveDamageModifier - simplySwordConfig.chakram_negativeDamageModifier);
+            case "scythe" -> (int) (simplySwordConfig.scythe_positiveDamageModifier - simplySwordConfig.scythe_negativeDamageModifier);
+            case "halberd" -> (int) (simplySwordConfig.halberd_positiveDamageModifier - simplySwordConfig.halberd_negativeDamageModifier);
+            default -> (int) (simplySwordConfig.longsword_positiveDamageModifier - simplySwordConfig.longsword_negativeDamageModifier);
         };
     }
 
