@@ -44,7 +44,6 @@ public class SwordSet {
         this.HALBERD = register(registrar, namespace, "halberd", tier, factory);
     }
 
-    //This doesn't get the attack damage and speed mod yet...
     private RegistrySupplier<Item> register(Registrar<Item> registrar, String namespace, String id, Tier tier, SwordFactory factory) {
         return registrar.register(namespace + "/" + tier.toString().toLowerCase(Locale.ROOT) + "/" + id, () ->
                 factory.create(tier, getAttackDamageModifier(id), getAttackSpeedModifier(id), new Item.Properties()));

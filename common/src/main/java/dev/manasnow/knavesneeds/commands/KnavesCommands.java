@@ -7,7 +7,10 @@ import dev.manasnow.knavesneeds.Constants;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.HoverEvent;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 
@@ -27,11 +30,22 @@ public class KnavesCommands {
         );
     }
 
+    // Helper method to create a clickable line
+    private static MutableComponent createClickableLine(String label, Object value, String labelColor, String valueColor, boolean newLine) {
+        String valStr = String.valueOf(value);
+        String prefix = newLine ? "\n " : "";
+        return Component.literal(prefix + labelColor + label + ": " + valueColor + valStr)
+                .withStyle(style -> style
+                        .withClickEvent(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, valStr))
+                        .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.literal("Click to copy - '§3" + valStr + "§f'"))));
+    }
+
+
     //Sub commands the shows information about the current tier.
     private static int executeInfo(CommandContext<CommandSourceStack> context) {
         CommandSourceStack source = context.getSource();
 
-        // Safety: check if the source is actually a player
+        // Check if the source is actually a player
         if (source.getPlayer() == null) {
             source.sendFailure(Component.literal("This command must be executed by a player."));
             return 0;
@@ -50,13 +64,13 @@ public class KnavesCommands {
                 ingredientName = "None";
             }
 
-            source.sendSuccess(() -> Component.literal("§5Tier Info: §f" + tier)
-                    .append("\n §7- Attack Bonus: §a" + tier.getAttackDamageBonus())
-                    .append("\n §7- Durability: §a" + tier.getUses())
-                    .append("\n §7- Speed: §a" + tier.getSpeed())
-                    .append("\n §7- Enchantability: §a" + tier.getEnchantmentValue())
-                    .append("\n §7- Mining Level: §a" + tier.getLevel())
-                    .append("\n §7- Repair Item: §e" + ingredientName), false);
+            source.sendSuccess(() -> createClickableLine("Tier Info", tier, "§5", "§f", false)
+                             .append(createClickableLine("§7- Attack Bonus", tier.getAttackDamageBonus(), "", "§a", true))
+                             .append(createClickableLine("§7- Durability", tier.getUses(), "", "§a", true))
+                             .append(createClickableLine("§7- Speed", tier.getSpeed(), "", "§a", true))
+                             .append(createClickableLine("§7- Enchantability", tier.getEnchantmentValue(), "", "§a", true))
+                             .append(createClickableLine("§7- Mining Level", tier.getLevel(), "", "§a", true))
+                             .append(createClickableLine("§7- Repair Item", ingredientName, "", "§e", true)), false);
             return 1;
         } else {
             source.sendFailure(Component.literal("You must be holding a Sword/Weapon to see tier info."));
@@ -65,7 +79,6 @@ public class KnavesCommands {
     }
 
     //Simple sub command, honestly don't know how helpful this is.
-    //TODO more testing to see if this is needed for the workflow.
     private static int executeHelp(CommandContext<CommandSourceStack> context) {
         context.getSource().sendSuccess(() -> Component.literal("§6Help: §fHold a weapon or sword and use /knavesneeds tier_info to get information about the item's tier. \n This is mostly a dev tool."), false);
         return 1;

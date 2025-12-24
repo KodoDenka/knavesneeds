@@ -19,6 +19,10 @@ public class AmethystImbuementAdditionsRegistries {
 
     public static KnavesAmethystImbuementConfig amethystImbuementConfig = ConfigApiJava.registerAndLoadConfig(KnavesAmethystImbuementConfig::new);
 
+    private enum AmethystImbuementTiers {
+        AMETRINE, GARNET, GLOWING, STEEL
+    }
+
     static Registrar<Item> AMETHYST_IMBUEMENT_ITEMS = ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
 
     public static final SwordSet AMETRINE = new SwordSet(AMETHYST_IMBUEMENT_ITEMS,"amethyst_imbuement", ToolTierHelper.AMETRINE, SwordItem::new);

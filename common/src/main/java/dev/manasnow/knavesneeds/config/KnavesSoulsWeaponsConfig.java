@@ -15,12 +15,12 @@ public class KnavesSoulsWeaponsConfig extends Config {
     }
 
     @Comment("Material - Translucent")
-    public static boolean translucentEnabled = true;
-    public static int translucentDurability = 1000;
-    public static float translucentMiningSpeedMultiplier = 1.0f;
-    public static float translucentAttackDamage = 0.0f;
-    public static int translucentMiningLevel = 1;
-    public static int translucentEnchantability = 15;
+    public boolean translucentEnabled = true;
+    public int translucentDurability = 1000;
+    public float translucentMiningSpeedMultiplier = 1.0f;
+    public float translucentAttackDamage = 0.0f;
+    public int translucentMiningLevel = 1;
+    public int translucentEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {
