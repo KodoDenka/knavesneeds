@@ -19,8 +19,8 @@ public class AmethystImbuementAdditionsRegistries {
     public static final Tier AMETRINE = new SimpleTier(
             "AMETRINE",
             () -> amethystImbuementConfig.ametrineDurability,
-            () -> amethystImbuementConfig.ametrineMiningSpeedMultiplier,
-            () -> amethystImbuementConfig.ametrineAttackDamage,
+            () -> amethystImbuementConfig.ametrineSpeed,
+            () -> amethystImbuementConfig.ametrineAttackBonus,
             () -> amethystImbuementConfig.ametrineMiningLevel,
             () -> amethystImbuementConfig.ametrineEnchantability,
             "byg:pendorite_ingot"
@@ -29,8 +29,8 @@ public class AmethystImbuementAdditionsRegistries {
     public static final Tier GARNET = new SimpleTier(
             "GARNET",
             () -> amethystImbuementConfig.garnetDurability,
-            () -> amethystImbuementConfig.garnetMiningSpeedMultiplier,
-            () -> amethystImbuementConfig.garnetAttackDamage,
+            () -> amethystImbuementConfig.garnetSpeed,
+            () -> amethystImbuementConfig.garnetAttackBonus,
             () -> amethystImbuementConfig.garnetMiningLevel,
             () -> amethystImbuementConfig.garnetEnchantability,
             "byg:pendorite_ingot"
@@ -39,8 +39,8 @@ public class AmethystImbuementAdditionsRegistries {
     public static final Tier GLOWING = new SimpleTier(
             "GLOWING",
             () -> amethystImbuementConfig.glowingDurability,
-            () -> amethystImbuementConfig.glowingMiningSpeedMultiplier,
-            () -> amethystImbuementConfig.glowingAttackDamage,
+            () -> amethystImbuementConfig.glowingSpeed,
+            () -> amethystImbuementConfig.glowingAttackBonus,
             () -> amethystImbuementConfig.glowingMiningLevel,
             () -> amethystImbuementConfig.glowingEnchantability,
             "byg:pendorite_ingot"
@@ -49,8 +49,8 @@ public class AmethystImbuementAdditionsRegistries {
     public static final Tier STEEL = new SimpleTier(
             "STEEL",
             () -> amethystImbuementConfig.steelDurability,
-            () -> amethystImbuementConfig.steelMiningSpeedMultiplier,
-            () -> amethystImbuementConfig.steelAttackDamage,
+            () -> amethystImbuementConfig.steelSpeed,
+            () -> amethystImbuementConfig.steelAttackBonus,
             () -> amethystImbuementConfig.steelMiningLevel,
             () -> amethystImbuementConfig.steelEnchantability,
             "byg:pendorite_ingot"

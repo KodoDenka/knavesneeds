@@ -18,6 +18,8 @@ public class TwilightForestAdditionsRegistries {
     //Load config for Twilight Forest
     public static KnavesTwilightForestConfig twilightForestConfig = ConfigApiJava.registerAndLoadConfig(KnavesTwilightForestConfig::new);
 
+    private static final String NAMESPACE = "twilight_forest";
+
     public static final Tier STEELEAF = new SimpleTier(
             "STEELEAF",
             () -> twilightForestConfig.steeleafDurability,
@@ -58,14 +60,34 @@ public class TwilightForestAdditionsRegistries {
             "twilightforest:knightmetal_ingot"
     );
 
-    static Registrar<Item> TWILIGHT_FOREST_ITEMS = ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
+    private static Registrar<Item> createRegistrar() {
+        return ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
+    }
 
-    public static final SwordSet STEELEAF_ITEMS = new SwordSet(TWILIGHT_FOREST_ITEMS,"twilight_forest", STEELEAF, SwordItem::new);
-    public static final SwordSet FIERY_ITEMS = new SwordSet(TWILIGHT_FOREST_ITEMS,"twilight_forest", FIERY, FierySwordItem::new);
-    public static final SwordSet IRONWOOD_TEMS = new SwordSet(TWILIGHT_FOREST_ITEMS,"twilight_forest", IRONWOOD, SwordItem::new);
-    public static final SwordSet KNIGHTMETAL_ITEMS = new SwordSet(TWILIGHT_FOREST_ITEMS,"twilight_forest", KNIGHTMETAL, SwordItem::new);
+    private static final Registrar<Item> STEELEAF_REGISTRAR = createRegistrar();
+    public static final SwordSet STEELEAF_ITEMS = new SwordSet(STEELEAF_REGISTRAR, NAMESPACE, STEELEAF, SwordItem::new);
+
+    private static final Registrar<Item> FIERY_REGISTRAR = createRegistrar();
+    public static final SwordSet FIERY_ITEMS = new SwordSet(FIERY_REGISTRAR, NAMESPACE, FIERY, FierySwordItem::new);
+
+    private static final Registrar<Item> IRONWOOD_REGISTRAR = createRegistrar();
+    public static final SwordSet IRONWOOD_ITEMS = new SwordSet(IRONWOOD_REGISTRAR, NAMESPACE, IRONWOOD, SwordItem::new);
+
+    private static final Registrar<Item> KNIGHTMETAL_REGISTRAR = createRegistrar();
+    public static final SwordSet KNIGHTMETAL_ITEMS = new SwordSet(KNIGHTMETAL_REGISTRAR, NAMESPACE, KNIGHTMETAL, SwordItem::new);
 
     public static void smartRegister() {
-        TWILIGHT_FOREST_ITEMS.init();
+        if (twilightForestConfig.fieryEnabled) {
+            FIERY_REGISTRAR.init();
+        }
+        if (twilightForestConfig.ironwoodEnabled) {
+            IRONWOOD_REGISTRAR.init();
+        }
+        if (twilightForestConfig.knightmetalEnabled) {
+            KNIGHTMETAL_REGISTRAR.init();
+        }
+        if (twilightForestConfig.steeleafEnabled) {
+            STEELEAF_REGISTRAR.init();
+        }
     }
 }
