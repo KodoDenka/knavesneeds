@@ -1,7 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesSoulsWeaponsConfig;
-import dev.manasnow.knavesneeds.helpers.SimpleTier;
+import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
@@ -16,21 +16,30 @@ public class SoulsWeaponsAdditionsRegistries {
 
     public static KnavesSoulsWeaponsConfig soulsWeaponsConfig = ConfigApiJava.registerAndLoadConfig(KnavesSoulsWeaponsConfig::new);
 
-    public static final Tier TRANSLUCENT = new SimpleTier(
+    public static final Tier TRANSLUCENT = new TierHelper(
             "TRANSLUCENT",
             () -> soulsWeaponsConfig.translucentDurability,
-            () -> soulsWeaponsConfig.translucentMiningSpeedMultiplier,
-            () -> soulsWeaponsConfig.translucentAttackDamage,
+            () -> soulsWeaponsConfig.translucentSpeed,
+            () -> soulsWeaponsConfig.translucentAttackBonus,
             () -> soulsWeaponsConfig.translucentMiningLevel,
             () -> soulsWeaponsConfig.translucentEnchantability,
             "soulsweapons:lost_soul"
     );
 
-    static Registrar<Item> SOULS_WEAPONS_ITEMS = ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
+    //TODO add silver weapons
 
-    public static final SwordSet TRANSLUCENT_ITEMS = new SwordSet(SOULS_WEAPONS_ITEMS,"soulsweapons", TRANSLUCENT, SwordItem::new);
+    private static Registrar<Item> createRegistrar() {
+        return ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
+    }
+
+    private static final String NAMESPACE = "soulsweapons";
+
+    private static final Registrar<Item> TRANSLUCENT_REGISTRAR = createRegistrar();
+    public static final SwordSet TRANSLUCENT_ITEMS = new SwordSet(TRANSLUCENT_REGISTRAR, NAMESPACE, TRANSLUCENT, SwordItem::new);
 
     public static void smartRegister() {
-        SOULS_WEAPONS_ITEMS.init();
+        if (soulsWeaponsConfig.translucentEnabled) {
+            TRANSLUCENT_REGISTRAR.init();
+        }
     }
 }

@@ -14,12 +14,15 @@ public class KnavesDeeperDarkerConfig extends Config {
         super(new ResourceLocation(MOD_ID, "deeper_darker_config"));
     }
 
-    @Comment("Material - warden")
-    public boolean wardenEnabled = true;
+    @Comment("Warden durability/uses, can be any whole number.")
     public int wardenDurability = 1000;
-    public float wardenMiningSpeedMultiplier = 1.0f;
-    public float wardenAttackDamage = 0.0f;
+    @Comment("Warden attack speed, can be any decimal number.")
+    public float wardenSpeed = 1.0f;
+    @Comment("Warden bonus damage, can be any decimal number.")
+    public float wardenAttackBonus = 0.0f;
+    @Comment("Warden mining level, can be any whole number.")
     public int wardenMiningLevel = 1;
+    @Comment("Warden enchantability, can be any whole number.")
     public int wardenEnchantability = 15;
 
     @Override

@@ -16,26 +16,41 @@ public class KnavesBetterEndConfig extends Config {
 
     @Comment("Enables/disables - Knaves' Needs' Aeternium additions.")
     public boolean aeterniumEnabled = true;
+    @Comment("Aeternium durability/uses, can be any whole number.")
     public int aeterniumDurability = 1000;
+    @Comment("Aeternium attack speed, can be any decimal number.")
     public float aeterniumSpeed = 1.0f;
-    public float aeterniumAttackDamage = 0.0f;
+    @Comment("Aeternium bonus damage, can be any decimal number.")
+    public float aeterniumAttackBonus = 0.0f;
+    @Comment("Aeternium mining level, can be any whole number.")
     public int aeterniumMiningLevel = 1;
+    @Comment("Aeternium enchantability, can be any whole number.")
     public int aeterniumEnchantability = 15;
 
-    @Comment("\n Material - Terminite")
+    @Comment("Enables/disables - Knaves' Needs' Terminite additions.")
     public boolean terminiteEnabled = true;
+    @Comment("Terminite durability/uses, can be any whole number.")
     public int terminiteDurability = 1000;
-    public float terminiteMiningSpeedMultiplier = 1.0f;
-    public float terminiteAttackDamage = 0.0f;
+    @Comment("Terminite attack speed, can be any decimal number.")
+    public float terminiteSpeed = 1.0f;
+    @Comment("Terminite bonus damage, can be any decimal number.")
+    public float terminiteAttackBonus = 0.0f;
+    @Comment("Terminite mining level, can be any whole number.")
     public int terminiteMiningLevel = 1;
+    @Comment("Terminite enchantability, can be any whole number.")
     public int terminiteEnchantability = 15;
 
-    @Comment("\n Material - Thallasium")
+    @Comment("Enables/disables - Knaves' Needs' Thallasium additions.")
     public boolean thallasiumEnabled = true;
+    @Comment("Thallasium durability/uses, can be any whole number.")
     public int thallasiumDurability = 1000;
-    public float thallasiumMiningSpeedMultiplier = 1.0f;
-    public float thallasiumAttackDamage = 0.0f;
+    @Comment("Thallasium attack speed, can be any decimal number.")
+    public float thallasiumSpeed = 1.0f;
+    @Comment("Thallasium bonus damage, can be any decimal number.")
+    public float thallasiumAttackBonus = 0.0f;
+    @Comment("Thallasium mining level, can be any whole number.")
     public int thallasiumMiningLevel = 1;
+    @Comment("Thallasium enchantability, can be any whole number.")
     public int thallasiumEnchantability = 15;
 
     @Override

@@ -2,7 +2,7 @@ package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesTwilightForestConfig;
 import dev.manasnow.knavesneeds.customitems.swords.twilight_forest.FierySwordItem;
-import dev.manasnow.knavesneeds.helpers.SimpleTier;
+import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
@@ -18,9 +18,7 @@ public class TwilightForestAdditionsRegistries {
     //Load config for Twilight Forest
     public static KnavesTwilightForestConfig twilightForestConfig = ConfigApiJava.registerAndLoadConfig(KnavesTwilightForestConfig::new);
 
-    private static final String NAMESPACE = "twilight_forest";
-
-    public static final Tier STEELEAF = new SimpleTier(
+    public static final Tier STEELEAF = new TierHelper(
             "STEELEAF",
             () -> twilightForestConfig.steeleafDurability,
             () -> twilightForestConfig.steeleafSpeed,
@@ -30,7 +28,7 @@ public class TwilightForestAdditionsRegistries {
             "twilightforest:steeleaf_ingot"
     );
 
-    public static final Tier IRONWOOD = new SimpleTier(
+    public static final Tier IRONWOOD = new TierHelper(
             "IRONWOOD",
             () -> twilightForestConfig.ironwoodDurability,
             () -> twilightForestConfig.ironwoodSpeed,
@@ -40,7 +38,7 @@ public class TwilightForestAdditionsRegistries {
             "twilightforest:ironwood_ingot"
     );
 
-    public static final Tier FIERY = new SimpleTier(
+    public static final Tier FIERY = new TierHelper(
             "FIERY",
             () -> twilightForestConfig.fieryDurability,
             () -> twilightForestConfig.fierySpeed,
@@ -50,7 +48,7 @@ public class TwilightForestAdditionsRegistries {
             "twilightforest:fiery_ingot"
     );
 
-    public static final Tier KNIGHTMETAL = new SimpleTier(
+    public static final Tier KNIGHTMETAL = new TierHelper(
             "KNIGHTMETAL",
             () -> twilightForestConfig.knightmetalDurability,
             () -> twilightForestConfig.knightmetalSpeed,
@@ -63,6 +61,8 @@ public class TwilightForestAdditionsRegistries {
     private static Registrar<Item> createRegistrar() {
         return ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
     }
+
+    private static final String NAMESPACE = "twilight_forest";
 
     private static final Registrar<Item> STEELEAF_REGISTRAR = createRegistrar();
     public static final SwordSet STEELEAF_ITEMS = new SwordSet(STEELEAF_REGISTRAR, NAMESPACE, STEELEAF, SwordItem::new);

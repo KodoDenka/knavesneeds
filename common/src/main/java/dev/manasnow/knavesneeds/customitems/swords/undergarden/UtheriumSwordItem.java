@@ -19,7 +19,7 @@ public class UtheriumSwordItem extends SwordItem{
     @Override
     public void appendHoverText(ItemStack stack, Level level, List tooltipComponents, TooltipFlag isAdvanced)  {
         if (stack.getItem() instanceof UtheriumSwordItem swordItem) {
-            tooltipComponents.add(Component.translatable("tooltip.utheric_sword").withStyle(ChatFormatting.GREEN));
+            tooltipComponents.add(Component.translatable("tooltip.utheric_sword").withStyle(ChatFormatting.DARK_RED));
         }
     }
 }

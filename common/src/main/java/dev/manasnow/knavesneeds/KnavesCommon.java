@@ -16,6 +16,8 @@ public class KnavesCommon {
 
     public static KnavesCommonConfig commonConfig = ConfigApiJava.registerAndLoadConfig(KnavesCommonConfig::new);
 
+    public static boolean USE_SAFE_ITEMSTACK = false;
+
     public static void init() {
 
         //SimplySwordsAPI.
@@ -26,6 +28,15 @@ public class KnavesCommon {
 
         if (Services.PLATFORM.getEnvironmentName().equals("development")){
             TwilightForestAdditionsRegistries.smartRegister();
+        }
+
+        //BetterCombatHelper Enable
+        if (Services.PLATFORM.isModLoaded("bettercombat")) {
+            Constants.LOG.info("BetterCombat is loaded. BetterCombatHelper is enabled.");
+            USE_SAFE_ITEMSTACK = true;
+        }
+        else {
+            Constants.LOG.info("BetterCombat is not loaded. BetterCombatHelper will not be enabled.");
         }
 
 

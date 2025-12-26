@@ -1,7 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesForbiddenArcanusConfig;
-import dev.manasnow.knavesneeds.helpers.SimpleTier;
+import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
@@ -15,21 +15,30 @@ import static dev.manasnow.knavesneeds.Constants.MOD_ID;
 public class ForbiddenArcanusAdditionsRegistries {
     public static KnavesForbiddenArcanusConfig forbiddenArcanusConfig = ConfigApiJava.registerAndLoadConfig(KnavesForbiddenArcanusConfig::new);
 
-    public static final Tier DRACO_ARCANUS = new SimpleTier(
+    public static final Tier DRACO_ARCANUS = new TierHelper(
             "DRACO_ARCANUS",
             () -> forbiddenArcanusConfig.dracoArcanusDurability,
-            () -> forbiddenArcanusConfig.dracoArcanusMiningSpeedMultiplier,
-            () -> forbiddenArcanusConfig.dracoArcanusAttackDamage,
+            () -> forbiddenArcanusConfig.dracoArcanusSpeed,
+            () -> forbiddenArcanusConfig.dracoArcanusAttackBonus,
             () -> forbiddenArcanusConfig.dracoArcanusMiningLevel,
             () -> forbiddenArcanusConfig.dracoArcanusEnchantability,
             "forbidden_arcanus:stellarite_piece"
     );
 
-    static Registrar<Item> FORBIDDEN_ARCANUS_ITEMS = ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
+    //TODO add support for the other Forbidden Arcanus items
 
-    public static final SwordSet DRACO_ARCANUS_ITEMS = new SwordSet(FORBIDDEN_ARCANUS_ITEMS,"forbidden_arcanus", DRACO_ARCANUS, SwordItem::new);
+    private static Registrar<Item> createRegistrar() {
+        return ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
+    }
+
+    private static final String NAMESPACE = "forbidden_arcanus";
+
+    private static final Registrar<Item> DRACO_ARCANUS_REGISTRAR = createRegistrar();
+    public static final SwordSet DRACO_ARCANUS_ITEMS = new SwordSet(DRACO_ARCANUS_REGISTRAR, NAMESPACE, DRACO_ARCANUS, SwordItem::new);
 
     public static void smartRegister() {
-        FORBIDDEN_ARCANUS_ITEMS.init();
+        if (forbiddenArcanusConfig.dracoArcanusEnabled) {
+            DRACO_ARCANUS_REGISTRAR.init();
+        }
     }
 }

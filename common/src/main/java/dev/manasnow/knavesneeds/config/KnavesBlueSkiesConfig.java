@@ -14,117 +14,187 @@ public class KnavesBlueSkiesConfig extends Config {
         super(new ResourceLocation(MOD_ID, "blue_skies_config"));
     }
 
-    @Comment("Material - Pyrope")
+    @Comment("Enables/disables - Knaves' Needs' Pyrope additions.")
     public boolean pyropeEnabled = true;
+    @Comment("Pyrope durability/uses, can be any whole number.")
     public int pyropeDurability = 1000;
-    public float pyropeMiningSpeedMultiplier = 1.0f;
-    public float pyropeAttackDamage = 0.0f;
+    @Comment("Pyrope attack speed, can be any decimal number.")
+    public float pyropeSpeed = 1.0f;
+    @Comment("Pyrope bonus damage, can be any decimal number.")
+    public float pyropeAttackBonus = 0.0f;
+    @Comment("Pyrope mining level, can be any whole number.")
     public int pyropeMiningLevel = 1;
+    @Comment("Pyrope enchantability, can be any whole number.")
     public int pyropeEnchantability = 15;
 
-    @Comment("\n Material - Aquite")
+    @Comment("Enables/disables - Knaves' Needs' Aquite additions.")
     public boolean aquiteEnabled = true;
+    @Comment("Aquite durability/uses, can be any whole number.")
     public int aquiteDurability = 1000;
-    public float aquiteMiningSpeedMultiplier = 1.0f;
-    public float aquiteAttackDamage = 0.0f;
+    @Comment("Aquite attack speed, can be any decimal number.")
+    public float aquiteSpeed = 1.0f;
+    @Comment("Aquite bonus damage, can be any decimal number.")
+    public float aquiteAttackBonus = 0.0f;
+    @Comment("Aquite mining level, can be any whole number.")
     public int aquiteMiningLevel = 1;
+    @Comment("Aquite enchantability, can be any whole number.")
     public int aquiteEnchantability = 15;
 
-    @Comment("\n Material - Diopside")
+    @Comment("Enables/disables - Knaves' Needs' Diopside additions.")
     public boolean diopsideEnabled = true;
+    @Comment("Diopside durability/uses, can be any whole number.")
     public int diopsideDurability = 1000;
-    public float diopsideMiningSpeedMultiplier = 1.0f;
-    public float diopsideAttackDamage = 0.0f;
+    @Comment("Diopside attack speed, can be any decimal number.")
+    public float diopsideSpeed = 1.0f;
+    @Comment("Diopside bonus damage, can be any decimal number.")
+    public float diopsideAttackBonus = 0.0f;
+    @Comment("Diopside mining level, can be any whole number.")
     public int diopsideMiningLevel = 1;
+    @Comment("Diopside enchantability, can be any whole number.")
     public int diopsideEnchantability = 15;
 
-    @Comment("\n Material - Charoite")
+    @Comment("Enables/disables - Knaves' Needs' Charoite additions.")
     public boolean charoiteEnabled = true;
+    @Comment("Charoite durability/uses, can be any whole number.")
     public int charoiteDurability = 1000;
-    public float charoiteMiningSpeedMultiplier = 1.0f;
-    public float charoiteAttackDamage = 0.0f;
+    @Comment("Charoite attack speed, can be any decimal number.")
+    public float charoiteSpeed = 1.0f;
+    @Comment("Charoite bonus damage, can be any decimal number.")
+    public float charoiteAttackBonus = 0.0f;
+    @Comment("Charoite mining level, can be any whole number.")
     public int charoiteMiningLevel = 1;
+    @Comment("Charoite enchantability, can be any whole number.")
     public int charoiteEnchantability = 15;
 
-    @Comment("\n Material - Horizonite")
+    @Comment("Enables/disables - Knaves' Needs' Horizonite additions.")
     public boolean horizoniteEnabled = true;
+    @Comment("Horizonite durability/uses, can be any whole number.")
     public int horizoniteDurability = 1000;
-    public float horizoniteMiningSpeedMultiplier = 1.0f;
-    public float horizoniteAttackDamage = 0.0f;
+    @Comment("Horizonite attack speed, can be any decimal number.")
+    public float horizoniteSpeed = 1.0f;
+    @Comment("Horizonite bonus damage, can be any decimal number.")
+    public float horizoniteAttackBonus = 0.0f;
+    @Comment("Horizonite mining level, can be any whole number.")
     public int horizoniteMiningLevel = 1;
+    @Comment("Horizonite enchantability, can be any whole number.")
     public int horizoniteEnchantability = 15;
 
-    @Comment("\n Material - Turquoise Stone")
+    @Comment("Enables/disables - Knaves' Needs' Turquoise Stone additions.")
     public boolean turquoiseStoneEnabled = true;
+    @Comment("Turquoise Stone durability/uses, can be any whole number.")
     public int turquoiseStoneDurability = 1000;
-    public float turquoiseStoneMiningSpeedMultiplier = 1.0f;
-    public float turquoiseStoneAttackDamage = 0.0f;
+    @Comment("Turquoise Stone attack speed, can be any decimal number.")
+    public float turquoiseStoneSpeed = 1.0f;
+    @Comment("Turquoise Stone bonus damage, can be any decimal number.")
+    public float turquoiseStoneAttackBonus = 0.0f;
+    @Comment("Turquoise Stone mining level, can be any whole number.")
     public int turquoiseStoneMiningLevel = 1;
+    @Comment("Turquoise Stone enchantability, can be any whole number.")
     public int turquoiseStoneEnchantability = 15;
 
-    @Comment("\n Material - Lunar Stone")
+    @Comment("Enables/disables - Knaves' Needs' Lunar Stone additions.")
     public boolean lunarStoneEnabled = true;
+    @Comment("Lunar Stone durability/uses, can be any whole number.")
     public int lunarStoneDurability = 1000;
-    public float lunarStoneMiningSpeedMultiplier = 1.0f;
-    public float lunarStoneAttackDamage = 0.0f;
+    @Comment("Lunar Stone attack speed, can be any decimal number.")
+    public float lunarStoneSpeed = 1.0f;
+    @Comment("Lunar Stone bonus damage, can be any decimal number.")
+    public float lunarStoneAttackBonus = 0.0f;
+    @Comment("Lunar Stone mining level, can be any whole number.")
     public int lunarStoneMiningLevel = 1;
+    @Comment("Lunar Stone enchantability, can be any whole number.")
     public int lunarStoneEnchantability = 15;
 
-    @Comment("\n Material - Bluebright Wood")
+    @Comment("Enables/disables - Knaves' Needs' Bluebright Wood additions.")
     public boolean bluebrightWoodEnabled = true;
+    @Comment("Bluebright Wood durability/uses, can be any whole number.")
     public int bluebrightWoodDurability = 1000;
-    public float bluebrightWoodMiningSpeedMultiplier = 1.0f;
-    public float bluebrightWoodAttackDamage = 0.0f;
+    @Comment("Bluebright Wood attack speed, can be any decimal number.")
+    public float bluebrightWoodSpeed = 1.0f;
+    @Comment("Bluebright Wood bonus damage, can be any decimal number.")
+    public float bluebrightWoodAttackBonus = 0.0f;
+    @Comment("Bluebright Wood mining level, can be any whole number.")
     public int bluebrightWoodMiningLevel = 1;
+    @Comment("Bluebright Wood enchantability, can be any whole number.")
     public int bluebrightWoodEnchantability = 15;
 
-    @Comment("\n Material - Lunar Wood")
+    @Comment("Enables/disables - Knaves' Needs' Lunar Wood additions.")
     public boolean lunarWoodEnabled = true;
+    @Comment("Lunar Wood durability/uses, can be any whole number.")
     public int lunarWoodDurability = 1000;
-    public float lunarWoodMiningSpeedMultiplier = 1.0f;
-    public float lunarWoodAttackDamage = 0.0f;
+    @Comment("Lunar Wood attack speed, can be any decimal number.")
+    public float lunarWoodSpeed = 1.0f;
+    @Comment("Lunar Wood bonus damage, can be any decimal number.")
+    public float lunarWoodAttackBonus = 0.0f;
+    @Comment("Lunar Wood mining level, can be any whole number.")
     public int lunarWoodMiningLevel = 1;
+    @Comment("Lunar Wood enchantability, can be any whole number.")
     public int lunarWoodEnchantability = 15;
 
-    @Comment("\n Material - Starlit Wood")
+    @Comment("Enables/disables - Knaves' Needs' Starlit Wood additions.")
     public boolean starlitWoodEnabled = true;
+    @Comment("Starlit Wood durability/uses, can be any whole number.")
     public int starlitWoodDurability = 1000;
-    public float starlitWoodMiningSpeedMultiplier = 1.0f;
-    public float starlitWoodAttackDamage = 0.0f;
+    @Comment("Starlit Wood attack speed, can be any decimal number.")
+    public float starlitWoodSpeed = 1.0f;
+    @Comment("Starlit Wood bonus damage, can be any decimal number.")
+    public float starlitWoodAttackBonus = 0.0f;
+    @Comment("Starlit Wood mining level, can be any whole number.")
     public int starlitWoodMiningLevel = 1;
+    @Comment("Starlit Wood enchantability, can be any whole number.")
     public int starlitWoodEnchantability = 15;
 
-    @Comment("\n Material - Dusk Wood")
+    @Comment("Enables/disables - Knaves' Needs' Dusk Wood additions.")
     public boolean duskWoodEnabled = true;
+    @Comment("Dusk Wood durability/uses, can be any whole number.")
     public int duskWoodDurability = 1000;
-    public float duskWoodMiningSpeedMultiplier = 1.0f;
-    public float duskWoodAttackDamage = 0.0f;
+    @Comment("Dusk Wood attack speed, can be any decimal number.")
+    public float duskWoodSpeed = 1.0f;
+    @Comment("Dusk Wood bonus damage, can be any decimal number.")
+    public float duskWoodAttackBonus = 0.0f;
+    @Comment("Dusk Wood mining level, can be any whole number.")
     public int duskWoodMiningLevel = 1;
+    @Comment("Dusk Wood enchantability, can be any whole number.")
     public int duskWoodEnchantability = 15;
 
-    @Comment("\n Material - Frostbright Wood")
+    @Comment("Enables/disables - Knaves' Needs' Frostbright Wood additions.")
     public boolean frostbrightWoodEnabled = true;
+    @Comment("Frostbright Wood durability/uses, can be any whole number.")
     public int frostbrightWoodDurability = 1000;
-    public float frostbrightWoodMiningSpeedMultiplier = 1.0f;
-    public float frostbrightWoodAttackDamage = 0.0f;
+    @Comment("Frostbright Wood attack speed, can be any decimal number.")
+    public float frostbrightWoodSpeed = 1.0f;
+    @Comment("Frostbright Wood bonus damage, can be any decimal number.")
+    public float frostbrightWoodAttackBonus = 0.0f;
+    @Comment("Frostbright Wood mining level, can be any whole number.")
     public int frostbrightWoodMiningLevel = 1;
+    @Comment("Frostbright Wood enchantability, can be any whole number.")
     public int frostbrightWoodEnchantability = 15;
 
-    @Comment("\n Material - Maple Wood")
+    @Comment("Enables/disables - Knaves' Needs' Maple Wood additions.")
     public boolean mapleWoodEnabled = true;
+    @Comment("Maple Wood durability/uses, can be any whole number.")
     public int mapleWoodDurability = 1000;
-    public float mapleWoodMiningSpeedMultiplier = 1.0f;
-    public float mapleWoodAttackDamage = 0.0f;
+    @Comment("Maple Wood attack speed, can be any decimal number.")
+    public float mapleWoodSpeed = 1.0f;
+    @Comment("Maple Wood bonus damage, can be any decimal number.")
+    public float mapleWoodAttackBonus = 0.0f;
+    @Comment("Maple Wood mining level, can be any whole number.")
     public int mapleWoodMiningLevel = 1;
+    @Comment("Maple Wood enchantability, can be any whole number.")
     public int mapleWoodEnchantability = 15;
 
-    @Comment("\n Material - Cherry Wood")
-    public boolean cherryWoodEnabled = true;
-    public int cherryWoodDurability = 1000;
-    public float cherryWoodMiningSpeedMultiplier = 1.0f;
-    public float cherryWoodAttackDamage = 0.0f;
-    public int cherryWoodMiningLevel = 1;
-    public int cherryWoodEnchantability = 15;
+    @Comment("Enables/disables - Knaves' Needs' Comet Wood additions.")
+    public boolean cometWoodEnabled = true;
+    @Comment("Comet Wood durability/uses, can be any whole number.")
+    public int cometWoodDurability = 1000;
+    @Comment("Comet Wood attack speed, can be any decimal number.")
+    public float cometWoodSpeed = 1.0f;
+    @Comment("Comet Wood bonus damage, can be any decimal number.")
+    public float cometWoodAttackBonus = 0.0f;
+    @Comment("Comet Wood mining level, can be any whole number.")
+    public int cometWoodMiningLevel = 1;
+    @Comment("Comet Wood enchantability, can be any whole number.")
+    public int cometWoodEnchantability = 15;
 
     @Override
     public void update(int deserializedVersion) {

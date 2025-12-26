@@ -34,6 +34,8 @@ dependencies {
     modImplementation "curse.maven:architectury-api-419699:5137936"
     modImplementation "curse.maven:cloth-config-348521:5729104"
 
+    compileOnly "curse.maven:better-combat-by-daedelus-639842:7287333"
+
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":common")
 }

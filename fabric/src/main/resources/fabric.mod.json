@@ -32,6 +32,11 @@
     },
     "suggests": {
         "another-mod": "*"
-    }
+    },
+    "custom": {
+        "fzzy_config": [
+        "knavesneeds"
+    ]
+  }
 }
   

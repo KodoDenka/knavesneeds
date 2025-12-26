@@ -36,7 +36,9 @@ dependencies {
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 
     modImplementation "me.fzzyhmstrs:fzzy_config:${project.fzzyConfigForgeVersion}"
+
     compileOnly "curse.maven:simply-swords-659887:5639538"
+    compileOnly "curse.maven:better-combat-by-daedelus-639842:7287334"
 }
 
 configurations {

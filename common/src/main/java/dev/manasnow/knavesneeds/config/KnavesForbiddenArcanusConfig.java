@@ -14,28 +14,43 @@ public class KnavesForbiddenArcanusConfig extends Config {
         super(new ResourceLocation(MOD_ID, "forbidden_arcanus_config"));
     }
 
-    @Comment("Material - deorum")
+    @Comment("Enables/disables - Knaves' Needs' Deorum additions.")
     public boolean deorumEnabled = true;
+    @Comment("Deorum durability/uses, can be any whole number.")
     public int deorumDurability = 1000;
-    public float deorumMiningSpeedMultiplier = 1.0f;
-    public float deorumAttackDamage = 0.0f;
+    @Comment("Deorum attack speed, can be any decimal number.")
+    public float deorumSpeed = 1.0f;
+    @Comment("Deorum bonus damage, can be any decimal number.")
+    public float deorumAttackBonus = 0.0f;
+    @Comment("Deorum mining level, can be any whole number.")
     public int deorumMiningLevel = 1;
+    @Comment("Deorum enchantability, can be any whole number.")
     public int deorumEnchantability = 15;
 
-    @Comment("\n Material - reinforcedDeorum")
+    @Comment("Enables/disables - Knaves' Needs' Reinforced Deorum additions.")
     public boolean reinforcedDeorumEnabled = true;
+    @Comment("Reinforced Deorum durability/uses, can be any whole number.")
     public int reinforcedDeorumDurability = 1000;
-    public float reinforcedDeorumMiningSpeedMultiplier = 1.0f;
-    public float reinforcedDeorumAttackDamage = 0.0f;
+    @Comment("Reinforced Deorum attack speed, can be any decimal number.")
+    public float reinforcedDeorumSpeed = 1.0f;
+    @Comment("Reinforced Deorum bonus damage, can be any decimal number.")
+    public float reinforcedDeorumAttackBonus = 0.0f;
+    @Comment("Reinforced Deorum mining level, can be any whole number.")
     public int reinforcedDeorumMiningLevel = 1;
+    @Comment("Reinforced Deorum enchantability, can be any whole number.")
     public int reinforcedDeorumEnchantability = 15;
 
-    @Comment("\n Material - dracoArcanus")
+    @Comment("Enables/disables - Knaves' Needs' Draco Arcanus additions.")
     public boolean dracoArcanusEnabled = true;
+    @Comment("Draco Arcanus durability/uses, can be any whole number.")
     public int dracoArcanusDurability = 1000;
-    public float dracoArcanusMiningSpeedMultiplier = 1.0f;
-    public float dracoArcanusAttackDamage = 0.0f;
+    @Comment("Draco Arcanus attack speed, can be any decimal number.")
+    public float dracoArcanusSpeed = 1.0f;
+    @Comment("Draco Arcanus bonus damage, can be any decimal number.")
+    public float dracoArcanusAttackBonus = 0.0f;
+    @Comment("Draco Arcanus mining level, can be any whole number.")
     public int dracoArcanusMiningLevel = 1;
+    @Comment("Draco Arcanus enchantability, can be any whole number.")
     public int dracoArcanusEnchantability = 15;
 
     @Override

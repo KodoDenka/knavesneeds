@@ -1,7 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesBetterEndConfig;
-import dev.manasnow.knavesneeds.helpers.SimpleTier;
+import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
@@ -16,43 +16,61 @@ public class BetterEndAdditionsRegistries {
 
     public static KnavesBetterEndConfig betterEndConfig = ConfigApiJava.registerAndLoadConfig(KnavesBetterEndConfig::new);
 
-    public static final Tier AETERNIUM = new SimpleTier(
+    public static final Tier AETERNIUM = new TierHelper(
             "AETERNIUM",
             () -> betterEndConfig.aeterniumDurability,
             () -> betterEndConfig.aeterniumSpeed,
-            () -> betterEndConfig.aeterniumAttackDamage,
+            () -> betterEndConfig.aeterniumAttackBonus,
             () -> betterEndConfig.aeterniumMiningLevel,
             () -> betterEndConfig.aeterniumEnchantability,
             "betterend:aeternium_ingot"
     );
 
-    public static final Tier TERMINITE = new SimpleTier(
+    public static final Tier TERMINITE = new TierHelper(
             "TERMINITE",
             () -> betterEndConfig.terminiteDurability,
-            () -> betterEndConfig.terminiteMiningSpeedMultiplier,
-            () -> betterEndConfig.terminiteAttackDamage,
+            () -> betterEndConfig.terminiteSpeed,
+            () -> betterEndConfig.terminiteAttackBonus,
             () -> betterEndConfig.terminiteMiningLevel,
             () -> betterEndConfig.terminiteEnchantability,
             "betterend:terminite_ingot"
     );
 
-    public static final Tier THALLASIUM = new SimpleTier(
+    public static final Tier THALLASIUM = new TierHelper(
             "THALLASIUM",
             () -> betterEndConfig.thallasiumDurability,
-            () -> betterEndConfig.thallasiumMiningSpeedMultiplier,
-            () -> betterEndConfig.thallasiumAttackDamage,
+            () -> betterEndConfig.thallasiumSpeed,
+            () -> betterEndConfig.thallasiumAttackBonus,
             () -> betterEndConfig.thallasiumMiningLevel,
             () -> betterEndConfig.thallasiumEnchantability,
             "betterend:thallasium_ingot"
     );
 
-    static Registrar<Item> BETTER_END_ITEMS = ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
+    private static Registrar<Item> createRegistrar() {
+        return ConfigApiJava.platform().createRegistrar(MOD_ID, BuiltInRegistries.ITEM);
+    }
 
-    public static final SwordSet AETERNIUM_ITEMS = new SwordSet(BETTER_END_ITEMS,"betterend", AETERNIUM, SwordItem::new);
-    public static final SwordSet TERMINITE_ITEMS = new SwordSet(BETTER_END_ITEMS,"betterend", TERMINITE, SwordItem::new);
-    public static final SwordSet THALLASIUM_ITEMS = new SwordSet(BETTER_END_ITEMS,"betterend", THALLASIUM, SwordItem::new);
+    private static final String NAMESPACE = "betterend";
+
+    private static final Registrar<Item> AETERNIUM_REGISTRAR = createRegistrar();
+    public static final SwordSet AETERNIUM_ITEMS = new SwordSet(AETERNIUM_REGISTRAR, NAMESPACE, AETERNIUM, SwordItem::new);
+
+    private static final Registrar<Item> TERMINITE_REGISTRAR = createRegistrar();
+    public static final SwordSet TERMINITE_ITEMS = new SwordSet(TERMINITE_REGISTRAR, NAMESPACE, TERMINITE, SwordItem::new);
+
+    private static final Registrar<Item> THALLASIUM_REGISTRAR = createRegistrar();
+    public static final SwordSet THALLASIUM_ITEMS = new SwordSet(THALLASIUM_REGISTRAR, NAMESPACE, THALLASIUM, SwordItem::new);
 
     public static void smartRegister() {
-        BETTER_END_ITEMS.init();
+        if (betterEndConfig.aeterniumEnabled) {
+            AETERNIUM_REGISTRAR.init();
+        }
+        if (betterEndConfig.terminiteEnabled) {
+            TERMINITE_REGISTRAR.init();
+        }
+        if (betterEndConfig.thallasiumEnabled) {
+            THALLASIUM_REGISTRAR.init();
+        }
     }
+
 }

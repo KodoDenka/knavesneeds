@@ -14,12 +14,17 @@ public class KnavesSoulsWeaponsConfig extends Config {
         super(new ResourceLocation(MOD_ID, "souls_weapons_config"));
     }
 
-    @Comment("Material - Translucent")
+    @Comment("Enables/disables - Knaves' Needs' Translucent additions.")
     public boolean translucentEnabled = true;
+    @Comment("Translucent durability/uses, can be any whole number.")
     public int translucentDurability = 1000;
-    public float translucentMiningSpeedMultiplier = 1.0f;
-    public float translucentAttackDamage = 0.0f;
-    public int translucentMiningLevel = 1;
+    @Comment("Translucent attack speed, can be any decimal number.")
+    public float translucentSpeed = 1.0f;
+    @Comment("Translucent bonus damage, can be any decimal number.")
+    public float translucentAttackBonus = 0.0f;
+    @Comment("Translucent mining level, can be any whole number.")
+    public int translucentMiningLevel = 1;    
+    @Comment("Translucent enchantability, can be any whole number.")
     public int translucentEnchantability = 15;
 
     @Override

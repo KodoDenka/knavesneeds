@@ -7,7 +7,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public record SimpleTier(
+public record TierHelper(
         String name,
         Supplier<Integer> uses,
         Supplier<Float> speed,
@@ -17,11 +17,11 @@ public record SimpleTier(
         Supplier<Ingredient> repairIngredient
 ) implements Tier {
 
-    public SimpleTier(Supplier<Integer> uses, Supplier<Float> speed, Supplier<Float> attackDamageBonus, Supplier<Integer> level, Supplier<Integer> enchantmentValue, String repairIngredientId) {
+    public TierHelper(Supplier<Integer> uses, Supplier<Float> speed, Supplier<Float> attackDamageBonus, Supplier<Integer> level, Supplier<Integer> enchantmentValue, String repairIngredientId) {
         this("UNKNOWN", uses, speed, attackDamageBonus, level, enchantmentValue, () -> Ingredient.of(BuiltInRegistries.ITEM.get(new ResourceLocation(repairIngredientId))));
     }
 
-    public SimpleTier(String name, Supplier<Integer> uses, Supplier<Float> speed, Supplier<Float> attackDamageBonus, Supplier<Integer> level, Supplier<Integer> enchantmentValue, String repairIngredientId) {
+    public TierHelper(String name, Supplier<Integer> uses, Supplier<Float> speed, Supplier<Float> attackDamageBonus, Supplier<Integer> level, Supplier<Integer> enchantmentValue, String repairIngredientId) {
         this(name, uses, speed, attackDamageBonus, level, enchantmentValue, () -> Ingredient.of(BuiltInRegistries.ITEM.get(new ResourceLocation(repairIngredientId))));
     }
 
