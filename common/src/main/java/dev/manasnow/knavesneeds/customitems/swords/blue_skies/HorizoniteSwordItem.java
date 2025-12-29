@@ -1,5 +1,6 @@
 package dev.manasnow.knavesneeds.customitems.swords.blue_skies;
 
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import net.minecraft.network.chat.Style;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
@@ -10,10 +11,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.ChatFormatting;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 
-public class HorizoniteSwordItem extends SwordItem{
-    public HorizoniteSwordItem(Tier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
+public class HorizoniteSwordItem extends DynamicSwordItem {
+    public HorizoniteSwordItem(Tier tier, Supplier<Integer> attackDamageModifier, Supplier<Float> attackSpeedModifier, Properties properties) {
         super(tier, attackDamageModifier, attackSpeedModifier, properties);
     }
 

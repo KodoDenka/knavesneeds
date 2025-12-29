@@ -8,6 +8,7 @@ import net.minecraft.world.item.Tier;
 import net.sweenus.simplyswords.SimplySwords;
 
 import java.util.Locale;
+import java.util.function.Supplier;
 
 public class SwordSet {
     public final RegistrySupplier<Item> LONGSWORD;
@@ -46,7 +47,7 @@ public class SwordSet {
 
     private RegistrySupplier<Item> register(Registrar<Item> registrar, String namespace, String id, Tier tier, SwordFactory factory) {
         return registrar.register(namespace + "/" + tier.toString().toLowerCase(Locale.ROOT) + "/" + id, () ->
-                factory.create(tier, getAttackDamageModifier(id), getAttackSpeedModifier(id), new Item.Properties()));
+                factory.create(tier, () -> getAttackDamageModifier(id), () -> getAttackSpeedModifier(id), new Item.Properties()));
     }
 
     //Grabs attack speed modifier from SimplySwords config. Wrapped to be safer for early loading.
@@ -55,7 +56,6 @@ public class SwordSet {
         if (simplySwordsConfig == null) {
             return switch (id) {
                 case "twinblade", "rapier", "katana", "sai", "chakram" -> -2.0f;
-                case "spear", "glaive", "cutlass" -> -2.4f;
                 case "warglaive" -> -2.2f;
                 case "claymore", "greathammer", "greataxe", "scythe", "halberd" -> -3.0f;
                 default -> -2.4f;
@@ -88,7 +88,6 @@ public class SwordSet {
             return switch (id) {
                 case "twinblade", "sai", "chakram" -> 1;
                 case "rapier", "katana", "spear" -> 2;
-                case "glaive", "warglaive", "cutlass" -> 3;
                 case "claymore", "greathammer", "greataxe", "scythe", "halberd" -> 4;
                 default -> 3;
             };
@@ -114,6 +113,6 @@ public class SwordSet {
 
     @FunctionalInterface
     public interface SwordFactory {
-        SwordItem create(Tier tier, int attackDamageModifier, float attackSpeedModifier, Item.Properties properties);
+        SwordItem create(Tier tier, Supplier<Integer> attackDamageModifier, Supplier<Float> attackSpeedModifier, Item.Properties properties);
     }
 }

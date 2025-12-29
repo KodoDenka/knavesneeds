@@ -1,6 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesBetterNetherConfig;
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
@@ -54,13 +55,13 @@ public class BetterNetherAdditionsRegistries {
     private static final String NAMESPACE = "betternether";
 
     private static final Registrar<Item> CINCINNASITE_REGISTRAR = createRegistrar();
-    public static final SwordSet CINCINNASITE_ITEMS = new SwordSet(createRegistrar(), NAMESPACE, CINCINNASITE, SwordItem::new);
+    public static final SwordSet CINCINNASITE_ITEMS = new SwordSet(createRegistrar(), NAMESPACE, CINCINNASITE, DynamicSwordItem::new);
 
     private static final Registrar<Item> CINCINNASITE_DIAMOND_REGISTRAR = createRegistrar();
-    public static final SwordSet CINCINNASITE_DIAMOND_ITEMS = new SwordSet(CINCINNASITE_DIAMOND_REGISTRAR, NAMESPACE, CINCINNASITE_DIAMOND, SwordItem::new);
+    public static final SwordSet CINCINNASITE_DIAMOND_ITEMS = new SwordSet(CINCINNASITE_DIAMOND_REGISTRAR, NAMESPACE, CINCINNASITE_DIAMOND, DynamicSwordItem::new);
 
     private static final Registrar<Item> NETHER_RUBY_REGISTRAR = createRegistrar();
-    public static final SwordSet NETHER_RUBY_ITEMS = new SwordSet(NETHER_RUBY_REGISTRAR, NAMESPACE, NETHER_RUBY, SwordItem::new);
+    public static final SwordSet NETHER_RUBY_ITEMS = new SwordSet(NETHER_RUBY_REGISTRAR, NAMESPACE, NETHER_RUBY, DynamicSwordItem::new);
 
     public static void smartRegister() {
         if (betterNetherConfig.cincinnasiteEnabled) {

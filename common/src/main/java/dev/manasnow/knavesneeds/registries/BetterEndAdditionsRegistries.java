@@ -1,6 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesBetterEndConfig;
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
@@ -53,13 +54,13 @@ public class BetterEndAdditionsRegistries {
     private static final String NAMESPACE = "betterend";
 
     private static final Registrar<Item> AETERNIUM_REGISTRAR = createRegistrar();
-    public static final SwordSet AETERNIUM_ITEMS = new SwordSet(AETERNIUM_REGISTRAR, NAMESPACE, AETERNIUM, SwordItem::new);
+    public static final SwordSet AETERNIUM_ITEMS = new SwordSet(AETERNIUM_REGISTRAR, NAMESPACE, AETERNIUM, DynamicSwordItem::new);
 
     private static final Registrar<Item> TERMINITE_REGISTRAR = createRegistrar();
-    public static final SwordSet TERMINITE_ITEMS = new SwordSet(TERMINITE_REGISTRAR, NAMESPACE, TERMINITE, SwordItem::new);
+    public static final SwordSet TERMINITE_ITEMS = new SwordSet(TERMINITE_REGISTRAR, NAMESPACE, TERMINITE, DynamicSwordItem::new);
 
     private static final Registrar<Item> THALLASIUM_REGISTRAR = createRegistrar();
-    public static final SwordSet THALLASIUM_ITEMS = new SwordSet(THALLASIUM_REGISTRAR, NAMESPACE, THALLASIUM, SwordItem::new);
+    public static final SwordSet THALLASIUM_ITEMS = new SwordSet(THALLASIUM_REGISTRAR, NAMESPACE, THALLASIUM, DynamicSwordItem::new);
 
     public static void smartRegister() {
         if (betterEndConfig.aeterniumEnabled) {

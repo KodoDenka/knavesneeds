@@ -1,6 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesTwilightForestConfig;
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.customitems.swords.twilight_forest.FierySwordItem;
 import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
@@ -8,7 +9,6 @@ import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
@@ -65,16 +65,16 @@ public class TwilightForestAdditionsRegistries {
     private static final String NAMESPACE = "twilight_forest";
 
     private static final Registrar<Item> STEELEAF_REGISTRAR = createRegistrar();
-    public static final SwordSet STEELEAF_ITEMS = new SwordSet(STEELEAF_REGISTRAR, NAMESPACE, STEELEAF, SwordItem::new);
+    public static final SwordSet STEELEAF_ITEMS = new SwordSet(STEELEAF_REGISTRAR, NAMESPACE, STEELEAF, DynamicSwordItem::new);
 
     private static final Registrar<Item> FIERY_REGISTRAR = createRegistrar();
     public static final SwordSet FIERY_ITEMS = new SwordSet(FIERY_REGISTRAR, NAMESPACE, FIERY, FierySwordItem::new);
 
     private static final Registrar<Item> IRONWOOD_REGISTRAR = createRegistrar();
-    public static final SwordSet IRONWOOD_ITEMS = new SwordSet(IRONWOOD_REGISTRAR, NAMESPACE, IRONWOOD, SwordItem::new);
+    public static final SwordSet IRONWOOD_ITEMS = new SwordSet(IRONWOOD_REGISTRAR, NAMESPACE, IRONWOOD, DynamicSwordItem::new);
 
     private static final Registrar<Item> KNIGHTMETAL_REGISTRAR = createRegistrar();
-    public static final SwordSet KNIGHTMETAL_ITEMS = new SwordSet(KNIGHTMETAL_REGISTRAR, NAMESPACE, KNIGHTMETAL, SwordItem::new);
+    public static final SwordSet KNIGHTMETAL_ITEMS = new SwordSet(KNIGHTMETAL_REGISTRAR, NAMESPACE, KNIGHTMETAL, DynamicSwordItem::new);
 
     public static void smartRegister() {
         if (twilightForestConfig.fieryEnabled) {

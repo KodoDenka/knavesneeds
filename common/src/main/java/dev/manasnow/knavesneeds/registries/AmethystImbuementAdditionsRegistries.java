@@ -1,6 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesAmethystImbuementConfig;
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
@@ -63,16 +64,16 @@ public class AmethystImbuementAdditionsRegistries {
     private static final String NAMESPACE = "amethyst_imbuement";
 
     private static final Registrar<Item> AMETRINE_REGISTRAR = createRegistrar();
-    public static final SwordSet AMETRINE_ITEMS = new SwordSet(AMETRINE_REGISTRAR, NAMESPACE, AMETRINE, SwordItem::new);
+    public static final SwordSet AMETRINE_ITEMS = new SwordSet(AMETRINE_REGISTRAR, NAMESPACE, AMETRINE, DynamicSwordItem::new);
 
     private static final Registrar<Item> GARNET_REGISTRAR = createRegistrar();
-    public static final SwordSet GARNET_ITEMS = new SwordSet(GARNET_REGISTRAR, NAMESPACE, GARNET, SwordItem::new);
+    public static final SwordSet GARNET_ITEMS = new SwordSet(GARNET_REGISTRAR, NAMESPACE, GARNET, DynamicSwordItem::new);
 
     private static final Registrar<Item> GLOWING_REGISTRAR = createRegistrar();
-    public static final SwordSet GLOWING_ITEMS = new SwordSet(GLOWING_REGISTRAR, NAMESPACE, GLOWING, SwordItem::new);
+    public static final SwordSet GLOWING_ITEMS = new SwordSet(GLOWING_REGISTRAR, NAMESPACE, GLOWING, DynamicSwordItem::new);
 
     private static final Registrar<Item> STEEL_REGISTRAR = createRegistrar();
-    public static final SwordSet STEEL_ITEMS = new SwordSet(STEEL_REGISTRAR, NAMESPACE, STEEL, SwordItem::new);
+    public static final SwordSet STEEL_ITEMS = new SwordSet(STEEL_REGISTRAR, NAMESPACE, STEEL, DynamicSwordItem::new);
 
     public static void smartRegister() {
         if (amethystImbuementConfig.ametrineEnabled) {

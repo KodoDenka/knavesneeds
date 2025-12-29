@@ -1,13 +1,13 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesBlueSkiesConfig;
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
 public class BlueSkiesAdditionsRegistries {
@@ -163,46 +163,46 @@ public class BlueSkiesAdditionsRegistries {
     private static final String NAMESPACE = "blue_skies";
 
     private static final Registrar<Item> PYROPE_REGISTRAR = createRegistrar();
-    public static final SwordSet PYROPE_ITEMS = new SwordSet(PYROPE_REGISTRAR, NAMESPACE, PYROPE, SwordItem::new);
+    public static final SwordSet PYROPE_ITEMS = new SwordSet(PYROPE_REGISTRAR, NAMESPACE, PYROPE, DynamicSwordItem::new);
 
     private static final Registrar<Item> AQUITE_REGISTRAR = createRegistrar();
-    public static final SwordSet AQUITE_ITEMS = new SwordSet(AQUITE_REGISTRAR, NAMESPACE, AQUITE, SwordItem::new);
+    public static final SwordSet AQUITE_ITEMS = new SwordSet(AQUITE_REGISTRAR, NAMESPACE, AQUITE, DynamicSwordItem::new);
 
     private static final Registrar<Item> DIOPSIDE_REGISTRAR = createRegistrar();
-    public static final SwordSet DIOPSIDE_ITEMS = new SwordSet(DIOPSIDE_REGISTRAR, NAMESPACE, DIOPSIDE, SwordItem::new);
+    public static final SwordSet DIOPSIDE_ITEMS = new SwordSet(DIOPSIDE_REGISTRAR, NAMESPACE, DIOPSIDE, DynamicSwordItem::new);
 
     private static final Registrar<Item> CHAROITE_REGISTRAR = createRegistrar();
-    public static final SwordSet CHAROITE_ITEMS = new SwordSet(CHAROITE_REGISTRAR, NAMESPACE, CHAROITE, SwordItem::new);
+    public static final SwordSet CHAROITE_ITEMS = new SwordSet(CHAROITE_REGISTRAR, NAMESPACE, CHAROITE, DynamicSwordItem::new);
 
     private static final Registrar<Item> HORIZONITE_REGISTRAR = createRegistrar();
-    public static final SwordSet HORIZONITE_ITEMS = new SwordSet(HORIZONITE_REGISTRAR, NAMESPACE, HORIZONITE, SwordItem::new);
+    public static final SwordSet HORIZONITE_ITEMS = new SwordSet(HORIZONITE_REGISTRAR, NAMESPACE, HORIZONITE, DynamicSwordItem::new);
 
     private static final Registrar<Item> TURQUOISE_STONE_REGISTRAR = createRegistrar();
-    public static final SwordSet TURQUOISE_STONE_ITEMS = new SwordSet(TURQUOISE_STONE_REGISTRAR, NAMESPACE, TURQUOISE_STONE, SwordItem::new);
+    public static final SwordSet TURQUOISE_STONE_ITEMS = new SwordSet(TURQUOISE_STONE_REGISTRAR, NAMESPACE, TURQUOISE_STONE, DynamicSwordItem::new);
 
     private static final Registrar<Item> LUNAR_STONE_REGISTRAR = createRegistrar();
-    public static final SwordSet LUNAR_STONE_ITEMS = new SwordSet(LUNAR_STONE_REGISTRAR, NAMESPACE, LUNAR_STONE, SwordItem::new);
+    public static final SwordSet LUNAR_STONE_ITEMS = new SwordSet(LUNAR_STONE_REGISTRAR, NAMESPACE, LUNAR_STONE, DynamicSwordItem::new);
 
     private static final Registrar<Item> BLUEBRIGHT_WOOD_REGISTRAR = createRegistrar();
-    public static final SwordSet BLUEBRIGHT_WOOD_ITEMS = new SwordSet(BLUEBRIGHT_WOOD_REGISTRAR, NAMESPACE, BLUEBRIGHT_WOOD, SwordItem::new);
+    public static final SwordSet BLUEBRIGHT_WOOD_ITEMS = new SwordSet(BLUEBRIGHT_WOOD_REGISTRAR, NAMESPACE, BLUEBRIGHT_WOOD, DynamicSwordItem::new);
 
     private static final Registrar<Item> LUNAR_WOOD_REGISTRAR = createRegistrar();
-    public static final SwordSet LUNAR_WOOD_ITEMS = new SwordSet(LUNAR_WOOD_REGISTRAR, NAMESPACE, LUNAR_WOOD, SwordItem::new);
+    public static final SwordSet LUNAR_WOOD_ITEMS = new SwordSet(LUNAR_WOOD_REGISTRAR, NAMESPACE, LUNAR_WOOD, DynamicSwordItem::new);
 
     private static final Registrar<Item> STARLIT_WOOD_REGISTRAR = createRegistrar();
-    public static final SwordSet STARLIT_WOOD_ITEMS = new SwordSet(STARLIT_WOOD_REGISTRAR, NAMESPACE, STARLIT_WOOD, SwordItem::new);
+    public static final SwordSet STARLIT_WOOD_ITEMS = new SwordSet(STARLIT_WOOD_REGISTRAR, NAMESPACE, STARLIT_WOOD, DynamicSwordItem::new);
 
     private static final Registrar<Item> DUSK_WOOD_REGISTRAR = createRegistrar();
-    public static final SwordSet DUSK_WOOD_ITEMS = new SwordSet(DUSK_WOOD_REGISTRAR, NAMESPACE, DUSK_WOOD, SwordItem::new);
+    public static final SwordSet DUSK_WOOD_ITEMS = new SwordSet(DUSK_WOOD_REGISTRAR, NAMESPACE, DUSK_WOOD, DynamicSwordItem::new);
 
     private static final Registrar<Item> FROSTBRIGHT_WOOD_REGISTRAR = createRegistrar();
-    public static final SwordSet FROSTBRIGHT_WOOD_ITEMS = new SwordSet(FROSTBRIGHT_WOOD_REGISTRAR, NAMESPACE, FROSTBRIGHT_WOOD, SwordItem::new);
+    public static final SwordSet FROSTBRIGHT_WOOD_ITEMS = new SwordSet(FROSTBRIGHT_WOOD_REGISTRAR, NAMESPACE, FROSTBRIGHT_WOOD, DynamicSwordItem::new);
 
     private static final Registrar<Item> MAPLE_WOOD_REGISTRAR = createRegistrar();
-    public static final SwordSet MAPLE_WOOD_ITEMS = new SwordSet(MAPLE_WOOD_REGISTRAR, NAMESPACE, MAPLE_WOOD, SwordItem::new);
+    public static final SwordSet MAPLE_WOOD_ITEMS = new SwordSet(MAPLE_WOOD_REGISTRAR, NAMESPACE, MAPLE_WOOD, DynamicSwordItem::new);
 
     private static final Registrar<Item> COMET_WOOD_REGISTRAR = createRegistrar();
-    public static final SwordSet COMET_WOOD_ITEMS = new SwordSet(COMET_WOOD_REGISTRAR, NAMESPACE, COMET_WOOD, SwordItem::new);
+    public static final SwordSet COMET_WOOD_ITEMS = new SwordSet(COMET_WOOD_REGISTRAR, NAMESPACE, COMET_WOOD, DynamicSwordItem::new);
 
     public static void smartRegister() {
         if (blueSkiesConfig.pyropeEnabled) {

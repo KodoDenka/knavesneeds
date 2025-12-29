@@ -1,5 +1,6 @@
 package dev.manasnow.knavesneeds.customitems.swords.twilight_forest;
 
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -9,10 +10,11 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 
-public class KnightmetalSwordItem extends SwordItem{
-    public KnightmetalSwordItem(Tier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
+public class KnightmetalSwordItem extends DynamicSwordItem {
+    public KnightmetalSwordItem(Tier tier, Supplier<Integer> attackDamageModifier, Supplier<Float> attackSpeedModifier, Properties properties) {
         super(tier, attackDamageModifier, attackSpeedModifier, properties);
     }
 

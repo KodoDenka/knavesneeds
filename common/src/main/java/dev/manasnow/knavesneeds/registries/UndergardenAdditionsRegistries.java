@@ -1,6 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesUndergardenConfig;
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.customitems.swords.undergarden.ForgottenSwordItem;
 import dev.manasnow.knavesneeds.customitems.swords.undergarden.FroststeelSwordItem;
 import dev.manasnow.knavesneeds.customitems.swords.undergarden.UtheriumSwordItem;
@@ -66,7 +67,7 @@ public class UndergardenAdditionsRegistries {
     private static final String NAMESPACE = "undergarden";
 
     private static final Registrar<Item> CLOGGRUM_REGISTRAR = createRegistrar();
-    public static final SwordSet CLOGGRUM_ITEMS = new SwordSet(CLOGGRUM_REGISTRAR, NAMESPACE, CLOGGRUM, SwordItem::new);
+    public static final SwordSet CLOGGRUM_ITEMS = new SwordSet(CLOGGRUM_REGISTRAR, NAMESPACE, CLOGGRUM, DynamicSwordItem::new);
 
     private static final Registrar<Item> FORGOTTEN_REGISTRAR = createRegistrar();
     public static final SwordSet FORGOTTEN_ITEMS = new SwordSet(FORGOTTEN_REGISTRAR, NAMESPACE, FORGOTTEN, ForgottenSwordItem::new);

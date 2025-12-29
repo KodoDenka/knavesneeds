@@ -1,6 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesForbiddenArcanusConfig;
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
@@ -34,7 +35,7 @@ public class ForbiddenArcanusAdditionsRegistries {
     private static final String NAMESPACE = "forbidden_arcanus";
 
     private static final Registrar<Item> DRACO_ARCANUS_REGISTRAR = createRegistrar();
-    public static final SwordSet DRACO_ARCANUS_ITEMS = new SwordSet(DRACO_ARCANUS_REGISTRAR, NAMESPACE, DRACO_ARCANUS, SwordItem::new);
+    public static final SwordSet DRACO_ARCANUS_ITEMS = new SwordSet(DRACO_ARCANUS_REGISTRAR, NAMESPACE, DRACO_ARCANUS, DynamicSwordItem::new);
 
     public static void smartRegister() {
         if (forbiddenArcanusConfig.dracoArcanusEnabled) {

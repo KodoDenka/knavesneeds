@@ -1,5 +1,6 @@
 package dev.manasnow.knavesneeds.customitems.swords.undergarden;
 
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.customitems.swords.twilight_forest.KnightmetalSwordItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -10,10 +11,11 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 
-public class ForgottenSwordItem extends SwordItem{
-    public ForgottenSwordItem(Tier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
+public class ForgottenSwordItem extends DynamicSwordItem {
+    public ForgottenSwordItem(Tier tier, Supplier<Integer> attackDamageModifier, Supplier<Float> attackSpeedModifier, Properties properties) {
         super(tier, attackDamageModifier, attackSpeedModifier, properties);
     }
 

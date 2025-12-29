@@ -1,6 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesDeeperDarkerConfig;
+import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
@@ -34,7 +35,7 @@ public class DeeperDarkerAdditionsRegistries {
     private static final String NAMESPACE = "deeperdarker";
 
     private static final Registrar<Item> WARDEN_REGISTRAR = createRegistrar();
-    public static final SwordSet WARDEN_ITEMS = new SwordSet(WARDEN_REGISTRAR, NAMESPACE, WARDEN, SwordItem::new);
+    public static final SwordSet WARDEN_ITEMS = new SwordSet(WARDEN_REGISTRAR, NAMESPACE, WARDEN, DynamicSwordItem::new);
 
     public static void smartRegister() {
         WARDEN_REGISTRAR.init();
