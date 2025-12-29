@@ -5,6 +5,7 @@ import dev.manasnow.knavesneeds.Constants;
 import dev.manasnow.knavesneeds.KnavesCommon;
 import dev.manasnow.knavesneeds.helpers.BetterCombatHelper;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -39,31 +40,30 @@ public class LivingEntityMixin {
         return player.getMainHandItem();
     }
 
-    //TODO - Causes fzzy_config to register configs for unloaded mods due to tier checks. (Fix this.)
     @Unique
     private float knavesneeds$applySwordEffects(float amount, LivingEntity target, SwordItem swordItem) {
         Tier tier = swordItem.getTier();
 
-        // Fiery Weapon burn
-        if (tier.toString().equals("FIERY")) {
-            Constants.LOG.info("Horizonite/Fiery event -");
-            Constants.LOG.info(tier.toString());
-            target.setSecondsOnFire(2);
-        }
-
-        // Knightmetal armor bonus
-        else if (tier.toString().equals("KNIGHTMETAL")) {
-            Constants.LOG.info("Knightmetal event -");
-            Constants.LOG.info(tier.toString());
-            if (target.getArmorValue() > 0) {
-                if (target.getArmorCoverPercentage() > 0.0f) {
-                    int damageBonus = (int) (2.0f * target.getArmorCoverPercentage());
-                    return amount + (float) damageBonus;
-                } else {
-                    return amount + 2.0f;
-                }
+        return switch (tier.toString()) {
+            // Fiery Weapon burn
+            case "FIERY" -> {
+                target.setSecondsOnFire(2);
+                yield amount;
             }
-        }
-        return amount;
+            // Knightmetal armor bonus damage
+            case "KNIGHTMETAL" -> {
+                if (target.getArmorValue() > 0) {
+                    if (target.getArmorCoverPercentage() > 0.0f) {
+                        int damageBonus = (int) (2.0f * target.getArmorCoverPercentage());
+                        yield amount + (float) damageBonus;
+                    } else {
+                        yield amount + 2.0f;
+                    }
+                }
+                yield amount;
+            }
+            // Do nothing case.
+            default -> amount;
+        };
     }
 }

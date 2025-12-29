@@ -1,7 +1,6 @@
 package dev.manasnow.knavesneeds.config;
 
-import me.fzzyhmstrs.fzzy_config.annotations.Comment;
-import me.fzzyhmstrs.fzzy_config.annotations.Version;
+import me.fzzyhmstrs.fzzy_config.annotations.*;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
 
@@ -27,11 +26,13 @@ public class KnavesTwilightForestConfig extends Config {
     @Comment("Fiery enchantability, can be any whole number.")
     public int fieryEnchantability = 10;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Ironwood additions.")
     public boolean ironwoodEnabled = true;
     @Comment("Ironwood durability/uses, can be any whole number.")
     public int ironwoodDurability = 512;
     @Comment("Ironwood attack speed, can be any decimal number.")
+    @Name("Ironwood §3Speeeeeeed")
     public float ironwoodSpeed = 6.5f;
     @Comment("Ironwood bonus damage, can be any decimal number.")
     public float ironwoodAttackBonus = 2.5f;

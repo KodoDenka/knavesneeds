@@ -60,5 +60,13 @@ loom {
             ideConfigGenerated(true)
             runDir("run")
         }
+        datagen {
+            inherit client
+                name "Fabric Data Generate"
+                vmArg "-Dfabric-api.datagen"
+                vmArg "-Dfabric-api.datagen.output-dir=${project(":common").file("src/main/resources")}"
+                vmArg "-Dfabric-api.datagen.modid=${mod_id}"
+
+                }
     }
 }
