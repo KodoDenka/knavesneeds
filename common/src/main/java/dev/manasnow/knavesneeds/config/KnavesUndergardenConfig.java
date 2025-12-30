@@ -1,6 +1,8 @@
 package dev.manasnow.knavesneeds.config;
 
+import me.fzzyhmstrs.fzzy_config.annotations.Action;
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.RequiresAction;
 import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
@@ -14,6 +16,7 @@ public class KnavesUndergardenConfig extends Config {
         super(new ResourceLocation(MOD_ID, "undergarden_config"));
     }
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Cloggrum additions.")
     public boolean cloggrumEnabled = true;
     @Comment("Cloggrum durability/uses, can be any whole number.")
@@ -27,6 +30,7 @@ public class KnavesUndergardenConfig extends Config {
     @Comment("Cloggrum enchantability, can be any whole number.")
     public int cloggrumEnchantability = 8;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Froststeel additions.")
     public boolean froststeelEnabled = true;
     @Comment("Froststeel durability/uses, can be any whole number.")
@@ -40,6 +44,7 @@ public class KnavesUndergardenConfig extends Config {
     @Comment("Froststeel enchantability, can be any whole number.")
     public int froststeelEnchantability = 20;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Utherium additions.")
     public boolean utheriumEnabled = true;
     @Comment("Utherium durability/uses, can be any whole number.")
@@ -53,6 +58,7 @@ public class KnavesUndergardenConfig extends Config {
     @Comment("Utherium enchantability, can be any whole number.")
     public int utheriumEnchantability = 17;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Forgotten additions.")
     public boolean forgottenEnabled = true;
     @Comment("Forgotten durability/uses, can be any whole number.")

@@ -1,6 +1,8 @@
 package dev.manasnow.knavesneeds.config;
 
+import me.fzzyhmstrs.fzzy_config.annotations.Action;
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.RequiresAction;
 import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
@@ -14,6 +16,7 @@ public class KnavesForbiddenArcanusConfig extends Config {
         super(new ResourceLocation(MOD_ID, "forbidden_arcanus_config"));
     }
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Deorum additions.")
     public boolean deorumEnabled = true;
     @Comment("Deorum durability/uses, can be any whole number.")
@@ -27,6 +30,7 @@ public class KnavesForbiddenArcanusConfig extends Config {
     @Comment("Deorum enchantability, can be any whole number.")
     public int deorumEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Reinforced Deorum additions.")
     public boolean reinforcedDeorumEnabled = true;
     @Comment("Reinforced Deorum durability/uses, can be any whole number.")
@@ -40,6 +44,7 @@ public class KnavesForbiddenArcanusConfig extends Config {
     @Comment("Reinforced Deorum enchantability, can be any whole number.")
     public int reinforcedDeorumEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Draco Arcanus additions.")
     public boolean dracoArcanusEnabled = true;
     @Comment("Draco Arcanus durability/uses, can be any whole number.")

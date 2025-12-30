@@ -1,6 +1,8 @@
 package dev.manasnow.knavesneeds.config;
 
+import me.fzzyhmstrs.fzzy_config.annotations.Action;
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.RequiresAction;
 import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
@@ -15,6 +17,7 @@ public class KnavesAmethystImbuementConfig extends Config {
         super(new ResourceLocation(MOD_ID, "amethyst_imbuement_config"));
     }
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Ametrine additions.")
     public boolean ametrineEnabled = true;
     @Comment("Ametrine durability/uses, can be any whole number.")
@@ -28,6 +31,7 @@ public class KnavesAmethystImbuementConfig extends Config {
     @Comment("Ametrine enchantability, can be any whole number.")
     public int ametrineEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Garnet additions.")
     public boolean garnetEnabled = true;
     @Comment("Garnet durability/uses, can be any whole number.")
@@ -41,6 +45,7 @@ public class KnavesAmethystImbuementConfig extends Config {
     @Comment("Garnet enchantability, can be any whole number.")
     public int garnetEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Glowing additions.")
     public boolean glowingEnabled = true;
     @Comment("Glowing durability/uses, can be any whole number.")
@@ -54,6 +59,7 @@ public class KnavesAmethystImbuementConfig extends Config {
     @Comment("Glowing enchantability, can be any whole number.")
     public int glowingEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Steel additions.")
     public boolean steelEnabled = true;
     @Comment("Steel durability/uses, can be any whole number.")

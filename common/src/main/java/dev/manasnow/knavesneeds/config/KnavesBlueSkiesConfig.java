@@ -1,6 +1,8 @@
 package dev.manasnow.knavesneeds.config;
 
+import me.fzzyhmstrs.fzzy_config.annotations.Action;
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.RequiresAction;
 import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
@@ -14,6 +16,7 @@ public class KnavesBlueSkiesConfig extends Config {
         super(new ResourceLocation(MOD_ID, "blue_skies_config"));
     }
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Pyrope additions.")
     public boolean pyropeEnabled = true;
     @Comment("Pyrope durability/uses, can be any whole number.")
@@ -27,6 +30,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Pyrope enchantability, can be any whole number.")
     public int pyropeEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Aquite additions.")
     public boolean aquiteEnabled = true;
     @Comment("Aquite durability/uses, can be any whole number.")
@@ -40,6 +44,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Aquite enchantability, can be any whole number.")
     public int aquiteEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Diopside additions.")
     public boolean diopsideEnabled = true;
     @Comment("Diopside durability/uses, can be any whole number.")
@@ -53,6 +58,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Diopside enchantability, can be any whole number.")
     public int diopsideEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Charoite additions.")
     public boolean charoiteEnabled = true;
     @Comment("Charoite durability/uses, can be any whole number.")
@@ -66,6 +72,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Charoite enchantability, can be any whole number.")
     public int charoiteEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Horizonite additions.")
     public boolean horizoniteEnabled = true;
     @Comment("Horizonite durability/uses, can be any whole number.")
@@ -79,6 +86,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Horizonite enchantability, can be any whole number.")
     public int horizoniteEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Turquoise Stone additions.")
     public boolean turquoiseStoneEnabled = true;
     @Comment("Turquoise Stone durability/uses, can be any whole number.")
@@ -92,6 +100,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Turquoise Stone enchantability, can be any whole number.")
     public int turquoiseStoneEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Lunar Stone additions.")
     public boolean lunarStoneEnabled = true;
     @Comment("Lunar Stone durability/uses, can be any whole number.")
@@ -105,6 +114,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Lunar Stone enchantability, can be any whole number.")
     public int lunarStoneEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Bluebright Wood additions.")
     public boolean bluebrightWoodEnabled = true;
     @Comment("Bluebright Wood durability/uses, can be any whole number.")
@@ -118,6 +128,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Bluebright Wood enchantability, can be any whole number.")
     public int bluebrightWoodEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Lunar Wood additions.")
     public boolean lunarWoodEnabled = true;
     @Comment("Lunar Wood durability/uses, can be any whole number.")
@@ -131,6 +142,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Lunar Wood enchantability, can be any whole number.")
     public int lunarWoodEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Starlit Wood additions.")
     public boolean starlitWoodEnabled = true;
     @Comment("Starlit Wood durability/uses, can be any whole number.")
@@ -144,6 +156,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Starlit Wood enchantability, can be any whole number.")
     public int starlitWoodEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Dusk Wood additions.")
     public boolean duskWoodEnabled = true;
     @Comment("Dusk Wood durability/uses, can be any whole number.")
@@ -157,6 +170,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Dusk Wood enchantability, can be any whole number.")
     public int duskWoodEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Frostbright Wood additions.")
     public boolean frostbrightWoodEnabled = true;
     @Comment("Frostbright Wood durability/uses, can be any whole number.")
@@ -170,6 +184,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Frostbright Wood enchantability, can be any whole number.")
     public int frostbrightWoodEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Maple Wood additions.")
     public boolean mapleWoodEnabled = true;
     @Comment("Maple Wood durability/uses, can be any whole number.")
@@ -183,6 +198,7 @@ public class KnavesBlueSkiesConfig extends Config {
     @Comment("Maple Wood enchantability, can be any whole number.")
     public int mapleWoodEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Comet Wood additions.")
     public boolean cometWoodEnabled = true;
     @Comment("Comet Wood durability/uses, can be any whole number.")

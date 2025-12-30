@@ -1,6 +1,8 @@
 package dev.manasnow.knavesneeds.config;
 
+import me.fzzyhmstrs.fzzy_config.annotations.Action;
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.RequiresAction;
 import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
@@ -14,6 +16,7 @@ public class KnavesBetterEndConfig extends Config {
         super(new ResourceLocation(MOD_ID, "betterend_config"));
     }
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Aeternium additions.")
     public boolean aeterniumEnabled = true;
     @Comment("Aeternium durability/uses, can be any whole number.")
@@ -27,6 +30,7 @@ public class KnavesBetterEndConfig extends Config {
     @Comment("Aeternium enchantability, can be any whole number.")
     public int aeterniumEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Terminite additions.")
     public boolean terminiteEnabled = true;
     @Comment("Terminite durability/uses, can be any whole number.")
@@ -40,6 +44,7 @@ public class KnavesBetterEndConfig extends Config {
     @Comment("Terminite enchantability, can be any whole number.")
     public int terminiteEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Thallasium additions.")
     public boolean thallasiumEnabled = true;
     @Comment("Thallasium durability/uses, can be any whole number.")

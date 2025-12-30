@@ -1,6 +1,8 @@
 package dev.manasnow.knavesneeds.config;
 
+import me.fzzyhmstrs.fzzy_config.annotations.Action;
 import me.fzzyhmstrs.fzzy_config.annotations.Comment;
+import me.fzzyhmstrs.fzzy_config.annotations.RequiresAction;
 import me.fzzyhmstrs.fzzy_config.annotations.Version;
 import me.fzzyhmstrs.fzzy_config.config.Config;
 import net.minecraft.resources.ResourceLocation;
@@ -14,6 +16,7 @@ public class KnavesBetterNetherConfig extends Config {
         super(new ResourceLocation(MOD_ID, "better_nether_config"));
     }
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Cincinnasite additions.")
     public boolean cincinnasiteEnabled = true;
     @Comment("Cincinnasite durability/uses, can be any whole number.")
@@ -26,6 +29,7 @@ public class KnavesBetterNetherConfig extends Config {
     public int cincinnasiteMiningLevel = 1;
     public int cincinnasiteEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Cincinnasite Diamond additions.")
     public boolean cincinnasiteDiamondEnabled = true;
     @Comment("Cincinnasite Diamond durability/uses, can be any whole number.")
@@ -39,6 +43,7 @@ public class KnavesBetterNetherConfig extends Config {
     @Comment("Cincinnasite Diamond enchantability, can be any whole number.")
     public int cincinnasiteDiamondEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Nether Ruby additions.")
     public boolean netherRubyEnabled = true;
     @Comment("Nether Ruby durability/uses, can be any whole number.")
@@ -52,6 +57,7 @@ public class KnavesBetterNetherConfig extends Config {
     @Comment("Nether Ruby enchantability, can be any whole number.")
     public int netherRubyEnchantability = 15;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Flaming Ruby additions.")
     public boolean flamingRubyEnabled = true;
     @Comment("Flaming Ruby durability/uses, can be any whole number.")

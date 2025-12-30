@@ -13,14 +13,17 @@ public class KnavesTwilightForestConfig extends Config {
         super(new ResourceLocation(MOD_ID, "twilight_forest_config"));
     }
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Fiery additions.")
     public boolean fieryEnabled = true;
     @Comment("Fiery durability/uses, can be any whole number.")
     public int fieryDurability = 1024;
+    //ATTACK SPEED DOESN"T CHANGE REMOVE
     @Comment("Fiery attack speed, can be any decimal number.")
     public float fierySpeed = 9.0f;
     @Comment("Fiery bonus damage, can be any decimal number.")
     public float fieryAttackBonus = 4.0f;
+    //Doesn't really do anything remove
     @Comment("Fiery mining level, can be any whole number.")
     public int fieryMiningLevel = 4;
     @Comment("Fiery enchantability, can be any whole number.")
@@ -41,6 +44,7 @@ public class KnavesTwilightForestConfig extends Config {
     @Comment("Ironwood enchantability, can be any whole number.")
     public int ironwoodEnchantability = 25;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Knightmetal additions.")
     public boolean knightmetalEnabled = true;
     @Comment("Knightmetal durability/uses, can be any whole number.")
@@ -54,6 +58,7 @@ public class KnavesTwilightForestConfig extends Config {
     @Comment("Knightmetal enchantability, can be any whole number.")
     public int knightmetalEnchantability = 8;
 
+    @RequiresAction(action = Action.RESTART)
     @Comment("Enables/disables - Knaves' Needs' Steeleaf additions.")
     public boolean steeleafEnabled = true;
     @Comment("Steeleaf durability/uses, can be any whole number.")
