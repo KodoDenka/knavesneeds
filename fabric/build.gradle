@@ -67,6 +67,7 @@ loom {
                 vmArg "-Dfabric-api.datagen.output-dir=${project(":common").file("src/main/resources")}"
                 vmArg "-Dfabric-api.datagen.modid=${mod_id}"
 
+                runDir "build/datagen"
                 }
     }
 }
