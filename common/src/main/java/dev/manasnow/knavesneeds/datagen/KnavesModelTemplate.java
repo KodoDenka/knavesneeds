@@ -27,21 +27,25 @@ public class KnavesModelTemplate {
         return new ModelTemplate(Optional.of(new ResourceLocation("knavesneeds", "item/" + itemModelLocation)), Optional.empty(), requiredSlots);
     }
 
+    private static ModelTemplate createTwinblade(String itemModelLocation, TextureSlot... requiredSlots) {
+        return new ModelTemplate(Optional.of(new ResourceLocation("knavesneeds", "item/" + itemModelLocation)), Optional.empty(), requiredSlots);
+    }
+
     static {
-        LONGSWORD   = createItem("longsword", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        TWINBLADE   = createItem("twinblade", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        RAPIER      = createItem("rapier", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        KATANA      = createItem("katana", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        SAI         = createItem("sai", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        SPEAR       = createItem("spear", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        GLAIVE      = createItem("glaive", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        WARGLAIVE   = createItem("warglaive", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        CUTLASS     = createItem("cutlass", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        CLAYMORE    = createItem("claymore", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        GREATHAMMER = createItem("greathammer", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        GREATAXE    = createItem("greataxe", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        CHAKRAM     = createItem("chakram", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        SCYTHE      = createItem("scythe", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
-        HALBERD     = createItem("halberd", TextureSlot.PARTICLE, TextureSlot.NORTH, TextureSlot.SOUTH, TextureSlot.EAST, TextureSlot.WEST, TextureSlot.UP, TextureSlot.DOWN);
+        LONGSWORD   = createItem("templates/longsword", TextureSlot.LAYER0);
+        TWINBLADE   = createTwinblade("templates/twinblade", TextureSlot.LAYER0);
+        RAPIER      = createItem("templates/rapier", TextureSlot.LAYER0);
+        KATANA      = createItem("templates/katana", TextureSlot.LAYER0);
+        SAI         = createItem("templates/sai", TextureSlot.LAYER0);
+        SPEAR       = createItem("templates/spear", TextureSlot.LAYER0);
+        GLAIVE      = createItem("templates/glaive", TextureSlot.LAYER0);
+        WARGLAIVE   = createItem("templates/warglaive", TextureSlot.LAYER0);
+        CUTLASS     = createItem("templates/cutlass", TextureSlot.LAYER0);
+        CLAYMORE    = createItem("templates/claymore", TextureSlot.LAYER0);
+        GREATHAMMER = createItem("templates/greathammer", TextureSlot.LAYER0);
+        GREATAXE    = createItem("templates/greataxe", TextureSlot.LAYER0);
+        CHAKRAM     = createItem("templates/chakram", TextureSlot.LAYER0);
+        SCYTHE      = createItem("templates/scythe", TextureSlot.LAYER0);
+        HALBERD     = createItem("templates/halberd", TextureSlot.LAYER0);
     }
 }

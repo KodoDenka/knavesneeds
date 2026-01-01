@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/handheld",
+  "parent": "knavesneeds:item/templates/twinblade",
   "textures": {
     "layer0": "knavesneeds:item/amethyst_imbuement/ametrine/chakram"
   }

@@ -7,6 +7,11 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.ModelTemplate;
+import net.minecraft.data.models.model.TextureSlot;
+import net.minecraft.resources.ResourceLocation;
+
+import java.util.Optional;
 
 public class KnavesModelProvider extends FabricModelProvider {
     public KnavesModelProvider(FabricDataOutput output) {
@@ -29,7 +34,7 @@ public class KnavesModelProvider extends FabricModelProvider {
         //Models for Amethyst Imbuement Additions
         for (var item : AmethystImbuementAdditionsRegistries.AMETRINE_ITEMS) {
             Constants.LOG.info("Generating model for Ametrine item: {}", item.get());
-            itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.LONGSWORD);
+            itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.TWINBLADE);
         }
         for (var item : AmethystImbuementAdditionsRegistries.GARNET_ITEMS) {
             itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
