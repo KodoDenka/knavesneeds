@@ -7,10 +7,12 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.sweenus.simplyswords.SimplySwords;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.Locale;
 import java.util.function.Supplier;
 
-public class SwordSet {
+public class SwordSet implements Iterable<RegistrySupplier<Item>> {
     public final RegistrySupplier<Item> LONGSWORD;
     public final RegistrySupplier<Item> TWINBLADE;
     public final RegistrySupplier<Item> RAPIER;
@@ -26,6 +28,8 @@ public class SwordSet {
     public final RegistrySupplier<Item> CHAKRAM;
     public final RegistrySupplier<Item> SCYTHE;
     public final RegistrySupplier<Item> HALBERD;
+
+    private final List<RegistrySupplier<Item>> items;
 
     public SwordSet(Registrar<Item> registrar, String namespace, Tier tier, SwordFactory factory) {
         this.LONGSWORD = register(registrar, namespace, "longsword", tier, factory);
@@ -43,8 +47,19 @@ public class SwordSet {
         this.CHAKRAM = register(registrar, namespace, "chakram", tier, factory);
         this.SCYTHE = register(registrar, namespace, "scythe", tier, factory);
         this.HALBERD = register(registrar, namespace, "halberd", tier, factory);
+
+        this.items = List.of(
+                LONGSWORD, TWINBLADE, RAPIER, KATANA, SAI,
+                SPEAR, GLAIVE, WARGLAIVE, CUTLASS, CLAYMORE,
+                GREATHAMMER, GREATAXE, CHAKRAM, SCYTHE, HALBERD
+        );
     }
 
+    //This makes it so that SwordSets are iterable for datagen.
+    @Override
+    public Iterator<RegistrySupplier<Item>> iterator() {
+        return items.iterator();
+    }
     private RegistrySupplier<Item> register(Registrar<Item> registrar, String namespace, String id, Tier tier, SwordFactory factory) {
         return registrar.register(namespace + "/" + tier.toString().toLowerCase(Locale.ROOT) + "/" + id, () ->
                 factory.create(tier, () -> getAttackDamageModifier(id), () -> getAttackSpeedModifier(id), new Item.Properties()));

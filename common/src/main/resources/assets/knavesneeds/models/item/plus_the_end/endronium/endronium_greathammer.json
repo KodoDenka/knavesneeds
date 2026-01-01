@@ -1,6 +1,0 @@
-{
-  "parent": "knavesneeds:item/template_greathammer",
-  "textures": {
-    "texture": "knavesneeds:item/plus_the_end/endronium/endronium_greathammer"
-  }
-}

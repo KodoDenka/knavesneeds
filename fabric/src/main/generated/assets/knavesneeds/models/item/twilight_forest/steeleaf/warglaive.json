@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "knavesneeds:item/twilight_forest/steeleaf/warglaive"
+  }
+}

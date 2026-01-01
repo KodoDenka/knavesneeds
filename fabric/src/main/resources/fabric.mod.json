@@ -1,42 +1,44 @@
 {
-    "schemaVersion": 1,
-    "id": "mod_id",
-    "version": "${version}",
-    "name": "${mod_name}",
-    "description": "${description}",
-    "authors": [
-        "${mod_author}"
+  "schemaVersion": 1,
+  "id": "knavesneeds",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "${license}",
+  "icon": "assets/modid/${mod_id}.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.manasnow.knavesneeds.KnavesNeeds"
     ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
-    "license": "${license}",
-    "icon": "assets/modid/${mod_id}.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-          "dev.manasnow.knavesneeds.KnavesNeeds"
-        ]
-    },
-    "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
-    ],
-    "depends": {
-        "fabricloader": ">=0.14",
-        "fabric": "*",
-        "minecraft": "${minecraft_version}",
-        "java": ">=17",
-        "fzzy_config": ">=0.5.9"
-    },
-    "suggests": {
-        "another-mod": "*"
-    },
-    "custom": {
-        "fzzy_config": [
-        "knavesneeds"
+    "fabric-datagen": [
+      "dev.manasnow.knavesneeds.KnavesFabricDatagen"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json",
+    "${mod_id}.fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=17",
+    "fzzy_config": ">=0.5.9"
+  },
+  "suggests": {
+    "another-mod": "*"
+  },
+  "custom": {
+    "fzzy_config": [
+      "knavesneeds"
     ]
   }
 }
-  
