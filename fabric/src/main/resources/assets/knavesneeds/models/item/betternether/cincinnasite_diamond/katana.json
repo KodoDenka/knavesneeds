@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/templates/katana",
+  "textures": {
+    "layer0": "knavesneeds:item/betternether/cincinnasite_diamond/katana"
+  }
+}

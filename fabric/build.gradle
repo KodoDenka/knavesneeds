@@ -62,11 +62,10 @@ loom {
         }
         datagen {
             inherit client
-            name "Data Generation"
+            setConfigName("Fabric Data")
             vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${project(":fabric").file("src/main/generated").absolutePath}"
+            vmArg "-Dfabric-api.datagen.output-dir=${project(":fabric").file("src/main/generated")}"
             vmArg "-Dfabric-api.datagen.modid=knavesneeds"
-            vmArg "-Dfabric-api.datagen.strict-output=true"
 
             runDir "build/datagen"
         }

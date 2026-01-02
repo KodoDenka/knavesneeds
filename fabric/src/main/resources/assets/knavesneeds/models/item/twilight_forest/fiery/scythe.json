@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/templates/scythe",
+  "textures": {
+    "layer0": "knavesneeds:item/twilight_forest/fiery/scythe"
+  }
+}

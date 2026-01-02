@@ -2,16 +2,13 @@ package dev.manasnow.knavesneeds.datagen;
 
 import dev.manasnow.knavesneeds.Constants;
 import dev.manasnow.knavesneeds.registries.*;
+import me.fzzyhmstrs.fzzy_config.util.platform.RegistrySupplier;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.ModelTemplates;
-import net.minecraft.data.models.model.ModelTemplate;
-import net.minecraft.data.models.model.TextureSlot;
-import net.minecraft.resources.ResourceLocation;
-
-import java.util.Optional;
+import net.minecraft.world.item.Item;
 
 public class KnavesModelProvider extends FabricModelProvider {
     public KnavesModelProvider(FabricDataOutput output) {
@@ -33,70 +30,89 @@ public class KnavesModelProvider extends FabricModelProvider {
         //Placeholder testing code, junk for better system.
         //Models for Amethyst Imbuement Additions
         for (var item : AmethystImbuementAdditionsRegistries.AMETRINE_ITEMS) {
-            Constants.LOG.info("Generating model for Ametrine item: {}", item.get());
-            itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.TWINBLADE);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : AmethystImbuementAdditionsRegistries.GARNET_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : AmethystImbuementAdditionsRegistries.GLOWING_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : AmethystImbuementAdditionsRegistries.STEEL_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
 
         //Models for Better End Additions
         for (var item : BetterEndAdditionsRegistries.AETERNIUM_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : BetterEndAdditionsRegistries.TERMINITE_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : BetterEndAdditionsRegistries.THALLASIUM_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
 
         //Models for Better Nether Additions
         for (var item : BetterNetherAdditionsRegistries.CINCINNASITE_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : BetterNetherAdditionsRegistries.NETHER_RUBY_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : BetterNetherAdditionsRegistries.CINCINNASITE_DIAMOND_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
 
         //Blueskies not on fabric
 
         //Models for Deeper Darker Additions
         for (var item : DeeperDarkerAdditionsRegistries.WARDEN_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
 
         //Forbidden Arcanus not on fabric
 
         //Models for SoulsWeapons Additions
         for (var item : SoulsWeaponsAdditionsRegistries.TRANSLUCENT_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
 
         //TODO Models for Spectrum not yet implemented
 
         //Models for Twilight Forest Additions
         for (var item : TwilightForestAdditionsRegistries.FIERY_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : TwilightForestAdditionsRegistries.IRONWOOD_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : TwilightForestAdditionsRegistries.KNIGHTMETAL_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
         for (var item : TwilightForestAdditionsRegistries.STEELEAF_ITEMS) {
-            itemModelGenerator.generateFlatItem(item.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGeneratorHelper(itemModelGenerator, item);
         }
+    }
 
+    private void itemModelGeneratorHelper(ItemModelGenerators itemModelGenerator, RegistrySupplier<Item> item) {
+        switch (item.get().toString().split("/")[2]) {
+            case "longsword" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.LONGSWORD);
+            case "twinblade" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.TWINBLADE);
+            case "rapier" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.RAPIER);
+            case "katana" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.KATANA);
+            case "sai" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.SAI);
+            case "spear" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.SPEAR);
+            case "glaive" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.GLAIVE);
+            case "warglaive" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.WARGLAIVE);
+            case "cutlass" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.CUTLASS);
+            case "claymore" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.CLAYMORE);
+            case "greathammer" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.GREATHAMMER);
+            case "greataxe" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.GREATAXE);
+            case "chakram" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.CHAKRAM);
+            case "scythe" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.SCYTHE);
+            case "halberd" -> itemModelGenerator.generateFlatItem(item.get(), KnavesModelTemplate.HALBERD);
+            default -> Constants.LOG.info("Failed to make model for item: {}", item.get());
+        }
     }
 }

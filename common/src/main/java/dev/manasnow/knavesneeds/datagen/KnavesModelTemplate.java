@@ -27,13 +27,9 @@ public class KnavesModelTemplate {
         return new ModelTemplate(Optional.of(new ResourceLocation("knavesneeds", "item/" + itemModelLocation)), Optional.empty(), requiredSlots);
     }
 
-    private static ModelTemplate createTwinblade(String itemModelLocation, TextureSlot... requiredSlots) {
-        return new ModelTemplate(Optional.of(new ResourceLocation("knavesneeds", "item/" + itemModelLocation)), Optional.empty(), requiredSlots);
-    }
-
     static {
         LONGSWORD   = createItem("templates/longsword", TextureSlot.LAYER0);
-        TWINBLADE   = createTwinblade("templates/twinblade", TextureSlot.LAYER0);
+        TWINBLADE   = createItem("templates/twinblade", TextureSlot.LAYER0);
         RAPIER      = createItem("templates/rapier", TextureSlot.LAYER0);
         KATANA      = createItem("templates/katana", TextureSlot.LAYER0);
         SAI         = createItem("templates/sai", TextureSlot.LAYER0);

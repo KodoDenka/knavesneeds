@@ -1,0 +1,6 @@
+{
+  "parent": "knavesneeds:item/templates/greataxe",
+  "textures": {
+    "layer0": "knavesneeds:item/betternether/cincinnasite/greataxe"
+  }
+}
