@@ -32,7 +32,7 @@ public class KnavesForgeDatagen {
         }
 
         protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
-            CommonRecipeGenerator.generate(consumer);
+            //CommonRecipeGenerator.generate(consumer);
         }
     }
 }
