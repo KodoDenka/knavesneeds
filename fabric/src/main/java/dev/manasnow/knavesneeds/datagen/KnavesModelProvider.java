@@ -15,7 +15,6 @@ public class KnavesModelProvider extends FabricModelProvider {
         super(output);
     }
 
-
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
         //Currently, there are no block models, but it's easier to put this here and leave it blank.
@@ -23,9 +22,6 @@ public class KnavesModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
-
-
-
 
         //Placeholder testing code, junk for better system.
         //Models for Amethyst Imbuement Additions
