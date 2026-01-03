@@ -13,5 +13,4 @@ public class CommonRecipeGenerator {
     public static void generateSword(String material, Item ingredient, Consumer<FinishedRecipe> consumer) {
         // Common logic
     }
-
 }
