@@ -12,221 +12,110 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 
+import java.util.Arrays;
 import java.util.function.Consumer;
 
 public class CommonRecipeGenerator {
-    public static void upgradeRecipeFor(RegistrySupplier<Item> item, Consumer<FinishedRecipe> exporter, Ingredient material, Ingredient template) {
+    public static void upgradeRecipeFor(RegistrySupplier<Item> item, Consumer<FinishedRecipe> exporter, Ingredient template, Ingredient material, Ingredient base) {
         //TODO add code for upgrade style recipes.
-        SmithingTransformRecipeBuilder.smithing()
 
-        //shapedRecipeFor(item, exporter, handle, material, binder);
+        SmithingTransformRecipeBuilder.smithing(template, base);
+
+
     }
 
 
+    public static void createShapedRecipe(RegistrySupplier<Item> item, Consumer<FinishedRecipe> exporter, Ingredient handle, Ingredient material, Ingredient binder) {
+        String itemType = item.get().toString().split("/")[2];
 
-    public static void shapedRecipeFor(RegistrySupplier< Item > item, Consumer<FinishedRecipe> exporter, Ingredient handle, Ingredient material, Ingredient binder) {
+        //Selects the recipe pattern based on itemType.
+        String[] pattern = switch (itemType) {
+            case "longsword" -> new String[]{
+                    "H  ",
+                    " M ",
+                    "  M"};
+            case "twinblade" -> new String[]{
+                    "  M",
+                    " H ",
+                    "M  "};
+            case "rapier" -> new String[]{
+                    "  M",
+                    " M ",
+                    "H  "};
+            case "katana" -> new String[]{
+                    "   ",
+                    "HMM",
+                    "   "};
+            case "sai" -> new String[]{
+                    " M ",
+                    "H  ",
+                    "   "};
+            case "spear" -> new String[]{
+                    "  M",
+                    " H ",
+                    "H  "};
+            case "glaive" -> new String[]{
+                    "  M",
+                    " HM",
+                    "H  "};
+            case "warglaive" -> new String[]{
+                    "   ",
+                    " B ",
+                    "MHM"};
+            case "cutlass" -> new String[]{
+                    " B ",
+                    "MM ",
+                    "H  "};
+            case "claymore" -> new String[]{
+                    " BM",
+                    "BMB",
+                    "HB "};
+            case "greathammer" -> new String[]{
+                    "MMM",
+                    "BBB",
+                    " H "};
+            case "greataxe" -> new String[]{
+                    "MMM",
+                    "BHB",
+                    " H "};
+            case "chakram" -> new String[]{
+                    "BMB",
+                    "M M",
+                    "BHB"};
+            case "scythe" -> new String[]{
+                    "MHM",
+                    "MH ",
+                    "H  "};
+            case "halberd" -> new String[]{
+                    " MB",
+                    "MHM",
+                    "H  "};
+            default -> null;
+        };
 
-        //TODO Should be able to use a builder here for cleaner code.
-        switch (item.get().toString().split("/")[2]) {
-            case "longsword" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("H  ")
-                    .pattern(" M ")
-                    .pattern("  M")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    //.define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "twinblade" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("  M")
-                    .pattern(" H ")
-                    .pattern("M  ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    //.define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "rapier" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("  M")
-                    .pattern(" M ")
-                    .pattern("H  ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    //.define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "katana" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("   ")
-                    .pattern("HMM")
-                    .pattern("   ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    //.define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "sai" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern(" M ")
-                    .pattern("H  ")
-                    .pattern("   ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    //.define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "spear" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("  M")
-                    .pattern(" H ")
-                    .pattern("H  ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    //.define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "glaive" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("  M")
-                    .pattern(" HM")
-                    .pattern("H  ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    //.define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "warglaive" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("   ")
-                    .pattern(" B ")
-                    .pattern("MHM")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    .define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "cutlass" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern(" B ")
-                    .pattern("MM ")
-                    .pattern("H  ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    .define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "claymore" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern(" BM")
-                    .pattern("BMB")
-                    .pattern("HB ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    .define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "greathammer" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("MMM")
-                    .pattern("BBB")
-                    .pattern(" H ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    .define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "greataxe" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("MMM")
-                    .pattern("BHB")
-                    .pattern(" H ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    .define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "chakram" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("BMB")
-                    .pattern("M M")
-                    .pattern("BHB")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    .define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "scythe" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern("MMH")
-                    .pattern("MH ")
-                    .pattern("H  ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    //.define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "halberd" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
-                    .pattern(" MB")
-                    .pattern("MHM")
-                    .pattern("H  ")
-                    //Handle
-                    .define('H', handle)
-                    //Material or Ingredient
-                    .define('M', material)
-                    //Binder
-                    .define('B', binder)
-                    // Check if any supported mod needs this?
-                    .unlockedBy("has_material", inventoryTrigger(material))
-                    .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            default -> Constants.LOG.info("Failed to make recipe for item: {}", item.get());
+        //Makes sure the pattern is valid.
+        if (pattern == null) {
+            Constants.LOG.info("Pattern is null for item: {}", item.get());
+            return;
         }
+
+        //Using the pattern, creates the recipe.
+        ShapedRecipeBuilder builder = ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1);
+        for (String row : pattern) {
+            builder.pattern(row);
+        }
+        builder.define('H', handle)
+                .define('M', material);
+
+        // Cannot define binder if the pattern doesn't contain it.
+        if (Arrays.toString(pattern).contains("B")) {
+            builder.define('B', binder);
+        }
+        builder.unlockedBy("has_material", inventoryTrigger(material))
+                .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
     }
 
+    //Inventory trigger to help with unlockedBy for Datagen.
     protected static InventoryChangeTrigger.TriggerInstance inventoryTrigger(Ingredient ingredient) {
         return InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(ingredient.getItems()[0].getItem()).build());
     }
