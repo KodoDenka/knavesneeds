@@ -7,6 +7,7 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -14,11 +15,20 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Consumer;
 
 public class CommonRecipeGenerator {
-    public static void buildRecipesFor(RegistrySupplier< Item > item, Consumer<FinishedRecipe> exporter, Ingredient handle, Ingredient material, Ingredient binder) {
+    public static void upgradeRecipeFor(RegistrySupplier<Item> item, Consumer<FinishedRecipe> exporter, Ingredient material, Ingredient template) {
+        //TODO add code for upgrade style recipes.
+        SmithingTransformRecipeBuilder.smithing()
+
+        //shapedRecipeFor(item, exporter, handle, material, binder);
+    }
+
+
+
+    public static void shapedRecipeFor(RegistrySupplier< Item > item, Consumer<FinishedRecipe> exporter, Ingredient handle, Ingredient material, Ingredient binder) {
 
         //TODO Should be able to use a builder here for cleaner code.
         switch (item.get().toString().split("/")[2]) {
-            case "longsword" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "longsword" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("H  ")
                     .pattern(" M ")
                     .pattern("  M")
@@ -31,7 +41,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "twinblade" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "twinblade" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("  M")
                     .pattern(" H ")
                     .pattern("M  ")
@@ -44,7 +54,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "rapier" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "rapier" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("  M")
                     .pattern(" M ")
                     .pattern("H  ")
@@ -57,7 +67,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "katana" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "katana" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("   ")
                     .pattern("HMM")
                     .pattern("   ")
@@ -70,7 +80,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "sai" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "sai" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern(" M ")
                     .pattern("H  ")
                     .pattern("   ")
@@ -83,7 +93,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "spear" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "spear" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("  M")
                     .pattern(" H ")
                     .pattern("H  ")
@@ -96,7 +106,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "glaive" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "glaive" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("  M")
                     .pattern(" HM")
                     .pattern("H  ")
@@ -109,7 +119,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "warglaive" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "warglaive" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("   ")
                     .pattern(" B ")
                     .pattern("MHM")
@@ -122,7 +132,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "cutlass" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "cutlass" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern(" B ")
                     .pattern("MM ")
                     .pattern("H  ")
@@ -135,7 +145,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "claymore" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "claymore" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern(" BM")
                     .pattern("BMB")
                     .pattern("HB ")
@@ -148,7 +158,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "greathammer" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "greathammer" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("MMM")
                     .pattern("BBB")
                     .pattern(" H ")
@@ -161,7 +171,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "greataxe" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "greataxe" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("MMM")
                     .pattern("BHB")
                     .pattern(" H ")
@@ -174,7 +184,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "chakram" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "chakram" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("BMB")
                     .pattern("M M")
                     .pattern("BHB")
@@ -187,7 +197,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "scythe" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "scythe" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern("MMH")
                     .pattern("MH ")
                     .pattern("H  ")
@@ -200,7 +210,7 @@ public class CommonRecipeGenerator {
                     // Check if any supported mod needs this?
                     .unlockedBy("has_material", inventoryTrigger(material))
                     .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
-            case "halberd" -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item.get(), 1)
+            case "halberd" -> ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1)
                     .pattern(" MB")
                     .pattern("MHM")
                     .pattern("H  ")
