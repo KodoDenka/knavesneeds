@@ -16,15 +16,13 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 
 public class CommonRecipeGenerator {
-    public static void upgradeRecipeFor(RegistrySupplier<Item> item, Consumer<FinishedRecipe> exporter, Ingredient template, Ingredient material, Ingredient base) {
-        //TODO add code for upgrade style recipes.
+    public static void upgradeRecipeFor(RegistrySupplier<Item> item, Consumer<FinishedRecipe> exporter, Ingredient template, Ingredient addition, Ingredient base) {
 
-        SmithingTransformRecipeBuilder.smithing(template, base);
-
-
+        //Currently a little silly to run this, but plan to expand for mod loading conditions.
+        SmithingTransformRecipeBuilder.smithing(template, base, addition, RecipeCategory.COMBAT, item.get()).save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
     }
 
-
+    // Creates a shaped recipe baseed on predefined patterns.
     public static void createShapedRecipe(RegistrySupplier<Item> item, Consumer<FinishedRecipe> exporter, Ingredient handle, Ingredient material, Ingredient binder) {
         String itemType = item.get().toString().split("/")[2];
 
