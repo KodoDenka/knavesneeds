@@ -1,9 +1,12 @@
 package dev.manasnow.knavesneeds.datagen;
 
 import dev.manasnow.knavesneeds.Constants;
+import dev.manasnow.knavesneeds.helpers.LoaderConditionalRecipe;
+import dev.manasnow.knavesneeds.platform.Services;
 import me.fzzyhmstrs.fzzy_config.util.platform.RegistrySupplier;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
@@ -16,15 +19,30 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 
 public class CommonRecipeGenerator {
-    public static void upgradeRecipeFor(RegistrySupplier<Item> item, Consumer<FinishedRecipe> exporter, Ingredient template, Ingredient addition, Ingredient base) {
+    public static void createAdvancedSmithingRecipe(RegistrySupplier<Item> itemSupplier, Consumer<FinishedRecipe> exporter, Ingredient template, Ingredient addition, String baseNamespace, String baseTier, String modId) {
+        Item item = itemSupplier.get();
+        String itemType = item.toString().split("/")[2];
 
-        //Currently a little silly to run this, but plan to expand for mod loading conditions.
-        SmithingTransformRecipeBuilder.smithing(template, base, addition, RecipeCategory.COMBAT, item.get()).save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
+        SmithingTransformRecipeBuilder builder = SmithingTransformRecipeBuilder.smithing(
+                template,
+                Ingredient.of(BuiltInRegistries.ITEM.get(new ResourceLocation(baseNamespace, (baseTier + itemType)))),
+                addition,
+                RecipeCategory.COMBAT,
+                item
+        );
+
+        builder.unlocks("has_material", inventoryTrigger(addition));
+
+        // Use our custom wrapper to inject the mod condition
+        builder.save(recipe -> exporter.accept(new LoaderConditionalRecipe(recipe, modId, Services.PLATFORM.getPlatformName())),
+                new ResourceLocation(Constants.MOD_ID, item.toString()));
     }
 
-    // Creates a shaped recipe baseed on predefined patterns.
-    public static void createShapedRecipe(RegistrySupplier<Item> item, Consumer<FinishedRecipe> exporter, Ingredient handle, Ingredient material, Ingredient binder) {
-        String itemType = item.get().toString().split("/")[2];
+
+    // Creates a shaped recipe based on predefined patterns.
+    public static void createShapedRecipe(RegistrySupplier<Item> itemSupplier, Consumer<FinishedRecipe> exporter, Ingredient handle, Ingredient material, Ingredient binder, String modId) {
+        Item item = itemSupplier.get();
+        String itemType = item.toString().split("/")[2];
 
         //Selects the recipe pattern based on itemType.
         String[] pattern = switch (itemType) {
@@ -93,12 +111,12 @@ public class CommonRecipeGenerator {
 
         //Makes sure the pattern is valid.
         if (pattern == null) {
-            Constants.LOG.info("Pattern is null for item: {}", item.get());
+            Constants.LOG.info("Pattern is null for item: {}", item);
             return;
         }
 
         //Using the pattern, creates the recipe.
-        ShapedRecipeBuilder builder = ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item.get(), 1);
+        ShapedRecipeBuilder builder = ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, item, 1);
         for (String row : pattern) {
             builder.pattern(row);
         }
@@ -109,8 +127,12 @@ public class CommonRecipeGenerator {
         if (Arrays.toString(pattern).contains("B")) {
             builder.define('B', binder);
         }
-        builder.unlockedBy("has_material", inventoryTrigger(material))
-                .save(exporter, new ResourceLocation(Constants.MOD_ID, item.get().toString()));
+
+        builder.unlockedBy("has_material", inventoryTrigger(material));
+
+        // Saves a finished recipe to the exporter and injects mod loaded condition.
+        builder.save(recipe -> exporter.accept(new LoaderConditionalRecipe(recipe, modId, Services.PLATFORM.getPlatformName())),
+                new ResourceLocation(Constants.MOD_ID, item.toString()));
     }
 
     //Inventory trigger to help with unlockedBy for Datagen.
