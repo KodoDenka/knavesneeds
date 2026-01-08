@@ -1,7 +1,7 @@
 package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesSoulsWeaponsConfig;
-import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
+import dev.manasnow.knavesneeds.customitems.swords.soulsweapons.TranslucentSwordItem;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
 import dev.manasnow.knavesneeds.helpers.TierHelper;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
@@ -35,7 +35,7 @@ public class SoulsWeaponsAdditionsRegistries {
     private static final String NAMESPACE = "soulsweapons";
 
     private static final Registrar<Item> TRANSLUCENT_REGISTRAR = createRegistrar();
-    public static final SwordSet TRANSLUCENT_ITEMS = new SwordSet(TRANSLUCENT_REGISTRAR, NAMESPACE, TRANSLUCENT, DynamicSwordItem::new);
+    public static final SwordSet TRANSLUCENT_ITEMS = new SwordSet(TRANSLUCENT_REGISTRAR, NAMESPACE, TRANSLUCENT, TranslucentSwordItem::new);
 
     public static void smartRegistrar() {
         if (soulsWeaponsConfig.translucentEnabled) {
