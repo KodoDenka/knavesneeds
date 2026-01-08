@@ -8,7 +8,6 @@ import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
@@ -63,7 +62,7 @@ public class BetterNetherAdditionsRegistries {
     private static final Registrar<Item> NETHER_RUBY_REGISTRAR = createRegistrar();
     public static final SwordSet NETHER_RUBY_ITEMS = new SwordSet(NETHER_RUBY_REGISTRAR, NAMESPACE, NETHER_RUBY, DynamicSwordItem::new);
 
-    public static void smartRegister() {
+    public static void smartRegistrar() {
         if (betterNetherConfig.cincinnasiteEnabled) {
             CINCINNASITE_REGISTRAR.init();
         }

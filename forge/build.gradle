@@ -69,6 +69,7 @@ repositories {
 
 dependencies {
     compileOnly project(":common")
+    compileOnly "org.jetbrains:annotations:24.1.0"
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 
     compileOnly "curse.maven:better-combat-by-daedelus-639842:7287334"
@@ -87,3 +88,4 @@ jar {
             "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
     ])
 }
+

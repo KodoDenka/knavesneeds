@@ -4,14 +4,12 @@ import dev.manasnow.knavesneeds.Constants;
 import dev.manasnow.knavesneeds.registries.*;
 import me.fzzyhmstrs.fzzy_config.util.platform.RegistrySupplier;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
-import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.world.item.Item;
 
-public class KnavesModelProvider extends FabricModelProvider {
-    public KnavesModelProvider(FabricDataOutput output) {
+public class FabricModelProvider extends net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider {
+    public FabricModelProvider(FabricDataOutput output) {
         super(output);
     }
 

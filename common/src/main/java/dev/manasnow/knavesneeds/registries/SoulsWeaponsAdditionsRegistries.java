@@ -2,13 +2,12 @@ package dev.manasnow.knavesneeds.registries;
 
 import dev.manasnow.knavesneeds.config.KnavesSoulsWeaponsConfig;
 import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
-import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
+import dev.manasnow.knavesneeds.helpers.TierHelper;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
@@ -38,7 +37,7 @@ public class SoulsWeaponsAdditionsRegistries {
     private static final Registrar<Item> TRANSLUCENT_REGISTRAR = createRegistrar();
     public static final SwordSet TRANSLUCENT_ITEMS = new SwordSet(TRANSLUCENT_REGISTRAR, NAMESPACE, TRANSLUCENT, DynamicSwordItem::new);
 
-    public static void smartRegister() {
+    public static void smartRegistrar() {
         if (soulsWeaponsConfig.translucentEnabled) {
             TRANSLUCENT_REGISTRAR.init();
         }

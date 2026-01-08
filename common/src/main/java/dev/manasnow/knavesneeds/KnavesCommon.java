@@ -15,13 +15,23 @@ public class KnavesCommon {
 
         //Register items if Dev environment for testing.
         if (Services.PLATFORM.getEnvironmentName().equals("development")){
-            TwilightForestAdditionsRegistries.smartRegister();
+            AmethystImbuementAdditionsRegistries.smartRegistrar();
+            BetterEndAdditionsRegistries.smartRegistrar();
+            BetterNetherAdditionsRegistries.smartRegistrar();
+            BlueSkiesAdditionsRegistries.smartRegistrar();
+            DeeperDarkerAdditionsRegistries.smartRegistrar();
+            ForbiddenArcanusAdditionsRegistries.smartRegistrar();
+            SoulsWeaponsAdditionsRegistries.smartRegistrar();
+            //SpectrumAdditionsRegistries.smartRegistrar();
+            TwilightForestAdditionsRegistries.smartRegistrar();
+            UndergardenAdditionsRegistries.smartRegistrar();
         }
 
         //BetterCombatHelper Enable
         if (Services.PLATFORM.isModLoaded("bettercombat")) {
             Constants.LOG.info("BetterCombat is loaded. BetterCombatHelper is enabled.");
             USE_SAFE_ITEMSTACK = true;
+            Constants.LOG.info(String.valueOf(USE_SAFE_ITEMSTACK));
         }
         else {
             Constants.LOG.info("BetterCombat is not loaded. BetterCombatHelper will not be enabled.");
@@ -31,43 +41,43 @@ public class KnavesCommon {
         //Checks if mod is loaded and enabled, and registers the weapons.
         if (Services.PLATFORM.isModLoaded("twilightforest") && commonConfig.twilightForestEnabled) {
             Constants.LOG.info("Knaves' Needs is adding Twilight Forest items.");
-            TwilightForestAdditionsRegistries.smartRegister();
+            TwilightForestAdditionsRegistries.smartRegistrar();
 
         }
 
         if (Services.PLATFORM.isModLoaded("undergarden") && commonConfig.undergardenEnabled) {
             Constants.LOG.info("Knaves' Needs is adding Undergarden items.");
-            UndergardenAdditionsRegistries.smartRegister();
+            UndergardenAdditionsRegistries.smartRegistrar();
         }
 
         if (Services.PLATFORM.isModLoaded("soulsweapons") && commonConfig.soulsWeaponsEnabled) {
             Constants.LOG.info("Knaves' Needs is adding Soulslike Weaponry items.");
-            SoulsWeaponsAdditionsRegistries.smartRegister();
+            SoulsWeaponsAdditionsRegistries.smartRegistrar();
         }
 
         if (Services.PLATFORM.isModLoaded("forbidden_arcanus") && commonConfig.forbiddenArcanusEnabled) {
             Constants.LOG.info("Knaves' Needs is adding Forbidden Arcanus items.");
-            ForbiddenArcanusAdditionsRegistries.smartRegister();
+            ForbiddenArcanusAdditionsRegistries.smartRegistrar();
         }
 
         if (Services.PLATFORM.isModLoaded("deeperdarker") && commonConfig.deeperDarkerEnabled) {
             Constants.LOG.info("Knaves' Needs is adding Deeper and Darker items.");
-            DeeperDarkerAdditionsRegistries.smartRegister();
+            DeeperDarkerAdditionsRegistries.smartRegistrar();
         }
 
         if (Services.PLATFORM.isModLoaded("blue_skies") && commonConfig.blueSkiesEnabled) {
             Constants.LOG.info("Knaves' Needs is adding Blue Skies items.");
-            BlueSkiesAdditionsRegistries.smartRegister();
+            BlueSkiesAdditionsRegistries.smartRegistrar();
         }
 
         if (Services.PLATFORM.isModLoaded("betterend") && commonConfig.betterEndEnabled) {
             Constants.LOG.info("Knaves' Needs is adding Better End items.");
-            BetterEndAdditionsRegistries.smartRegister();
+            BetterEndAdditionsRegistries.smartRegistrar();
         }
 
         if ((Services.PLATFORM.isModLoaded("betternether") && commonConfig.betterNetherEnabled)) {
             Constants.LOG.info("Knaves' Needs is adding Better Nether items.");
-            BetterNetherAdditionsRegistries.smartRegister();
+            BetterNetherAdditionsRegistries.smartRegistrar();
         }
 
         if (Services.PLATFORM.isModLoaded("evenbetternether")) {

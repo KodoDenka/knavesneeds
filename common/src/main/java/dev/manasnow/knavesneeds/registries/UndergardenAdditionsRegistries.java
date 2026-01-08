@@ -5,13 +5,12 @@ import dev.manasnow.knavesneeds.customitems.swords.common.DynamicSwordItem;
 import dev.manasnow.knavesneeds.customitems.swords.undergarden.ForgottenSwordItem;
 import dev.manasnow.knavesneeds.customitems.swords.undergarden.FroststeelSwordItem;
 import dev.manasnow.knavesneeds.customitems.swords.undergarden.UtheriumSwordItem;
-import dev.manasnow.knavesneeds.helpers.TierHelper;
 import dev.manasnow.knavesneeds.helpers.SwordSet;
+import dev.manasnow.knavesneeds.helpers.TierHelper;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
@@ -78,7 +77,7 @@ public class UndergardenAdditionsRegistries {
     private static final Registrar<Item> UTHERIUM_REGISTRAR = createRegistrar();
     public static final SwordSet UTHERIUM_ITEMS = new SwordSet(UTHERIUM_REGISTRAR, NAMESPACE, UTHERIUM, UtheriumSwordItem::new);
 
-    public static void smartRegister() {
+    public static void smartRegistrar() {
         if (undergardenConfig.cloggrumEnabled) {
             CLOGGRUM_REGISTRAR.init();
         }

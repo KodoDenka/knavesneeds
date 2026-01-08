@@ -204,7 +204,7 @@ public class BlueSkiesAdditionsRegistries {
     private static final Registrar<Item> COMET_WOOD_REGISTRAR = createRegistrar();
     public static final SwordSet COMET_WOOD_ITEMS = new SwordSet(COMET_WOOD_REGISTRAR, NAMESPACE, COMET_WOOD, DynamicSwordItem::new);
 
-    public static void smartRegister() {
+    public static void smartRegistrar() {
         if (blueSkiesConfig.pyropeEnabled) {
             PYROPE_REGISTRAR.init();
         }

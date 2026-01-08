@@ -2,7 +2,6 @@ package dev.manasnow.knavesneeds.datagen;
 
 import dev.manasnow.knavesneeds.Constants;
 import dev.manasnow.knavesneeds.helpers.LoaderConditionalRecipe;
-import dev.manasnow.knavesneeds.platform.Services;
 import me.fzzyhmstrs.fzzy_config.util.platform.RegistrySupplier;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
@@ -19,7 +18,7 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 
 public class CommonRecipeGenerator {
-    public static void createAdvancedSmithingRecipe(RegistrySupplier<Item> itemSupplier, Consumer<FinishedRecipe> exporter, Ingredient template, Ingredient addition, String baseNamespace, String baseTier, String modId) {
+    public static void createAdvancedSmithingRecipe(RegistrySupplier<Item> itemSupplier, Consumer<FinishedRecipe> exporter, Ingredient template, Ingredient addition, String baseNamespace, String baseTier, String modId, String platform) {
         Item item = itemSupplier.get();
         String itemType = item.toString().split("/")[2];
 
@@ -34,13 +33,13 @@ public class CommonRecipeGenerator {
         builder.unlocks("has_material", inventoryTrigger(addition));
 
         // Use our custom wrapper to inject the mod condition
-        builder.save(recipe -> exporter.accept(new LoaderConditionalRecipe(recipe, modId, Services.PLATFORM.getPlatformName())),
+        builder.save(recipe -> exporter.accept(new LoaderConditionalRecipe(recipe, modId, platform)),
                 new ResourceLocation(Constants.MOD_ID, item.toString()));
     }
 
 
     // Creates a shaped recipe based on predefined patterns.
-    public static void createShapedRecipe(RegistrySupplier<Item> itemSupplier, Consumer<FinishedRecipe> exporter, Ingredient handle, Ingredient material, Ingredient binder, String modId) {
+    public static void createShapedRecipe(RegistrySupplier<Item> itemSupplier, Consumer<FinishedRecipe> exporter, Ingredient handle, Ingredient material, Ingredient binder, String modId, String platform) {
         Item item = itemSupplier.get();
         String itemType = item.toString().split("/")[2];
 
@@ -131,7 +130,7 @@ public class CommonRecipeGenerator {
         builder.unlockedBy("has_material", inventoryTrigger(material));
 
         // Saves a finished recipe to the exporter and injects mod loaded condition.
-        builder.save(recipe -> exporter.accept(new LoaderConditionalRecipe(recipe, modId, Services.PLATFORM.getPlatformName())),
+        builder.save(recipe -> exporter.accept(new LoaderConditionalRecipe(recipe, modId, platform)),
                 new ResourceLocation(Constants.MOD_ID, item.toString()));
     }
 

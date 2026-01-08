@@ -1,10 +1,10 @@
 package dev.manasnow.knavesneeds.datagen;
 
-import java.util.Optional;
-
 import net.minecraft.data.models.model.ModelTemplate;
 import net.minecraft.data.models.model.TextureSlot;
 import net.minecraft.resources.ResourceLocation;
+
+import java.util.Optional;
 
 public class KnavesModelTemplate {
     public static final ModelTemplate LONGSWORD;

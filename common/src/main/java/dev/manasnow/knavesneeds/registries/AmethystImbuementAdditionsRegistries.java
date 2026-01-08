@@ -8,7 +8,6 @@ import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.fzzyhmstrs.fzzy_config.util.platform.Registrar;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
 import static dev.manasnow.knavesneeds.Constants.MOD_ID;
@@ -75,7 +74,7 @@ public class AmethystImbuementAdditionsRegistries {
     private static final Registrar<Item> STEEL_REGISTRAR = createRegistrar();
     public static final SwordSet STEEL_ITEMS = new SwordSet(STEEL_REGISTRAR, NAMESPACE, STEEL, DynamicSwordItem::new);
 
-    public static void smartRegister() {
+    public static void smartRegistrar() {
         if (amethystImbuementConfig.ametrineEnabled) {
             AMETRINE_REGISTRAR.init();
         }
