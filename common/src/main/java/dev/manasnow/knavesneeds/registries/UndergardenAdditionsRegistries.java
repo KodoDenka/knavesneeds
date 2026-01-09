@@ -46,7 +46,7 @@ public class UndergardenAdditionsRegistries {
             () -> undergardenConfig.froststeelAttackBonus,
             () -> undergardenConfig.froststeelMiningLevel,
             () -> undergardenConfig.froststeelEnchantability,
-            "undergarden:utherium_crystal"
+            "undergarden:utheric_shard"
     );
 
     public static final Tier UTHERIUM = new TierHelper(

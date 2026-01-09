@@ -11,7 +11,8 @@ import org.jetbrains.annotations.NotNull;
 public record LoaderConditionalRecipe(FinishedRecipe internal, String modId, String platform) implements FinishedRecipe {
     @Override
     public void serializeRecipeData(@NotNull JsonObject json) {
-        internal.serializeRecipeData(json);
+        JsonObject internalData = new JsonObject();
+        internal.serializeRecipeData(internalData);
 
         JsonArray conditions = new JsonArray();
         JsonObject condition = new JsonObject();
@@ -28,6 +29,11 @@ public record LoaderConditionalRecipe(FinishedRecipe internal, String modId, Str
             json.add("fabric:load_conditions", conditions);
         }
         conditions.add(condition);
+
+        // Copy internal data after conditions to ensure order
+        for (String key : internalData.keySet()) {
+            json.add(key, internalData.get(key));
+        }
     }
 
     @MethodsReturnNonnullByDefault
