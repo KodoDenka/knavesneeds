@@ -12,10 +12,28 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider {
     public FabricRecipeProvider(FabricDataOutput output) {
         super(output);
+    }
+
+    /**
+     * This is a hacky fix to create ingredients for mods that aren't loaded.
+     * If you mess with this, remember about the access widener
+     */
+    private static Ingredient ingredientFromId(String modId, String path) {
+        return Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new net.minecraft.world.item.ItemStack(
+                BuiltInRegistries.ITEM.get(new ResourceLocation(modId, path))
+        )) {
+            @Override
+            public com.google.gson.JsonObject serialize() {
+                com.google.gson.JsonObject jsonObject = new com.google.gson.JsonObject();
+                jsonObject.addProperty("item", new ResourceLocation(modId, path).toString());
+                return jsonObject;
+            }
+        }));
     }
 
     @Override
@@ -52,8 +70,8 @@ public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.pro
 
             //Souls Weapons
             //TODO it needs the mod load to do this, either load the mod or look into a bypass.
-            Ingredient lostSoul = Ingredient.of(BuiltInRegistries.ITEM.get(new ResourceLocation("soulsweapons:lost_soul")));
-            Ingredient soulIngot = Ingredient.of(BuiltInRegistries.ITEM.get(new ResourceLocation("soulsweapons:soul_ingot")));
+            Ingredient lostSoul = ingredientFromId("soulsweapons","lost_soul");
+            Ingredient soulIngot = ingredientFromId("soulsweapons","soul_ingot");
             for (var item : SoulsWeaponsAdditionsRegistries.TRANSLUCENT_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
                 CommonRecipeGenerator.createShapedRecipe(item, exporter, soulIngot, lostSoul, ironNugget, "soulsweapons", platform);
