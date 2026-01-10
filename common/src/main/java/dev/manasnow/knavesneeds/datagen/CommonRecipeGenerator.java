@@ -32,6 +32,8 @@ public class CommonRecipeGenerator {
 
         builder.unlocks("has_material", inventoryTrigger(addition));
 
+        builder.save(exporter, new ResourceLocation(Constants.MOD_ID, item.toString()));
+
         // Use our custom wrapper to inject the mod condition
         builder.save(recipe -> exporter.accept(new LoaderConditionalRecipe(recipe, modId, platform)),
                 new ResourceLocation(Constants.MOD_ID, item.toString()));
