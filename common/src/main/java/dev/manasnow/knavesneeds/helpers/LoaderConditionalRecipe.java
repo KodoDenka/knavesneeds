@@ -3,51 +3,33 @@ package dev.manasnow.knavesneeds.helpers;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.MethodsReturnNonnullByDefault;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import org.jetbrains.annotations.NotNull;
 
-public record LoaderConditionalRecipe(FinishedRecipe internal, String modId, String platform) implements FinishedRecipe {
-    @Override
-    public void serializeRecipeData(@NotNull JsonObject json) {
-        JsonObject internalData = new JsonObject();
-        internal.serializeRecipeData(internalData);
+import javax.annotation.Nullable;
 
-        JsonArray conditions = new JsonArray();
-        JsonObject condition = new JsonObject();
+public interface LoaderConditionalRecipe {
+    //TODO Rework this interface to rebuild the recipes properly.
 
-        if (platform.equals("forge")) {
-            condition.addProperty("condition", "forge:mod_loaded");
-            condition.addProperty("modid", modId);
-            json.add("conditions", conditions);
-        } else {
-            condition.addProperty("condition", "fabric:all_mods_loaded");
-            JsonArray values = new JsonArray();
-            values.add(modId);
-            condition.add("values", values);
-            json.add("fabric:load_conditions", conditions);
-        }
-        conditions.add(condition);
+    void serializeRecipeData(JsonObject var1);
 
-        // Copy internal data after conditions to ensure order
-        for (String key : internalData.keySet()) {
-            json.add(key, internalData.get(key));
-        }
+    default JsonObject serializeRecipe() {
+        JsonObject jsonobject = new JsonObject();
+        jsonobject.addProperty("type", BuiltInRegistries.RECIPE_SERIALIZER.getKey(this.getType()).toString());
+        this.serializeRecipeData(jsonobject);
+        return jsonobject;
     }
 
-    @MethodsReturnNonnullByDefault
-    @Override
-    public ResourceLocation getId() { return internal.getId(); }
+    ResourceLocation getId();
 
-    @MethodsReturnNonnullByDefault
-    @Override
-    public RecipeSerializer<?> getType() { return internal.getType(); }
+    RecipeSerializer<?> getType();
 
-    @Override
-    public JsonObject serializeAdvancement() { return internal.serializeAdvancement(); }
+    @Nullable
+    JsonObject serializeAdvancement();
 
-    @Override
-    public ResourceLocation getAdvancementId() { return internal.getAdvancementId(); }
-
+    @Nullable
+    ResourceLocation getAdvancementId();
 }
