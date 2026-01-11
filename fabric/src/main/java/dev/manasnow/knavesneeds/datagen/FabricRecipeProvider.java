@@ -51,7 +51,7 @@ public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.pro
             Ingredient knightmetalIngot = ingredientFromId("twilight_forest","knightmetal_ingot");
             for (var item : TwilightForestAdditionsRegistries.KNIGHTMETAL_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.smithing(item, exporter, cSticks, knightmetalIngot, ironNugget, "twilight_forest", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, knightmetalIngot, ironNugget, "twilight_forest", platform);
             }
 
             //TODO also add shapless recipes
@@ -59,21 +59,22 @@ public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.pro
             Ingredient blazeRod = Ingredient.of(BuiltInRegistries.ITEM.get(new ResourceLocation("minecraft:blaze_rod")));
             for (var item : TwilightForestAdditionsRegistries.FIERY_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, blazeRod, fieryIngot, ironNugget, "twilight_forest", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, blazeRod, fieryIngot, ironNugget, "twilight_forest", platform);
             }
 
             Ingredient ironwoodIngot = ingredientFromId("twilight_forest","ironwood_ingot");
             for (var item : TwilightForestAdditionsRegistries.IRONWOOD_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, ironwoodIngot, ironNugget, "twilight_forest", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, ironwoodIngot, ironNugget, "twilight_forest", platform);
             }
 
             Ingredient steeleafIngot = ingredientFromId("twilight_forest","steeleaf_ingot");
             for (var item : TwilightForestAdditionsRegistries.STEELEAF_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, steeleafIngot, ironNugget, "twilight_forest", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, steeleafIngot, ironNugget, "twilight_forest", platform);
             }
 
+            /*
             //Deeper Darker
             Ingredient wardenTemplate = ingredientFromId("deeperdarker","warden_upgrade_smithing_template");
             Ingredient echoShard = ingredientFromId("deeperdarker","reinforced_echo_shard");
@@ -88,7 +89,7 @@ public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.pro
             Ingredient soulIngot = ingredientFromId("soulsweapons","soul_ingot");
             for (var item : SoulsWeaponsAdditionsRegistries.TRANSLUCENT_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, soulIngot, lostSoul, ironNugget, "soulsweapons", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, soulIngot, lostSoul, ironNugget, "soulsweapons", platform);
             }
         }
 
@@ -100,21 +101,21 @@ public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.pro
             //Better End
             for (var item : BetterEndAdditionsRegistries.AETERNIUM_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, Ingredient.of(Items.STONE), ironNugget, "better_end", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, Ingredient.of(Items.STONE), ironNugget, "better_end", platform);
             }
             for (var item : BetterEndAdditionsRegistries.TERMINITE_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, Ingredient.of(Items.STONE), ironNugget, "better_end", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, Ingredient.of(Items.STONE), ironNugget, "better_end", platform);
             }
             for (var item : BetterEndAdditionsRegistries.THALLASIUM_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, Ingredient.of(Items.STONE), ironNugget, "better_end", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, Ingredient.of(Items.STONE), ironNugget, "better_end", platform);
             }
 
             //Better Nether
             for (var item : BetterNetherAdditionsRegistries.CINCINNASITE_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, Ingredient.of(Items.STONE), ironNugget, "better_nether", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, Ingredient.of(Items.STONE), ironNugget, "better_nether", platform);
             }
 
             for (var item : BetterNetherAdditionsRegistries.CINCINNASITE_DIAMOND_ITEMS) {
@@ -131,85 +132,85 @@ public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.pro
             Ingredient pyropeGem = ingredientFromId("blue_skies","pyrope_gem");
             for (var item : BlueSkiesAdditionsRegistries.PYROPE_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, pyropeGem, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, pyropeGem, ironNugget, "blue_skies", platform);
             }
 
             Ingredient aquite = ingredientFromId("blue_skies","aquite");
             for (var item : BlueSkiesAdditionsRegistries.AQUITE_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, aquite, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, aquite, ironNugget, "blue_skies", platform);
             }
 
             Ingredient diopsideGem = ingredientFromId("blue_skies","diopside_gem");
             for (var item : BlueSkiesAdditionsRegistries.DIOPSIDE_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, diopsideGem, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, diopsideGem, ironNugget, "blue_skies", platform);
             }
 
             Ingredient charoite = ingredientFromId("blue_skies","charoite");
             for (var item : BlueSkiesAdditionsRegistries.CHAROITE_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, charoite, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, charoite, ironNugget, "blue_skies", platform);
             }
 
             Ingredient horizoniteIngot = ingredientFromId("blue_skies","horizonite_ingot");
             for (var item : BlueSkiesAdditionsRegistries.HORIZONITE_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, horizoniteIngot, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, horizoniteIngot, ironNugget, "blue_skies", platform);
             }
 
             Ingredient turquoiseCobblestone = ingredientFromId("blue_skies","turquoise_cobblestone");
             for (var item : BlueSkiesAdditionsRegistries.TURQUOISE_STONE_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, turquoiseCobblestone, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, turquoiseCobblestone, ironNugget, "blue_skies", platform);
             }
 
             Ingredient lunarCobblestone = ingredientFromId("blue_skies","lunar_cobblestone");
             for (var item : BlueSkiesAdditionsRegistries.LUNAR_STONE_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, lunarCobblestone, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, lunarCobblestone, ironNugget, "blue_skies", platform);
             }
 
             Ingredient bluebrightPlanks = ingredientFromId("blue_skies","bluebright_planks");
             for (var item : BlueSkiesAdditionsRegistries.BLUEBRIGHT_WOOD_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, bluebrightPlanks, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, bluebrightPlanks, ironNugget, "blue_skies", platform);
             }
 
             Ingredient lunarPlanks = ingredientFromId("blue_skies","lunar_planks");
             for (var item : BlueSkiesAdditionsRegistries.LUNAR_WOOD_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, lunarPlanks, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, lunarPlanks, ironNugget, "blue_skies", platform);
             }
 
             Ingredient starlitPlanks = ingredientFromId("blue_skies","starlit_planks");
             for (var item : BlueSkiesAdditionsRegistries.STARLIT_WOOD_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, starlitPlanks, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, starlitPlanks, ironNugget, "blue_skies", platform);
             }
 
             Ingredient duskPlanks = ingredientFromId("blue_skies","dusk_planks");
             for (var item : BlueSkiesAdditionsRegistries.DUSK_WOOD_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, duskPlanks, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, duskPlanks, ironNugget, "blue_skies", platform);
             }
 
             Ingredient frostbrightPlanks = ingredientFromId("blue_skies","frostbright_planks");
             for (var item : BlueSkiesAdditionsRegistries.FROSTBRIGHT_WOOD_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, frostbrightPlanks, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, frostbrightPlanks, ironNugget, "blue_skies", platform);
             }
 
             Ingredient maplePlanks = ingredientFromId("blue_skies","maple_planks");
             for (var item : BlueSkiesAdditionsRegistries.MAPLE_WOOD_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, maplePlanks, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, maplePlanks, ironNugget, "blue_skies", platform);
             }
 
             Ingredient cometPlanks = ingredientFromId("blue_skies","comet_planks");
             for (var item : BlueSkiesAdditionsRegistries.COMET_WOOD_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, cometPlanks, ironNugget, "blue_skies", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, cometPlanks, ironNugget, "blue_skies", platform);
             }
 
             //FobiddenArcanus
@@ -219,19 +220,19 @@ public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.pro
             Ingredient cloggrumIngot = ingredientFromId("undergarden","cloggrum_ingot");
             for (var item : UndergardenAdditionsRegistries.CLOGGRUM_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, cloggrumIngot, ironNugget, "undergarden", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, cloggrumIngot, ironNugget, "undergarden", platform);
             }
 
             Ingredient froststeelIngot = ingredientFromId("undergarden","froststeel_ingot");
             for (var item : UndergardenAdditionsRegistries.FROSTSTEEL_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, froststeelIngot, ironNugget, "undergarden", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, froststeelIngot, ironNugget, "undergarden", platform);
             }
 
             Ingredient uthericShard = ingredientFromId("undergarden","utheric_shard");
             for (var item : UndergardenAdditionsRegistries.UTHERIUM_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.createShapedRecipe(item, exporter, cSticks, uthericShard, ironNugget, "undergarden", platform);
+                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, uthericShard, ironNugget, "undergarden", platform);
             }
 
             Ingredient forgottenIngot = ingredientFromId("undergarden","forgotten_ingot");
@@ -241,6 +242,11 @@ public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.pro
                 ConditionalSmithingRecipeBuilder.smithing(item, exporter, forgottenTemplate, forgottenIngot, "undergarden","cloggrum_", "undergarden", platform);
             }
 
+        }
+    }
+}
+
+             */
         }
     }
 }

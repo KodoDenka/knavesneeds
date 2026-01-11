@@ -2,7 +2,6 @@ package dev.manasnow.knavesneeds.datagen;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import dev.manasnow.knavesneeds.Constants;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -23,21 +22,42 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class ConditionalSmithingRecipeBuilder extends SmithingTransformRecipeBuilder {
-    public ConditionalSmithingRecipeBuilder(RecipeSerializer<?> type, Ingredient template, Ingredient base, Ingredient addition, RecipeCategory category, Item result) {
-        super(type, template, base, addition, category, result);
+    private final String platform;
+    private final Ingredient template;
+    private final Ingredient base;
+    private final Ingredient addition;
+    private final RecipeCategory category;
+    private final Item result;
+    private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
+    private final RecipeSerializer<?> type;
+
+    // Inventory trigger helper
+    private static InventoryChangeTrigger.TriggerInstance inventoryTrigger(Ingredient ingredient) {
+        return InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(ingredient.getItems()[0].getItem()).build());
     }
 
-    public static ConditionalSmithingRecipeBuilder smithing(
-            RecipeSerializer<?> type, Ingredient template, Ingredient base, Ingredient addition, RecipeCategory category, Item result) {
-        return new ConditionalSmithingRecipeBuilder(type, template, base, addition, category, result);
+    public ConditionalSmithingRecipeBuilder(RecipeSerializer<?> type, Ingredient template, Ingredient base, Ingredient addition, RecipeCategory category, Item result, String platform) {
+        super(type, template, base, addition, category, result);
+        this.template = template;
+        this.base = base;
+        this.addition = addition;
+        this.category = category;
+        this.result = result;
+        this.type = type;
+        this.platform = platform;
     }
+
+    //public static ConditionalSmithingRecipeBuilder smithing(
+    //        RecipeSerializer<?> type, Ingredient template, Ingredient base, Ingredient addition, RecipeCategory category, Item result) {
+    //    return new ConditionalSmithingRecipeBuilder(type, template, base, addition, category, result);
+    //}
 
     // New static helper to match usage in FabricRecipeProvider
     public static void smithing(Supplier<Item> itemSupplier, Consumer<FinishedRecipe> exporter, Ingredient template, Ingredient addition, String baseNamespace, String baseTier, String modId, String platform) {
         Item item = itemSupplier.get();
         ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(item);
 
-        // Heuristic to get weapon type (e.g. extracts "sword" from "warden_sword")
+        // Gets the path and type of weapon.
         String path = itemId.getPath();
         String weaponType = path.substring(path.lastIndexOf('_') + 1);
 
@@ -50,8 +70,8 @@ public class ConditionalSmithingRecipeBuilder extends SmithingTransformRecipeBui
                 Ingredient.of(baseItem),
                 addition,
                 RecipeCategory.COMBAT,
-                item
-        );
+                item,
+                platform);
 
         builder.unlocks("has_material", inventoryTrigger(addition));
         builder.save(exporter, itemId, modId, platform);
@@ -63,7 +83,7 @@ public class ConditionalSmithingRecipeBuilder extends SmithingTransformRecipeBui
     }
 
     public void save(Consumer<FinishedRecipe> recipeConsumer, ResourceLocation location, String modId, String platform) {
-        this.ensureValid(location);
+        //this.ensureValid(location);
         this.advancement.parent(RecipeBuilder.ROOT_RECIPE_ADVANCEMENT)
                 .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(location))
                 .rewards(net.minecraft.advancements.AdvancementRewards.Builder.recipe(location))
@@ -83,12 +103,7 @@ public class ConditionalSmithingRecipeBuilder extends SmithingTransformRecipeBui
         ));
     }
 
-    // Inventory trigger helper
-    protected static InventoryChangeTrigger.TriggerInstance inventoryTrigger(Ingredient ingredient) {
-        return InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(ingredient.getItems()[0].getItem()).build());
-    }
-
-    public static record Result(
+    public record Result(
             ResourceLocation id,
             RecipeSerializer<?> type,
             Ingredient template,
@@ -100,7 +115,6 @@ public class ConditionalSmithingRecipeBuilder extends SmithingTransformRecipeBui
             String modId,
             String platform
     ) implements FinishedRecipe {
-
         @Override
         public void serializeRecipeData(JsonObject json) {
             json.add("template", this.template.toJson());
@@ -117,39 +131,31 @@ public class ConditionalSmithingRecipeBuilder extends SmithingTransformRecipeBui
             jsonobject.addProperty("type", BuiltInRegistries.RECIPE_SERIALIZER.getKey(this.type).toString());
             this.serializeRecipeData(jsonobject);
             // Conditional logic from LoaderConditionalRecipe integrated here
-            this.serializeConditions(jsonobject);
-            return jsonobject;
-        }
-
-        private void serializeConditions(JsonObject jsonobject) {
-            if (this.modId.isEmpty()) {
-                return;
-            }
-
             if ("forge".equals(this.platform)) {
                 this.addForgeConditions(jsonobject);
             } else if ("fabric".equals(this.platform)) {
                 this.addFabricConditions(jsonobject);
             }
+            return jsonobject;
         }
 
-        private void addForgeConditions(JsonObject jsonobject) {
+        private void addForgeConditions(JsonObject json) {
             JsonArray conditions = new JsonArray();
             JsonObject condition = new JsonObject();
             condition.addProperty("type", "forge:mod_loaded");
             condition.addProperty("modid", this.modId);
             conditions.add(condition);
-            jsonobject.add("conditions", conditions);
+            json.add("conditions", conditions);
         }
 
-        private void addFabricConditions(JsonObject jsonobject) {
+        private void addFabricConditions(JsonObject json) {
             JsonArray conditions = new JsonArray();
             JsonObject condition = new JsonObject();
             condition.addProperty("condition", "fabric:all_mods_loaded");
             JsonArray values = new JsonArray();
             values.add(this.modId);
             condition.add("values", values);
-            jsonobject.add("fabric:load_conditions", conditions);
+            json.add("fabric:load_conditions", conditions);
         }
 
         @Override
