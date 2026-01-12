@@ -51,28 +51,28 @@ public class FabricRecipeProvider extends net.fabricmc.fabric.api.datagen.v1.pro
             Ingredient knightmetalIngot = ingredientFromId("twilight_forest","knightmetal_ingot");
             for (var item : TwilightForestAdditionsRegistries.KNIGHTMETAL_ITEMS) {
                 Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, knightmetalIngot, ironNugget, "twilight_forest", platform);
+                ConditionalShapedRecipeBuilder.swordSetFor(item.get(), exporter, cSticks, knightmetalIngot, ironNugget, "twilight_forest", platform);
             }
 
             //TODO also add shapless recipes
-            Ingredient fieryIngot = ingredientFromId("twilight_forest","fiery_ingot");
-            Ingredient blazeRod = Ingredient.of(BuiltInRegistries.ITEM.get(new ResourceLocation("minecraft:blaze_rod")));
-            for (var item : TwilightForestAdditionsRegistries.FIERY_ITEMS) {
-                Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.shaped(item, exporter, blazeRod, fieryIngot, ironNugget, "twilight_forest", platform);
-            }
+            //Ingredient fieryIngot = ingredientFromId("twilight_forest","fiery_ingot");
+            //Ingredient blazeRod = Ingredient.of(BuiltInRegistries.ITEM.get(new ResourceLocation("minecraft:blaze_rod")));
+            //for (var item : TwilightForestAdditionsRegistries.FIERY_ITEMS) {
+            //    Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
+            //    ConditionalShapedRecipeBuilder.swordSetFor(item.get(), exporter, blazeRod, fieryIngot, ironNugget, "twilight_forest", platform);
+            //}
 
-            Ingredient ironwoodIngot = ingredientFromId("twilight_forest","ironwood_ingot");
-            for (var item : TwilightForestAdditionsRegistries.IRONWOOD_ITEMS) {
-                Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, ironwoodIngot, ironNugget, "twilight_forest", platform);
-            }
+            //Ingredient ironwoodIngot = ingredientFromId("twilight_forest","ironwood_ingot");
+            //for (var item : TwilightForestAdditionsRegistries.IRONWOOD_ITEMS) {
+            //    Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
+            //    ConditionalShapedRecipeBuilder.swordSetFor(item.get(), exporter, cSticks, ironwoodIngot, ironNugget, "twilight_forest", platform);
+            //}
 
-            Ingredient steeleafIngot = ingredientFromId("twilight_forest","steeleaf_ingot");
-            for (var item : TwilightForestAdditionsRegistries.STEELEAF_ITEMS) {
-                Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
-                ConditionalShapedRecipeBuilder.shaped(item, exporter, cSticks, steeleafIngot, ironNugget, "twilight_forest", platform);
-            }
+            //Ingredient steeleafIngot = ingredientFromId("twilight_forest","steeleaf_ingot");
+            //for (var item : TwilightForestAdditionsRegistries.STEELEAF_ITEMS) {
+            //    Constants.LOG.info("Attempting to make recipe for item: {}", item.get());
+            //    ConditionalShapedRecipeBuilder.swordSetFor(item.get(), exporter, cSticks, steeleafIngot, ironNugget, "twilight_forest", platform);
+            //}
 
             /*
             //Deeper Darker
