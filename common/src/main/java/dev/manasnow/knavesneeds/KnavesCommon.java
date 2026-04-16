@@ -39,7 +39,7 @@ public class KnavesCommon {
 
 
         //Checks if mod is loaded and enabled, and registers the weapons.
-        if (Services.PLATFORM.isModLoaded("twilightforest") && commonConfig.twilightForestEnabled) {
+        if (Services.PLATFORM.isModLoaded("twilight_forest") && commonConfig.twilightForestEnabled) {
             Constants.LOG.info("Knaves' Needs is adding Twilight Forest items.");
             TwilightForestAdditionsRegistries.smartRegistrar();
 
